@@ -128,7 +128,8 @@
   "minecraft:adventure/adventuring_time": {
     "criteria": {
       "minecraft:beach": "2023-02-06 20:55:23 +0000",
-      "minecraft:river": "2023-02-06 20:55:28 +0000"
+      "minecraft:river": "2023-02-06 20:55:28 +0000",
+      "minecraft:swamp": "2023-02-07 21:43:51 +0000"
     },
     "done": false
   },
@@ -237,6 +238,12 @@
   "comforts:hammock_pink_from_white": {
     "criteria": {
       "has_the_recipe": "2023-02-06 21:42:56 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/shoot_arrow": {
+    "criteria": {
+      "shot_arrow": "2023-02-07 21:20:12 +0000"
     },
     "done": true
   },

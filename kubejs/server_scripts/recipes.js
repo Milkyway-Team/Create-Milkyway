@@ -105,7 +105,6 @@ function unwantedRecipes(event) {
 	native_metals.forEach(e => {
 		event.remove({ type: MC("smelting"), input: F("#dusts/" + e) })
 		event.remove({ type: MC("blasting"), input: F("#dusts/" + e) })
-		event.remove({ type: TC("melting"), input: F("#dusts/" + e) })
 		event.replaceInput({ type: "tconstruct:melting"}, F('#dusts/' + e), F('#dusts/processed' + e))
 	})
 }

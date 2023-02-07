@@ -1,0 +1,223 @@
+---- Minecraft Crash Report ----
+// Uh... Did I do that?
+
+Time: 2/7/23, 9:13 PM
+Description: Mod loading error has occurred
+
+java.lang.Exception: Mod Loading has failed
+	at net.minecraftforge.logging.CrashReportExtender.dumpModLoadingCrashReport(CrashReportExtender.java:55) ~[forge-1.18.2-40.2.1-universal.jar%23140!/:?] {re:classloading}
+	at net.minecraftforge.client.loading.ClientModLoader.completeModLoading(ClientModLoader.java:170) ~[forge-1.18.2-40.2.1-universal.jar%23140!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.lambda$new$1(Minecraft.java:557) ~[client-1.18.2-20220404.173914-srg.jar%23135!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:kubejs-common.mixins.json:MinecraftMixin,pl:mixin:APP:ae2.mixins.json:PickColorMixin,pl:mixin:APP:balm.mixins.json:MinecraftMixin,pl:mixin:APP:immersiveengineering.mixins.json:accessors.client.MinecraftAccess,pl:mixin:APP:flywheel.mixins.json:PausedPartialTickAccessor,pl:mixin:APP:architectury.mixins.json:MixinMinecraft,pl:mixin:APP:mixins.essential.json:client.MixinMinecraft,pl:mixin:APP:mixins.essential.json:client.gui.Mixin_FixKeybindUnpressedInEmoteWheel,pl:mixin:APP:mixins.essential.json:client.gui.Mixin_RecalculateMenuScale,pl:mixin:APP:mixins.essential.json:compatibility.forge.Mixin_FixInternalByteBufAccess,pl:mixin:APP:create.mixins.json:WindowResizeMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.Util.m_137521_(Util.java:397) ~[client-1.18.2-20220404.173914-srg.jar%23135!/:?] {re:mixin,re:classloading,pl:mixin:APP:kubejs-common.mixins.json:UtilMixin,pl:mixin:APP:ftbchunks-common.mixins.json:UtilMixin,pl:mixin:APP:bettermineshafts.mixins.json:SuppressLogMixin,pl:mixin:A}
+	at net.minecraft.client.Minecraft.lambda$new$2(Minecraft.java:551) ~[client-1.18.2-20220404.173914-srg.jar%23135!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:kubejs-common.mixins.json:MinecraftMixin,pl:mixin:APP:ae2.mixins.json:PickColorMixin,pl:mixin:APP:balm.mixins.json:MinecraftMixin,pl:mixin:APP:immersiveengineering.mixins.json:accessors.client.MinecraftAccess,pl:mixin:APP:flywheel.mixins.json:PausedPartialTickAccessor,pl:mixin:APP:architectury.mixins.json:MixinMinecraft,pl:mixin:APP:mixins.essential.json:client.MixinMinecraft,pl:mixin:APP:mixins.essential.json:client.gui.Mixin_FixKeybindUnpressedInEmoteWheel,pl:mixin:APP:mixins.essential.json:client.gui.Mixin_RecalculateMenuScale,pl:mixin:APP:mixins.essential.json:compatibility.forge.Mixin_FixInternalByteBufAccess,pl:mixin:APP:create.mixins.json:WindowResizeMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.gui.screens.LoadingOverlay.m_6305_(LoadingOverlay.java:135) ~[client-1.18.2-20220404.173914-srg.jar%23135!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:kubejs-common.mixins.json:LoadingOverlayMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.m_109093_(GameRenderer.java:879) ~[client-1.18.2-20220404.173914-srg.jar%23135!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91383_(Minecraft.java:1046) ~[client-1.18.2-20220404.173914-srg.jar%23135!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:kubejs-common.mixins.json:MinecraftMixin,pl:mixin:APP:ae2.mixins.json:PickColorMixin,pl:mixin:APP:balm.mixins.json:MinecraftMixin,pl:mixin:APP:immersiveengineering.mixins.json:accessors.client.MinecraftAccess,pl:mixin:APP:flywheel.mixins.json:PausedPartialTickAccessor,pl:mixin:APP:architectury.mixins.json:MixinMinecraft,pl:mixin:APP:mixins.essential.json:client.MixinMinecraft,pl:mixin:APP:mixins.essential.json:client.gui.Mixin_FixKeybindUnpressedInEmoteWheel,pl:mixin:APP:mixins.essential.json:client.gui.Mixin_RecalculateMenuScale,pl:mixin:APP:mixins.essential.json:compatibility.forge.Mixin_FixInternalByteBufAccess,pl:mixin:APP:create.mixins.json:WindowResizeMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91374_(Minecraft.java:665) ~[client-1.18.2-20220404.173914-srg.jar%23135!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:kubejs-common.mixins.json:MinecraftMixin,pl:mixin:APP:ae2.mixins.json:PickColorMixin,pl:mixin:APP:balm.mixins.json:MinecraftMixin,pl:mixin:APP:immersiveengineering.mixins.json:accessors.client.MinecraftAccess,pl:mixin:APP:flywheel.mixins.json:PausedPartialTickAccessor,pl:mixin:APP:architectury.mixins.json:MixinMinecraft,pl:mixin:APP:mixins.essential.json:client.MixinMinecraft,pl:mixin:APP:mixins.essential.json:client.gui.Mixin_FixKeybindUnpressedInEmoteWheel,pl:mixin:APP:mixins.essential.json:client.gui.Mixin_RecalculateMenuScale,pl:mixin:APP:mixins.essential.json:compatibility.forge.Mixin_FixInternalByteBufAccess,pl:mixin:APP:create.mixins.json:WindowResizeMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:205) ~[client-1.18.2-20220404.173914-srg.jar%23135!/:?] {re:classloading,re:mixin,pl:runtimedistcleaner:A,pl:mixin:A,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonClientLaunchHandler.lambda$launchService$0(CommonClientLaunchHandler.java:31) ~[fmlloader-1.18.2-40.2.1.jar%2317!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:106) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:77) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:149) [bootstraplauncher-1.0.0.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at dev.latvian.mods.kubejs.script.ScriptManager.load(ScriptManager.java:161) ~[kubejs-forge-1802.5.5-build.569.jar%2398!/:1802.5.5-build.569] {re:classloading}
+-- MOD kubejs --
+Details:
+	Caused by 0: java.lang.reflect.InvocationTargetException
+		at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?] {}
+		at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?] {}
+		at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?] {}
+		at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?] {}
+		at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?] {}
+		at net.minecraftforge.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:67) ~[javafmllanguage-1.18.2-40.2.1.jar%23137!/:?] {}
+		at net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:106) ~[fmlcore-1.18.2-40.2.1.jar%23136!/:?] {}
+		at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[?:?] {}
+		at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796) ~[?:?] {}
+		at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) ~[?:?] {}
+		at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) ~[?:?] {}
+		at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?] {re:computing_frames}
+		at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?] {re:computing_frames}
+		at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?] {}
+
+	Mod File: /C:/Users/pouff/curseforge/minecraft/Instances/Create Milkyway/mods/kubejs-forge-1802.5.5-build.569.jar
+	Failure message: KubeJS (kubejs) has failed to load correctly
+		java.lang.reflect.InvocationTargetException: null
+	Mod Version: 1802.5.5-build.569
+	Mod Issue URL: https://github.com/KubeJS-Mods/KubeJS/issues
+	Exception message: java.lang.RuntimeException: There were startup script syntax errors! See logs/kubejs/startup.txt for more info
+Stacktrace:
+	at dev.latvian.mods.kubejs.script.ScriptManager.load(ScriptManager.java:161) ~[kubejs-forge-1802.5.5-build.569.jar%2398!/:1802.5.5-build.569] {re:classloading}
+	at dev.latvian.mods.kubejs.KubeJS.<init>(KubeJS.java:115) ~[kubejs-forge-1802.5.5-build.569.jar%2398!/:1802.5.5-build.569] {re:mixin,re:classloading}
+	at dev.latvian.mods.kubejs.forge.KubeJSForge.<init>(KubeJSForge.java:40) ~[kubejs-forge-1802.5.5-build.569.jar%2398!/:1802.5.5-build.569] {re:classloading}
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?] {}
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?] {}
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?] {}
+	at net.minecraftforge.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:67) ~[javafmllanguage-1.18.2-40.2.1.jar%23137!/:?] {}
+	at net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:106) ~[fmlcore-1.18.2-40.2.1.jar%23136!/:?] {}
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796) ~[?:?] {}
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) ~[?:?] {}
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) ~[?:?] {}
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?] {re:computing_frames}
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?] {re:computing_frames}
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.18.2
+	Minecraft Version ID: 1.18.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 17.0.1, Microsoft
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Microsoft
+	Memory: 2474022856 bytes (2359 MiB) / 4865392640 bytes (4640 MiB) up to 12884901888 bytes (12288 MiB)
+	CPUs: 12
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 5 5600X 6-Core Processor             
+	Identifier: AuthenticAMD Family 25 Model 33 Stepping 0
+	Microarchitecture: Zen 3
+	Frequency (GHz): 3.70
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: NVIDIA GeForce GTX 1660 SUPER
+	Graphics card #0 vendor: NVIDIA (0x10de)
+	Graphics card #0 VRAM (MB): 4095.00
+	Graphics card #0 deviceId: 0x21c4
+	Graphics card #0 versionInfo: DriverVersion=31.0.15.2647
+	Memory slot #0 capacity (MB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 2.67
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 2.67
+	Memory slot #1 type: DDR4
+	Virtual memory max (MB): 42934.23
+	Virtual memory used (MB): 26093.68
+	Swap memory total (MB): 26624.00
+	Swap memory used (MB): 1160.73
+	JVM Flags: 4 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss1M -Xmx12288m -Xms256m
+	ModLauncher: 9.1.3+9.1.3+main.9b69c82a
+	ModLauncher launch target: forgeclient
+	ModLauncher naming: srg
+	ModLauncher services: 
+		 mixin PLUGINSERVICE 
+		 eventbus PLUGINSERVICE 
+		 slf4jfixer PLUGINSERVICE 
+		 object_holder_definalize PLUGINSERVICE 
+		 runtime_enum_extender PLUGINSERVICE 
+		 capability_token_subclass PLUGINSERVICE 
+		 accesstransformer PLUGINSERVICE 
+		 runtimedistcleaner PLUGINSERVICE 
+		 mixin TRANSFORMATIONSERVICE 
+		 essential-loader TRANSFORMATIONSERVICE 
+		 fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		lowcodefml@null
+		javafml@null
+		kotlinforforge@3.6.0
+	Mod List: 
+		molotov-1.0.jar                                   |Molotov                       |molotov                       |1.0                 |COMMON_SET|Manifest: NOSIGNATURE
+		QuarkOddities-1.18.jar                            |Quark Oddities                |quarkoddities                 |1.18                |COMMON_SET|Manifest: NOSIGNATURE
+		YungsBetterDungeons-1.18.2-Forge-2.1.0.jar        |YUNG's Better Dungeons        |betterdungeons                |1.18.2-Forge-2.1.0  |COMMON_SET|Manifest: NOSIGNATURE
+		rhino-forge-1802.2.1-build.255.jar                |Rhino                         |rhino                         |1802.2.1-build.255  |COMMON_SET|Manifest: NOSIGNATURE
+		create_misc_and_things_1.18.2_2.0.jar             |create: things and misc       |create_things_and_misc        |1.0.0               |COMMON_SET|Manifest: NOSIGNATURE
+		YungsBetterWitchHuts-1.18.2-Forge-1.0.1.jar       |YUNG's Better Witch Huts      |betterwitchhuts               |1.18.2-Forge-1.0.1  |COMMON_SET|Manifest: NOSIGNATURE
+		YungsBetterOceanMonuments-1.18.2-Forge-1.0.3.jar  |YUNG's Better Ocean Monuments |betteroceanmonuments          |1.18.2-Forge-1.0.3  |COMMON_SET|Manifest: NOSIGNATURE
+		mw_core-1.18.2-0.1.R.jar                          |Create: Milkyway              |mw_core                       |1.18.2-0.1.R        |COMMON_SET|Manifest: NOSIGNATURE
+		sophisticatedcore-1.18.2-0.5.37.202.jar           |Sophisticated Core            |sophisticatedcore             |1.18.2-0.5.37.202   |COMMON_SET|Manifest: NOSIGNATURE
+		waystones-forge-1.18.2-10.1.0.jar                 |Waystones                     |waystones                     |10.1.0              |COMMON_SET|Manifest: NOSIGNATURE
+		BuildersDelight-1.18.2-v.1.0.jar                  |Builder's Delight             |buildersdelight               |1.0                 |COMMON_SET|Manifest: NOSIGNATURE
+		Clumps-forge-1.18.2-8.0.0+17.jar                  |Clumps                        |clumps                        |8.0.0+17            |COMMON_SET|Manifest: NOSIGNATURE
+		comforts-forge-1.18.2-5.0.0.5.jar                 |Comforts                      |comforts                      |1.18.2-5.0.0.5      |COMMON_SET|Manifest: NOSIGNATURE
+		framedcompactdrawers-1.18-4.1.0.jar               |Framed Compacting Drawers     |framedcompactdrawers          |1.18-4.1.0          |COMMON_SET|Manifest: NOSIGNATURE
+		YungsApi-1.18.2-Forge-2.2.7.jar                   |YUNG's API                    |yungsapi                      |1.18.2-Forge-2.2.7  |COMMON_SET|Manifest: NOSIGNATURE
+		farmingforblockheads-forge-1.18.2-10.0.2.jar      |Farming for Blockheads        |farmingforblockheads          |10.0.2              |COMMON_SET|Manifest: NOSIGNATURE
+		create-confectionery1.18.2_v1.0.8.jar             |Create Confectionery          |create_confectionery          |1.0.8               |COMMON_SET|Manifest: NOSIGNATURE
+		sophisticatedbackpacks-1.18.2-3.18.40.777.jar     |Sophisticated Backpacks       |sophisticatedbackpacks        |1.18.2-3.18.40.777  |COMMON_SET|Manifest: NOSIGNATURE
+		YungsBetterDesertTemples-1.18.2-Forge-1.3.1.jar   |YUNG's Better Desert Temples  |betterdeserttemples           |1.18.2-Forge-1.3.1  |COMMON_SET|Manifest: NOSIGNATURE
+		questsadditions-1.18.2-1.4.1.jar                  |Quests Additions              |questsadditions               |1.4.1               |COMMON_SET|Manifest: NOSIGNATURE
+		balm-3.2.2+0.jar                                  |Balm                          |balm                          |3.2.2+0             |COMMON_SET|Manifest: NOSIGNATURE
+		JEITweaker-1.18.2-3.0.0.9.jar                     |JEI Tweaker                   |jeitweaker                    |3.0.0.9             |COMMON_SET|Manifest: NOSIGNATURE
+		randomium-1.18.2-1.9.jar                          |Randomium                     |randomium                     |1.18.2-1.9          |COMMON_SET|Manifest: NOSIGNATURE
+		JustEnoughResources-1.18.2-0.14.1.171.jar         |Just Enough Resources         |jeresources                   |0.14.1.171          |COMMON_SET|Manifest: NOSIGNATURE
+		CraftTweaker-forge-1.18.2-9.1.203.jar             |CraftTweaker                  |crafttweaker                  |9.1.203             |COMMON_SET|Manifest: NOSIGNATURE
+		forge-1.18.2-40.2.1-universal.jar                 |Forge                         |forge                         |40.2.1              |COMMON_SET|Manifest: 84:ce:76:e8:45:35:e4:0e:63:86:df:47:59:80:0f:67:6c:c1:5f:6e:5f:4d:b3:54:47:1a:9f:7f:ed:5e:f2:90
+		refinedstorage-1.10.4.jar                         |Refined Storage               |refinedstorage                |1.10.4              |COMMON_SET|Manifest: NOSIGNATURE
+		jei-1.18.2-9.7.1.255.jar                          |Just Enough Items             |jei                           |9.7.1.255           |COMMON_SET|Manifest: NOSIGNATURE
+		appliedenergistics2-forge-11.7.0.jar              |Applied Energistics 2         |ae2                           |11.7.0              |COMMON_SET|Manifest: NOSIGNATURE
+		selene-1.18.2-1.17.9.jar                          |Selene                        |selene                        |1.18.2-1.17.9       |COMMON_SET|Manifest: NOSIGNATURE
+		supplementaries-1.18.2-1.5.16.jar                 |Supplementaries               |supplementaries               |1.18.2-1.5.16       |COMMON_SET|Manifest: NOSIGNATURE
+		OreTweaker-1.18.2-3.3.0.jar                       |Ore Tweaker                   |oretweaker                    |3.3.0               |COMMON_SET|Manifest: NOSIGNATURE
+		client-1.18.2-20220404.173914-srg.jar             |Minecraft                     |minecraft                     |1.18.2              |COMMON_SET|Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		cofh_core-1.18.2-9.2.0.36.jar                     |CoFH Core                     |cofh_core                     |9.2.0.36            |COMMON_SET|Manifest: 75:0b:cc:9b:64:2e:9b:c4:41:d1:95:00:71:ee:87:1a:b3:5e:4b:da:8e:e8:39:00:fd:5d:e5:9c:40:42:33:09
+		thermal_foundation-1.18.2-9.2.0.46.jar            |Thermal Series                |thermal                       |9.2.0.46            |COMMON_SET|Manifest: 75:0b:cc:9b:64:2e:9b:c4:41:d1:95:00:71:ee:87:1a:b3:5e:4b:da:8e:e8:39:00:fd:5d:e5:9c:40:42:33:09
+		TConstruct-1.18.2-3.6.2.92.jar                    |Tinkers' Construct            |tconstruct                    |3.6.2.92            |COMMON_SET|Manifest: NOSIGNATURE
+		MouseTweaks-forge-mc1.18-2.21.jar                 |Mouse Tweaks                  |mousetweaks                   |2.21                |COMMON_SET|Manifest: NOSIGNATURE
+		ImmersiveEngineering-1.18.2-8.3.1-157.jar         |Immersive Engineering         |immersiveengineering          |1.18.2-8.3.1-157    |COMMON_SET|Manifest: 44:39:94:cf:1d:8c:be:3c:7f:a9:ee:f4:1e:63:a5:ac:61:f9:c2:87:d5:5b:d9:d6:8c:b5:3e:96:5d:8e:3f:b7
+		EnigmaticGraves-1.18.2-1.7.6.jar                  |Enigmatic Graves              |enigmaticgraves               |1.18.2-1.7.6        |COMMON_SET|Manifest: NOSIGNATURE
+		CreateTweaker-1.18.2-2.0.0.17.jar                 |CreateTweaker                 |createtweaker                 |2.0.0.17            |COMMON_SET|Manifest: NOSIGNATURE
+		flywheel-forge-1.18.2-0.6.8.a.jar                 |Flywheel                      |flywheel                      |0.6.8.a             |COMMON_SET|Manifest: NOSIGNATURE
+		alloyed-1.18.2-v1.4e.jar                          |Create: Alloyed               |alloyed                       |1.18.2              |COMMON_SET|Manifest: NOSIGNATURE
+		curios-forge-1.18.2-5.0.7.1.jar                   |Curios API                    |curios                        |1.18.2-5.0.7.1      |COMMON_SET|Manifest: NOSIGNATURE
+		Mantle-1.18.2-1.9.43.jar                          |Mantle                        |mantle                        |1.9.43              |COMMON_SET|Manifest: NOSIGNATURE
+		create-stuff-additions1.18.2_v2.0.2a.jar          |Create Stuff & Additions      |create_sa                     |2.0.2               |COMMON_SET|Manifest: NOSIGNATURE
+		AutoRegLib-1.7-53.jar                             |AutoRegLib                    |autoreglib                    |1.7-53              |COMMON_SET|Manifest: NOSIGNATURE
+		Quark-3.2-358.jar                                 |Quark                         |quark                         |3.2-358             |COMMON_SET|Manifest: NOSIGNATURE
+		StorageDrawers-1.18.2-10.2.1.jar                  |Storage Drawers               |storagedrawers                |10.2.1              |COMMON_SET|Manifest: NOSIGNATURE
+		morestoragedrawers-1.18.2-1.1.2.jar               |More Storage Drawers          |morestoragedrawers            |1.18.2-1.1.2        |COMMON_SET|Manifest: NOSIGNATURE
+		thermal_expansion-1.18.2-9.2.0.20.jar             |Thermal Expansion             |thermal_expansion             |9.2.0.20            |COMMON_SET|Manifest: 75:0b:cc:9b:64:2e:9b:c4:41:d1:95:00:71:ee:87:1a:b3:5e:4b:da:8e:e8:39:00:fd:5d:e5:9c:40:42:33:09
+		ftb-ultimine-forge-1802.3.3-build.70.jar          |FTB Ultimine                  |ftbultimine                   |1802.3.3-build.70   |COMMON_SET|Manifest: NOSIGNATURE
+		lootjs-forge-1.18.2-2.7.7.jar                     |LootJS                        |lootjs                        |2.7.7               |COMMON_SET|Manifest: NOSIGNATURE
+		architectury-4.11.89-forge.jar                    |Architectury                  |architectury                  |4.11.89             |COMMON_SET|Manifest: NOSIGNATURE
+		ftb-library-forge-1802.3.9-build.167.jar          |FTB Library                   |ftblibrary                    |1802.3.9-build.167  |COMMON_SET|Manifest: NOSIGNATURE
+		item-filters-forge-1802.2.8-build.47.jar          |Item Filters                  |itemfilters                   |1802.2.8-build.47   |COMMON_SET|Manifest: NOSIGNATURE
+		ftb-teams-forge-1802.2.10-build.96.jar            |FTB Teams                     |ftbteams                      |1802.2.10-build.96  |COMMON_SET|Manifest: NOSIGNATURE
+		ftb-chunks-forge-1802.3.13-build.234.jar          |FTB Chunks                    |ftbchunks                     |1802.3.13-build.234 |COMMON_SET|Manifest: NOSIGNATURE
+		kubejs-forge-1802.5.5-build.569.jar               |KubeJS                        |kubejs                        |1802.5.5-build.569  |ERROR     |Manifest: NOSIGNATURE
+		kubejs-thermal-1802.1.5-build.16.jar              |KubeJS Thermal                |kubejs_thermal                |1802.1.5-build.16   |COMMON_SET|Manifest: NOSIGNATURE
+		kubejs-tinkers-1802.1.0-build.1.jar               |KubeJS Tinkers Construct      |kubejs_tinkers_construct      |1802.1.0-build.1    |COMMON_SET|Manifest: NOSIGNATURE
+		ftb-quests-forge-1802.3.13-build.175.jar          |FTB Quests                    |ftbquests                     |1802.3.13-build.175 |COMMON_SET|Manifest: NOSIGNATURE
+		appleskin-forge-mc1.18.2-2.4.1.jar                |AppleSkin                     |appleskin                     |2.4.1+mc1.18.2      |COMMON_SET|Manifest: NOSIGNATURE
+		alexsdelight-1.18.2-1.3.3.jar                     |Alex's Delight                |alexsdelight                  |1.3.3               |COMMON_SET|Manifest: NOSIGNATURE
+		citadel-1.11.3-1.18.2.jar                         |Citadel                       |citadel                       |1.11.3              |COMMON_SET|Manifest: NOSIGNATURE
+		alexsmobs-1.18.6.jar                              |Alex's Mobs                   |alexsmobs                     |1.18.6              |COMMON_SET|Manifest: NOSIGNATURE
+		FarmersDelight-1.18.2-1.2.0.jar                   |Farmer's Delight              |farmersdelight                |1.18.2-1.2.0        |COMMON_SET|Manifest: NOSIGNATURE
+		NethersDelight-1.18.2-2.2.0.jar                   |Nethers Delight               |nethersdelight                |2.2                 |COMMON_SET|Manifest: NOSIGNATURE
+		lootr-1.18.2-0.2.23.60.jar                        |Lootr                         |lootr                         |0.2.21.58           |COMMON_SET|Manifest: NOSIGNATURE
+		create_crystal_clear-0.1.3e-1.18.2.jar            |Create: Crystal Clear         |create_crystal_clear          |1.18.2-0.1.3e       |COMMON_SET|Manifest: NOSIGNATURE
+		extendedflywheels-1.2.5-1.18.2-0.5.e.jar          |Extended Flywheels            |extendedflywheels             |1.2.5-1.18.2-0.5.e  |COMMON_SET|Manifest: NOSIGNATURE
+		create-1.18.2-0.5.0.i.jar                         |Create                        |create                        |0.5.0.i             |COMMON_SET|Manifest: NOSIGNATURE
+		ponderjs-1.18.2-1.1.8.jar                         |PonderJS                      |ponderjs                      |1.1.8               |COMMON_SET|Manifest: NOSIGNATURE
+		Steam_Rails-1.18.2-1.1.1.jar                      |Create: Steam 'n Rails        |railways                      |1.18.2-1.1.1        |COMMON_SET|Manifest: NOSIGNATURE
+		kubejs-create-forge-1802.2.2-build.28.jar         |KubeJS Create                 |kubejs_create                 |1802.2.2-build.28   |COMMON_SET|Manifest: NOSIGNATURE
+		extendedgears-1.18.2-0.5.0g-1.1.2.jar             |Extended Cogs                 |extendedgears                 |1.18.2-0.5.0g-1.1.2 |COMMON_SET|Manifest: NOSIGNATURE
+		YungsBetterMineshafts-1.18.2-Forge-2.2.jar        |YUNG's Better Mineshafts      |bettermineshafts              |1.18.2-Forge-2.2    |COMMON_SET|Manifest: NOSIGNATURE
+		valhelsia_core-forge-1.18.2-0.4.0.jar             |Valhelsia Core                |valhelsia_core                |1.18.2-0.4.0        |COMMON_SET|Manifest: NOSIGNATURE
+		forbidden_arcanus-1.18.2-2.1.1.jar                |Forbidden & Arcanus           |forbidden_arcanus             |1.18.2-2.1.1        |COMMON_SET|Manifest: NOSIGNATURE
+		create_enchantment_industry-1.18.2-for-create-0.5.|Create Enchantment Industry   |create_enchantment_industry   |1.1.13              |COMMON_SET|Manifest: NOSIGNATURE
+		OpenLoader-Forge-1.18.2-12.0.1.jar                |OpenLoader                    |openloader                    |12.0.1              |COMMON_SET|Manifest: eb:c4:b1:67:8b:f9:0c:db:dc:4f:01:b1:8e:61:64:39:4c:10:85:0b:a6:c4:c7:48:f0:fa:95:f2:cb:08:3a:e5
+		createaddition-1.18.2-20230203a.jar               |Create Crafts & Additions     |createaddition                |1.18.2-20230203a    |COMMON_SET|Manifest: NOSIGNATURE
+		Essential (forge_1.18.2).jar                      |Essential                     |essential                     |11794+deploy-staging|COMMON_SET|Manifest: NOSIGNATURE
+	Crash Report UUID: 421357ff-ce1a-4b92-b6eb-b7addae6fd47
+	FML: 40.2
+	Forge: net.minecraftforge:40.2.1
+	Flywheel Backend: GL33 Instanced Arrays

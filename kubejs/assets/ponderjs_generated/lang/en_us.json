@@ -1,1 +1,9 @@
-{}
+{
+  "kubejs.ponder.tag.hephaestus_forge_setup": "Hephaestus Forge",
+  "kubejs.ponder.tag.hephaestus_forge_setup.description": "Setup Guide For Hephaestus Forge",
+  "kubejs.ponder.hephaestus_forge_construction.header": "Construction of Hephaestus Forge",
+  "kubejs.ponder.hephaestus_forge_construction.text_1": "Place Arcane Polished Darkstone Here",
+  "kubejs.ponder.hephaestus_forge_construction.text_2": "Place Chiseled Arcane Polished Darkstone Here",
+  "kubejs.ponder.hephaestus_forge_construction.text_3": "Surround These With Polished Darkstone",
+  "kubejs.ponder.hephaestus_forge_construction.text_4": "Next, Place A Smithing Table In The Center"
+}

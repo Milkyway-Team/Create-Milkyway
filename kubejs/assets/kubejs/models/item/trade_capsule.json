@@ -1,0 +1,8 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "kubejs:item/trade_capsule_0",
+    "layer1": "kubejs:item/trade_capsule_1",
+    "layer2": "kubejs:item/trade_capsule_2"
+  }
+}
