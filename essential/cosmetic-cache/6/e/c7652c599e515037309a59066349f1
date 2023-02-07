@@ -1,0 +1,10 @@
+[
+  {
+    "id": "DAB_LOOP",
+    "type": "INTERRUPTS_EMOTE",
+    "enabled": true,
+    "data": {
+      "MOVEMENT": true
+    }
+  }
+]

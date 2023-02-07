@@ -1,0 +1,5 @@
+
+["Client Configs for Milkyway Core"]
+	#Should meal and drink tooltips display which effects they provide?
+	foodEffectTooltip = true
+

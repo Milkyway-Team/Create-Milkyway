@@ -1,0 +1,10 @@
+[
+    {
+        "id": "SALUTE",
+        "type": "TRANSITION_DELAY",
+        "enabled": true,
+        "data": {
+            "time": 150
+        }
+    }
+]

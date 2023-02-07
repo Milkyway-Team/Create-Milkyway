@@ -1,0 +1,37 @@
+{
+	id: "5ABB1405ACFD0421"
+	group: ""
+	order_index: 0
+	filename: "create_milkyway"
+	title: "Create: Milkyway"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [{
+		icon: "ftbquests:book"
+		x: 0.0d
+		y: 0.0d
+		subtitle: "How It Began"
+		description: ["Create Milkyway was originally an SMP by the name of Milkyway SMP created by MilkFur. Pouffy later joined his discord server and began to update the modpack to what you see today!"]
+		id: "2A39249976E79176"
+		tasks: [{
+			id: "5FAA99F09CFDA015"
+			type: "checkmark"
+			title: "The Story"
+		}]
+		rewards: [
+			{
+				id: "45A2DBCA31293551"
+				type: "item"
+				item: "mw_core:soda"
+				count: 4
+			}
+			{
+				id: "2621703463490934"
+				type: "item"
+				item: "create_confectionery:gingerbread"
+				count: 8
+			}
+		]
+	}]
+	quest_links: [ ]
+}

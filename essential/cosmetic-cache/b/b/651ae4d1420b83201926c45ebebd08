@@ -1,0 +1,28 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.propeller_hat.propeller_spin": {
+      "loop": true,
+      "animation_length": 0.5,
+      "bones": {
+        "propeller": {
+          "rotation": {
+            "0.0": [0, 0, 0],
+            "0.5": [0, 359, 0]
+          }
+        }
+      }
+    }
+  },
+  "triggers": [
+    {
+      "type": "IDLE",
+      "target": "ALL",
+      "probability": 1,
+      "name": "animation.propeller_hat.propeller_spin",
+      "skips": 0,
+      "priority": 1,
+      "loops": 0
+    }
+  ]
+}

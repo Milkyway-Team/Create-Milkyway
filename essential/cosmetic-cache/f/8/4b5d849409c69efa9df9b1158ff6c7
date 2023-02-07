@@ -1,0 +1,157 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.heart_particles",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "hearts",
+					"parent": "body",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "heart_1",
+					"parent": "hearts",
+					"pivot": [7.5, 2.5, -8],
+					"rotation": [0, -45, 0],
+					"cubes": [
+						{"origin": [5, 0, -8], "size": [5, 5, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "heart_11",
+					"parent": "hearts",
+					"pivot": [4, 11.5, -11.5],
+					"rotation": [0, -22.5, 0],
+					"cubes": [
+						{"origin": [1.5, 9, -11.5], "size": [5, 5, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "heart_14",
+					"parent": "hearts",
+					"pivot": [-6.5, 27.5, 9],
+					"rotation": [0, -22.5, 0],
+					"cubes": [
+						{"origin": [-8.93962, 25, 9.4601], "size": [5, 5, 0], "uv": [0, 0], "mirror": true}
+					]
+				},
+				{
+					"name": "heart_12",
+					"parent": "hearts",
+					"pivot": [-4, 27.5, -11.5],
+					"rotation": [0, 22.5, 0],
+					"cubes": [
+						{"origin": [-6.5, 25, -11.5], "size": [5, 5, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "heart_13",
+					"parent": "hearts",
+					"pivot": [4, 11.5, 11.5],
+					"rotation": [0, 22.5, 0],
+					"cubes": [
+						{"origin": [1.5, 9, 11.5], "size": [5, 5, 0], "uv": [0, 0], "mirror": true}
+					]
+				},
+				{
+					"name": "heart_5",
+					"parent": "hearts",
+					"pivot": [10.5, 20.5, -4],
+					"rotation": [0, -67.5, 0],
+					"cubes": [
+						{"origin": [8, 18, -4], "size": [5, 5, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "heart_10",
+					"parent": "hearts",
+					"pivot": [-10.5, 29.5, 4],
+					"rotation": [0, -67.5, 0],
+					"cubes": [
+						{"origin": [-13, 27, 4], "size": [5, 5, 0], "uv": [0, 0], "mirror": true}
+					]
+				},
+				{
+					"name": "heart_6",
+					"parent": "hearts",
+					"pivot": [9.5, 6.5, 3],
+					"rotation": [-180, -67.5, 180],
+					"cubes": [
+						{"origin": [7, 4, 2], "size": [5, 5, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "heart_9",
+					"parent": "hearts",
+					"pivot": [-9.5, 6.5, -3],
+					"rotation": [180, -67.5, -180],
+					"cubes": [
+						{"origin": [-12, 4, -2], "size": [5, 5, 0], "uv": [0, 0], "mirror": true}
+					]
+				},
+				{
+					"name": "heart_7",
+					"parent": "hearts",
+					"pivot": [11.5, 31.5, 0],
+					"rotation": [0, -90, 0],
+					"cubes": [
+						{"origin": [9, 29, 0], "size": [5, 5, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "heart_8",
+					"parent": "hearts",
+					"pivot": [-11.5, 20.5, 0],
+					"rotation": [0, 90, 0],
+					"cubes": [
+						{"origin": [-14, 18, 0], "size": [5, 5, 0], "uv": [0, 0], "mirror": true}
+					]
+				},
+				{
+					"name": "heart_2",
+					"parent": "hearts",
+					"pivot": [-7.5, 14.5, -8],
+					"rotation": [0, 45, 0],
+					"cubes": [
+						{"origin": [-10, 12, -8], "size": [5, 5, 0], "uv": [0, 0], "mirror": true}
+					]
+				},
+				{
+					"name": "heart_3",
+					"parent": "hearts",
+					"pivot": [7.5, 21.5, 8],
+					"rotation": [0, 45, 0],
+					"cubes": [
+						{"origin": [5, 19, 8], "size": [5, 5, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "heart_4",
+					"parent": "hearts",
+					"pivot": [-7.5, 5.5, 8],
+					"rotation": [0, -45, 0],
+					"cubes": [
+						{"origin": [-10, 3, 8], "size": [5, 5, 0], "uv": [0, 0], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

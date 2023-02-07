@@ -1,0 +1,10 @@
+[
+  {
+    "id": "BUBBO_APPLE_HAT",
+    "type": "LOCALIZATION",
+    "enabled": true,
+    "data": {
+      "en_US": "Bubbo"
+    }
+  }
+]

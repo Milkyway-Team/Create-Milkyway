@@ -1,0 +1,68 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.gem_crown",
+				"texture_width": 38,
+				"texture_height": 38,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "red",
+					"parent": "root",
+					"pivot": [8, 34, -0.1],
+					"cubes": [
+						{"origin": [6.5, 33, -1.5], "size": [3, 3, 3], "uv": [18, 7]}
+					]
+				},
+				{
+					"name": "yellow",
+					"parent": "root",
+					"pivot": [-4, 34, 6.9],
+					"cubes": [
+						{"origin": [-5.5, 33, 5.5], "size": [3, 3, 3], "uv": [12, 0]}
+					]
+				},
+				{
+					"name": "orange",
+					"parent": "root",
+					"pivot": [4, 34, 6.9],
+					"cubes": [
+						{"origin": [2.5, 33, 5.5], "size": [3, 3, 3], "uv": [9, 11]}
+					]
+				},
+				{
+					"name": "purple",
+					"parent": "root",
+					"pivot": [4, 34, 6.9],
+					"cubes": [
+						{"origin": [2.5, 33, -8.5], "size": [3, 3, 3], "uv": [0, 7]}
+					]
+				},
+				{
+					"name": "green",
+					"parent": "root",
+					"pivot": [-4, 34, 6.9],
+					"cubes": [
+						{"origin": [-5.5, 33, -8.5], "size": [3, 3, 3], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "blue",
+					"parent": "root",
+					"pivot": [-8, 34, -0.1],
+					"cubes": [
+						{"origin": [-9.5, 33, -1.5], "size": [3, 3, 3], "uv": [0, 15]}
+					]
+				}]
+		}
+	]
+}

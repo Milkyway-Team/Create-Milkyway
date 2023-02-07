@@ -1,0 +1,19 @@
+[
+  {
+    "id": "NO",
+    "type": "INTERRUPTS_EMOTE",
+    "enabled": true,
+    "data": {
+      "ATTACK": false,
+      "ARM_SWING": false
+    }
+  },
+  {
+    "id": "NO",
+    "type": "TRANSITION_DELAY",
+    "enabled": true,
+    "data": {
+        "time": 250
+    }
+}
+]

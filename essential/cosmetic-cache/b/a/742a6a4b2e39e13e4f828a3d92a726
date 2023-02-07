@@ -1,0 +1,50 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.scary_clown_suit_f.smile_enable": {
+      "loop": true,
+      "animation_length": 1,
+      "bones": {
+        "idle": {
+          "scale": {
+            "0.0": [0, 0, 0],
+            "1.0": [0, 0, 0]
+          }
+        }
+      }
+    },
+    "animation.scary_clown_suit_f.smile_disable": {
+      "loop": true,
+      "animation_length": 1,
+      "bones": {
+        "smile": {
+          "scale": {
+            "0.0": [0, 0, 0],
+            "1.0": [0, 0, 0]
+          }
+        }
+      }
+    }
+  },
+  "triggers": [
+    {
+      "type": "IDLE",
+      "target": "ALL",
+      "probability": 1,
+      "name": "animation.scary_clown_suit_f.smile_disable",
+      "skips": 0,
+      "priority": 1,
+      "loops": 0
+    },
+    {
+      "type": "TEXTURE_ANIMATION_START",
+      "target": "SELF",
+      "probability": 0.333,
+      "name": "animation.scary_clown_suit_f.smile_enable",
+      "skips": 0,
+      "priority": 1,
+      "loops": 5
+    }
+  ],
+  "geckolib_format_version": 2
+}

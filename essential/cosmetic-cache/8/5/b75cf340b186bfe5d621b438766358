@@ -1,0 +1,9 @@
+[{
+  "id": "DEMON_ONESIE",
+  "type": "external_hidden_bone",
+  "enabled": true,
+  "data": {
+    "wing_left_1": true,
+    "wing_right_1": true
+  }
+}]

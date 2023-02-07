@@ -1,0 +1,55 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.rabbit_ears.new": {
+			"loop": true
+		},
+		"animation.rabbit_ears.still": {
+			"loop": true
+		},
+		"animation.rabbit_ears.move": {
+			"animation_length": 40.3,
+			"bones": {
+				"ear_right": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"4.1": [0, 0, 0],
+						"4.2": [0, 0, -6],
+						"4.3": [0, 0, -5],
+						"5.75": [0, 0, -5],
+						"5.9": [0, 0, 4],
+						"6.0": [0, 0, 3],
+						"8.8": [0, 0, 3],
+						"9.05": [0, 0, 0],
+						"40.2": [0, 0, 0]
+					}
+				},
+				"ear_left": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"4.1": [0, 0, 0],
+						"4.2": [0, 0, 6],
+						"4.3": [0, 0, 5],
+						"5.75": [0, 0, 5],
+						"5.9": [0, 0, -4],
+						"6.0": [0, 0, -3],
+						"8.8": [0, 0, -3],
+						"9.05": [0, 0, 0],
+						"40.2": [0, 0, 0]
+					}
+				}
+			}
+		}
+	},
+	"triggers": [
+		{
+			"type": "IDLE",
+			"target": "ALL",
+			"probability": 1,
+			"name": "animation.rabbit_ears.move",
+			"skips": 0,
+			"priority": 1,
+			"loops": 0
+		}
+	]
+}

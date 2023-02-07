@@ -1,0 +1,30 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.rageelixir_flame_eyes",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "head",
+					"parent": "root",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [0, 26, -4.6], "size": [13, 13, 0], "uv": [0, 3]},
+						{"origin": [-13, 26, -4.6], "size": [13, 13, 0], "uv": [0, 19], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

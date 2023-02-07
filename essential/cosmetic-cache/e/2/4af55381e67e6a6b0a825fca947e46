@@ -1,0 +1,10 @@
+[
+    {
+      "id": "PUSH_UP",
+      "type": "INTERRUPTS_EMOTE",
+      "enabled": true,
+      "data": {
+        "MOVEMENT": true
+      }
+    }
+  ]

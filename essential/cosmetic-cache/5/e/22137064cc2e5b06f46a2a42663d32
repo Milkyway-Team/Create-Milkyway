@@ -1,0 +1,49 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.alien_ears",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "head",
+					"parent": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "ears",
+					"parent": "head",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "ear_left",
+					"parent": "ears",
+					"pivot": [4, 28, -1],
+					"rotation": [-10, 10, 20],
+					"cubes": [
+						{"origin": [3, 28, -1], "size": [1, 7, 3], "uv": [0, 6]}
+					]
+				},
+				{
+					"name": "ear_right",
+					"parent": "ears",
+					"pivot": [-4, 28, -1],
+					"rotation": [-10, -10, -20],
+					"cubes": [
+						{"origin": [-4, 28, -1], "size": [1, 7, 3], "uv": [0, 6], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

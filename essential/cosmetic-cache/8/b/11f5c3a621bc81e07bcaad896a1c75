@@ -1,0 +1,10 @@
+[
+  {
+    "id": "THE_FLOSS",
+    "type": "INTERRUPTS_EMOTE",
+    "enabled": true,
+    "data": {
+      "MOVEMENT": true
+    }
+  }
+]

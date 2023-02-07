@@ -1,0 +1,157 @@
+To refresh this file, delete it and run /reload command again! Last updated: Feb 6, 2023, 8:54:30 PM
+
+#mw_core:molten_creativity
+- mw_core:molten_creativity
+
+#forge:crude_oil
+
+#minecraft:water
+- minecraft:water
+- minecraft:flowing_water
+- create_things_and_misc:slime
+- create_things_and_misc:flowing_slime
+- create_confectionery:black_chocolate
+- create_confectionery:flowing_black_chocolate
+- create_confectionery:white_chocolate
+- create_confectionery:flowing_white_chocolate
+- create_confectionery:hot_chocolate
+- create_confectionery:flowing_hot_chocolate
+- create_confectionery:caramel
+- create_confectionery:flowing_caramel
+- create_confectionery:ruby_chocolate
+- create_confectionery:flowing_ruby_chocolate
+- create:flowing_honey
+- create:honey
+- create:flowing_chocolate
+- create:chocolate
+- create_enchantment_industry:flowing_ink
+- create_enchantment_industry:ink
+- createaddition:flowing_seed_oil
+- createaddition:seed_oil
+
+#forge:milk
+- minecraft:milk?
+- minecraft:flowing_milk?
+
+#tconstruct:tooltips/metal
+- #mw_core:molten_transium
+- #mw_core:molten_cast_iron
+- #mw_core:molten_nethersteel
+- #mw_core:molten_creativity
+- create_enchantment_industry:experience
+- #mw_core:molten_magisteel
+
+#mw_core:molten_pure_creatite
+- mw_core:molten_pure_creatite
+
+#forge:biofuel
+- createaddition:flowing_bioethanol
+- createaddition:bioethanol
+
+#tconstruct:tooltips/gem_small
+- mw_core:molten_fluix
+- mw_core:molten_certus
+
+#forge:plantoil
+- createaddition:flowing_seed_oil
+- createaddition:seed_oil
+
+#mw_core:molten_cast_iron
+- mw_core:molten_cast_iron
+
+#minecraft:lava
+- minecraft:lava
+- minecraft:flowing_lava
+- tconstruct:flowing_blazing_blood
+- tconstruct:blazing_blood
+
+#create_enchantment_industry:printer_input
+- create_enchantment_industry:flowing_experience
+- create_enchantment_industry:experience
+- #forge:ink
+
+#mw_core:nethersteel_metal_fluid
+- mw_core:molten_cast_iron
+- tconstruct:molten_steel
+
+#create:bottomless/deny
+
+#forge:chocolate
+- create:flowing_chocolate
+- create:chocolate
+
+#mw_core:molten_magisteel
+- mw_core:molten_magisteel
+
+#create:bottomless/allow
+- minecraft:water
+- minecraft:lava
+
+#mw_core:experience
+- create_enchantment_industry:experience
+
+#tconstruct:tooltips/slime
+- #mw_core:refined_magic
+
+#mw_core:literally_just_water
+- minecraft:water
+
+#create:bottemless/allow
+- tconstruct:blazing_blood
+
+#mantle:water
+- minecraft:water
+- minecraft:flowing_water
+
+#forge:tea
+- create:flowing_tea
+- create:tea
+
+#mantle:lava
+- minecraft:lava
+- minecraft:flowing_lava
+
+#ae2:blacklisted/annihilation_plane
+
+#mw_core:dough_soaker
+- minecraft:water
+
+#mw_core:chromatic_waste
+- mw_core:chromatic_waste
+
+#mw_core:molten_nethersteel
+- mw_core:molten_nethersteel
+
+#create_enchantment_industry:blaze_enchanter_input
+- create_enchantment_industry:flowing_experience
+- create_enchantment_industry:experience
+- create_enchantment_industry:flowing_hyper_experience
+- create_enchantment_industry:hyper_experience
+
+#mw_core:molten_certus
+- mw_core:molten_certus
+
+#forge:honey
+- create:flowing_honey
+- create:honey
+
+#forge:creosote
+
+#tconstruct:tooltips/gem_large
+- #mw_core:molten_creatite
+
+#mw_core:molten_fluix
+- mw_core:molten_fluix
+
+#mw_core:molten_creatite
+- mw_core:molten_creatite
+
+#mw_core:molten_transium
+- mw_core:molten_transium
+
+#forge:ink
+- create_enchantment_industry:flowing_ink
+- create_enchantment_industry:ink
+
+#mw_core:refined_magic
+- mw_core:refined_magic

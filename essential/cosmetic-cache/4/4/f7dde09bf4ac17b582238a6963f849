@@ -1,0 +1,11 @@
+[
+  {
+    "id": "UNUSED",
+    "type": "POSITION_RANGE",
+    "enabled": true,
+    "data": {
+      "y_min": -1.0,
+      "y_max": 3.0
+    }
+  }
+]

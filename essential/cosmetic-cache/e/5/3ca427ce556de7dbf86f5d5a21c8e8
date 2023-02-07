@@ -1,0 +1,32 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.top_hat.still": {
+			"loop": true
+		},
+		"animation.top_hat.flip": {
+			"loop": true,
+			"animation_length": 4
+		}
+	},
+	"triggers": [
+		{
+			"type": "TICK",
+			"target": "SELF",
+			"probability": 0.5,
+			"name": "animation.top_hat.flip",
+			"skips": 200,
+			"priority": 2,
+			"loops": 1
+		},
+		{
+			"type": "IDLE",
+			"target": "ALL",
+			"probability": 1,
+			"name": "animation.top_hat.still",
+			"skips": 0,
+			"priority": 1,
+			"loops": 0
+		}
+	]
+}

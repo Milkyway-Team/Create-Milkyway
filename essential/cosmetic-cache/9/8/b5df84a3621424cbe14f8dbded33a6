@@ -1,0 +1,1 @@
+[{"id":"UNUSED","type":"POSITION_RANGE","enabled":true,"data":{"y_min":0,"y_max":3}},{"id":"SCARY_CLOWN_SUIT","type":"COSMETIC_BONE_HIDING","enabled":true,"data":{"head":true}},{"id":"JACK_O_LANTERN_SUIT","type":"COSMETIC_BONE_HIDING","enabled":true,"data":{"head":true}}]

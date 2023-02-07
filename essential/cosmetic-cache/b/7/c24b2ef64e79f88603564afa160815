@@ -1,0 +1,78 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.butterfly_blue_wings",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "wings",
+					"parent": "body",
+					"pivot": [0, 24, 1.5]
+				},
+				{
+					"name": "wing_left",
+					"parent": "wings",
+					"pivot": [0, 18, 2],
+					"rotation": [0, 25, 0]
+				},
+				{
+					"name": "wing_left_1",
+					"parent": "wing_left",
+					"pivot": [0, 18, 2],
+					"rotation": [-10, 0, 0],
+					"cubes": [
+						{"origin": [-16, 17, 2], "size": [17, 16, 0], "uv": [0, 1]}
+					]
+				},
+				{
+					"name": "wing_left_2",
+					"parent": "wing_left",
+					"pivot": [0, 18, 2],
+					"rotation": [10, 0, 0],
+					"cubes": [
+						{"origin": [-13, 5, 2], "size": [14, 14, 0], "uv": [0, 20]}
+					]
+				},
+				{
+					"name": "wing_right",
+					"parent": "wings",
+					"pivot": [0, 18, 2],
+					"rotation": [0, -25, 0]
+				},
+				{
+					"name": "wing_right_1",
+					"parent": "wing_right",
+					"pivot": [0, 18, 2],
+					"rotation": [-10, 0, 0],
+					"cubes": [
+						{"origin": [-1, 17, 2], "size": [17, 16, 0], "uv": [0, 1], "mirror": true}
+					]
+				},
+				{
+					"name": "wing_right_2",
+					"parent": "wing_right",
+					"pivot": [0, 18, 2],
+					"rotation": [10, 0, 0],
+					"cubes": [
+						{"origin": [-1, 5, 2], "size": [14, 14, 0], "uv": [0, 20], "mirror": true}
+					]
+				}]
+		}
+	]
+}

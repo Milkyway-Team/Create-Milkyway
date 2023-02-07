@@ -1,0 +1,47 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.emoji_wheel.idle": {
+      "loop": true,
+      "animation_length": 4,
+      "bones": {
+        "emoji_1": {
+          "position": ["0+Math.sin(query.anim_time * 180)* 20", "0+Math.cos(query.anim_time * 180)* 20 -18", 0]
+        },
+        "emoji_2": {
+          "position": ["0+Math.sin(query.anim_time * 180 - 315)* 20-15", "0+Math.cos(query.anim_time * 180 - 315)* 20-15 ", 0]
+        },
+        "emoji_3": {
+          "position": ["0+Math.sin(query.anim_time * 180 - 270)* 20 -18", "0+Math.cos(query.anim_time * 180 - 270)* 20 ", 0]
+        },
+        "emoji_4": {
+          "position": ["0+Math.sin(query.anim_time * 180 - 225)* 20 -15", "0+Math.cos(query.anim_time * 180 - 225)* 20 +15", 0]
+        },
+        "emoji_5": {
+          "position": ["0+Math.sin(query.anim_time * 180- 180)* 20", "0+Math.cos(query.anim_time * 180- 180)* 20 +18", 0]
+        },
+        "emoji_6": {
+          "position": ["0+Math.sin(query.anim_time * 180 - 135)* 20 +15", "0+Math.cos(query.anim_time * 180 - 135)* 20 +15", 0]
+        },
+        "emoji_7": {
+          "position": ["0+Math.sin(query.anim_time * 180 - 90)* 20 +18", "0+Math.cos(query.anim_time * 180 - 90)*  20", 0]
+        },
+        "emoji_8": {
+          "position": ["0+Math.sin(query.anim_time * 180 - 45)* 20 +15", "0+Math.cos(query.anim_time * 180 - 45)* 20 -15", 0]
+        }
+      }
+    }
+  },
+  "triggers": [
+    {
+      "type": "IDLE",
+      "target": "ALL",
+      "probability": 1,
+      "name": "animation.emoji_wheel.idle",
+      "skips": 0,
+      "priority": 1,
+      "loops": 0
+    }
+  ],
+  "geckolib_format_version": 2
+}

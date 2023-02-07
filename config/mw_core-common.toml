@@ -1,0 +1,18 @@
+
+["Common Configs for Milkyway Core"]
+	#How many Bauxite Ore Veins spawn per chunk!
+	"Bauxite Veins Per Chunk" = 9
+	#How many Creatite Ore Veins spawn per chunk!
+	"Creatite Veins Per Chunk" = 13
+	#How many Halite Ore Veins spawn per chunk!
+	"Halite Veins Per Chunk" = 13
+	#How many Bauxite Ore Blocks spawn in one Vein!
+	#Range: 4 ~ 20
+	"Bauxite Vein Size" = 9
+	#How many Creatite Ore Blocks spawn in one Vein!
+	#Range: 1 ~ 6
+	"Creatite Vein Size" = 3
+	#How many Creatite Ore Blocks spawn in one Vein!
+	#Range: 5 ~ 16
+	"Halite Vein Size" = 13
+

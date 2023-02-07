@@ -1,0 +1,18 @@
+[
+  {
+    "id": "HENRY_COSMETIC",
+    "type": "LOCALIZATION",
+    "enabled": true,
+    "data": {
+      "en_US": "Henwy"
+    }
+  },
+  {
+    "id": "SPACEWALK_SUIT",
+    "type": "external_hidden_bone",
+    "enabled": true,
+    "data": {
+      "backpack": true
+    }
+  }
+]

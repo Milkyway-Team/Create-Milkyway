@@ -1,0 +1,51 @@
+[
+  {
+    "id": "MICHAELMCCHIL_ALESIA_BACKPACK",
+    "type": "LOCALIZATION",
+    "enabled": true,
+    "data": {
+      "en_US": "MichaelMCChill"
+    }
+  },
+  {
+    "id": "SPACEWALK_SUIT",
+    "type": "external_hidden_bone",
+    "enabled": true,
+    "data": {
+      "backpack": true
+    }
+  },
+  {
+    "id": "BANANA_SUIT",
+    "type": "external_hidden_bone",
+    "enabled": true,
+    "data": {
+      "peel_back": true
+    }
+  },
+  {
+    "id": "DRAGON_ONESIE_2",
+    "type": "external_hidden_bone",
+    "enabled": true,
+    "data": {
+      "wing_right_1": true,
+      "wing_left_1": true
+    }
+  },
+  {
+    "id": "SHARK_ONESIE",
+    "type": "external_hidden_bone",
+    "enabled": true,
+    "data": {
+      "tail": true
+    }
+  },
+  {
+    "id": "SCI_FI_MINING_SUIT",
+    "type": "external_hidden_bone",
+    "enabled": true,
+    "data": {
+      "backpack": true
+    }
+  }
+]

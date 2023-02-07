@@ -1,0 +1,157 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.hapico_frog_on_head",
+				"texture_width": 30,
+				"texture_height": 30,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				}, 
+				{
+					"name": "head",
+					"parent": "root",
+					"pivot": [0, 24, 0]
+				}, 
+				{
+					"name": "frog_cog",
+					"parent": "head",
+					"pivot": [0, 34.225, 2.75]
+				}, 
+				{
+					"name": "frog_body",
+					"parent": "frog_cog",
+					"pivot": [0, 38, -1],
+					"rotation": [-25, 0, 0],
+					"cubes": [
+						{"origin": [-2, 35, -1], "size": [4, 3, 6], "inflate": -0.01, "uv": [0, 0]}
+					]
+				}, 
+				{
+					"name": "fly",
+					"parent": "frog_body",
+					"pivot": [0.5, 35.5, 0]
+				}, 
+				{
+					"name": "fly_body",
+					"parent": "fly",
+					"pivot": [0.5, 35.5, 0],
+					"cubes": [
+						{"origin": [-0.5, 35.5, 0], "size": [1, 1, 1], "uv": [0, 28]}
+					]
+				}, 
+				{
+					"name": "fly_wing_1",
+					"parent": "fly",
+					"pivot": [0.5, 36.5, 0.5],
+					"cubes": [
+						{"origin": [0.5, 36.5, 0], "size": [1, 0, 1], "uv": [0, 27]}
+					]
+				}, 
+				{
+					"name": "fly_wing_2",
+					"parent": "fly",
+					"pivot": [-0.5, 36.5, 0.5],
+					"cubes": [
+						{"origin": [-1.5, 36.5, 0], "size": [1, 0, 1], "uv": [0, 27], "mirror": true}
+					]
+				}, 
+				{
+					"name": "frog_head_croack",
+					"parent": "frog_body",
+					"pivot": [0, 36.5, -1]
+				}, 
+				{
+					"name": "frog_head",
+					"parent": "frog_head_croack",
+					"pivot": [0, 36.5, -1],
+					"rotation": [26, 0, 0],
+					"cubes": [
+						{"origin": [-2, 37, -5], "size": [4, 1, 4], "uv": [14, 0]}, 
+						{"origin": [1.5, 37, -4], "size": [1, 2, 2], "uv": [0, 0]}, 
+						{"origin": [-2.5, 37, -4], "size": [1, 2, 2], "uv": [0, 0], "mirror": true}
+					]
+				}, 
+				{
+					"name": "frog_jaw",
+					"parent": "frog_head",
+					"pivot": [0, 37, -1],
+					"cubes": [
+						{"origin": [-2, 35, -5], "size": [4, 2, 4], "inflate": 0.2, "uv": [0, 9]}, 
+						{"origin": [-2, 35, -5], "size": [4, 2, 4], "uv": [12, 11]}
+					]
+				}, 
+				{
+					"name": "frog_tongue",
+					"parent": "frog_jaw",
+					"pivot": [0, 37, -1],
+					"rotation": [-1, 0, 0],
+					"cubes": [
+						{"origin": [-0.5, 37, -5], "size": [1, 0, 4], "uv": [13, 24]}
+					]
+				}, 
+				{
+					"name": "frog_leg_back_left",
+					"parent": "head",
+					"pivot": [0, 34.25, 2.75],
+					"rotation": [-25, 0, 0],
+					"cubes": [
+						{"origin": [0.5, 32.26384, 1.76653], "size": [2, 3, 2], "uv": [8, 18]}
+					]
+				}, 
+				{
+					"name": "frog_foot_back_left",
+					"parent": "frog_leg_back_left",
+					"pivot": [0, 32.26384, 3.76653],
+					"rotation": [25, 0, 0],
+					"cubes": [
+						{"origin": [0.5, 32.26384, -0.23347], "size": [3, 0, 4], "uv": [0, 15]}
+					]
+				}, 
+				{
+					"name": "frog_leg_back_right",
+					"parent": "head",
+					"pivot": [0, 34.25, 2.75],
+					"rotation": [-25, 0, 0],
+					"cubes": [
+						{"origin": [-2.5, 32.26384, 1.76653], "size": [2, 3, 2], "uv": [8, 18], "mirror": true}
+					]
+				}, 
+				{
+					"name": "frog_foot_back_right",
+					"parent": "frog_leg_back_right",
+					"pivot": [0, 32.26384, 3.76653],
+					"rotation": [25, 0, 0],
+					"cubes": [
+						{"origin": [-3.5, 32.26384, -0.23347], "size": [3, 0, 4], "uv": [0, 15], "mirror": true}
+					]
+				}, 
+				{
+					"name": "frog_leg_front_left",
+					"parent": "head",
+					"pivot": [2, 36, -1.5],
+					"rotation": [-15, 0, 0],
+					"cubes": [
+						{"origin": [1.5, 32, -2], "size": [1, 4, 1], "uv": [0, 15]}
+					]
+				}, 
+				{
+					"name": "frog_leg_front_right",
+					"parent": "head",
+					"pivot": [-2, 36, -1.5],
+					"rotation": [-15, 0, 0],
+					"cubes": [
+						{"origin": [-2.5, 32, -2], "size": [1, 4, 1], "uv": [0, 15], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

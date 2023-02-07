@@ -1,0 +1,10 @@
+[
+  {
+    "id": "EVIL_LAUGH",
+    "type": "INTERRUPTS_EMOTE",
+    "enabled": true,
+    "data": {
+      "MOVEMENT": true
+    }
+  }
+]

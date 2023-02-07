@@ -1,0 +1,60 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.back_skis",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "skis",
+					"parent": "body",
+					"pivot": [0, 18, 2]
+				},
+				{
+					"name": "ski_1",
+					"parent": "skis",
+					"pivot": [0, 18, 2],
+					"rotation": [0, 0, -40],
+					"cubes": [
+						{"origin": [-16, 16, 2], "size": [31, 4, 1], "uv": [0, 0]},
+						{"origin": [15, 16, 2], "size": [1, 4, 2], "uv": [0, 10]}
+					]
+				},
+				{
+					"name": "ski_2",
+					"parent": "skis",
+					"pivot": [0, 18, 3],
+					"rotation": [0, 0, -20],
+					"cubes": [
+						{"origin": [-16, 16, 3], "size": [31, 4, 1], "uv": [0, 0]},
+						{"origin": [-2, 16, 4], "size": [5, 4, 2], "uv": [0, 26]},
+						{"origin": [15, 16, 3], "size": [1, 4, 2], "uv": [0, 10]}
+					]
+				},
+				{
+					"name": "straps",
+					"parent": "body",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-4, 15, -2], "size": [8, 9, 4], "inflate": 0.25, "uv": [31, 16]}
+					]
+				}
+			]
+		}
+	]
+}

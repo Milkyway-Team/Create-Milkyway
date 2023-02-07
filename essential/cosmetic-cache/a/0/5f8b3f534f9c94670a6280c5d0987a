@@ -1,0 +1,71 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.fairy_wings",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "_left_wing",
+					"parent": "body",
+					"pivot": [-1, 20, 2],
+					"rotation": [-10, 30, -10]
+				},
+				{
+					"name": "_wing_left_1",
+					"parent": "_left_wing",
+					"pivot": [-1, 20, 2],
+					"cubes": [
+						{"origin": [-16, 18, 2], "size": [16, 19, 0], "uv": [1, 1]}
+					]
+				},
+				{
+					"name": "_wing_left_2",
+					"parent": "_left_wing",
+					"pivot": [-2, 20, 2],
+					"rotation": [0, -2.5, 0],
+					"cubes": [
+						{"origin": [-15, 4, 2], "size": [14, 17, 0], "uv": [1, 23]}
+					]
+				},
+				{
+					"name": "_right_wing",
+					"parent": "body",
+					"pivot": [1, 20, 2],
+					"rotation": [-10, -30, 10]
+				},
+				{
+					"name": "_wing_right_1",
+					"parent": "_right_wing",
+					"pivot": [1, 20, 2],
+					"cubes": [
+						{"origin": [0, 18, 2], "size": [16, 19, 0], "uv": [1, 1], "mirror": true}
+					]
+				},
+				{
+					"name": "_wing_right_2",
+					"parent": "_right_wing",
+					"pivot": [2, 20, 2],
+					"rotation": [0, 2.5, 0],
+					"cubes": [
+						{"origin": [1, 4, 2], "size": [14, 17, 0], "uv": [1, 23], "mirror": true}
+					]
+				}]
+		}
+	]
+}
