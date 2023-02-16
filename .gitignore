@@ -1,8 +1,9 @@
-saves/
-logs/
-local/
-crash-reports/
-defaultconfigs/
-usercache.json
-usernamecache.json
-minecraftinstance.json
+/saves/
+/logs/
+/local/
+/crash-reports/
+/defaultconfigs/
+/usercache.json
+/usernamecache.json
+/minecraftinstance.json
+/essential/

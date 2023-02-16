@@ -1,0 +1,122 @@
+{
+	id: "4BD68893DD83FB1D"
+	group: "76E7DC80C9223355"
+	order_index: 1
+	filename: "meet_the_engineer"
+	title: "Meet the Engineer"
+	icon: "immersiveengineering:cloche"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			icon: "immersiveengineering:screwdriver"
+			x: 1.0d
+			y: 1.0d
+			dependencies: ["557DFCE6AF64FB1B"]
+			id: "21373A05FC1F3645"
+			tasks: [{
+				id: "1043936B8DC98C19"
+				type: "checkmark"
+				title: "Immersive Engineering"
+			}]
+		}
+		{
+			icon: "immersiveengineering:arc_furnace"
+			x: 2.5d
+			y: 0.5d
+			description: ["Most Multiblocks are now impossible to obtain. Only the Excavator and Crusher are obtainable."]
+			dependencies: ["21373A05FC1F3645"]
+			id: "400CDC5BAE44229A"
+			tasks: [{
+				id: "7DBEF3295626F629"
+				type: "checkmark"
+				title: "No Multiblocks?"
+			}]
+		}
+		{
+			x: -2.0d
+			y: 5.0d
+			dependencies: [
+				"46B53BCDADDB63E6"
+				"65F715E4D9A0664A"
+				"1A4C689CCD5E6F36"
+			]
+			id: "0865B88CA5A3E919"
+			tasks: [{
+				id: "656B7997268E4BA0"
+				type: "item"
+				item: "immersiveengineering:component_electronic"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 3.0d
+			dependencies: [
+				"02444CFE7D60C1FC"
+				"123E97DAD0EA3DEE"
+			]
+			id: "1A4C689CCD5E6F36"
+			tasks: [{
+				id: "753EA1D0D36C262E"
+				type: "item"
+				item: "mw_core:treated_circuit"
+			}]
+		}
+		{
+			x: -1.5d
+			y: 1.5d
+			hide_dependency_lines: true
+			dependencies: ["21373A05FC1F3645"]
+			id: "123E97DAD0EA3DEE"
+			tasks: [{
+				id: "74445528758E8AB3"
+				type: "item"
+				title: "Treated Wood Slab"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "forge:treated_wood_slab"
+					}
+				}
+			}]
+		}
+		{
+			x: -3.0d
+			y: 1.5d
+			hide_dependency_lines: true
+			dependencies: ["21373A05FC1F3645"]
+			id: "02444CFE7D60C1FC"
+			tasks: [{
+				id: "25AC00081165E200"
+				type: "item"
+				item: "minecraft:redstone"
+			}]
+		}
+		{
+			x: -3.0d
+			y: 3.5d
+			hide_dependency_lines: true
+			dependencies: ["21373A05FC1F3645"]
+			id: "46B53BCDADDB63E6"
+			tasks: [{
+				id: "7CA979F25FD71EEB"
+				type: "item"
+				item: "immersiveengineering:wire_electrum"
+			}]
+		}
+		{
+			x: -0.5d
+			y: 4.5d
+			hide_dependency_lines: true
+			dependencies: ["21373A05FC1F3645"]
+			id: "65F715E4D9A0664A"
+			tasks: [{
+				id: "4025215A50496D06"
+				type: "item"
+				item: "minecraft:quartz"
+			}]
+		}
+	]
+	quest_links: [ ]
+}
