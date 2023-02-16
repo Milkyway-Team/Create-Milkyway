@@ -1,8 +1,0 @@
-[{
-"id": "FORWARD_ROLL",
-"enabled": true,
-"type": "TRANSITION_DELAY",
-"data": {
-"time": 0
-}
-}]
