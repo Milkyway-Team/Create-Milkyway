@@ -1,0 +1,12 @@
+{
+    "ctm":{
+        "ctm_version": 1,
+        "type":"CTM",
+        "textures":[
+            "minecraft:block/end_portal_frame_top_ctm"
+        ],
+        "extra":{
+        	"ignore_states":true
+        }
+    }
+}

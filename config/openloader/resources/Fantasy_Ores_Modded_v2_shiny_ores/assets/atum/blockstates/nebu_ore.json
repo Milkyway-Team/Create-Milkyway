@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "atum:block/nebu_ore_0"
+      },
+      {
+        "model": "atum:block/nebu_ore_1"
+      },
+      {
+        "model": "atum:block/nebu_ore_2"
+      },
+      {
+        "model": "atum:block/nebu_ore_3"
+      }
+    ]
+  }
+}

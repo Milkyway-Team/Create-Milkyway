@@ -1,0 +1,14 @@
+{
+    "ctm":{
+        "ctm_version": 1,
+        "type":"ctm",
+        "layer":"SOLID",
+        "textures":[
+            "forbidden_arcanus:block/rune_block_ctm"
+        ],
+        "extra":{
+        	"ignore_states":true,
+        	"connect_inside":true
+        }   
+    }
+}

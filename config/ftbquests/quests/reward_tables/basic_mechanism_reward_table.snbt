@@ -1,0 +1,39 @@
+{
+	id: "3EF5C97C846D67A7"
+	order_index: 0
+	title: "Basic"
+	icon: "create:andesite_alloy"
+	loot_size: 1
+	rewards: [
+		{ item: "create:andesite_alloy", count: 64 }
+		{
+			item: {
+				id: "create_things_and_misc:mending_rune"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+		}
+		{ item: "create:experience_nugget", count: 12 }
+		{ item: "forbidden_arcanus:obsidian_with_iron", count: 4 }
+		{
+			title: "Dungeon Loot"
+			icon: "quark:spruce_chest"
+			exclude_from_claim_all: true
+			command: "/loot spawn ~ ~ ~ loot minecraft:chests/simple_dungeon"
+			player_command: true
+			type: "command"
+		}
+	]
+	loot_crate: {
+		drops: {
+			boss: 0
+			passive: 0
+			monster: 0
+		}
+		color: 13871223
+		item_name: "Basic Crate"
+		string_id: "basic_mechanism_reward_table"
+	}
+}

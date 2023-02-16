@@ -1,0 +1,10 @@
+{
+  "credit": "Model created by Zorak Design - Contact me on discord for work: CesarZorak#0808",
+  "parent": "cesarzorak:block/fancy_ore_classic/classic_0",
+  "textures": {
+		"0": "atum:block/limestone",
+		"1": "atum:block/limestone",
+		"2": "cesarzorak:block/fancy_ores/iron_ore",
+		"particle": "atum:block/limestone"
+  }
+}

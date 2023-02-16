@@ -1,0 +1,1074 @@
+{
+	id: "44206B2FB11C35F8"
+	group: "26C9462713CC8837"
+	order_index: 6
+	filename: "subchapter_3a"
+	title: "Sub-Chapter 3a"
+	icon: "mw_core:logic_mechanism"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			icon: "farmersdelight:lime_canvas_sign"
+			x: 0.0d
+			y: -2.5d
+			dependencies: ["799F6769884BAAAD"]
+			hide: true
+			id: "32F62312B7D4D162"
+			tasks: [{
+				id: "0B624F385E176D97"
+				type: "checkmark"
+				title: "INFO"
+			}]
+		}
+		{
+			icon: "create:brass_hand"
+			x: 2.5d
+			y: -2.5d
+			dependencies: ["32F62312B7D4D162"]
+			id: "2ADAC0B8BF09A42F"
+			tasks: [{
+				id: "26543EDFBE93F7BF"
+				type: "checkmark"
+				title: "Chapter 3a START!"
+			}]
+		}
+		{
+			x: 3.5d
+			y: 11.0d
+			dependencies: [
+				"23A6D391BEEB782D"
+				"4057976A51270973"
+				"7A0A9266D53A9E0B"
+				"4A839CEEF20D4670"
+			]
+			id: "418462B40338095D"
+			tasks: [{
+				id: "1F51F831C1C6F9C5"
+				type: "item"
+				item: "mw_core:logic_mechanism"
+			}]
+		}
+		{
+			icon: "ae2:logic_processor"
+			x: 0.5d
+			y: 11.0d
+			dependencies: [
+				"396BC8AFF3B320A3"
+				"4A839CEEF20D4670"
+				"26E1D775D45FE920"
+			]
+			id: "7A0A9266D53A9E0B"
+			tasks: [
+				{
+					id: "013F79EC3AE8102C"
+					type: "item"
+					item: "ae2:logic_processor"
+				}
+				{
+					id: "772FC4CE6A5980F6"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "ae2:printed_silicon"
+			x: 0.5d
+			y: 9.0d
+			dependencies: [
+				"63944E30EF00B1C4"
+				"02316D6159B0F361"
+				"56E5EBABDF0AEAC3"
+			]
+			id: "4A839CEEF20D4670"
+			tasks: [
+				{
+					id: "0E9F171579FDA809"
+					type: "item"
+					item: "ae2:printed_silicon"
+				}
+				{
+					id: "3A92BF43E9172C0F"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "ae2:printed_logic_processor"
+			x: -0.5d
+			y: 9.5d
+			dependencies: [
+				"5C5C9C56C8851E20"
+				"02316D6159B0F361"
+				"7F2DD91F93148CC3"
+			]
+			id: "26E1D775D45FE920"
+			tasks: [
+				{
+					id: "4573A31B1C6F3606"
+					type: "item"
+					item: "ae2:printed_logic_processor"
+				}
+				{
+					id: "5E9EE774F3978AF3"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: -3.0d
+			y: 9.0d
+			dependencies: ["0279C9E65A622D89"]
+			id: "5C5C9C56C8851E20"
+			tasks: [{
+				id: "370C96E8892929FF"
+				type: "item"
+				item: "ae2:logic_processor_press"
+			}]
+		}
+		{
+			x: -1.5d
+			y: 8.0d
+			dependencies: ["0279C9E65A622D89"]
+			id: "63944E30EF00B1C4"
+			tasks: [{
+				id: "63E54CA8EAEE4B39"
+				type: "item"
+				item: "ae2:silicon_press"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 6.0d
+			shape: "hexagon"
+			dependencies: [
+				"68CAC6214B95EA19"
+				"29D8F34C45FDCD70"
+				"1FDB1C03BA284C83"
+			]
+			id: "02316D6159B0F361"
+			tasks: [{
+				id: "0DC3C769F15D3395"
+				type: "item"
+				item: "ae2:inscriber"
+			}]
+		}
+		{
+			icon: "mw_core:certus_core"
+			x: 1.0d
+			y: 5.0d
+			description: ["COmbining a shard of Certus QUartz with an Advanced Processor creates a Certus Core which will be a key part of all Applied Energistics machines."]
+			dependencies: [
+				"4DCC48D7D4B619D7"
+				"25E4A332085DD39B"
+			]
+			id: "1FDB1C03BA284C83"
+			tasks: [
+				{
+					id: "51A656E9F254795A"
+					type: "item"
+					item: "mw_core:certus_core"
+				}
+				{
+					id: "0769FE6FF39DF3E9"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "mw_core:sturdy_iron_sheet"
+			x: -1.0d
+			y: 5.0d
+			description: ["Sturdy Sheets are more advanced sheets. They require an ingots worth of bonus metal and lots of pressing. They are used in Late-Game machines."]
+			dependencies: ["5F72C45C626A7728"]
+			id: "29D8F34C45FDCD70"
+			tasks: [
+				{
+					id: "1B812ABF468E407C"
+					type: "item"
+					item: "mw_core:sturdy_iron_sheet"
+				}
+				{
+					id: "14C20829EE917EAF"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: -3.5d
+			y: 4.5d
+			dependencies: [
+				"002B402561D45110"
+				"299E17D92BA78878"
+				"348D797A1F0E2975"
+			]
+			id: "5F72C45C626A7728"
+			tasks: [{
+				id: "6AD8CFA3E2A09EA1"
+				type: "item"
+				item: "mw_core:unprocessed_iron_sheet"
+			}]
+		}
+		{
+			icon: "minecraft:water_bucket"
+			x: -2.5d
+			y: 3.0d
+			dependencies: ["25B11CBC12805C52"]
+			id: "299E17D92BA78878"
+			tasks: [
+				{
+					id: "48696140FEC0064A"
+					type: "item"
+					item: "minecraft:water_bucket"
+				}
+				{
+					id: "38C14B3AAA21A26C"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Creosote Oil"
+			icon: "thermal:creosote_bucket"
+			x: -5.0d
+			y: 3.0d
+			description: ["Pyrolyzers can create Creosote Oil from Logs or Coal."]
+			dependencies: [
+				"2A87C2C4CE55FC9F"
+				"126AF733185B9775"
+			]
+			id: "348D797A1F0E2975"
+			tasks: [
+				{
+					id: "4B8BEF2677283C8C"
+					type: "item"
+					item: "thermal:creosote_bucket"
+				}
+				{
+					id: "33B766B8A3E396D0"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Molten Iron"
+			x: -5.5d
+			y: 5.0d
+			subtitle: "[Already Automated]"
+			dependencies: ["122AFF15DD760CAE"]
+			id: "002B402561D45110"
+			tasks: [{
+				id: "5E1DDA6DA50148F0"
+				type: "item"
+				item: "tconstruct:molten_iron_bucket"
+			}]
+		}
+		{
+			title: "Crude Oil"
+			icon: "thermal:crude_oil_bucket"
+			x: -11.0d
+			y: 3.5d
+			description: ["Bituminous Sand can be drained, leaving behind Drained Sand and Crude Oil."]
+			dependencies: ["723BF4973D982373"]
+			id: "5D3429B5ACD0E45A"
+			tasks: [
+				{
+					id: "3D0A0EEB8E747716"
+					type: "item"
+					item: "thermal:crude_oil_bucket"
+				}
+				{
+					id: "0841C3BAA8654225"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "refinedstorage:advanced_processor"
+			x: 2.0d
+			y: 4.0d
+			dependencies: [
+				"56F964BDDB1BCCA0"
+				"7D7F6429CBCF601F"
+			]
+			id: "25E4A332085DD39B"
+			tasks: [
+				{
+					id: "74529956B2CA4DE8"
+					type: "item"
+					item: "refinedstorage:advanced_processor"
+				}
+				{
+					id: "0A024E48A7CE1E28"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "refinedstorage:improved_processor"
+			x: 4.0d
+			y: 4.5d
+			dependencies: [
+				"633EFB2125A85532"
+				"0F641738544FCAE6"
+			]
+			id: "56F964BDDB1BCCA0"
+			tasks: [
+				{
+					id: "7A26B524B97254A8"
+					type: "item"
+					item: "refinedstorage:improved_processor"
+				}
+				{
+					id: "27EE91430A0A45E4"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "refinedstorage:basic_processor"
+			x: 6.0d
+			y: 5.0d
+			dependencies: [
+				"3CAAA0EBE196B04C"
+				"5DE3AC2B6525923C"
+			]
+			id: "633EFB2125A85532"
+			tasks: [
+				{
+					id: "147D47CE66751833"
+					type: "item"
+					item: "refinedstorage:basic_processor"
+				}
+				{
+					id: "0C931898EDFE4AFA"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "mw_core:core_casing"
+			x: 7.5d
+			y: 4.5d
+			description: ["Core Casing is the main ingredient to create primitive Processors."]
+			dependencies: ["5ABC97221F761E3E"]
+			id: "3CAAA0EBE196B04C"
+			tasks: [
+				{
+					id: "57AEA21D035A449F"
+					type: "item"
+					item: "mw_core:core_casing"
+				}
+				{
+					id: "1E709A1F64477AEE"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Growing Certus Quartz"
+			icon: "ae2:certus_quartz_crystal"
+			x: 0.0d
+			y: 3.5d
+			dependencies: ["3B3AAA522715339A"]
+			id: "4DCC48D7D4B619D7"
+			tasks: [
+				{
+					id: "6F7DD7FB2C899086"
+					type: "item"
+					item: "ae2:certus_quartz_crystal"
+				}
+				{
+					id: "3687390EFE2E3256"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: 5.5d
+			y: 1.0d
+			dependencies: [
+				"32A9B55169990D39"
+				"3919A2F5E35E3A0B"
+				"6EE9CA8AB4D7015E"
+			]
+			id: "52356C3DA9EEE1A0"
+			tasks: [{
+				id: "70A1D7D22B0BD93D"
+				type: "item"
+				item: "ae2:certus_crystal_seed"
+			}]
+		}
+		{
+			x: 8.0d
+			y: 0.5d
+			subtitle: "[Already Automated]"
+			dependencies: ["3663AB6030B54209"]
+			id: "3919A2F5E35E3A0B"
+			tasks: [{
+				id: "25A885D30923CAF0"
+				type: "item"
+				item: "minecraft:sand"
+			}]
+		}
+		{
+			x: 5.5d
+			y: -1.0d
+			dependencies: ["2ADAC0B8BF09A42F"]
+			id: "32A9B55169990D39"
+			tasks: [{
+				id: "5BAAEE69351AF448"
+				type: "item"
+				item: "ae2:certus_quartz_dust"
+			}]
+		}
+		{
+			icon: "create:iron_sheet"
+			x: 8.5d
+			y: 5.0d
+			dependencies: ["5DE3AC2B6525923C"]
+			id: "5ABC97221F761E3E"
+			tasks: [
+				{
+					id: "0D069FE0C2EC3FD6"
+					type: "item"
+					item: "create:iron_sheet"
+				}
+				{
+					id: "1382416EFA6F5402"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: 2.5d
+			y: 5.0d
+			dependencies: ["2C55BD11CCF57406"]
+			id: "7D7F6429CBCF601F"
+			tasks: [{
+				id: "3F9E63839034B7DF"
+				type: "item"
+				item: "tconstruct:molten_diamond_bucket"
+			}]
+		}
+		{
+			x: 4.5d
+			y: 3.5d
+			subtitle: "[Already Automated]"
+			dependencies: ["6BA631E8E1E29949"]
+			id: "0F641738544FCAE6"
+			tasks: [{
+				id: "6DA3A14894685A2F"
+				type: "item"
+				item: "tconstruct:molten_gold_bucket"
+			}]
+		}
+		{
+			title: "Molten Iron"
+			x: 6.0d
+			y: 6.5d
+			subtitle: "[Already Automated]"
+			dependencies: ["1A113538450D74E2"]
+			id: "5DE3AC2B6525923C"
+			tasks: [{
+				id: "0E63DCEFA8D5C21C"
+				type: "item"
+				item: "tconstruct:molten_iron_bucket"
+			}]
+		}
+		{
+			icon: "mw_core:data_tube"
+			x: 4.5d
+			y: 9.5d
+			dependencies: [
+				"396BC8AFF3B320A3"
+				"5DE3AC2B6525923C"
+			]
+			id: "23A6D391BEEB782D"
+			tasks: [
+				{
+					id: "3BB975377F1CDDDC"
+					type: "item"
+					item: "mw_core:data_tube"
+				}
+				{
+					id: "599FDF7408578DB6"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "create:experience_nugget"
+			x: 2.5d
+			y: 8.5d
+			dependencies: ["551BB04B1EEF3F51"]
+			id: "396BC8AFF3B320A3"
+			tasks: [
+				{
+					id: "17AFCB04681AE220"
+					type: "item"
+					item: "create:experience_nugget"
+				}
+				{
+					id: "2CCD44A6F4625197"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "thermal:diamond_gear"
+			x: 6.0d
+			y: 10.5d
+			dependencies: ["2C55BD11CCF57406"]
+			id: "4057976A51270973"
+			tasks: [
+				{
+					id: "145D09C59519AEF1"
+					type: "item"
+					item: "thermal:diamond_gear"
+				}
+				{
+					id: "471C6164BE5734D9"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Growing Diamonds"
+			icon: "minecraft:diamond"
+			x: 7.5d
+			y: 10.0d
+			description: ["You can mix Diamond Dust in a basin with Water to create a Diamond."]
+			dependencies: ["4427BA11ECB98CA5"]
+			id: "2C55BD11CCF57406"
+			tasks: [
+				{
+					id: "3432A71069DA9042"
+					type: "item"
+					item: "minecraft:diamond"
+				}
+				{
+					id: "06E976D3F6AB8537"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "thermal:diamond_dust"
+			x: 8.5d
+			y: 8.5d
+			description: ["Deepslate can be pulverized for a small chance of creating Diamond Dust."]
+			dependencies: ["5A146A7F684E3A51"]
+			id: "4427BA11ECB98CA5"
+			tasks: [
+				{
+					id: "2D99D44CA69E29F0"
+					type: "item"
+					item: "thermal:diamond_dust"
+				}
+				{
+					id: "720B8F99C24C2097"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "minecraft:textures/mob_effect/water_breathing.png"
+				}
+			}
+			x: -2.0d
+			y: 1.0d
+			dependencies: ["2ADAC0B8BF09A42F"]
+			id: "25B11CBC12805C52"
+			tasks: [{
+				id: "48F3DF4E8B048958"
+				type: "checkmark"
+				title: "Infinite Water Source"
+			}]
+		}
+		{
+			icon: "alloyed:steel_sheet"
+			x: -2.0d
+			y: 6.5d
+			dependencies: ["1CE3BE0A1B859671"]
+			id: "68CAC6214B95EA19"
+			tasks: [
+				{
+					id: "487B904F44EE67CA"
+					type: "item"
+					item: "alloyed:steel_sheet"
+				}
+				{
+					id: "050104EFD5D40956"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "alloyed:steel_ingot"
+			x: -4.0d
+			y: 7.0d
+			dependencies: ["2C9115ABC6A0DE7A"]
+			id: "1CE3BE0A1B859671"
+			tasks: [
+				{
+					id: "0996D210AEC0B8C5"
+					type: "item"
+					item: "alloyed:steel_ingot"
+				}
+				{
+					id: "190E69B12EC224C7"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Molten Steel"
+			icon: "tconstruct:molten_steel_bucket"
+			x: -6.5d
+			y: 7.0d
+			description: ["Molten Iron and Coal Coke can be mixed to make Steel."]
+			dependencies: [
+				"002B402561D45110"
+				"0B28578BE327C1C0"
+			]
+			id: "2C9115ABC6A0DE7A"
+			tasks: [
+				{
+					id: "2E34F209A6625B2D"
+					type: "item"
+					item: "tconstruct:molten_steel_bucket"
+				}
+				{
+					id: "25B7E3F48F1590AD"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "thermal:coal_coke"
+			x: -8.5d
+			y: 6.5d
+			description: ["A small amount of Crude Oil can be heated in a Basin Foundry to produce Coal Coke."]
+			dependencies: ["5D3429B5ACD0E45A"]
+			id: "0B28578BE327C1C0"
+			tasks: [
+				{
+					id: "2E0E2C0C8D879277"
+					type: "item"
+					item: "thermal:coal_coke"
+				}
+				{
+					id: "0A347FE7F9722CE6"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "thermal:oil_sand"
+			x: -13.0d
+			y: 2.5d
+			dependencies: ["475B0F015ABD4524"]
+			id: "723BF4973D982373"
+			tasks: [
+				{
+					id: "1A2A02005286946E"
+					type: "item"
+					title: "Bituminous Sand"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "mw_core:oil_sands"
+						}
+					}
+				}
+				{
+					id: "6DA40E3FAE0914BF"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Find a Meteorite"
+			x: -3.0d
+			y: 7.5d
+			shape: "octagon"
+			hide_dependency_lines: true
+			dependencies: ["2ADAC0B8BF09A42F"]
+			id: "0279C9E65A622D89"
+			tasks: [{
+				id: "750E5325DE06E783"
+				type: "structure"
+				icon: "ae2:sky_stone_chest"
+				structure: "ae2:meteorite"
+			}]
+		}
+		{
+			title: "Sand Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: 9.5d
+			y: 0.0d
+			shape: "gear"
+			subtitle: "Automated in Chapter 1"
+			hide_dependency_lines: true
+			dependencies: ["2ADAC0B8BF09A42F"]
+			id: "3663AB6030B54209"
+			tasks: [{
+				id: "11780DE821DAD787"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			x: 3.5d
+			y: 1.5d
+			dependencies: ["52356C3DA9EEE1A0"]
+			id: "0FA5664056195D0E"
+			tasks: [{
+				id: "2F3C89F79E9150EA"
+				type: "item"
+				item: "kubejs:tiny_certus_crystal"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 2.5d
+			dependencies: ["0FA5664056195D0E"]
+			id: "3B3AAA522715339A"
+			tasks: [{
+				id: "6A550F2241B17D4E"
+				type: "item"
+				item: "kubejs:small_certus_crystal"
+			}]
+		}
+		{
+			title: "Logs"
+			x: -8.5d
+			y: 2.5d
+			subtitle: "[Already Automated]"
+			dependencies: ["7873D99933B6B945"]
+			id: "126AF733185B9775"
+			tasks: [{
+				id: "7A0DDF0F698E7B41"
+				type: "item"
+				title: "Any Logs"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "minecraft:logs"
+					}
+				}
+			}]
+		}
+		{
+			x: -6.5d
+			y: 2.0d
+			shape: "hexagon"
+			hide_dependency_lines: true
+			dependencies: ["2ADAC0B8BF09A42F"]
+			id: "2A87C2C4CE55FC9F"
+			tasks: [{
+				id: "451B62D9DB93D2CB"
+				type: "item"
+				item: "thermal:machine_pyrolyzer"
+			}]
+		}
+		{
+			title: "Logs Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: -9.5d
+			y: 0.5d
+			shape: "gear"
+			hide_dependency_lines: true
+			dependencies: ["2ADAC0B8BF09A42F"]
+			id: "7873D99933B6B945"
+			tasks: [{
+				id: "3D027DC37BAEDBA5"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Molten Gold Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: 6.0d
+			y: 3.0d
+			shape: "gear"
+			subtitle: "Automated in Chapter 2"
+			hide_dependency_lines: true
+			dependencies: ["2ADAC0B8BF09A42F"]
+			id: "6BA631E8E1E29949"
+			tasks: [{
+				id: "623FC479DCEB94FC"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Certus Soaking"
+			x: 4.0d
+			y: 0.0d
+			shape: "hexagon"
+			description: ["Certus Quartz Seeds can be grown faster with a spout and water."]
+			hide_dependency_lines: true
+			dependencies: ["2ADAC0B8BF09A42F"]
+			id: "6EE9CA8AB4D7015E"
+			tasks: [{
+				id: "713F177E59E09286"
+				type: "item"
+				item: "create:spout"
+			}]
+		}
+		{
+			title: "Molten Iron Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: -7.5d
+			y: 4.5d
+			shape: "gear"
+			subtitle: "Automated in Chapter 1"
+			hide_dependency_lines: true
+			dependencies: ["2ADAC0B8BF09A42F"]
+			id: "122AFF15DD760CAE"
+			tasks: [{
+				id: "3F9F634305687D46"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Molten Iron Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: 8.0d
+			y: 7.0d
+			shape: "gear"
+			hide_dependency_lines: true
+			dependencies: ["2ADAC0B8BF09A42F"]
+			id: "1A113538450D74E2"
+			tasks: [{
+				id: "5EF5D464C69CAC07"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			icon: "create_sa:heap_of_experience"
+			x: 3.0d
+			y: 7.5d
+			hide_dependency_lines: true
+			dependencies: ["2ADAC0B8BF09A42F"]
+			id: "551BB04B1EEF3F51"
+			tasks: [{
+				id: "33ACF437F56B5150"
+				type: "checkmark"
+				title: "Automating Experience Nuggets?"
+			}]
+			rewards: [{
+				id: "28A2E1B1E794058E"
+				type: "command"
+				title: "Open Ponder"
+				icon: {
+					id: "ftbquests:custom_icon"
+					Count: 1b
+					tag: {
+						Icon: "forbidden_arcanus:textures/block/black_hole_aura_0.png"
+					}
+				}
+				command: "/create ponder create:experience_nugget"
+				player_command: true
+			}]
+		}
+		{
+			title: "Non Renewable?"
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "create_things_and_misc:textures/blocks/yellow1.png"
+				}
+			}
+			x: -14.0d
+			y: 1.0d
+			shape: "rsquare"
+			subtitle: "Nope"
+			description: ["With a bit of magic, Bituminous Sand can be created with Ichor Dust."]
+			hide_dependency_lines: true
+			dependencies: ["2ADAC0B8BF09A42F"]
+			id: "475B0F015ABD4524"
+			tasks: [{
+				id: "1523F93666ECBCA2"
+				type: "checkmark"
+				title: "Non Renewable"
+			}]
+		}
+		{
+			icon: "refinedstorage:silicon"
+			x: 1.0d
+			y: 8.0d
+			description: ["Cooking Nether Quartz will create Silicon."]
+			dependencies: ["2C9EB3F14047A8C9"]
+			id: "56E5EBABDF0AEAC3"
+			tasks: [
+				{
+					id: "279DDB9CECCA94BF"
+					type: "item"
+					item: "refinedstorage:silicon"
+				}
+				{
+					id: "366DF2335F129D0A"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: 2.0d
+			y: 7.5d
+			subtitle: "[Already Automated]"
+			dependencies: ["228DB986EB8D2B38"]
+			id: "2C9EB3F14047A8C9"
+			tasks: [{
+				id: "30409D1013D3E82D"
+				type: "item"
+				item: "minecraft:quartz"
+			}]
+		}
+		{
+			title: "Nether Quartz Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: 1.5d
+			y: 6.0d
+			shape: "gear"
+			subtitle: "Automated in Chapter 1"
+			hide_dependency_lines: true
+			dependencies: ["2ADAC0B8BF09A42F"]
+			id: "228DB986EB8D2B38"
+			tasks: [{
+				id: "5DBFD6B1EA8B159F"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			x: -1.5d
+			y: 11.0d
+			subtitle: "[Already Automated]"
+			dependencies: ["2E8D782A6E43CF2E"]
+			id: "7F2DD91F93148CC3"
+			tasks: [{
+				id: "4AA64B3D96FB5C24"
+				type: "item"
+				item: "minecraft:gold_ingot"
+			}]
+		}
+		{
+			title: "Gold Ingot Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: -3.5d
+			y: 11.0d
+			shape: "gear"
+			subtitle: "Automated in Chapter 2"
+			hide_dependency_lines: true
+			dependencies: ["2ADAC0B8BF09A42F"]
+			id: "2E8D782A6E43CF2E"
+			tasks: [{
+				id: "2FD7DB81C26FBCB1"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			icon: "minecraft:cobbled_deepslate"
+			x: 10.5d
+			y: 8.0d
+			description: ["Cobbled Deeslate can be created with an Igneous Extruder. Place Lava and Packed Ice either side of the Extruder and it will start generating Cobbled Deepslate."]
+			dependencies: [
+				"4446754E39F75334"
+				"11EEFFD4DD420608"
+				"5CF23E43B195B826"
+			]
+			id: "5A146A7F684E3A51"
+			tasks: [
+				{
+					id: "6D393165950D236A"
+					type: "item"
+					item: "minecraft:cobbled_deepslate"
+				}
+				{
+					id: "6E2500337525F29A"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: 13.0d
+			y: 8.5d
+			shape: "hexagon"
+			hide_dependency_lines: true
+			dependencies: ["2ADAC0B8BF09A42F"]
+			id: "5CF23E43B195B826"
+			tasks: [{
+				id: "610028A015227D35"
+				type: "item"
+				item: "thermal:device_rock_gen"
+			}]
+		}
+		{
+			x: 13.0d
+			y: 7.5d
+			shape: "hexagon"
+			hide_dependency_lines: true
+			dependencies: ["2ADAC0B8BF09A42F"]
+			id: "4446754E39F75334"
+			tasks: [{
+				id: "02456E659536E2F7"
+				type: "item"
+				item: "minecraft:packed_ice"
+			}]
+		}
+		{
+			x: 13.0d
+			y: 9.5d
+			shape: "hexagon"
+			hide_dependency_lines: true
+			dependencies: ["2ADAC0B8BF09A42F"]
+			id: "11EEFFD4DD420608"
+			tasks: [{
+				id: "4FF35BF57EBC7EFB"
+				type: "item"
+				item: "minecraft:lava_bucket"
+			}]
+		}
+	]
+	quest_links: [ ]
+}

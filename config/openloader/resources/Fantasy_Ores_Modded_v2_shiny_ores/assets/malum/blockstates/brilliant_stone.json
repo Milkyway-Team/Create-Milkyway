@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "malum:block/brilliant_stone_0"
+      },
+      {
+        "model": "malum:block/brilliant_stone_1"
+      },
+      {
+        "model": "malum:block/brilliant_stone_2"
+      },
+      {
+        "model": "malum:block/brilliant_stone_3"
+      }
+    ]
+  }
+}

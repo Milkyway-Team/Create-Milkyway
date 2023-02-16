@@ -1,0 +1,594 @@
+{
+	id: "1AD854FB04146E35"
+	group: "26C9462713CC8837"
+	order_index: 3
+	filename: "chapter_2"
+	title: "Chapter 2"
+	icon: "create:precision_mechanism"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			icon: "create:brass_hand"
+			x: 4.5d
+			y: -6.5d
+			dependencies: ["69B68E5F6108C42C"]
+			id: "6C735D9F5BDF5C57"
+			tasks: [{
+				id: "657AD7199593D831"
+				type: "checkmark"
+				title: "Chapter 2 START!"
+			}]
+		}
+		{
+			icon: "farmersdelight:lime_canvas_sign"
+			x: 2.5d
+			y: -6.5d
+			description: ["Precision Machinery will be very useful for the future, it will enable filters and easy transport."]
+			dependencies: [
+				"4CD56BDAF5F61552"
+				"552F8F8CE7A6CE21"
+			]
+			hide: true
+			id: "69B68E5F6108C42C"
+			tasks: [{
+				id: "742105741B472489"
+				type: "checkmark"
+				title: "INFO"
+			}]
+		}
+		{
+			icon: "create:precision_mechanism"
+			x: 5.5d
+			y: 7.5d
+			dependencies: [
+				"2DB062CE797C1434"
+				"17BBDA48EC3244CB"
+				"3ABFBCD3D28C30E6"
+				"47C21D5CCC558818"
+			]
+			id: "32FE250DD6950ABE"
+			tasks: [
+				{
+					id: "0BB855289F974A3D"
+					type: "item"
+					item: "create:precision_mechanism"
+				}
+				{
+					id: "66617144EEBCF38D"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+			rewards: [{
+				id: "6F9C96BA7B8D2DDC"
+				type: "item"
+				item: {
+					id: "ftbquests:lootcrate"
+					Count: 1b
+					tag: {
+						type: "precision_mechanism_reward_table"
+					}
+				}
+			}]
+		}
+		{
+			icon: "create:golden_sheet"
+			x: 4.0d
+			y: 8.0d
+			dependencies: ["0CFD560A77B1EE86"]
+			id: "3ABFBCD3D28C30E6"
+			tasks: [
+				{
+					id: "3146698F8102EA0D"
+					type: "item"
+					item: "create:golden_sheet"
+				}
+				{
+					id: "15F085AD4864EA5F"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "thermal:gold_gear"
+			x: 4.0d
+			y: 7.0d
+			dependencies: ["75F52A944A86DB3F"]
+			id: "17BBDA48EC3244CB"
+			tasks: [
+				{
+					id: "76B80E7A8D98D800"
+					type: "item"
+					item: "thermal:gold_gear"
+				}
+				{
+					id: "39E98C83951FB9EA"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "minecraft:clock"
+			x: 4.5d
+			y: 6.0d
+			description: ["Cast Molten Gold over Redstone Dust to make a Clock."]
+			dependencies: [
+				"75F52A944A86DB3F"
+				"4444559FADB46F42"
+			]
+			id: "47C21D5CCC558818"
+			tasks: [
+				{
+					id: "37663E19DCFF27F0"
+					type: "item"
+					item: "minecraft:clock"
+				}
+				{
+					id: "19F497AC32C0804C"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: 5.5d
+			y: 5.5d
+			subtitle: "[Already Automated]"
+			dependencies: ["6A29C6D94B87CD43"]
+			id: "2DB062CE797C1434"
+			tasks: [{
+				id: "5781125F700F4190"
+				type: "item"
+				item: "create:andesite_alloy"
+			}]
+		}
+		{
+			icon: "minecraft:gold_ingot"
+			x: 1.5d
+			y: 5.0d
+			description: ["Cast the Molten Gold into an Ingot Cast."]
+			dependencies: ["75F52A944A86DB3F"]
+			id: "0CFD560A77B1EE86"
+			tasks: [
+				{
+					id: "589FC2A982F4151A"
+					type: "item"
+					item: "minecraft:gold_ingot"
+				}
+				{
+					id: "00237855EBA10258"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Molten Gold"
+			icon: "tconstruct:molten_gold_bucket"
+			x: 3.5d
+			y: 3.0d
+			description: ["You can melt the Gold Nuggets you have automated to produce Molten Gold."]
+			dependencies: ["37EE1BA02279A234"]
+			id: "75F52A944A86DB3F"
+			tasks: [
+				{
+					id: "1576476221AA5B06"
+					type: "item"
+					item: "tconstruct:molten_gold_bucket"
+				}
+				{
+					id: "3CBE309EA4743966"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "minecraft:redstone"
+			x: 5.0d
+			y: 4.0d
+			description: ["Haunting some Cinder Flour will make Redstone Dust."]
+			dependencies: ["6137C7F01BD50989"]
+			id: "4444559FADB46F42"
+			tasks: [
+				{
+					id: "011E96C000E3FE3C"
+					type: "item"
+					item: "minecraft:redstone"
+				}
+				{
+					id: "711C2F7198257D5F"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "create:cinder_flour"
+			x: 7.0d
+			y: 3.0d
+			description: ["Crushing Netherrack results in a somehow edible powder, known to the local bakers as Cinder Flour."]
+			dependencies: ["525775611FE09F93"]
+			id: "6137C7F01BD50989"
+			tasks: [
+				{
+					id: "0A028CD55A51CBB6"
+					type: "item"
+					item: "create:cinder_flour"
+				}
+				{
+					id: "44C20C1211AE9768"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "minecraft:netherrack"
+			x: 8.0d
+			y: 1.0d
+			description: ["Pouring a small amount of Healing Potion over some Cobblestone will produce Netherrack."]
+			dependencies: [
+				"1D346139A459C750"
+				"0C396F5482521A29"
+			]
+			id: "525775611FE09F93"
+			tasks: [
+				{
+					id: "4BD1EA060DDA900C"
+					type: "item"
+					item: "minecraft:netherrack"
+				}
+				{
+					id: "1966C1AE04C6BF79"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: 8.5d
+			y: -1.0d
+			subtitle: "[Already Automated]"
+			dependencies: ["248E49CF7106FFC0"]
+			id: "0C396F5482521A29"
+			tasks: [{
+				id: "38D5FC803CCA51E8"
+				type: "item"
+				item: "minecraft:cobblestone"
+			}]
+		}
+		{
+			icon: {
+				id: "minecraft:potion"
+				Count: 1b
+				tag: {
+					Potion: "minecraft:healing"
+				}
+			}
+			x: 6.0d
+			y: -0.5d
+			description: ["Mix the Awkward Potion with a Glistering Melon to make a Healing Potion."]
+			dependencies: [
+				"776752F2FAFABFAA"
+				"0EA2DD73EE7B6B3C"
+			]
+			id: "1D346139A459C750"
+			tasks: [
+				{
+					id: "3A123F8CCEBAC84E"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "minecraft:healing"
+						}
+					}
+				}
+				{
+					id: "53F46021CED54017"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "minecraft:glistering_melon_slice"
+			x: 4.5d
+			y: 0.0d
+			description: ["Pouring some Gold over a melon slice will transform it into a Glistering Melon."]
+			dependencies: [
+				"75F52A944A86DB3F"
+				"6AA2709416C0BAF5"
+			]
+			id: "776752F2FAFABFAA"
+			tasks: [
+				{
+					id: "75F836737B35CFE1"
+					type: "item"
+					item: "minecraft:glistering_melon_slice"
+				}
+				{
+					id: "58359FE09AEED540"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: {
+				id: "minecraft:potion"
+				Count: 1b
+				tag: {
+					Potion: "minecraft:awkward"
+				}
+			}
+			x: 5.0d
+			y: -2.0d
+			subtitle: "Automated Brewery"
+			description: ["Mixing some Nether Wart with Water over a heated Basin will create an awkward potion."]
+			dependencies: [
+				"4E1F1E41B43C2F5D"
+				"7FBF80B6695C56E2"
+			]
+			id: "0EA2DD73EE7B6B3C"
+			tasks: [
+				{
+					id: "36460DCE907A783F"
+					type: "item"
+					item: {
+						id: "minecraft:potion"
+						Count: 1b
+						tag: {
+							Potion: "minecraft:awkward"
+						}
+					}
+				}
+				{
+					id: "748CED061A8D4DCC"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "minecraft:gold_nugget"
+			x: 2.0d
+			y: 1.5d
+			description: ["Washing Red Sand will reveal the precious Gold Nuggets buried within!"]
+			dependencies: ["63ADD75A541F9313"]
+			id: "37EE1BA02279A234"
+			tasks: [
+				{
+					id: "1CFC859EAE4A4C64"
+					type: "item"
+					item: "minecraft:gold_nugget"
+				}
+				{
+					id: "35FFF79D24227904"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "minecraft:red_sand"
+			x: -0.5d
+			y: 0.5d
+			description: ["You can crush Granite to make Red Sand."]
+			dependencies: ["65ED0D8F734F905C"]
+			id: "63ADD75A541F9313"
+			tasks: [
+				{
+					id: "635D3DAEF56DF52A"
+					type: "item"
+					item: "minecraft:red_sand"
+				}
+				{
+					id: "44E4F98263F8116D"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "minecraft:granite"
+			x: -1.5d
+			y: -1.0d
+			description: ["Mixing Molten Quartz with Diorite makes Granite."]
+			dependencies: ["4724D186692D7A79"]
+			id: "65ED0D8F734F905C"
+			tasks: [
+				{
+					id: "513ED857E902CA44"
+					type: "item"
+					item: "minecraft:granite"
+				}
+				{
+					id: "57F1CAB8AA9F9BC3"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "minecraft:diorite"
+			x: 0.0d
+			y: -1.5d
+			description: ["Mixing Molten Quartz with Andesite creates Diorite."]
+			dependencies: ["68B79E21F6C4473C"]
+			id: "4724D186692D7A79"
+			tasks: [
+				{
+					id: "247879C79272A5A3"
+					type: "item"
+					item: "minecraft:diorite"
+				}
+				{
+					id: "0C41C156C3BBB6D4"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: 1.5d
+			y: -2.5d
+			subtitle: "[Already Automated]"
+			dependencies: ["432259DDC63E5E67"]
+			id: "68B79E21F6C4473C"
+			tasks: [{
+				id: "32129FBEFD2E8655"
+				type: "item"
+				item: "minecraft:andesite"
+			}]
+		}
+		{
+			title: "Andesite Alloy Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: 7.5d
+			y: 5.0d
+			shape: "gear"
+			subtitle: "Automated in Chapter 1"
+			hide_dependency_lines: true
+			dependencies: ["6C735D9F5BDF5C57"]
+			id: "6A29C6D94B87CD43"
+			tasks: [{
+				id: "7673401420BDBA93"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			icon: "minecraft:nether_wart"
+			x: 3.5d
+			y: -3.0d
+			description: ["Nether Warts will have to be grown to brew Awkward Potions."]
+			dependencies: ["1A7A01C537C9E75E"]
+			id: "4E1F1E41B43C2F5D"
+			tasks: [
+				{
+					id: "4483C16241F3A9D3"
+					type: "item"
+					item: "minecraft:nether_wart"
+				}
+				{
+					id: "60E6A4EB38E1414A"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Molten Quartz Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: 1.5d
+			y: -4.5d
+			shape: "gear"
+			subtitle: "Automated in Chapter 1"
+			hide_dependency_lines: true
+			dependencies: ["6C735D9F5BDF5C57"]
+			id: "02C9A70591BB9134"
+			tasks: [{
+				id: "0086E84C490FE593"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Molten Quartz"
+			x: 0.0d
+			y: -3.5d
+			subtitle: "[Already Automated]"
+			dependencies: ["02C9A70591BB9134"]
+			id: "432259DDC63E5E67"
+			tasks: [{
+				id: "41D39F4CCF8FFC42"
+				type: "item"
+				item: "tconstruct:molten_quartz_bucket"
+			}]
+		}
+		{
+			icon: "minecraft:melon_slice"
+			x: 3.0d
+			y: -1.0d
+			subtitle: "Make a Melon Farm"
+			description: ["Trust me, it's worth it. And spare Melons can make good popsicles!"]
+			hide_dependency_lines: true
+			dependencies: ["6C735D9F5BDF5C57"]
+			id: "6AA2709416C0BAF5"
+			tasks: [
+				{
+					id: "4502D645B1B4DF3C"
+					type: "item"
+					item: "minecraft:melon_slice"
+				}
+				{
+					id: "07F1C2FDA0501BBE"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Cobblestone Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: 7.5d
+			y: -3.0d
+			shape: "gear"
+			subtitle: "Automated in Chapter 1"
+			hide_dependency_lines: true
+			dependencies: ["6C735D9F5BDF5C57"]
+			id: "248E49CF7106FFC0"
+			tasks: [{
+				id: "5F5B81BDE554669E"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Visit The Nether"
+			x: 4.5d
+			y: -4.5d
+			shape: "octagon"
+			description: ["For your next task, you will literally be going to hell!"]
+			dependencies: ["6C735D9F5BDF5C57"]
+			id: "1A7A01C537C9E75E"
+			tasks: [{
+				id: "7A57FD8888B7FEE0"
+				type: "dimension"
+				title: "Visit The Nether"
+				icon: "minecraft:nether_gold_ore"
+				dimension: "minecraft:the_nether"
+			}]
+		}
+		{
+			x: 6.0d
+			y: -4.0d
+			dependencies: ["1A7A01C537C9E75E"]
+			id: "7FBF80B6695C56E2"
+			tasks: [{
+				id: "58179EB36658ACD7"
+				type: "item"
+				item: "create:blaze_burner"
+			}]
+		}
+		{
+			icon: "mw_core:seared_mechanism"
+			x: 6.0d
+			y: 9.0d
+			dependencies: ["32FE250DD6950ABE"]
+			id: "66061EDBE498CE02"
+			tasks: [{
+				id: "59E76E2FBCA7442D"
+				type: "checkmark"
+				title: "The Mighty Smeltery"
+			}]
+		}
+	]
+	quest_links: [ ]
+}

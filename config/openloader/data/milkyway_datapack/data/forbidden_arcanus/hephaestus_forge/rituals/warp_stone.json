@@ -1,0 +1,38 @@
+{
+  "inputs": [
+    {
+      "item": "minecraft:emerald",
+      "slot": 0
+    },
+    {
+      "item": "waystones:warp_dust",
+      "slot": 1
+    },
+    {
+      "item": "forbidden_arcanus:ender_pearl_fragment",
+      "slot": 2
+    },
+    {
+      "item": "quark:purple_rune",
+      "slot": 3
+    },
+    {
+      "item": "waystones:warp_dust",
+      "slot": 4
+    },
+    {
+      "item": "forbidden_arcanus:ender_pearl_fragment",
+      "slot": 5
+    }
+  ],
+  "hephaestus_forge_item": "thermal:enderium_gear",
+  "essences": {
+    "aureal": 200,
+    "blood": 1000,
+    "souls": 1
+  },
+  "result": {
+    "item": "waystones:warp_stone",
+    "count": 1
+  }
+}

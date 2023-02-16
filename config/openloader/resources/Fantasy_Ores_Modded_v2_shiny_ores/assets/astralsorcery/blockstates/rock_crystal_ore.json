@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "astralsorcery:block/rock_crystal_ore_0"
+      },
+      {
+        "model": "astralsorcery:block/rock_crystal_ore_1"
+      },
+      {
+        "model": "astralsorcery:block/rock_crystal_ore_2"
+      },
+      {
+        "model": "astralsorcery:block/rock_crystal_ore_3"
+      }
+    ]
+  }
+}

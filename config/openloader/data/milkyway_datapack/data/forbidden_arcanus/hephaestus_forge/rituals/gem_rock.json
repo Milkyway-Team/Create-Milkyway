@@ -1,0 +1,38 @@
+{
+  "inputs": [
+    {
+      "item": "mw_core:creatite",
+      "slot": 0
+    },
+    {
+      "item": "forbidden_arcanus:dark_rune",
+      "slot": 1
+    },
+    {
+      "item": "forbidden_arcanus:dark_rune",
+      "slot": 2
+    },
+    {
+      "item": "mw_core:creatite",
+      "slot": 3
+    },
+    {
+      "item": "forbidden_arcanus:dark_rune",
+      "slot": 4
+    },
+    {
+      "item": "forbidden_arcanus:dark_rune",
+      "slot": 5
+    }
+  ],
+  "hephaestus_forge_item": "mw_core:rock",
+  "essences": {
+    "aureal": 50,
+    "blood": 1000,
+    "souls": 1
+  },
+  "result": {
+    "item": "kubejs:gem_rock",
+    "count": 1
+  }
+}

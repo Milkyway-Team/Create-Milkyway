@@ -1,0 +1,10 @@
+{
+  "credit": "Model created by Zorak Design - Contact me on discord for work: CesarZorak#0808",
+  "parent": "cesarzorak:block/fancy_ore_crystal/crystal_3",
+  "textures": {
+		"0": "minecraft:block/andesite",
+		"1": "minecraft:block/andesite",
+		"2": "cesarzorak:block/fancy_ores/redstone_ore",
+		"particle": "minecraft:block/andesite"
+  }
+}

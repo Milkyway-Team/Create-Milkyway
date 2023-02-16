@@ -30,83 +30,133 @@ onEvent("ponder.registry", (event) => {
             scene.idle(20);
                scene.addKeyframe();
                scene
-               .text(40, "Place Arcane Polished Darkstone Here", [5, 2, 5])
+               .text(60, "Place Arcane Polished Darkstone Here", [5, 2, 5])
                scene.world.setBlock([5, 1, 5,], "forbidden_arcanus:arcane_chiseled_polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([5, 1, 2,], "forbidden_arcanus:arcane_chiseled_polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([7, 1, 3,], "forbidden_arcanus:arcane_chiseled_polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([8, 1, 5,], "forbidden_arcanus:arcane_chiseled_polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([7, 1, 7,], "forbidden_arcanus:arcane_chiseled_polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([5, 1, 8,], "forbidden_arcanus:arcane_chiseled_polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([3, 1, 7,], "forbidden_arcanus:arcane_chiseled_polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([2, 1, 5,], "forbidden_arcanus:arcane_chiseled_polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([3, 1, 3,], "forbidden_arcanus:arcane_chiseled_polished_darkstone", false);
                scene.idle(45);
                scene.addKeyframe();
                scene
-               .text(40, "Place Chiseled Arcane Polished Darkstone Here", [5, 2, 4])
+               .text(50, "Place Chiseled Arcane Polished Darkstone Here", [5, 2, 4])
                scene.world.setBlock([4, 1, 5,], "forbidden_arcanus:chiseled_arcane_polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([5, 1, 4,], "forbidden_arcanus:chiseled_arcane_polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([6, 1, 5,], "forbidden_arcanus:chiseled_arcane_polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([5, 1, 6,], "forbidden_arcanus:chiseled_arcane_polished_darkstone", false);
                scene.idle(45);
                scene.addKeyframe();
                scene
-               .text(40, "Surround These With Polished Darkstone", [5, 2, 4])
+               .text(80, "Surround These With Polished Darkstone", [6, 2, 5])
                scene.world.setBlock([9, 1, 4,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([9, 1, 5,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([9, 1, 6,], "forbidden_arcanus:polished_darkstone", false);
-
+           scene.idle(2);
                scene.world.setBlock([8, 1, 2,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([8, 1, 3,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([8, 1, 4,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([8, 1, 6,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([8, 1, 7,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([8, 1, 8,], "forbidden_arcanus:polished_darkstone", false);
-
+           scene.idle(2);
                scene.world.setBlock([7, 1, 2,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([7, 1, 4,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([7, 1, 5,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([7, 1, 6,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([7, 1, 8,], "forbidden_arcanus:polished_darkstone", false);
-
+           scene.idle(2);
                scene.world.setBlock([6, 1, 1,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([6, 1, 2,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([6, 1, 3,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([6, 1, 4,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([6, 1, 6,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([6, 1, 7,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([6, 1, 8,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([6, 1, 9,], "forbidden_arcanus:polished_darkstone", false);
-
+           scene.idle(2);
                scene.world.setBlock([5, 1, 1,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([5, 1, 3,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([5, 1, 7,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([5, 1, 9,], "forbidden_arcanus:polished_darkstone", false);
-
+           scene.idle(2);
                scene.world.setBlock([4, 1, 1,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([4, 1, 2,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([4, 1, 3,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([4, 1, 4,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([4, 1, 6,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([4, 1, 7,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([4, 1, 8,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([4, 1, 9,], "forbidden_arcanus:polished_darkstone", false);
-
+           scene.idle(2);
                scene.world.setBlock([3, 1, 2,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([3, 1, 4,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([3, 1, 5,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([3, 1, 6,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([3, 1, 8,], "forbidden_arcanus:polished_darkstone", false);
-
+           scene.idle(2);
                scene.world.setBlock([2, 1, 2,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([2, 1, 3,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([2, 1, 4,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([2, 1, 6,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([2, 1, 7,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([2, 1, 8,], "forbidden_arcanus:polished_darkstone", false);
-
+           scene.idle(2);
                scene.world.setBlock([1, 1, 4,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([1, 1, 5,], "forbidden_arcanus:polished_darkstone", false);
+           scene.idle(2);
                scene.world.setBlock([1, 1, 6,], "forbidden_arcanus:polished_darkstone", false);
                scene.idle(45);
                scene.addKeyframe();

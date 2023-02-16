@@ -1,0 +1,116 @@
+{
+	id: "2661A26BB1ABE177"
+	group: "76E7DC80C9223355"
+	order_index: 0
+	filename: "forbidden_arts"
+	title: "Forbidden Arts"
+	icon: "forbidden_arcanus:hephaestus_forge"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			icon: "forbidden_arcanus:dark_soul"
+			x: -1.0d
+			y: -1.0d
+			subtitle: "Dark, yet beautiful."
+			description: [
+				"Rituals can be used to forge magical items and summon creatures."
+				"You can utilise sacrifices of creatures and trinkets for an unethical way of progression."
+			]
+			dependencies: ["747ED96162F5B664"]
+			id: "2ECEBAE9D05E8B87"
+			tasks: [{
+				id: "729CA194C4C92962"
+				type: "checkmark"
+				title: "Rituals"
+			}]
+		}
+		{
+			x: 1.0d
+			y: 1.0d
+			hide_dependency_lines: true
+			dependencies: ["2ECEBAE9D05E8B87"]
+			id: "61257FBF8525EAC2"
+			tasks: [{
+				id: "1D93D5797B1E3E7D"
+				type: "observation"
+				title: "The Hephaestus Forge"
+				icon: "forbidden_arcanus:hephaestus_forge"
+				timer: 0L
+				observe_type: 0
+				to_observe: "forbidden_arcanus:hephaestus_forge"
+			}]
+		}
+		{
+			x: 1.5d
+			y: -2.0d
+			hide_dependency_lines: true
+			dependencies: ["2ECEBAE9D05E8B87"]
+			id: "1B54415C4F7F4B5E"
+			tasks: [{
+				id: "76AE497291CAAC30"
+				type: "observation"
+				title: "Summoning Altar"
+				icon: "summoningrituals:altar"
+				timer: 0L
+				observe_type: 0
+				to_observe: "summoningrituals:altar"
+			}]
+		}
+		{
+			x: -2.0d
+			y: 1.5d
+			hide_dependency_lines: true
+			dependencies: ["2ECEBAE9D05E8B87"]
+			id: "200E9C9E41239402"
+			tasks: [{
+				id: "1C471D1289A5376A"
+				type: "item"
+				item: {
+					id: "waystones:warp_stone"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+		}
+		{
+			x: -4.0d
+			y: 0.0d
+			hide_dependency_lines: true
+			dependencies: ["200E9C9E41239402"]
+			id: "5C87EDA3FECE3BB8"
+			tasks: [{
+				id: "5A5608EB21749EA6"
+				type: "item"
+				item: "waystones:waystone"
+			}]
+		}
+		{
+			x: -3.0d
+			y: -2.0d
+			subtitle: "A buggy mess"
+			description: [
+				"So... here's the thing, I tried to make a cool custom furnace powered by arcane crystal dust."
+				"But it is INCREDIBLY buggy meaning it isn't actually that reliable."
+				"If you somehow find this buried within some Randomium then it's your problem, not mine."
+			]
+			hide_dependency_lines: true
+			dependencies: ["2ECEBAE9D05E8B87"]
+			id: "6C003EFCDE90DAFC"
+			tasks: [{
+				id: "343BF7B384B0F1F1"
+				type: "item"
+				item: {
+					id: "custommachinery:custom_machine_item"
+					Count: 1b
+					tag: {
+						machine: "custommachinery:aureal_furnace"
+					}
+				}
+			}]
+		}
+	]
+	quest_links: [ ]
+}

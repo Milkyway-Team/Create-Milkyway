@@ -1,0 +1,14 @@
+{
+    "ctm":{
+        "ctm_version": 1,
+        "type":"ctm",
+        "layer":"SOLID",
+        "textures":[
+            "milkyway_core:blocks/zinc_casing_ctm"
+        ],
+        "extra":{
+        	"ignore_states":true,
+        	"connect_inside":false
+        }   
+    }
+}

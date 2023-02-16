@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "atum:block/gold_ore_0"
+      },
+      {
+        "model": "atum:block/gold_ore_1"
+      },
+      {
+        "model": "atum:block/gold_ore_2"
+      },
+      {
+        "model": "atum:block/gold_ore_3"
+      }
+    ]
+  }
+}

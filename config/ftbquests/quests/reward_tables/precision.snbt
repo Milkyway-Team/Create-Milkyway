@@ -1,0 +1,41 @@
+{
+	id: "2017BF63E4193EC2"
+	order_index: 2
+	title: "Precision"
+	icon: "create:precision_mechanism"
+	loot_size: 1
+	rewards: [
+		{ item: "create:precision_mechanism", count: 4 }
+		{ item: "minecraft:deepslate_gold_ore", count: 64 }
+		{ item: "minecraft:enchanted_golden_apple", count: 4 }
+		{ item: "create:andesite_alloy", count: 32 }
+		{
+			item: {
+				id: "create_things_and_misc:mending_rune"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+		}
+		{
+			item: {
+				id: "create_sa:experience_pickaxe"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+		}
+	]
+	loot_crate: {
+		drops: {
+			boss: 0
+			passive: 0
+			monster: 0
+		}
+		color: 16771988
+		item_name: "Precision Crate"
+		string_id: "precision_mechanism_reward_table"
+	}
+}

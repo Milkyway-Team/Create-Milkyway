@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "create:block/zinc_ore_0"
+      },
+      {
+        "model": "create:block/zinc_ore_1"
+      },
+      {
+        "model": "create:block/zinc_ore_2"
+      },
+      {
+        "model": "create:block/zinc_ore_3"
+      }
+    ]
+  }
+}

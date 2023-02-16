@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "mw_core:block/creatite_ore_0"
+      },
+      {
+        "model": "mw_core:block/creatite_ore_1"
+      },
+      {
+        "model": "mw_core:block/creatite_ore_2"
+      },
+      {
+        "model": "mw_core:block/creatite_ore_3"
+      }
+    ]
+  }
+}

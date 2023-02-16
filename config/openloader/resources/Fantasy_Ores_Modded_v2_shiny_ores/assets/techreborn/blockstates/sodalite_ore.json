@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "techreborn:block/sodalite_ore_0"
+      },
+      {
+        "model": "techreborn:block/sodalite_ore_1"
+      },
+      {
+        "model": "techreborn:block/sodalite_ore_2"
+      },
+      {
+        "model": "techreborn:block/sodalite_ore_3"
+      }
+    ]
+  }
+}

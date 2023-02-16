@@ -1,0 +1,34 @@
+{
+	id: "61ECC4A52EB75A9A"
+	order_index: 1
+	title: "Copper"
+	icon: "minecraft:copper_ingot"
+	loot_size: 1
+	rewards: [
+		{ item: "mw_core:copper_mechanism", count: 4 }
+		{ item: "minecraft:copper_ingot", count: 16 }
+		{ item: "alloyed:bronze_ingot", count: 8 }
+		{ item: "minecraft:iron_ingot", count: 16 }
+		{
+			item: {
+				id: "create_things_and_misc:mending_rune"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+		}
+		{ item: "forbidden_arcanus:xpetrified_orb", count: 16 }
+		{ item: "forbidden_arcanus:xpetrified_ore", count: 4 }
+	]
+	loot_crate: {
+		drops: {
+			boss: 0
+			passive: 0
+			monster: 0
+		}
+		color: 6763540
+		item_name: "Copper Crate"
+		string_id: "copper_mechanism_reward_table"
+	}
+}

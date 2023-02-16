@@ -1,0 +1,10 @@
+{
+  "credit": "Model created by Zorak Design - Contact me on discord for work: CesarZorak#0808",
+  "parent": "cesarzorak:block/fancy_ore_crystal/crystal_1",
+  "textures": {
+		"0": "cesarzorak:block/xpetrified_ore",
+		"1": "cesarzorak:block/xpetrified_ore",
+		"2": "forbidden_arcanus:block/xpetrified_ore_layer",
+		"particle": "cesarzorak:block/xpetrified_ore"
+  }
+}

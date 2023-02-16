@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "betterendforge:block/amber_ore_0"
+      },
+      {
+        "model": "betterendforge:block/amber_ore_1"
+      },
+      {
+        "model": "betterendforge:block/amber_ore_2"
+      },
+      {
+        "model": "betterendforge:block/amber_ore_3"
+      }
+    ]
+  }
+}

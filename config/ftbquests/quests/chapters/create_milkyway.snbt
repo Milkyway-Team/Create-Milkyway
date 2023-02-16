@@ -10,8 +10,10 @@
 		icon: "ftbquests:book"
 		x: 0.0d
 		y: 0.0d
+		shape: "gear"
 		subtitle: "How It Began"
 		description: ["Create Milkyway was originally an SMP by the name of Milkyway SMP created by MilkFur. Pouffy later joined his discord server and began to update the modpack to what you see today!"]
+		size: 5.0d
 		id: "2A39249976E79176"
 		tasks: [{
 			id: "5FAA99F09CFDA015"

@@ -1,12 +1,555 @@
 {
 	id: "2DFBD3E344DE2F8E"
 	group: "26C9462713CC8837"
-	order_index: 1
+	order_index: 5
 	filename: "cobalt_age"
 	title: "Chapter 3"
 	icon: "mw_core:cobalt_mechanism"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
-	quests: [ ]
+	quests: [
+		{
+			icon: "create:brass_hand"
+			x: 0.0d
+			y: -5.5d
+			dependencies: ["266393D12E3D6B5F"]
+			id: "44286347C6F6AC67"
+			tasks: [{
+				id: "1FF232A3B8A8CE99"
+				type: "checkmark"
+				title: "Chapter 3 START!"
+			}]
+		}
+		{
+			icon: "farmersdelight:lime_canvas_sign"
+			x: -2.0d
+			y: -5.5d
+			dependencies: ["58D2C0B12357186B"]
+			hide: true
+			id: "266393D12E3D6B5F"
+			tasks: [{
+				id: "142F180A9E036B25"
+				type: "checkmark"
+				title: "INFO"
+			}]
+		}
+		{
+			x: -0.5d
+			y: 6.5d
+			dependencies: [
+				"22A3CD60B02D1ACB"
+				"616F0D4ADBDE8021"
+				"07A5F2C58D197172"
+				"4E853010A2AF5E73"
+			]
+			id: "427B116E232D4809"
+			tasks: [{
+				id: "704D547A3D1E0075"
+				type: "item"
+				item: "mw_core:cobalt_mechanism"
+			}]
+		}
+		{
+			title: "Molten Lead"
+			icon: "tconstruct:molten_lead_bucket"
+			x: -2.0d
+			y: 6.5d
+			dependencies: ["69240D98881683E1"]
+			id: "4E853010A2AF5E73"
+			tasks: [
+				{
+					id: "2258E3CFACFDD2F2"
+					type: "item"
+					item: "tconstruct:molten_lead_bucket"
+				}
+				{
+					id: "2B17B384CC0845C6"
+					type: "checkmark"
+					title: "AUtomated"
+				}
+			]
+		}
+		{
+			icon: "create:zinc_ingot"
+			x: -1.5d
+			y: 5.5d
+			dependencies: ["229215814734628C"]
+			id: "07A5F2C58D197172"
+			tasks: [
+				{
+					id: "0F1B4C5BD06BBFD8"
+					type: "item"
+					item: "create:zinc_ingot"
+				}
+				{
+					id: "4D73DA54F9FEFF3E"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "tconstruct:cobalt_ingot"
+			x: 0.5d
+			y: 5.5d
+			dependencies: ["709C0EFA23C31D47"]
+			id: "22A3CD60B02D1ACB"
+			tasks: [
+				{
+					id: "52C18428450D1106"
+					type: "item"
+					item: "tconstruct:cobalt_ingot"
+				}
+				{
+					id: "3F5160C61732072C"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: -0.5d
+			y: 5.0d
+			description: ["Mechanical Crafting is the only way to automate the construction of Redstone Flux Coils."]
+			dependencies: [
+				"5CA7EA0275FC0C1F"
+				"219BF695E1461900"
+			]
+			id: "616F0D4ADBDE8021"
+			tasks: [{
+				id: "420F69F0B7729CF9"
+				type: "item"
+				item: "thermal:rf_coil"
+			}]
+		}
+		{
+			x: 1.0d
+			y: 3.5d
+			subtitle: "[Already Automated]"
+			dependencies: ["487ED42271AE45D6"]
+			id: "5CA7EA0275FC0C1F"
+			tasks: [{
+				id: "6F69DF05BEC5D4B2"
+				type: "item"
+				item: "minecraft:redstone"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 2.5d
+			subtitle: "[Already Automated]"
+			dependencies: ["2248C1E1A0AC7CEB"]
+			id: "219BF695E1461900"
+			tasks: [{
+				id: "64D3633062A8CBF8"
+				type: "item"
+				item: "minecraft:gold_ingot"
+			}]
+		}
+		{
+			title: "Molten Cobalt"
+			icon: "tconstruct:molten_cobalt_bucket"
+			x: 4.0d
+			y: 3.0d
+			description: ["Molten Cobalt is an output from most metal refining recipes."]
+			dependencies: ["63227557E2B93547"]
+			id: "709C0EFA23C31D47"
+			tasks: [
+				{
+					id: "11A799821F4AD783"
+					type: "item"
+					title: "Molten Cobalt"
+					item: "tconstruct:molten_cobalt_bucket"
+				}
+				{
+					id: "72D0CCAC066D1066"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Molten Zinc"
+			icon: "tconstruct:molten_zinc_bucket"
+			x: -2.5d
+			y: 4.0d
+			dependencies: ["40A7D6E655703913"]
+			id: "229215814734628C"
+			tasks: [
+				{
+					id: "101656C9F8D22CB8"
+					type: "item"
+					item: "tconstruct:molten_zinc_bucket"
+				}
+				{
+					id: "7D756E8250D69419"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Refining Molten Tin"
+			icon: "tconstruct:molten_tin_bucket"
+			x: -2.0d
+			y: 2.0d
+			dependencies: ["2FD55ADBF5C8D65A"]
+			id: "40A7D6E655703913"
+			tasks: [
+				{
+					id: "010B7F6DBFD64F73"
+					type: "item"
+					item: "tconstruct:molten_tin_bucket"
+				}
+				{
+					id: "44214942BDA9535E"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Refining Molten Gold"
+			icon: "tconstruct:molten_gold_bucket"
+			x: -0.5d
+			y: 0.5d
+			dependencies: ["63227557E2B93547"]
+			id: "2FD55ADBF5C8D65A"
+			tasks: [
+				{
+					id: "130D8DAE7D98B92D"
+					type: "item"
+					item: "tconstruct:molten_gold_bucket"
+				}
+				{
+					id: "36BD262546929FA6"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Refining Molten Copper"
+			icon: "tconstruct:molten_copper_bucket"
+			x: 2.5d
+			y: 0.5d
+			dependencies: ["30C85CF854731D59"]
+			id: "63227557E2B93547"
+			tasks: [
+				{
+					id: "60F6E632EF8BB664"
+					type: "item"
+					item: "tconstruct:molten_copper_bucket"
+				}
+				{
+					id: "357DB27645E6322D"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "thermal:lead_nugget"
+			x: -4.5d
+			y: 5.0d
+			description: ["Scorchia is rich in Lead! Crushing it will break off chunks of Crushed Lead and Lead Nuggets!"]
+			dependencies: ["35229A5907071191"]
+			id: "69240D98881683E1"
+			tasks: [
+				{
+					id: "40463C37A5B5C198"
+					type: "item"
+					item: "thermal:lead_nugget"
+				}
+				{
+					id: "14CF156AA0D10D4B"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "create:scorchia"
+			x: -5.0d
+			y: 3.0d
+			description: ["Combining Scoria with Black Dye will create Scorchia."]
+			dependencies: [
+				"5444ACC4A2743BA4"
+				"7F9F2C05DD8FE2BE"
+			]
+			id: "35229A5907071191"
+			tasks: [
+				{
+					id: "738A337A69DA039A"
+					type: "item"
+					item: "create:scorchia"
+				}
+				{
+					id: "282DCCF41F7FC432"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "minecraft:black_dye"
+			x: -4.0d
+			y: 1.5d
+			description: ["Crush Charcoal to make Black Dye"]
+			dependencies: ["0D8941A1F6A444B9"]
+			id: "5444ACC4A2743BA4"
+			tasks: [
+				{
+					id: "2E42142F838AF1C1"
+					type: "item"
+					item: "minecraft:black_dye"
+				}
+				{
+					id: "4A8D4ADE3E106030"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "create:scoria"
+			x: -6.0d
+			y: 1.0d
+			description: ["Cooking Scoria will result in Soul Sand."]
+			dependencies: ["619760787EF29973"]
+			id: "7F9F2C05DD8FE2BE"
+			tasks: [
+				{
+					id: "778E710F1C0B4CAC"
+					type: "item"
+					item: "create:scoria"
+				}
+				{
+					id: "4D3E8ED366B40C99"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "minecraft:soul_sand"
+			x: -4.5d
+			y: 0.0d
+			description: ["You'll need to haunt your Sand to get Soul Sand."]
+			dependencies: ["6CCB317A61E1F369"]
+			id: "619760787EF29973"
+			tasks: [
+				{
+					id: "464D2399C7D122FA"
+					type: "item"
+					item: "minecraft:soul_sand"
+				}
+				{
+					id: "5CE19C85D4B61F90"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: -4.0d
+			y: -1.5d
+			subtitle: "[Already Automated]"
+			dependencies: ["4058BED15C956B22"]
+			id: "6CCB317A61E1F369"
+			tasks: [{
+				id: "1B75BB22CCFAE667"
+				type: "item"
+				item: "minecraft:sand"
+			}]
+		}
+		{
+			icon: "minecraft:charcoal"
+			x: -2.5d
+			y: 0.5d
+			description: ["Time to cook all those Flammable Logs you've worked so hard to grow!"]
+			dependencies: ["03AF1DFD02A32727"]
+			id: "0D8941A1F6A444B9"
+			tasks: [
+				{
+					id: "65BEA0393B0401A2"
+					type: "item"
+					item: "minecraft:charcoal"
+				}
+				{
+					id: "21071156F44CA7E3"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Flammable Logs"
+			icon: "minecraft:oak_log"
+			x: -1.0d
+			y: -2.0d
+			description: ["Whilst you may have constructed a tree farm already for Chapter 1, a new one is reccommended as you will be needing a lot of charcoal."]
+			dependencies: ["44286347C6F6AC67"]
+			id: "03AF1DFD02A32727"
+			tasks: [
+				{
+					id: "18E6C131343EE183"
+					type: "item"
+					title: "Any Flammable Logs"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "minecraft:logs_that_burn"
+						}
+					}
+				}
+				{
+					id: "57F80860EDFB9625"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Refining Molten Iron"
+			icon: "tconstruct:molten_iron_bucket"
+			x: 4.0d
+			y: -0.5d
+			dependencies: [
+				"503A97041C9C5577"
+				"5049B227F0BC4BA1"
+			]
+			id: "30C85CF854731D59"
+			tasks: [
+				{
+					id: "79AB790BE66AB233"
+					type: "item"
+					item: "tconstruct:molten_iron_bucket"
+				}
+				{
+					id: "43972890D172B413"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: 2.0d
+			y: -2.0d
+			subtitle: "[Already Automated]"
+			dependencies: ["2C522C3F689D3703"]
+			id: "503A97041C9C5577"
+			tasks: [{
+				id: "4F218D05E33390B8"
+				type: "item"
+				item: "minecraft:iron_nugget"
+			}]
+		}
+		{
+			title: "Iron Nuggets Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: 3.5d
+			y: -3.0d
+			shape: "gear"
+			subtitle: "Automated in Chapter 1"
+			hide_dependency_lines: true
+			dependencies: ["44286347C6F6AC67"]
+			id: "2C522C3F689D3703"
+			tasks: [{
+				id: "1E9D3F12B086B355"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Sand Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: -5.0d
+			y: -3.0d
+			shape: "gear"
+			subtitle: "Automated in Chapter 1"
+			hide_dependency_lines: true
+			dependencies: ["44286347C6F6AC67"]
+			id: "4058BED15C956B22"
+			tasks: [{
+				id: "792FFBA7476A64D6"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Gold Ingot Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: 1.0d
+			y: 1.5d
+			shape: "gear"
+			subtitle: "Automated in Chapter 2"
+			hide_dependency_lines: true
+			dependencies: ["44286347C6F6AC67"]
+			id: "2248C1E1A0AC7CEB"
+			tasks: [{
+				id: "09F0E928C3F58771"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Redstone Dust Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: 2.5d
+			y: 2.5d
+			shape: "gear"
+			subtitle: "Automated in Chapter 2"
+			hide_dependency_lines: true
+			dependencies: ["44286347C6F6AC67"]
+			id: "487ED42271AE45D6"
+			tasks: [{
+				id: "7612BC7ED4FA88BD"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "custommachinery:textures/gui/base_status_running.png"
+				}
+			}
+			x: 5.5d
+			y: -1.5d
+			shape: "hexagon"
+			description: ["To get Molten Zinc you will need to refine many molten metals starting with Molten Iron. Descriptions will not be provided for these quests as they all follow the same method."]
+			hide_dependency_lines: true
+			dependencies: ["44286347C6F6AC67"]
+			id: "5049B227F0BC4BA1"
+			tasks: [
+				{
+					id: "44F3862D8247192A"
+					type: "checkmark"
+					title: "Refining"
+				}
+				{
+					id: "1BFDF1C1D0166994"
+					type: "item"
+					item: "thermal:machine_refinery"
+				}
+			]
+		}
+		{
+			icon: "mw_core:logic_mechanism"
+			x: -1.0d
+			y: 8.0d
+			dependencies: ["427B116E232D4809"]
+			id: "799F6769884BAAAD"
+			tasks: [{
+				id: "2030B48387F141EF"
+				type: "checkmark"
+				title: "A Logical Way Forward"
+			}]
+		}
+	]
 	quest_links: [ ]
 }

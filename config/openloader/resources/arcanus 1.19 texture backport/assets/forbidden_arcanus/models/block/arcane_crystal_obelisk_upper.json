@@ -1,0 +1,26 @@
+{
+	"credit": "Model created by Zorak Design - Contact me on discord for work: CesarZorak#0808",
+	"parent": "minecraft:block/block",
+	"render_type": "cutout",
+	"textures": {
+		"4": "forbidden_arcanus:block/arcane_crystal_obelisk_top",
+		"5": "forbidden_arcanus:block/arcane_crystal_obelisk_upper",
+		"particle": "#0"
+	},
+	"elements": [
+		{
+			"name": "0",
+			"from": [3, 0, 3],
+			"to": [13, 14, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [3, 2, 13, 16], "texture": "#5"},
+				"east": {"uv": [3, 2, 13, 16], "texture": "#5"},
+				"south": {"uv": [3, 2, 13, 16], "texture": "#5"},
+				"west": {"uv": [3, 2, 13, 16], "texture": "#5"},
+				"up": {"uv": [3, 3, 13, 13], "texture": "#4"},
+				"down": {"uv": [3, 3, 13, 13], "texture": "#4", "cullface": "down"}
+			}
+		}
+	]
+}

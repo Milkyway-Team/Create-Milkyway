@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "malum:block/blazing_quartz_ore_0"
+      },
+      {
+        "model": "malum:block/blazing_quartz_ore_1"
+      },
+      {
+        "model": "malum:block/blazing_quartz_ore_2"
+      },
+      {
+        "model": "malum:block/blazing_quartz_ore_3"
+      }
+    ]
+  }
+}

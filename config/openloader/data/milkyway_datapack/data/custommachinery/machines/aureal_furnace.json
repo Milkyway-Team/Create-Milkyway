@@ -1,0 +1,178 @@
+{
+  "name": "Aureal Furnace",
+  "appearance": {
+    "interaction_sound": "forbidden_arcanus:runic_tenebris_core_activated",
+    "idle": {
+      "block": "kubejs:machine/aureal_furnace_off"
+    },
+    "running": {
+      "lightlevel": 15,
+      "block": "custommachinery:machine/aureal_furnace_on"
+    }
+  },
+  "gui": [
+    {
+      "texture": "kubejs:textures/gui/fa_base_background.png",
+      "x": 0,
+      "y": 0,
+      "type": "custommachinery:texture"
+    },
+    {
+      "x": 47,
+      "y": 80,
+      "type": "custommachinery:player_inventory"
+    },
+    {
+      "texture": "kubejs:textures/gui/fa_slot.png",
+      "id": "input",
+      "x": 67,
+      "y": 30,
+      "type": "custommachinery:slot"
+    },
+    {
+      "texture": "kubejs:textures/gui/fa_slot.png",
+      "id": "input2",
+      "x": 87,
+      "y": 30,
+      "type": "custommachinery:slot"
+    },
+    {
+      "emptytexture": "kubejs:textures/gui/aureal_empty.png",
+      "filledtexture": "kubejs:textures/gui/aureal_full.png",
+      "type": "custommachinery:energy",
+      "x": 47,
+      "y": 30
+    },
+    {
+      "texture": "kubejs:textures/gui/fa_slot.png",
+      "id": "output1",
+      "x": 149,
+      "y": 30,
+      "type": "custommachinery:slot"
+    },
+    {
+      "texture": "kubejs:textures/gui/fa_slot.png",
+      "id": "output2",
+      "x": 169,
+      "y": 30,
+      "type": "custommachinery:slot"
+    },
+    {
+      "texture": "kubejs:textures/gui/fa_slot.png",
+      "id": "output3",
+      "x": 189,
+      "y": 30,
+      "type": "custommachinery:slot"
+    },
+    {
+      "texture": "kubejs:textures/gui/fa_slot.png",
+      "id": "fuel",
+      "x": 116,
+      "y": 50,
+      "type": "custommachinery:slot",
+      "ghost": "forbidden_arcanus:arcane_crystal_dust"
+    },
+    {
+      "x": 116,
+      "y": 30,
+      "type": "custommachinery:progress",
+      "filledTexture": "kubejs:textures/gui/progress_full.png",
+      "emptyTexture": "kubejs:textures/gui/progress_empty.png"
+    },
+    {
+      "text": "Aureal Furnace",
+      "x": 18,
+      "y": 5,
+      "type": "custommachinery:text"
+    }
+  ],
+  "components": [
+    {
+      "mode": "input",
+      "id": "input",
+      "type": "custommachinery:item"
+    },
+    {
+      "mode": "input",
+      "id": "input2",
+      "type": "custommachinery:item"
+    },
+    {
+      "mode": "output",
+      "id": "output1",
+      "type": "custommachinery:item"
+    },
+    {
+      "mode": "output",
+      "id": "output2",
+      "type": "custommachinery:item"
+    },
+    {
+      "mode": "output",
+      "id": "output3",
+      "type": "custommachinery:item"
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "fuel",
+      "mode": "input",
+      "filter": ["forbidden_arcanus:arcane_crystal_dust"]
+    },
+    {
+      "type": "custommachinery:energy",
+      "capacity": 1000,
+      "maxInput": 0,
+      "maxOutput": 0
+    }
+  ],
+  "jei": [
+    {
+      "x": 116,
+      "y": 30,
+      "type": "custommachinery:progress"
+    },
+    {
+      "texture": "custommachinery:textures/gui/base_slot.png",
+      "id": "input",
+      "x": 67,
+      "y": 30,
+      "type": "custommachinery:slot"
+    },
+    {
+      "texture": "custommachinery:textures/gui/base_slot.png",
+      "id": "input2",
+      "x": 87,
+      "y": 30,
+      "type": "custommachinery:slot"
+    },
+    {
+      "texture": "custommachinery:textures/gui/base_slot.png",
+      "id": "output1",
+      "x": 149,
+      "y": 30,
+      "type": "custommachinery:slot"
+    },
+    {
+      "texture": "kubejs:textures/gui/fa_slot.png",
+      "id": "output2",
+      "x": 168,
+      "y": 30,
+      "type": "custommachinery:slot"
+    },
+    {
+      "texture": "custommachinery:textures/gui/base_slot.png",
+      "id": "output3",
+      "x": 187,
+      "y": 30,
+      "type": "custommachinery:slot"
+    },
+    {
+      "texture": "custommachinery:textures/gui/base_slot.png",
+      "id": "fuel",
+      "x": 116,
+      "y": 50,
+      "type": "custommachinery:slot"
+    }
+  ],
+  "catalysts": ["custommachinery:magic_spawner", "custommachinery:stone_generator"]
+}

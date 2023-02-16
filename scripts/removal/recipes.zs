@@ -423,8 +423,6 @@ craftingTable.remove(<item:tconstruct:manyullyn_nugget>);
 craftingTable.remove(<item:tconstruct:hepatizon_nugget>);
 craftingTable.remove(<item:mw_core:transium_nugget>);
 craftingTable.remove(<item:create:brass_nugget>);
-craftingTable.remove(<tag:items:forge:nuggets>);
-craftingTable.remove(<tag:items:forge:ingots>);
 
 craftingTable.remove(<item:immersiveengineering:dust_constantan>);
 craftingTable.remove(<item:immersiveengineering:dust_electrum>);
@@ -661,8 +659,6 @@ craftingTable.removeByName("thermal:rubber_from_dandelion");
 <recipetype:minecraft:crafting>.removeByName("create:crafting/materials/andesite_alloy");
 <recipetype:minecraft:crafting>.removeByName("create:crafting/materials/andesite_alloy_from_zinc");
 
-<recipetype:minecraft:crafting>.removeByName("minecraft:cast_iron_nugget");
-<recipetype:minecraft:crafting>.removeByName("minecraft:nethersteel_nugget");
 <recipetype:minecraft:crafting>.removeByName("tconstruct:common/materials/netherite_nugget_from_ingot");
 
 

@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "block/deepslate_copper_ore_0"
+      },
+      {
+        "model": "block/deepslate_copper_ore_1"
+      },
+      {
+        "model": "block/deepslate_copper_ore_2"
+      },
+      {
+        "model": "block/deepslate_copper_ore_3"
+      }
+    ]
+  }
+}

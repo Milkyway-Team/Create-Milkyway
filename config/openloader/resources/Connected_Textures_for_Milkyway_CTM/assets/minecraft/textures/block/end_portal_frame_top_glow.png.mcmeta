@@ -1,0 +1,14 @@
+{
+    "ctm":{
+        "ctm_version": 1,
+        "type":"ctm",
+        "layer":"CUTOUT",
+        "textures":[
+            "minecraft:block/end_portal_frame_top_glow_ctm"
+        ],
+        "extra":{
+        	  "ignore_states":true,
+            "light": 15
+        }
+    }
+}

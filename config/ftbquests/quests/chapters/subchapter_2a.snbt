@@ -1,0 +1,396 @@
+{
+	id: "004015E71598A85C"
+	group: "26C9462713CC8837"
+	order_index: 4
+	filename: "subchapter_2a"
+	title: "Sub-Chapter 2a"
+	icon: "mw_core:seared_mechanism"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			icon: "create:brass_hand"
+			x: -0.5d
+			y: -2.5d
+			dependencies: ["6FE74C09FE0EC2F1"]
+			id: "3F21DA3AB297FB38"
+			tasks: [{
+				id: "2E3242C52AFB1EFA"
+				type: "checkmark"
+				title: "Chapter 2a START!"
+			}]
+		}
+		{
+			icon: "farmersdelight:lime_canvas_sign"
+			x: -2.5d
+			y: -2.5d
+			dependencies: ["66061EDBE498CE02"]
+			id: "6FE74C09FE0EC2F1"
+			tasks: [{
+				id: "5DC9277E0A4E470F"
+				type: "checkmark"
+				title: "INFO"
+			}]
+		}
+		{
+			icon: "mw_core:seared_mechanism"
+			x: -0.5d
+			y: 5.5d
+			dependencies: [
+				"0A2B7F279E9362DB"
+				"4A473DA6AB6F59BF"
+				"26A42BC3E3045AD0"
+				"4D88E0517BB40904"
+				"637DEC177A1B4110"
+			]
+			id: "09B7D8720A844CF6"
+			tasks: [
+				{
+					id: "5FF40F3777DDC9EA"
+					type: "item"
+					item: "mw_core:seared_mechanism"
+				}
+				{
+					id: "38231D37BCD76AC0"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "create:iron_sheet"
+			x: -2.5d
+			y: 5.0d
+			dependencies: ["7E6D77AB5145745D"]
+			id: "4A473DA6AB6F59BF"
+			tasks: [
+				{
+					id: "2064398915A2E380"
+					type: "item"
+					item: "create:iron_sheet"
+				}
+				{
+					id: "78FD71DB5BD16A82"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "create:copper_nugget"
+			x: -1.5d
+			y: 4.5d
+			description: ["You can use a single Mechanical Crafter to seperate an Ingot into 9 Nuggets."]
+			dependencies: ["3A8A05C1BD43E643"]
+			id: "637DEC177A1B4110"
+			tasks: [
+				{
+					id: "7654416FE942DFAC"
+					type: "item"
+					item: "create:copper_nugget"
+				}
+				{
+					id: "5F3A4CCBE26DAB12"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "tconstruct:seared_brick"
+			x: 0.5d
+			y: 4.5d
+			description: ["Cooking Grout will create Seared Bricks."]
+			dependencies: ["1FC3FEC9F1C127FB"]
+			id: "0A2B7F279E9362DB"
+			tasks: [
+				{
+					id: "213B75DC69BB63BB"
+					type: "item"
+					item: "tconstruct:seared_brick"
+				}
+				{
+					id: "52EA59AD0C148A9C"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "minecraft:glass"
+			x: 1.5d
+			y: 5.0d
+			dependencies: ["108FC6794CF6FDA5"]
+			id: "26A42BC3E3045AD0"
+			tasks: [
+				{
+					id: "0EDB5D93D4A75447"
+					type: "item"
+					item: "minecraft:glass"
+				}
+				{
+					id: "3E0AF846E2714EDF"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "minecraft:lava_bucket"
+			x: -0.5d
+			y: 4.0d
+			dependencies: ["067D47320FFC4C48"]
+			id: "4D88E0517BB40904"
+			tasks: [
+				{
+					id: "2731413D9838E5F9"
+					type: "item"
+					item: "minecraft:lava_bucket"
+				}
+				{
+					id: "7F1EC3E4876A7018"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "minecraft:sand"
+			x: 3.5d
+			y: 3.5d
+			description: ["Crush Gravel to make Sand."]
+			dependencies: ["1F390B390699DF20"]
+			id: "108FC6794CF6FDA5"
+			tasks: [
+				{
+					id: "09B85FCE3772454B"
+					type: "item"
+					item: "minecraft:sand"
+				}
+				{
+					id: "23F53EED4A6576D3"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "tconstruct:grout"
+			x: 1.0d
+			y: 2.0d
+			description: ["Combining Sand, Gravel and Clay will make Grout."]
+			dependencies: [
+				"108FC6794CF6FDA5"
+				"1F390B390699DF20"
+				"131AC4A5E9587D8B"
+			]
+			id: "1FC3FEC9F1C127FB"
+			tasks: [
+				{
+					id: "63894B3068A3B10A"
+					type: "item"
+					item: "tconstruct:grout"
+				}
+				{
+					id: "2DB2F58D78C27D06"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "minecraft:gravel"
+			x: 2.5d
+			y: 1.0d
+			description: ["Crushing Cobblestone creates Gravel"]
+			dependencies: ["4E195F9EB29DAC0B"]
+			id: "1F390B390699DF20"
+			tasks: [
+				{
+					id: "6A7B6813A6268B2C"
+					type: "item"
+					item: "minecraft:gravel"
+				}
+				{
+					id: "49C9896BAD6DA689"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "minecraft:clay_ball"
+			x: 1.5d
+			y: 3.5d
+			description: ["Washing sand will create Clay Balls."]
+			dependencies: ["108FC6794CF6FDA5"]
+			id: "131AC4A5E9587D8B"
+			tasks: [
+				{
+					id: "30D19D296F601CF9"
+					type: "item"
+					item: "minecraft:clay_ball"
+				}
+				{
+					id: "1E4C3DF4F412C402"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: 3.0d
+			y: -0.5d
+			subtitle: "[Already Automated]"
+			dependencies: ["250136F69BCA2E15"]
+			id: "4E195F9EB29DAC0B"
+			tasks: [{
+				id: "5B4D483D653A244F"
+				type: "item"
+				item: "minecraft:cobblestone"
+			}]
+		}
+		{
+			title: "Dripstone Lava Farm"
+			icon: "minecraft:pointed_dripstone"
+			x: -0.5d
+			y: 2.0d
+			description: ["Dripstone can fill a Cauldron with lava when it is placed beneath a lava source."]
+			dependencies: ["238207FF7A9570D3"]
+			id: "067D47320FFC4C48"
+			tasks: [
+				{
+					id: "7DBC62FCF100B363"
+					type: "item"
+					item: "minecraft:pointed_dripstone"
+				}
+				{
+					id: "0466648C25C074E6"
+					type: "item"
+					item: "minecraft:cauldron"
+				}
+				{
+					id: "3E5FA0316DC183DB"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: -2.0d
+			y: 2.5d
+			subtitle: "[Already Automated]"
+			dependencies: ["11A526E9D7D59EE6"]
+			id: "3A8A05C1BD43E643"
+			tasks: [{
+				id: "7667E505B58A3339"
+				type: "item"
+				item: "minecraft:copper_ingot"
+			}]
+		}
+		{
+			icon: "minecraft:iron_ingot"
+			x: -3.5d
+			y: 3.5d
+			dependencies: ["0D3D5E8CAC23FF4B"]
+			id: "7E6D77AB5145745D"
+			tasks: [
+				{
+					id: "16DD342C8C6FDC8E"
+					type: "item"
+					item: "minecraft:iron_ingot"
+				}
+				{
+					id: "61BC2B2E09F8E700"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Molten Iron Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: -5.0d
+			y: 1.0d
+			shape: "gear"
+			subtitle: "Automated in Chapter 1"
+			hide_dependency_lines: true
+			dependencies: ["3F21DA3AB297FB38"]
+			id: "45EF8E32436C1D4D"
+			tasks: [{
+				id: "4AEAEAB5263BD8F0"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Molten Iron"
+			x: -5.0d
+			y: 2.5d
+			subtitle: "[Already Automated]"
+			dependencies: ["45EF8E32436C1D4D"]
+			id: "0D3D5E8CAC23FF4B"
+			tasks: [{
+				id: "70EA2A99AD49CEBC"
+				type: "item"
+				item: "tconstruct:molten_iron_bucket"
+			}]
+		}
+		{
+			title: "Copper Ingot Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: -3.0d
+			y: 1.5d
+			shape: "gear"
+			subtitle: "Automated in Chapter 1a"
+			hide_dependency_lines: true
+			dependencies: ["3F21DA3AB297FB38"]
+			id: "11A526E9D7D59EE6"
+			tasks: [{
+				id: "4A6FF272B7D53F5B"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Find the Dripstone Caves"
+			icon: "minecraft:dripstone_block"
+			x: -1.5d
+			y: 0.5d
+			shape: "octagon"
+			dependencies: ["3F21DA3AB297FB38"]
+			id: "238207FF7A9570D3"
+			tasks: [
+				{
+					id: "60F3A7D7D1F0B9C1"
+					type: "biome"
+					title: "Locate a Dripstone Cave"
+					icon: "minecraft:dripstone_block"
+					biome: "minecraft:dripstone_caves"
+				}
+				{
+					id: "40E82E14383524A3"
+					type: "checkmark"
+					title: "Dripstone Acquired"
+				}
+			]
+		}
+		{
+			title: "Cobblestone Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: 1.5d
+			y: -1.5d
+			shape: "gear"
+			subtitle: "Automated in Chapter 1"
+			hide_dependency_lines: true
+			dependencies: ["3F21DA3AB297FB38"]
+			id: "250136F69BCA2E15"
+			tasks: [{
+				id: "06532D95490F9A6E"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+	]
+	quest_links: [ ]
+}

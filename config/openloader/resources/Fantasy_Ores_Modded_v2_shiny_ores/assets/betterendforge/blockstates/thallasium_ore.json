@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "betterendforge:block/thallasium_ore_0"
+      },
+      {
+        "model": "betterendforge:block/thallasium_ore_1"
+      },
+      {
+        "model": "betterendforge:block/thallasium_ore_2"
+      },
+      {
+        "model": "betterendforge:block/thallasium_ore_3"
+      }
+    ]
+  }
+}

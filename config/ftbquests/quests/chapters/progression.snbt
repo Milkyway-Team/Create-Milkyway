@@ -9,14 +9,15 @@
 	default_hide_dependency_lines: false
 	quests: [
 		{
+			title: "A New World To Explore"
 			icon: "create:cogwheel"
 			disable_toast: true
 			x: -20.0d
 			y: -2.5d
-			shape: "diamond"
+			shape: "gear"
+			subtitle: "Lots has changed since you were last here..."
 			dependencies: ["2A39249976E79176"]
-			hide: true
-			size: 5.0d
+			size: 3.0d
 			id: "11CF00C9EEC3C9C8"
 			tasks: [{
 				id: "5F9A7A749DA4BF58"
@@ -25,9 +26,13 @@
 			}]
 		}
 		{
+			title: "A Basic Start"
+			icon: "mw_core:basic_mechanism"
 			x: -16.5d
-			y: -5.5d
-			dependencies: ["11CF00C9EEC3C9C8"]
+			y: -2.5d
+			shape: "gear"
+			dependencies: ["75F74C3D065BD772"]
+			hide: false
 			id: "2C0A2986300275F6"
 			tasks: [{
 				id: "06C1A6E6BD386063"
@@ -36,9 +41,15 @@
 			}]
 		}
 		{
-			x: -15.0d
-			y: -3.5d
-			dependencies: ["2C0A2986300275F6"]
+			title: "Quite The Upgrade"
+			icon: "create:precision_mechanism"
+			x: -14.0d
+			y: -2.5d
+			shape: "gear"
+			dependencies: [
+				"2C0A2986300275F6"
+				"552F8F8CE7A6CE21"
+			]
 			id: "4CD56BDAF5F61552"
 			tasks: [{
 				id: "2B82E19690BB8EEC"
@@ -47,9 +58,15 @@
 			}]
 		}
 		{
-			x: -15.5d
-			y: -1.0d
-			dependencies: ["4CD56BDAF5F61552"]
+			title: "The Great Thermal Expansion"
+			icon: "mw_core:cobalt_mechanism"
+			x: -11.0d
+			y: -2.5d
+			shape: "gear"
+			dependencies: [
+				"4CD56BDAF5F61552"
+				"32FE250DD6950ABE"
+			]
 			id: "58D2C0B12357186B"
 			tasks: [{
 				id: "648AB343F229945F"
@@ -58,15 +75,91 @@
 			}]
 		}
 		{
-			title: "Copper Machinery"
-			x: -13.5d
-			y: -6.0d
-			dependencies: ["2C0A2986300275F6"]
-			id: "706AE58DB1F43BBC"
+			icon: "forbidden_arcanus:smelter_prism"
+			x: -18.5d
+			y: -5.0d
+			hide_dependency_lines: true
+			dependencies: ["11CF00C9EEC3C9C8"]
+			id: "1C0D3D5FBBAC4DF3"
 			tasks: [{
-				id: "570FA947BEBBD2EC"
+				id: "7047AF83CFF3FC10"
 				type: "checkmark"
-				title: "Copper Machinery"
+				title: "Metallurgy"
+			}]
+		}
+		{
+			title: "So This Is How It Ends..."
+			icon: "mw_core:manyullyn_mechanism"
+			x: -5.0d
+			y: -2.5d
+			shape: "gear"
+			subtitle: "One Last Drop of Creativity..."
+			dependencies: ["501D87E236FCB915"]
+			size: 3.0d
+			id: "068568D3D5E20DAC"
+			tasks: [{
+				id: "6937BBCD32F0242C"
+				type: "checkmark"
+				title: "The Manyullyn Mechanism"
+			}]
+		}
+		{
+			title: "Imaginative Inventions"
+			icon: "mw_core:creative_alloy"
+			x: -8.5d
+			y: -2.5d
+			dependencies: ["58D2C0B12357186B"]
+			id: "501D87E236FCB915"
+			tasks: [{
+				id: "4BAA22FBE0A415D1"
+				type: "checkmark"
+				title: "Creative Materials"
+			}]
+		}
+		{
+			title: "The Forbidden Arts"
+			icon: "forbidden_arcanus:hephaestus_forge"
+			x: -11.0d
+			y: -4.0d
+			hide_dependency_lines: true
+			dependencies: ["068568D3D5E20DAC"]
+			secret: true
+			id: "747ED96162F5B664"
+			tasks: [{
+				id: "681BB2941AACAA14"
+				type: "checkmark"
+				title: "Arcane Sorcery"
+			}]
+		}
+		{
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: -18.0d
+			y: -2.5d
+			shape: "gear"
+			subtitle: "What does this mean?"
+			description: [
+				"In some later quest trees, you may see a quest with the icon of an Enchanting Guide. This means that a resource needed has already been automated in previous chapters."
+				"The Summary of the \"Already Automated\" quest will say what chapter automated the production of said resource."
+			]
+			dependencies: ["11CF00C9EEC3C9C8"]
+			id: "75F74C3D065BD772"
+			tasks: [{
+				id: "5744BC158A136D75"
+				type: "checkmark"
+				title: "Already Automated?"
+			}]
+		}
+		{
+			icon: "immersiveengineering:workbench"
+			x: -15.0d
+			y: -0.5d
+			dependencies: ["552F8F8CE7A6CE21"]
+			secret: true
+			id: "557DFCE6AF64FB1B"
+			tasks: [{
+				id: "472557F51EAEABD0"
+				type: "checkmark"
+				title: "Engineering Time!"
 			}]
 		}
 	]

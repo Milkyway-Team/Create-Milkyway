@@ -1,0 +1,14 @@
+{
+    "ctm":{
+        "ctm_version": 1,
+        "type":"ctm",
+        "layer":"SOLID",
+        "textures":[
+            "forbidden_arcanus:block/polished_darkstone_ctm"
+        ],
+        "extra":{
+        	"ignore_states":true,
+        	"connect_inside":false
+        }   
+    }
+}

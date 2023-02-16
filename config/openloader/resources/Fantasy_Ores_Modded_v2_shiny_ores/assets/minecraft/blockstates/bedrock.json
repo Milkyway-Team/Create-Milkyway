@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "block/bedrock_0"
+      },
+      {
+        "model": "block/bedrock_1"
+      },
+      {
+        "model": "block/bedrock_2"
+      },
+      {
+        "model": "block/bedrock_3"
+      }
+    ]
+  }
+}

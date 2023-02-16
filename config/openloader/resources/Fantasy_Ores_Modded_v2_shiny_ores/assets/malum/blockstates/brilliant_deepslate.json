@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "malum:block/brilliant_deepslate_0"
+      },
+      {
+        "model": "malum:block/brilliant_deepslate_1"
+      },
+      {
+        "model": "malum:block/brilliant_deepslate_2"
+      },
+      {
+        "model": "malum:block/brilliant_deepslate_3"
+      }
+    ]
+  }
+}

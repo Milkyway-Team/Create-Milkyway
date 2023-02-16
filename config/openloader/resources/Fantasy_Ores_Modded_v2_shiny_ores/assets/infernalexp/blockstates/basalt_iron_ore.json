@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "infernalexp:block/basalt_iron_ore_0"
+      },
+      {
+        "model": "infernalexp:block/basalt_iron_ore_1"
+      },
+      {
+        "model": "infernalexp:block/basalt_iron_ore_2"
+      },
+      {
+        "model": "infernalexp:block/basalt_iron_ore_3"
+      }
+    ]
+  }
+}

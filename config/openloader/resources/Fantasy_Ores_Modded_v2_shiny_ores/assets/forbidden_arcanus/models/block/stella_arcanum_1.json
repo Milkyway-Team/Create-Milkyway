@@ -1,0 +1,9 @@
+{
+  "credit": "Model created by Zorak Design - Contact me on discord for work: CesarZorak#0808",
+  "parent": "cesarzorak:block/fancy_gemstone/gemstone_1",
+  "textures": {
+		"0": "forbidden_arcanus:block/stella_arcanum",
+		"1": "forbidden_arcanus:block/stella_arcanum",
+		"particle": "forbidden_arcanus:block/stella_arcanum"
+  }
+}

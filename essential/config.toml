@@ -64,7 +64,7 @@
 
 	[quality_of_life.discord_integration]
 		show_username_and_avatar = true
-		set_activity_status_on_discord = true
+		set_activity_status_on_discord = false
 		allow_ask_to_join = true
 		show_current_server = false
 

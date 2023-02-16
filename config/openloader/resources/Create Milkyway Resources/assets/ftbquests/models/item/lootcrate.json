@@ -1,0 +1,71 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"textures": {
+		"0": "ftbquests:item/lootcrate/side_outline",
+		"1": "ftbquests:item/lootcrate/top",
+		"2": "ftbquests:item/lootcrate/top_outline",
+		"3": "ftbquests:item/lootcrate/front",
+		"5": "ftbquests:item/lootcrate/side",
+		"particle": "ftbquests:item/lootcrate/side_outline"
+	},
+	"elements": [
+		{
+			"from": [1, 0, 1],
+			"to": [15, 14, 15],
+			"faces": {
+				"north": {"uv": [1, 1, 15, 15], "texture": "#0"},
+				"east": {"uv": [1, 1, 15, 15], "texture": "#0"},
+				"south": {"uv": [1, 1, 15, 15], "texture": "#0"},
+				"west": {"uv": [1, 1, 15, 15], "texture": "#0"},
+				"up": {"uv": [1, 2, 15, 16], "texture": "#2"},
+				"down": {"uv": [1, 2, 15, 16], "texture": "#2", "cullface": "down"}
+			}
+		},
+		{
+			"from": [1, 0, 1],
+			"to": [15, 14, 15],
+			"faces": {
+				"north": {"uv": [1, 2, 15, 16], "texture": "#3", "tintindex": 0},
+				"east": {"uv": [1, 2, 15, 16], "texture": "#5", "tintindex": 0},
+				"south": {"uv": [1, 2, 15, 16], "texture": "#5", "tintindex": 0},
+				"west": {"uv": [1, 2, 15, 16], "texture": "#5", "tintindex": 0},
+				"up": {"uv": [1, 1, 15, 15], "texture": "#1", "tintindex": 0},
+				"down": {"uv": [1, 1, 15, 15], "texture": "#1", "cullface": "down", "tintindex": 0}
+			}
+		}
+	],
+	"gui_light": "side",
+	"display": {
+		"gui": {
+			"rotation": [ 30, 225, 0 ],
+			"translation": [ 0, 0, 0],
+			"scale":[ 0.625, 0.625, 0.625 ]
+		},
+		"ground": {
+			"rotation": [ 0, 0, 0 ],
+			"translation": [ 0, 3, 0],
+			"scale":[ 0.25, 0.25, 0.25 ]
+		},
+		"fixed": {
+			"rotation": [ 0, 0, 0 ],
+			"translation": [ 0, 0, 0],
+			"scale":[ 0.5, 0.5, 0.5 ]
+		},
+		"thirdperson_righthand": {
+			"rotation": [ 75, 45, 0 ],
+			"translation": [ 0, 2.5, 0],
+			"scale": [ 0.375, 0.375, 0.375 ]
+		},
+		"firstperson_righthand": {
+			"rotation": [ 0, 45, 0 ],
+			"translation": [ 0, 0, 0 ],
+			"scale": [ 0.40, 0.40, 0.40 ]
+		},
+		"firstperson_lefthand": {
+			"rotation": [ 0, 225, 0 ],
+			"translation": [ 0, 0, 0 ],
+			"scale": [ 0.40, 0.40, 0.40 ]
+		}
+	}
+}

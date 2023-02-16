@@ -1,0 +1,12 @@
+{
+	id: "43A7CD50FFD0A1FD"
+	group: "26C9462713CC8837"
+	order_index: 7
+	filename: "chapter_4_2"
+	title: "Chapter 4"
+	icon: "mw_core:creative_alloy"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [ ]
+	quest_links: [ ]
+}

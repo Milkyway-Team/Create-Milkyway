@@ -1,0 +1,431 @@
+{
+	id: "7844FC220D63EF8B"
+	group: "26C9462713CC8837"
+	order_index: 2
+	filename: "subchapter_1a"
+	title: "Sub-Chapter 1a"
+	icon: "mw_core:copper_mechanism"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			icon: "create:brass_hand"
+			x: -4.0d
+			y: -0.5d
+			dependencies: ["4CB93E926C89E0CF"]
+			id: "102D79A7CE69CB39"
+			tasks: [{
+				id: "5EC79453C6641EAD"
+				type: "checkmark"
+				title: "Chapter 1a START!"
+			}]
+		}
+		{
+			icon: "farmersdelight:lime_canvas_sign"
+			x: -5.5d
+			y: -0.5d
+			description: [
+				"The Copper Mechanism is used for all fluid machinery. It will be required to make some machines but automation is optional."
+				"Due to this being a bonus chapter, if you do wish to automate it you will find it requires use of machines from later chapters to easily automate some resources."
+			]
+			dependencies: ["682F0B62DB2A51A8"]
+			hide: true
+			id: "4CB93E926C89E0CF"
+			tasks: [{
+				id: "32299D12AEB35715"
+				type: "checkmark"
+				title: "INFO"
+			}]
+		}
+		{
+			icon: "mw_core:copper_mechanism"
+			x: -4.0d
+			y: 10.5d
+			dependencies: [
+				"52042BBB2D4BF962"
+				"4D8876D092B78FE3"
+				"7ECCE72F8FCEFAED"
+			]
+			id: "0DFC6445613E3F0F"
+			tasks: [
+				{
+					id: "01E8643AD289CF40"
+					type: "item"
+					item: "mw_core:copper_mechanism"
+				}
+				{
+					id: "55FAF2B03FE0CEEF"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+			rewards: [{
+				id: "53589EF159CE75BE"
+				type: "item"
+				item: {
+					id: "questsadditions:lootcrate_block"
+					Count: 1b
+					tag: {
+						BlockEntityTag: {
+							type: "copper_mechanism_reward_table"
+						}
+					}
+				}
+			}]
+		}
+		{
+			icon: "alloyed:bronze_sheet"
+			x: -5.5d
+			y: 9.5d
+			dependencies: ["669A2D21258470E5"]
+			id: "4D8876D092B78FE3"
+			tasks: [
+				{
+					id: "0C6F4DBA7B3150D2"
+					type: "item"
+					item: "alloyed:bronze_sheet"
+				}
+				{
+					id: "0E97F9F384F2CEF3"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "thermal:iron_gear"
+			x: -2.5d
+			y: 9.5d
+			description: ["Cast your Molten Iron into a Gear Cast."]
+			dependencies: ["1D4663EF5C7348C4"]
+			id: "7ECCE72F8FCEFAED"
+			tasks: [
+				{
+					id: "09F4A883C0C931C6"
+					type: "item"
+					item: "thermal:iron_gear"
+				}
+				{
+					id: "65EC6687347D16E6"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "create:copper_sheet"
+			x: -4.0d
+			y: 9.0d
+			dependencies: ["6D3FB796223CDB37"]
+			id: "52042BBB2D4BF962"
+			tasks: [
+				{
+					id: "43AF79F9C1E78107"
+					type: "item"
+					item: "create:copper_sheet"
+				}
+				{
+					id: "261CA9270ABF9302"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "alloyed:bronze_ingot"
+			x: -7.0d
+			y: 8.0d
+			description: ["Bronze Blend is the only blend that can be Smelted into an Ingot."]
+			dependencies: ["37E003FBD36A2D3C"]
+			id: "669A2D21258470E5"
+			tasks: [
+				{
+					id: "67FD854FD7DD647B"
+					type: "item"
+					item: "alloyed:bronze_ingot"
+				}
+				{
+					id: "4B9085674F360E60"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "thermal:bronze_dust"
+			x: -7.0d
+			y: 6.5d
+			subtitle: "Mixer Alloying"
+			description: ["Mixing the two dusts you (hopefully)just automated will make a Blend. Blends are early-progression ways of Alloying."]
+			dependencies: [
+				"4F657D4D1C32EF5A"
+				"18CE1F4FFC55DEBC"
+			]
+			id: "37E003FBD36A2D3C"
+			tasks: [
+				{
+					id: "706EC0D09744F942"
+					type: "item"
+					item: "thermal:bronze_dust"
+				}
+				{
+					id: "46516584127FA113"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "thermal:tin_dust"
+			x: -8.5d
+			y: 5.5d
+			description: ["You can use a Pulverizer to crush Tin Ingots straight to dust."]
+			dependencies: ["3887446B434CB545"]
+			id: "18CE1F4FFC55DEBC"
+			tasks: [
+				{
+					id: "10F795B287D291D9"
+					type: "item"
+					item: "thermal:tin_dust"
+				}
+				{
+					id: "5CB57D8C184BCB61"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "thermal:copper_dust"
+			x: -5.0d
+			y: 4.5d
+			description: ["You can use a Pulverizer to crush Copper Ingots straight to dust."]
+			dependencies: ["6D3FB796223CDB37"]
+			id: "4F657D4D1C32EF5A"
+			tasks: [
+				{
+					id: "7208AEC00B2F1313"
+					type: "item"
+					item: "thermal:copper_dust"
+				}
+				{
+					id: "2C9EE09758AA2877"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "thermal:tin_ingot"
+			x: -8.0d
+			y: 4.0d
+			description: ["Nuggets can be compacted in a Basin to create Ingots."]
+			dependencies: ["50AE5DB4679DB577"]
+			id: "3887446B434CB545"
+			tasks: [
+				{
+					id: "1B07495010AD53C5"
+					type: "item"
+					item: "thermal:tin_ingot"
+				}
+				{
+					id: "08280D7C30C65C85"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "thermal:tin_nugget"
+			x: -9.0d
+			y: 3.0d
+			description: ["Three Tin Nuggets are guaranteed when you crush Jasper."]
+			dependencies: ["4042C5D6C4612639"]
+			id: "50AE5DB4679DB577"
+			tasks: [
+				{
+					id: "1C5083A39C491A17"
+					type: "item"
+					item: "thermal:tin_nugget"
+				}
+				{
+					id: "39EE821637DDA55A"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "quark:jasper"
+			x: -8.0d
+			y: 2.0d
+			description: ["Using an Igneous Extruder to combine Lava and Dripstone will create Jasper."]
+			dependencies: ["102D79A7CE69CB39"]
+			id: "4042C5D6C4612639"
+			tasks: [
+				{
+					id: "71E26F3C0D84ABBE"
+					type: "item"
+					item: "quark:jasper"
+				}
+				{
+					id: "2D62FE06362A9D25"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Molten Iron"
+			icon: "tconstruct:molten_iron_bucket"
+			x: -1.0d
+			y: 8.0d
+			dependencies: ["1C56061E4CA77E50"]
+			id: "1D4663EF5C7348C4"
+			tasks: [
+				{
+					id: "6C99018CFE401B55"
+					type: "item"
+					item: "tconstruct:molten_iron_bucket"
+				}
+				{
+					id: "3F51980578053B19"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "minecraft:iron_nugget"
+			x: 0.5d
+			y: 5.5d
+			description: ["Wash your gravel or import it from your Basic Mechanism factory if it starts overflowing."]
+			dependencies: ["36F3798022B3EC5F"]
+			id: "1C56061E4CA77E50"
+			tasks: [
+				{
+					id: "39C3E8B9DC6C1596"
+					type: "item"
+					item: "minecraft:iron_nugget"
+				}
+				{
+					id: "23E6C527AB18AFA5"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "minecraft:gravel"
+			x: 0.0d
+			y: 4.0d
+			description: ["Crush Cobblestone in a Millstone to make Gravel"]
+			dependencies: ["1EDD1CCCE9C0F8CE"]
+			id: "36F3798022B3EC5F"
+			tasks: [
+				{
+					id: "2308F1CB84CF6A9E"
+					type: "item"
+					item: "minecraft:gravel"
+				}
+				{
+					id: "57E182BD1373A01F"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: 1.0d
+			y: 3.0d
+			subtitle: "[Already Automated]"
+			dependencies: ["0654FE268287E7D6"]
+			id: "1EDD1CCCE9C0F8CE"
+			tasks: [{
+				id: "7B7FF90FF0DF7D4E"
+				type: "item"
+				item: "minecraft:cobblestone"
+			}]
+		}
+		{
+			icon: "minecraft:copper_ingot"
+			x: -4.0d
+			y: 6.5d
+			description: ["Cast the Molten Copper with an Ingot Cast."]
+			dependencies: ["188CDA318F8A954A"]
+			id: "6D3FB796223CDB37"
+			tasks: [
+				{
+					id: "00CD675672E5841F"
+					type: "item"
+					item: "minecraft:copper_ingot"
+				}
+				{
+					id: "49F55B7ABEFB2F90"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Molten Copper"
+			icon: "tconstruct:molten_copper_bucket"
+			x: -3.0d
+			y: 4.5d
+			dependencies: ["43862B73D695C1EC"]
+			id: "188CDA318F8A954A"
+			tasks: [
+				{
+					id: "4F7512617D1A6A93"
+					type: "item"
+					item: "tconstruct:molten_copper_bucket"
+				}
+				{
+					id: "41A820DD129E3A88"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "thermal:machine_refinery"
+			x: -1.5d
+			y: 6.0d
+			subtitle: "Split!"
+			description: [
+				"Meet your new friend, The Refinery! Check the ponder to see how to use it. In this instance you will need to convert Molten Iron to Molten Copper."
+				"The Molten Iron will also produce some cobalt which may or may not be useful later."
+			]
+			dependencies: ["1D4663EF5C7348C4"]
+			id: "43862B73D695C1EC"
+			tasks: [
+				{
+					id: "5E53BBC9C8F4EDC4"
+					type: "item"
+					item: "thermal:machine_refinery"
+				}
+				{
+					id: "1DB83808E499E6E6"
+					type: "checkmark"
+					title: "I Understand"
+				}
+			]
+		}
+		{
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: 0.0d
+			y: 2.0d
+			shape: "gear"
+			subtitle: "Automated in Chapter 1"
+			hide_dependency_lines: true
+			dependencies: ["102D79A7CE69CB39"]
+			id: "0654FE268287E7D6"
+			tasks: [{
+				id: "79E4C006D7BA43BB"
+				type: "checkmark"
+				title: "Cobblestone Already Automated"
+			}]
+		}
+	]
+	quest_links: [ ]
+}
