@@ -1,1 +1,0 @@
-[{"id":"SCARY_CLOWN_SUIT","type":"COSMETIC_BONE_HIDING","enabled":true,"data":{"head":true}},{"id":"JACK_O_LANTERN_SUIT","type":"COSMETIC_BONE_HIDING","enabled":true,"data":{"head":true}},{"id":"RAGEEXLIXIR_FLAME_EYES","type":"LOCALIZATION","enabled":true,"data":{"en_US":"RageElixir"}},{"id":"UNUSED","type":"POSITION_RANGE","enabled":true,"data":{"y_min":-2,"y_max":2}}]
