@@ -76,18 +76,6 @@
 			}]
 		}
 		{
-			x: -4.0d
-			y: 0.0d
-			hide_dependency_lines: true
-			dependencies: ["200E9C9E41239402"]
-			id: "5C87EDA3FECE3BB8"
-			tasks: [{
-				id: "5A5608EB21749EA6"
-				type: "item"
-				item: "waystones:waystone"
-			}]
-		}
-		{
 			x: -3.0d
 			y: -2.0d
 			subtitle: "A buggy mess"

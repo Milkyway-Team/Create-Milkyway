@@ -1,0 +1,993 @@
+{
+	id: "44F68408CAD025B8"
+	group: ""
+	order_index: 1
+	filename: "market"
+	title: "The Market"
+	icon: "minecraft:chest"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Sleepless"
+			icon: "minecraft:cyan_bed"
+			x: -7.0d
+			y: 2.5d
+			subtitle: "10 Silver"
+			description: ["Your last resort in case the sundown beat you to it."]
+			id: "5D17CB247942013A"
+			tasks: [{
+				id: "0783860FB502A201"
+				type: "item"
+				icon: { id: "thermal:silver_coin", Count: 10b }
+				item: "thermal:silver_coin"
+				count: 10L
+				consume_items: true
+			}]
+			rewards: [{
+				id: "55EF0FE847AE3353"
+				type: "item"
+				item: "minecraft:cyan_bed"
+			}]
+		}
+		{
+			title: "The Market"
+			icon: "minecraft:chest"
+			x: -6.0d
+			y: -4.0d
+			shape: "hexagon"
+			description: [
+				"&6The Market&r gives you options to spend your money on a variety of fun and useful items and gadgets."
+				""
+				"Have a look around. I'm sure you'll find something of use."
+			]
+			size: 2.0d
+			id: "0F870BEA235D662D"
+			tasks: [{
+				id: "3929233A89B34A71"
+				type: "checkmark"
+			}]
+		}
+		{
+			title: "Manual Exchange"
+			icon: { id: "thermal:silver_coin", Count: 16b }
+			disable_toast: true
+			x: -4.0d
+			y: -4.0d
+			shape: "circle"
+			subtitle: "Gold -> Silver"
+			description: ["Here you can exchange a Gold Coin back to a Stack of Silver."]
+			dependencies: ["0F870BEA235D662D"]
+			repeatable: true
+			id: "5326F6482C45D22A"
+			tasks: [{
+				id: "772821832EE93341"
+				type: "item"
+				item: "thermal:gold_coin"
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "26512E93CE404069"
+					type: "item"
+					icon: "thermal:silver_coin"
+					auto: "enabled"
+					item: "thermal:silver_coin"
+					count: 64
+				}
+				{
+					id: "6FA6A9A201CA27BE"
+					type: "custom"
+					title: "Repeatable"
+					icon: "thermal:machine_cycle_augment"
+					tags: ["reset"]
+					auto: "no_toast"
+				}
+			]
+		}
+		{
+			title: "Manual Exchange"
+			icon: { id: "thermal:gold_coin", Count: 2b }
+			disable_toast: true
+			x: -8.0d
+			y: -4.0d
+			shape: "circle"
+			subtitle: "Silver -> Gold"
+			description: ["Some trades require you to hand in Gold Coins. These are worth a stack of Silver each."]
+			dependencies: ["0F870BEA235D662D"]
+			repeatable: true
+			id: "1A566C74B1F7F050"
+			tasks: [{
+				id: "2387D852CA97AD1A"
+				type: "item"
+				icon: "thermal:silver_coin"
+				item: "thermal:silver_coin"
+				count: 64L
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "66BE3DDEC92812C4"
+					type: "item"
+					auto: "enabled"
+					item: "thermal:gold_coin"
+				}
+				{
+					id: "6E78A95786CA5B28"
+					type: "custom"
+					title: "Repeatable"
+					icon: "thermal:machine_cycle_augment"
+					tags: ["reset"]
+					auto: "no_toast"
+				}
+			]
+		}
+		{
+			title: "Corporate Dinner"
+			icon: "farmersdelight:steak_and_potatoes"
+			disable_toast: true
+			x: -7.0d
+			y: -1.5d
+			subtitle: "10 Silver"
+			description: ["Sometimes you have to treat yourself and the co-workers to a nice meal."]
+			id: "09DC2E2BE2BE32F4"
+			tasks: [{
+				id: "6235F365D702DF2B"
+				type: "item"
+				icon: { id: "thermal:silver_coin", Count: 10b }
+				item: "thermal:silver_coin"
+				count: 10L
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "05B553B614119E4A"
+					type: "item"
+					item: "farmersdelight:steak_and_potatoes"
+					count: 4
+				}
+				{
+					id: "607D48921297C475"
+					type: "item"
+					item: "create:builders_tea"
+					count: 4
+				}
+				{
+					id: "37DB33F821AD0AFE"
+					type: "item"
+					item: "minecraft:bread"
+					count: 2
+				}
+				{
+					id: "51A8014ACD2153F6"
+					type: "item"
+					item: "farmersdelight:mixed_salad"
+					count: 4
+				}
+				{
+					id: "5CD27D9058DAFAAB"
+					type: "item"
+					item: "farmersdelight:sweet_berry_cookie"
+					count: 4
+				}
+			]
+		}
+		{
+			title: "Landfill Pickup"
+			icon: "minecraft:dirt"
+			x: -6.0d
+			y: -0.5d
+			subtitle: "15 Silver"
+			description: ["Early on it might help to import some dirt for base building."]
+			id: "4B01606CE7AF3121"
+			tasks: [{
+				id: "188BEC2BA245DB13"
+				type: "item"
+				icon: { id: "thermal:silver_coin", Count: 15b }
+				item: "thermal:silver_coin"
+				count: 15L
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "65597F84B69546EF"
+					type: "item"
+					item: "minecraft:dirt"
+					count: 64
+				}
+				{
+					id: "5ED9F3AFC25DD60E"
+					type: "item"
+					item: "minecraft:dirt"
+					count: 64
+				}
+				{
+					id: "1A8CE751232C7235"
+					type: "item"
+					item: "minecraft:dirt"
+					count: 64
+				}
+			]
+		}
+		{
+			title: "Enderpack"
+			icon: "minecraft:shulker_box"
+			x: -4.0d
+			y: -0.5d
+			subtitle: "4 Gold"
+			description: ["It's like a backpack but classy."]
+			id: "4FD46F841CCD59F8"
+			tasks: [{
+				id: "709557A517B0143F"
+				type: "item"
+				icon: "thermal:gold_coin"
+				item: "thermal:gold_coin"
+				count: 4L
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "7B8F11CCEDEBEBD6"
+					type: "item"
+					item: "minecraft:shulker_shell"
+				}
+				{
+					id: "364AA663BD7C519F"
+					type: "item"
+					item: "minecraft:chest"
+				}
+				{
+					id: "440DF47BEF341626"
+					type: "item"
+					item: "minecraft:shulker_shell"
+				}
+			]
+		}
+		{
+			title: "1-Up!"
+			icon: "minecraft:totem_of_undying"
+			x: -8.0d
+			y: -0.5d
+			subtitle: "4 Gold"
+			id: "6D9F2FBEB7CC5195"
+			tasks: [{
+				id: "165B9A886A26BCC8"
+				type: "item"
+				icon: { id: "thermal:gold_coin", Count: 4b }
+				item: "thermal:gold_coin"
+				count: 4L
+				consume_items: true
+			}]
+			rewards: [{
+				id: "6BCBFB22A82A5698"
+				type: "item"
+				item: "minecraft:totem_of_undying"
+			}]
+		}
+		{
+			title: "Where mob ?"
+			icon: "create:haunted_bell"
+			x: -4.0d
+			y: 1.5d
+			subtitle: "45 Silver"
+			description: ["As seen on TV: This Magical Bell can detect unlit areas around it. Free shipping, bonus cursed campfire. What a Deal!"]
+			id: "4B52A04818075900"
+			tasks: [{
+				id: "4FB1B4787D648565"
+				type: "item"
+				icon: { id: "thermal:silver_coin", Count: 35b }
+				item: "thermal:silver_coin"
+				count: 45L
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "0257303302DADA1B"
+					type: "item"
+					item: "create:peculiar_bell"
+				}
+				{
+					id: "30D4605E06FF45B6"
+					type: "item"
+					item: "minecraft:soul_campfire"
+				}
+			]
+		}
+		{
+			title: "Playing with Fire"
+			icon: "thermal:explosive_grenade"
+			x: -6.0d
+			y: 3.5d
+			subtitle: "32 Silver"
+			description: ["A little testing selection of Thermal Weaponry."]
+			id: "1CC29991D5F248CA"
+			tasks: [{
+				id: "2BF8F9E5070C6122"
+				type: "item"
+				icon: { id: "thermal:silver_coin", Count: 32b }
+				item: "thermal:silver_coin"
+				count: 32L
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "1C6218230C6D71A0"
+					type: "item"
+					item: "thermal:explosive_grenade"
+					count: 8
+				}
+				{
+					id: "2D1A3F35DF8894FF"
+					type: "item"
+					item: "thermal:glowstone_grenade"
+					count: 8
+				}
+				{
+					id: "093F58649A1E0DD6"
+					type: "item"
+					item: "thermal:ice_grenade"
+					count: 8
+				}
+				{
+					id: "71BB0C93A4A7BC04"
+					type: "item"
+					item: "thermal:earth_grenade"
+					count: 8
+				}
+			]
+		}
+		{
+			title: "Gardener's Starter Pack"
+			icon: "forbidden_arcanus:cherry_flower_vines"
+			x: -7.0d
+			y: 0.5d
+			subtitle: "24 Silver"
+			id: "42384DE39AA48976"
+			tasks: [{
+				id: "05BB5DFA82280C0C"
+				type: "item"
+				icon: { id: "thermal:silver_coin", Count: 24b }
+				item: "thermal:silver_coin"
+				count: 24L
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "26A16DC998FEF595"
+					type: "item"
+					item: "farmersdelight:organic_compost"
+					count: 8
+				}
+				{
+					id: "68B1199F9AE6B8FE"
+					type: "item"
+					item: "supplementaries:planter_rich"
+					count: 16
+				}
+				{
+					id: "5DEDD7BBA8A712AA"
+					type: "item"
+					item: "minecraft:flower_pot"
+					count: 8
+				}
+				{
+					id: "01196A417139EA21"
+					type: "item"
+					item: "supplementaries:flower_box"
+					count: 4
+				}
+				{
+					id: "648B819C1B484A3F"
+					type: "item"
+					item: "minecraft:grass_block"
+					count: 4
+				}
+			]
+		}
+		{
+			title: "Painter's Starter Kit"
+			icon: "minecraft:painting"
+			x: -6.0d
+			y: 1.5d
+			subtitle: "24 Silver"
+			id: "61B040CD0832EFC0"
+			tasks: [{
+				id: "6404722100F1DEF7"
+				type: "item"
+				icon: { id: "thermal:silver_coin", Count: 24b }
+				item: "thermal:silver_coin"
+				count: 24L
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "6375AD9CBA9276E0"
+					type: "item"
+					item: "minecraft:white_wool"
+					count: 16
+				}
+				{
+					id: "72F57D408AD5C84A"
+					type: "item"
+					item: "minecraft:white_dye"
+					count: 12
+				}
+				{
+					id: "3477DB4BB2003475"
+					type: "item"
+					item: "minecraft:yellow_dye"
+					count: 12
+				}
+				{
+					id: "14FE738419E8578F"
+					type: "item"
+					item: "minecraft:black_dye"
+					count: 12
+				}
+				{
+					id: "4D37425F17A9D45F"
+					type: "item"
+					item: "minecraft:blue_dye"
+					count: 12
+				}
+				{
+					id: "4A3F1D820F9F1D26"
+					type: "item"
+					item: "minecraft:green_dye"
+					count: 12
+				}
+				{
+					id: "4FFD3D4728DFBB16"
+					type: "item"
+					item: "minecraft:red_dye"
+					count: 12
+				}
+				{
+					id: "0F0A7101131FFC08"
+					type: "item"
+					item: "minecraft:brown_dye"
+					count: 12
+				}
+			]
+		}
+		{
+			title: "Railway Starter Pack"
+			icon: "minecraft:minecart"
+			x: -5.0d
+			y: -1.5d
+			subtitle: "24 Silver"
+			id: "117587D824D23D69"
+			tasks: [{
+				id: "06C835DB602D6F9F"
+				type: "item"
+				icon: { id: "thermal:silver_coin", Count: 24b }
+				item: "thermal:silver_coin"
+				count: 24L
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "738387AED344C59B"
+					type: "item"
+					item: "create:controller_rail"
+					count: 8
+				}
+				{
+					id: "4D33B3525FF09C68"
+					type: "item"
+					item: "minecraft:powered_rail"
+					count: 8
+				}
+				{
+					id: "0A214A7B25C331F6"
+					type: "item"
+					item: "minecraft:lever"
+					count: 8
+				}
+				{
+					id: "3F0919FBED64778C"
+					type: "item"
+					item: "minecraft:rail"
+					count: 64
+				}
+				{
+					id: "6D3CCD1BF0BFD7D6"
+					type: "item"
+					item: "minecraft:rail"
+					count: 64
+				}
+			]
+		}
+		{
+			title: "Pet Owner's Starter Pack"
+			icon: "minecraft:tropical_fish"
+			x: -8.0d
+			y: 1.5d
+			subtitle: "24 Silver"
+			id: "2D75D1864FB1EF75"
+			tasks: [{
+				id: "3AA788B63B6A73EF"
+				type: "item"
+				icon: { id: "thermal:silver_coin", Count: 24b }
+				item: "thermal:silver_coin"
+				count: 24L
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "4961B49D79004571"
+					type: "item"
+					item: "minecraft:name_tag"
+					count: 4
+				}
+				{
+					id: "054AEE030B3B81F6"
+					type: "item"
+					item: "minecraft:bone"
+					count: 8
+				}
+				{
+					id: "29F276B6CDE4D6B5"
+					type: "item"
+					item: "minecraft:tropical_fish"
+					count: 8
+				}
+				{
+					id: "53AA2AF7CA1EF02C"
+					type: "item"
+					item: "minecraft:saddle"
+				}
+				{
+					id: "762BB57B2AFDB21F"
+					type: "item"
+					item: "minecraft:lead"
+					count: 2
+				}
+			]
+		}
+		{
+			title: "Instant Aesthetics"
+			icon: "minecraft:oak_leaves"
+			x: -5.0d
+			y: 0.5d
+			subtitle: "24 Silver"
+			description: ["Not too stoked with your facade? Not a problem! Foliage solves everything."]
+			id: "7D93DAB3E8ACF953"
+			tasks: [{
+				id: "06028A67C6DCCD00"
+				type: "item"
+				icon: { id: "thermal:silver_coin", Count: 24b }
+				item: "thermal:silver_coin"
+				count: 24L
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "1BA12452E9A090EC"
+					type: "item"
+					item: "minecraft:flowering_azalea_leaves"
+					count: 32
+				}
+				{
+					id: "17FCE9D6C12A7822"
+					type: "item"
+					item: "minecraft:oak_leaves"
+					count: 64
+				}
+				{
+					id: "51C2FE4F4F5057CC"
+					type: "item"
+					item: "minecraft:oak_leaves"
+					count: 64
+				}
+				{
+					id: "5B801D097C1C538F"
+					type: "item"
+					item: "minecraft:spruce_leaves"
+					count: 64
+				}
+				{
+					id: "5A23AFB90F20641B"
+					type: "item"
+					item: "minecraft:spruce_leaves"
+					count: 64
+				}
+				{
+					id: "1EC1E1486084AE66"
+					type: "item"
+					item: "minecraft:spruce_fence"
+					count: 16
+				}
+			]
+		}
+		{
+			title: "No, not the bees!"
+			icon: "minecraft:bee_nest"
+			disable_toast: true
+			x: -5.0d
+			y: 2.5d
+			subtitle: "48 Silver"
+			repeatable: true
+			id: "003E0D1CE60B166A"
+			tasks: [
+				{
+					id: "6837BEE1075CC785"
+					type: "item"
+					icon: {
+						id: "ftbquests:custom_icon"
+						Count: 1b
+						tag: {
+							Icon: "thermal:textures/item/silver_coin_3.png"
+						}
+					}
+					item: "thermal:silver_coin"
+					count: 48L
+					consume_items: true
+				}
+				{
+					id: "3CCE09D1715B54C7"
+					type: "item"
+					title: "Any Flower"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "minecraft:flowers"
+						}
+					}
+					count: 10L
+					consume_items: true
+				}
+			]
+			rewards: [
+				{
+					id: "773C4F5E97BD82B8"
+					type: "item"
+					auto: "enabled"
+					item: "minecraft:bee_nest"
+				}
+				{
+					id: "0C8C369DEF6B0FD4"
+					type: "item"
+					auto: "no_toast"
+					item: "minecraft:bee_spawn_egg"
+					count: 2
+				}
+				{
+					id: "6D5E00890DAB64DB"
+					type: "custom"
+					title: "Repeatable"
+					icon: "thermal:machine_cycle_augment"
+					tags: ["reset"]
+					auto: "no_toast"
+				}
+			]
+		}
+		{
+			title: "Profession: Mining"
+			icon: {
+				id: "minecraft:golden_pickaxe"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			disable_toast: true
+			x: -9.5d
+			y: -6.0d
+			shape: "hexagon"
+			repeatable: true
+			id: "7077EAC1AFB5D59E"
+			tasks: [{
+				id: "49E4ED85063A06FD"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 32L
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "3AEB8B1C68833642"
+					type: "item"
+					auto: "enabled"
+					item: "kubejs:profession_card_mining"
+				}
+				{
+					id: "0FF8DDBFA6F53FFE"
+					type: "custom"
+					title: "Repeatable"
+					icon: "thermal:machine_cycle_augment"
+					auto: "no_toast"
+				}
+			]
+		}
+		{
+			title: "Profession: Carpentry"
+			icon: {
+				id: "minecraft:golden_axe"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			disable_toast: true
+			x: -8.5d
+			y: -6.0d
+			shape: "hexagon"
+			repeatable: true
+			id: "2A051D2F0F3B9081"
+			tasks: [{
+				id: "60CA4E93DDAE88DC"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 32L
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "57CB3526BF3E9FF1"
+					type: "item"
+					auto: "enabled"
+					item: "kubejs:profession_card_carpentry"
+				}
+				{
+					id: "46A57EFEA4B7E445"
+					type: "custom"
+					title: "Repeatable"
+					icon: "thermal:machine_cycle_augment"
+					auto: "no_toast"
+				}
+			]
+		}
+		{
+			title: "Profession: Smithing"
+			icon: {
+				id: "forbidden_arcanus:golden_blacksmith_gavel"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			disable_toast: true
+			x: -7.5d
+			y: -6.0d
+			shape: "hexagon"
+			repeatable: true
+			id: "080D70C020C84E7C"
+			tasks: [{
+				id: "3DF2845FFB063059"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 32L
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "295FDF8EB1F515CC"
+					type: "item"
+					auto: "enabled"
+					item: "kubejs:profession_card_smithing"
+				}
+				{
+					id: "417003CE52F95A91"
+					type: "custom"
+					title: "Repeatable"
+					icon: "thermal:machine_cycle_augment"
+					auto: "no_toast"
+				}
+			]
+		}
+		{
+			title: "Profession: Farming"
+			icon: {
+				id: "minecraft:golden_hoe"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			disable_toast: true
+			x: -6.5d
+			y: -6.0d
+			shape: "hexagon"
+			repeatable: true
+			id: "61806B49E570D58F"
+			tasks: [{
+				id: "2BD98B0158B95AAE"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 32L
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "7864BDFE5FA608FD"
+					type: "item"
+					auto: "enabled"
+					item: "kubejs:profession_card_farming"
+				}
+				{
+					id: "1D9D088DF0CC1491"
+					type: "custom"
+					title: "Repeatable"
+					icon: "thermal:machine_cycle_augment"
+					auto: "no_toast"
+				}
+			]
+		}
+		{
+			title: "Profession: Masonry"
+			icon: {
+				id: "forbidden_arcanus:reinforced_arcane_golden_blacksmith_gavel"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			disable_toast: true
+			x: -5.5d
+			y: -6.0d
+			shape: "hexagon"
+			repeatable: true
+			id: "4C92281F1097BD44"
+			tasks: [{
+				id: "4019AC709CF48EF3"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 32L
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "1A756E1F1171CE55"
+					type: "item"
+					auto: "enabled"
+					item: "kubejs:profession_card_masonry"
+				}
+				{
+					id: "7416F67DA75C4FFC"
+					type: "custom"
+					title: "Repeatable"
+					icon: "thermal:machine_cycle_augment"
+					auto: "no_toast"
+				}
+			]
+		}
+		{
+			title: "Profession: Hunting"
+			icon: {
+				id: "minecraft:golden_sword"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			disable_toast: true
+			x: -4.5d
+			y: -6.0d
+			shape: "hexagon"
+			repeatable: true
+			id: "6F0D060D378BC0F0"
+			tasks: [{
+				id: "0F4FE67081DC47B1"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 32L
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "18F411889BD17683"
+					type: "item"
+					auto: "enabled"
+					item: "kubejs:profession_card_hunting"
+				}
+				{
+					id: "2C279EE02E1CB5AB"
+					type: "custom"
+					title: "Repeatable"
+					icon: "thermal:machine_cycle_augment"
+					auto: "no_toast"
+				}
+			]
+		}
+		{
+			title: "Profession: Cooking"
+			icon: {
+				id: "farmersdelight:golden_knife"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			disable_toast: true
+			x: -3.5d
+			y: -6.0d
+			shape: "hexagon"
+			repeatable: true
+			id: "133BF4C329483B0D"
+			tasks: [{
+				id: "547904AD6E411ABF"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 32L
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "0FD68C72AD8F3A4D"
+					type: "item"
+					auto: "enabled"
+					item: "kubejs:profession_card_cooking"
+				}
+				{
+					id: "7C7939BC2698F666"
+					type: "custom"
+					title: "Repeatable"
+					icon: "thermal:machine_cycle_augment"
+					auto: "no_toast"
+				}
+			]
+		}
+		{
+			title: "Profession: Fishing"
+			icon: {
+				id: "aquaculture:gold_fishing_rod"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			disable_toast: true
+			x: -2.5d
+			y: -6.0d
+			shape: "hexagon"
+			repeatable: true
+			id: "09F01AE099C3ED34"
+			tasks: [{
+				id: "56F7994E2D2A9D57"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 32L
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "141896DF6463FD7E"
+					type: "item"
+					auto: "enabled"
+					item: "kubejs:profession_card_fishing"
+				}
+				{
+					id: "479FBD80C38763A8"
+					type: "custom"
+					title: "Repeatable"
+					icon: "thermal:machine_cycle_augment"
+					auto: "no_toast"
+				}
+			]
+		}
+		{
+			title: "Shipments"
+			icon: "thermal:machine_press"
+			disable_toast: true
+			x: -6.0d
+			y: -7.0d
+			shape: "hexagon"
+			id: "14105A03A4D53107"
+			tasks: [{
+				id: "05294F6A45D0023A"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 32L
+				consume_items: true
+			}]
+			rewards: [{
+				id: "41E2956742CCFEF9"
+				type: "item"
+				item: "thermal:machine_press"
+			}]
+		}
+	]
+	quest_links: [ ]
+}

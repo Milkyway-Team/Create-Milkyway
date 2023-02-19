@@ -12,6 +12,7 @@
 			icon: "farmersdelight:lime_canvas_sign"
 			x: 0.0d
 			y: -2.5d
+			description: ["Logic Mechanisms unlock Applied Energistics 2 and all it's storage helpers!"]
 			dependencies: ["799F6769884BAAAD"]
 			hide: true
 			id: "32F62312B7D4D162"
@@ -48,13 +49,17 @@
 				type: "item"
 				item: "mw_core:logic_mechanism"
 			}]
+			rewards: [{
+				id: "319CF5D9AC4AE8CB"
+				type: "item"
+				item: "mw_core:music_disc_space_pirates"
+			}]
 		}
 		{
 			icon: "ae2:logic_processor"
 			x: 0.5d
 			y: 11.0d
 			dependencies: [
-				"396BC8AFF3B320A3"
 				"4A839CEEF20D4670"
 				"26E1D775D45FE920"
 			]
@@ -78,7 +83,6 @@
 			y: 9.0d
 			dependencies: [
 				"63944E30EF00B1C4"
-				"02316D6159B0F361"
 				"56E5EBABDF0AEAC3"
 			]
 			id: "4A839CEEF20D4670"
@@ -101,7 +105,6 @@
 			y: 9.5d
 			dependencies: [
 				"5C5C9C56C8851E20"
-				"02316D6159B0F361"
 				"7F2DD91F93148CC3"
 			]
 			id: "26E1D775D45FE920"
@@ -119,8 +122,8 @@
 			]
 		}
 		{
-			x: -3.0d
-			y: 9.0d
+			x: -2.0d
+			y: 8.5d
 			dependencies: ["0279C9E65A622D89"]
 			id: "5C5C9C56C8851E20"
 			tasks: [{
@@ -130,30 +133,14 @@
 			}]
 		}
 		{
-			x: -1.5d
-			y: 8.0d
+			x: -1.0d
+			y: 7.0d
 			dependencies: ["0279C9E65A622D89"]
 			id: "63944E30EF00B1C4"
 			tasks: [{
 				id: "63E54CA8EAEE4B39"
 				type: "item"
 				item: "ae2:silicon_press"
-			}]
-		}
-		{
-			x: 0.0d
-			y: 6.0d
-			shape: "hexagon"
-			dependencies: [
-				"68CAC6214B95EA19"
-				"29D8F34C45FDCD70"
-				"1FDB1C03BA284C83"
-			]
-			id: "02316D6159B0F361"
-			tasks: [{
-				id: "0DC3C769F15D3395"
-				type: "item"
-				item: "ae2:inscriber"
 			}]
 		}
 		{
@@ -174,118 +161,6 @@
 				}
 				{
 					id: "0769FE6FF39DF3E9"
-					type: "checkmark"
-					title: "Automated"
-				}
-			]
-		}
-		{
-			icon: "mw_core:sturdy_iron_sheet"
-			x: -1.0d
-			y: 5.0d
-			description: ["Sturdy Sheets are more advanced sheets. They require an ingots worth of bonus metal and lots of pressing. They are used in Late-Game machines."]
-			dependencies: ["5F72C45C626A7728"]
-			id: "29D8F34C45FDCD70"
-			tasks: [
-				{
-					id: "1B812ABF468E407C"
-					type: "item"
-					item: "mw_core:sturdy_iron_sheet"
-				}
-				{
-					id: "14C20829EE917EAF"
-					type: "checkmark"
-					title: "Automated"
-				}
-			]
-		}
-		{
-			x: -3.5d
-			y: 4.5d
-			dependencies: [
-				"002B402561D45110"
-				"299E17D92BA78878"
-				"348D797A1F0E2975"
-			]
-			id: "5F72C45C626A7728"
-			tasks: [{
-				id: "6AD8CFA3E2A09EA1"
-				type: "item"
-				item: "mw_core:unprocessed_iron_sheet"
-			}]
-		}
-		{
-			icon: "minecraft:water_bucket"
-			x: -2.5d
-			y: 3.0d
-			dependencies: ["25B11CBC12805C52"]
-			id: "299E17D92BA78878"
-			tasks: [
-				{
-					id: "48696140FEC0064A"
-					type: "item"
-					item: "minecraft:water_bucket"
-				}
-				{
-					id: "38C14B3AAA21A26C"
-					type: "checkmark"
-					title: "Automated"
-				}
-			]
-		}
-		{
-			title: "Creosote Oil"
-			icon: "thermal:creosote_bucket"
-			x: -5.0d
-			y: 3.0d
-			description: ["Pyrolyzers can create Creosote Oil from Logs or Coal."]
-			dependencies: [
-				"2A87C2C4CE55FC9F"
-				"126AF733185B9775"
-			]
-			id: "348D797A1F0E2975"
-			tasks: [
-				{
-					id: "4B8BEF2677283C8C"
-					type: "item"
-					item: "thermal:creosote_bucket"
-				}
-				{
-					id: "33B766B8A3E396D0"
-					type: "checkmark"
-					title: "Automated"
-				}
-			]
-		}
-		{
-			title: "Molten Iron"
-			x: -5.5d
-			y: 5.0d
-			subtitle: "[Already Automated]"
-			dependencies: ["122AFF15DD760CAE"]
-			id: "002B402561D45110"
-			tasks: [{
-				id: "5E1DDA6DA50148F0"
-				type: "item"
-				item: "tconstruct:molten_iron_bucket"
-			}]
-		}
-		{
-			title: "Crude Oil"
-			icon: "thermal:crude_oil_bucket"
-			x: -11.0d
-			y: 3.5d
-			description: ["Bituminous Sand can be drained, leaving behind Drained Sand and Crude Oil."]
-			dependencies: ["723BF4973D982373"]
-			id: "5D3429B5ACD0E45A"
-			tasks: [
-				{
-					id: "3D0A0EEB8E747716"
-					type: "item"
-					item: "thermal:crude_oil_bucket"
-				}
-				{
-					id: "0841C3BAA8654225"
 					type: "checkmark"
 					title: "Automated"
 				}
@@ -381,7 +256,7 @@
 			title: "Growing Certus Quartz"
 			icon: "ae2:certus_quartz_crystal"
 			x: 0.0d
-			y: 3.5d
+			y: 4.0d
 			dependencies: ["3B3AAA522715339A"]
 			id: "4DCC48D7D4B619D7"
 			tasks: [
@@ -425,8 +300,8 @@
 			}]
 		}
 		{
-			x: 5.5d
-			y: -1.0d
+			x: -2.5d
+			y: 3.0d
 			dependencies: ["2ADAC0B8BF09A42F"]
 			id: "32A9B55169990D39"
 			tasks: [{
@@ -514,8 +389,8 @@
 		}
 		{
 			icon: "create:experience_nugget"
-			x: 2.5d
-			y: 8.5d
+			x: 4.0d
+			y: 8.0d
 			dependencies: ["551BB04B1EEF3F51"]
 			id: "396BC8AFF3B320A3"
 			tasks: [
@@ -592,135 +467,9 @@
 			]
 		}
 		{
-			icon: {
-				id: "ftbquests:custom_icon"
-				Count: 1b
-				tag: {
-					Icon: "minecraft:textures/mob_effect/water_breathing.png"
-				}
-			}
-			x: -2.0d
-			y: 1.0d
-			dependencies: ["2ADAC0B8BF09A42F"]
-			id: "25B11CBC12805C52"
-			tasks: [{
-				id: "48F3DF4E8B048958"
-				type: "checkmark"
-				title: "Infinite Water Source"
-			}]
-		}
-		{
-			icon: "alloyed:steel_sheet"
-			x: -2.0d
-			y: 6.5d
-			dependencies: ["1CE3BE0A1B859671"]
-			id: "68CAC6214B95EA19"
-			tasks: [
-				{
-					id: "487B904F44EE67CA"
-					type: "item"
-					item: "alloyed:steel_sheet"
-				}
-				{
-					id: "050104EFD5D40956"
-					type: "checkmark"
-					title: "Automated"
-				}
-			]
-		}
-		{
-			icon: "alloyed:steel_ingot"
-			x: -4.0d
-			y: 7.0d
-			dependencies: ["2C9115ABC6A0DE7A"]
-			id: "1CE3BE0A1B859671"
-			tasks: [
-				{
-					id: "0996D210AEC0B8C5"
-					type: "item"
-					item: "alloyed:steel_ingot"
-				}
-				{
-					id: "190E69B12EC224C7"
-					type: "checkmark"
-					title: "Automated"
-				}
-			]
-		}
-		{
-			title: "Molten Steel"
-			icon: "tconstruct:molten_steel_bucket"
-			x: -6.5d
-			y: 7.0d
-			description: ["Molten Iron and Coal Coke can be mixed to make Steel."]
-			dependencies: [
-				"002B402561D45110"
-				"0B28578BE327C1C0"
-			]
-			id: "2C9115ABC6A0DE7A"
-			tasks: [
-				{
-					id: "2E34F209A6625B2D"
-					type: "item"
-					item: "tconstruct:molten_steel_bucket"
-				}
-				{
-					id: "25B7E3F48F1590AD"
-					type: "checkmark"
-					title: "Automated"
-				}
-			]
-		}
-		{
-			icon: "thermal:coal_coke"
-			x: -8.5d
-			y: 6.5d
-			description: ["A small amount of Crude Oil can be heated in a Basin Foundry to produce Coal Coke."]
-			dependencies: ["5D3429B5ACD0E45A"]
-			id: "0B28578BE327C1C0"
-			tasks: [
-				{
-					id: "2E0E2C0C8D879277"
-					type: "item"
-					item: "thermal:coal_coke"
-				}
-				{
-					id: "0A347FE7F9722CE6"
-					type: "checkmark"
-					title: "Automated"
-				}
-			]
-		}
-		{
-			icon: "thermal:oil_sand"
-			x: -13.0d
-			y: 2.5d
-			dependencies: ["475B0F015ABD4524"]
-			id: "723BF4973D982373"
-			tasks: [
-				{
-					id: "1A2A02005286946E"
-					type: "item"
-					title: "Bituminous Sand"
-					item: {
-						id: "itemfilters:tag"
-						Count: 1b
-						tag: {
-							value: "mw_core:oil_sands"
-						}
-					}
-				}
-				{
-					id: "6DA40E3FAE0914BF"
-					type: "checkmark"
-					title: "Automated"
-				}
-			]
-		}
-		{
 			title: "Find a Meteorite"
-			x: -3.0d
-			y: 7.5d
+			x: -2.5d
+			y: 6.0d
 			shape: "octagon"
 			hide_dependency_lines: true
 			dependencies: ["2ADAC0B8BF09A42F"]
@@ -750,7 +499,7 @@
 		}
 		{
 			x: 3.5d
-			y: 1.5d
+			y: 2.5d
 			dependencies: ["52356C3DA9EEE1A0"]
 			id: "0FA5664056195D0E"
 			tasks: [{
@@ -761,61 +510,13 @@
 		}
 		{
 			x: 1.5d
-			y: 2.5d
+			y: 3.0d
 			dependencies: ["0FA5664056195D0E"]
 			id: "3B3AAA522715339A"
 			tasks: [{
 				id: "6A550F2241B17D4E"
 				type: "item"
 				item: "kubejs:small_certus_crystal"
-			}]
-		}
-		{
-			title: "Logs"
-			x: -8.5d
-			y: 2.5d
-			subtitle: "[Already Automated]"
-			dependencies: ["7873D99933B6B945"]
-			id: "126AF733185B9775"
-			tasks: [{
-				id: "7A0DDF0F698E7B41"
-				type: "item"
-				title: "Any Logs"
-				item: {
-					id: "itemfilters:tag"
-					Count: 1b
-					tag: {
-						value: "minecraft:logs"
-					}
-				}
-			}]
-		}
-		{
-			x: -6.5d
-			y: 2.0d
-			shape: "hexagon"
-			hide_dependency_lines: true
-			dependencies: ["2ADAC0B8BF09A42F"]
-			id: "2A87C2C4CE55FC9F"
-			tasks: [{
-				id: "451B62D9DB93D2CB"
-				type: "item"
-				item: "thermal:machine_pyrolyzer"
-			}]
-		}
-		{
-			title: "Logs Already Automated"
-			icon: "create_enchantment_industry:enchanting_guide"
-			x: -9.5d
-			y: 0.5d
-			shape: "gear"
-			hide_dependency_lines: true
-			dependencies: ["2ADAC0B8BF09A42F"]
-			id: "7873D99933B6B945"
-			tasks: [{
-				id: "3D027DC37BAEDBA5"
-				type: "checkmark"
-				title: "Already Automated"
 			}]
 		}
 		{
@@ -836,34 +537,26 @@
 		}
 		{
 			title: "Certus Soaking"
-			x: 4.0d
+			icon: "create:spout"
+			x: 4.5d
 			y: 0.0d
 			shape: "hexagon"
 			description: ["Certus Quartz Seeds can be grown faster with a spout and water."]
 			hide_dependency_lines: true
 			dependencies: ["2ADAC0B8BF09A42F"]
 			id: "6EE9CA8AB4D7015E"
-			tasks: [{
-				id: "713F177E59E09286"
-				type: "item"
-				item: "create:spout"
-			}]
-		}
-		{
-			title: "Molten Iron Already Automated"
-			icon: "create_enchantment_industry:enchanting_guide"
-			x: -7.5d
-			y: 4.5d
-			shape: "gear"
-			subtitle: "Automated in Chapter 1"
-			hide_dependency_lines: true
-			dependencies: ["2ADAC0B8BF09A42F"]
-			id: "122AFF15DD760CAE"
-			tasks: [{
-				id: "3F9F634305687D46"
-				type: "checkmark"
-				title: "Already Automated"
-			}]
+			tasks: [
+				{
+					id: "713F177E59E09286"
+					type: "item"
+					item: "create:spout"
+				}
+				{
+					id: "343363290609265A"
+					type: "checkmark"
+					title: "Certus Soaking"
+				}
+			]
 		}
 		{
 			title: "Molten Iron Already Automated"
@@ -883,7 +576,7 @@
 		{
 			icon: "create_sa:heap_of_experience"
 			x: 3.0d
-			y: 7.5d
+			y: 6.5d
 			hide_dependency_lines: true
 			dependencies: ["2ADAC0B8BF09A42F"]
 			id: "551BB04B1EEF3F51"
@@ -908,40 +601,17 @@
 			}]
 		}
 		{
-			title: "Non Renewable?"
-			icon: {
-				id: "ftbquests:custom_icon"
-				Count: 1b
-				tag: {
-					Icon: "create_things_and_misc:textures/blocks/yellow1.png"
-				}
-			}
-			x: -14.0d
-			y: 1.0d
-			shape: "rsquare"
-			subtitle: "Nope"
-			description: ["With a bit of magic, Bituminous Sand can be created with Ichor Dust."]
-			hide_dependency_lines: true
-			dependencies: ["2ADAC0B8BF09A42F"]
-			id: "475B0F015ABD4524"
-			tasks: [{
-				id: "1523F93666ECBCA2"
-				type: "checkmark"
-				title: "Non Renewable"
-			}]
-		}
-		{
-			icon: "refinedstorage:silicon"
-			x: 1.0d
-			y: 8.0d
+			icon: "ae2:silicon"
+			x: 1.5d
+			y: 7.0d
 			description: ["Cooking Nether Quartz will create Silicon."]
-			dependencies: ["2C9EB3F14047A8C9"]
+			dependencies: ["32A9B55169990D39"]
 			id: "56E5EBABDF0AEAC3"
 			tasks: [
 				{
 					id: "279DDB9CECCA94BF"
 					type: "item"
-					item: "refinedstorage:silicon"
+					item: "ae2:silicon"
 				}
 				{
 					id: "366DF2335F129D0A"
@@ -951,47 +621,21 @@
 			]
 		}
 		{
-			x: 2.0d
-			y: 7.5d
-			subtitle: "[Already Automated]"
-			dependencies: ["228DB986EB8D2B38"]
-			id: "2C9EB3F14047A8C9"
-			tasks: [{
-				id: "30409D1013D3E82D"
-				type: "item"
-				item: "minecraft:quartz"
-			}]
-		}
-		{
-			title: "Nether Quartz Already Automated"
-			icon: "create_enchantment_industry:enchanting_guide"
-			x: 1.5d
-			y: 6.0d
-			shape: "gear"
-			subtitle: "Automated in Chapter 1"
-			hide_dependency_lines: true
-			dependencies: ["2ADAC0B8BF09A42F"]
-			id: "228DB986EB8D2B38"
-			tasks: [{
-				id: "5DBFD6B1EA8B159F"
-				type: "checkmark"
-				title: "Already Automated"
-			}]
-		}
-		{
-			x: -1.5d
-			y: 11.0d
+			title: "Molten Gold"
+			x: -2.0d
+			y: 10.5d
 			subtitle: "[Already Automated]"
 			dependencies: ["2E8D782A6E43CF2E"]
 			id: "7F2DD91F93148CC3"
 			tasks: [{
 				id: "4AA64B3D96FB5C24"
 				type: "item"
+				icon: "tconstruct:molten_gold_bucket"
 				item: "minecraft:gold_ingot"
 			}]
 		}
 		{
-			title: "Gold Ingot Already Automated"
+			title: "Molten Gold Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
 			x: -3.5d
 			y: 11.0d

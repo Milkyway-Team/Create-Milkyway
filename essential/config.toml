@@ -46,7 +46,7 @@
 
 	[notifications.general]
 		disable_all_notifications = false
-		host_world_ip_warning = true
+		host_world_ip_warning = false
 		screeenshot_toast_duration = 1
 		update_notifications = false
 		message_sound = true

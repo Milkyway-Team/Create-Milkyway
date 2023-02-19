@@ -7,6 +7,1451 @@
 	icon: "mw_core:creative_alloy"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
-	quests: [ ]
+	quests: [
+		{
+			icon: "farmersdelight:lime_canvas_sign"
+			x: -2.5d
+			y: -2.0d
+			description: ["The base materials required for the Creative Motor."]
+			dependencies: ["501D87E236FCB915"]
+			hide: true
+			id: "689BBA6A1804D4E6"
+			tasks: [{
+				id: "06C476B070123CCD"
+				type: "checkmark"
+				title: "INFO"
+			}]
+		}
+		{
+			icon: "create:brass_hand"
+			x: -0.5d
+			y: -2.0d
+			dependencies: ["689BBA6A1804D4E6"]
+			hide: true
+			id: "1C9328C10043749C"
+			tasks: [{
+				id: "562952B34ED8CC1F"
+				type: "checkmark"
+				title: "Chapter 4 START!"
+			}]
+		}
+		{
+			icon: "mw_core:creative_alloy"
+			x: 4.5d
+			y: 4.0d
+			dependencies: [
+				"3B7ECBA091FA42AA"
+				"4B2C4AFB9C5DD5D9"
+				"5A86706C84FDD376"
+			]
+			id: "270E6F407BD727B0"
+			tasks: [
+				{
+					id: "5C0E516BEFCB0E85"
+					type: "item"
+					item: "mw_core:creative_alloy"
+				}
+				{
+					id: "3DBEB755A8F6D589"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "mw_core:creative_ingot"
+			x: 6.0d
+			y: 2.0d
+			dependencies: [
+				"4E30354C361E34A8"
+				"7C8AB82CF7F6C180"
+				"5A86706C84FDD376"
+			]
+			id: "3B7ECBA091FA42AA"
+			tasks: [
+				{
+					id: "7D6AB0B213016711"
+					type: "item"
+					item: "mw_core:creative_ingot"
+				}
+				{
+					id: "14BA3150C40EF8E7"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "mw_core:insulation_sheet"
+			x: 2.0d
+			y: 4.0d
+			dependencies: ["4BA59AEAA9E983D0"]
+			id: "4B2C4AFB9C5DD5D9"
+			tasks: [
+				{
+					id: "657873926B37747A"
+					type: "item"
+					item: "mw_core:insulation_sheet"
+				}
+				{
+					id: "374726A832C6B8C2"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Liquid Magic"
+			icon: "mw_core:liquid_magic_bucket"
+			x: 6.0d
+			y: 6.0d
+			description: ["Liquid Magic is a combination of magical ingredients and holds many magical properties."]
+			dependencies: [
+				"46877398DA7DA7C1"
+				"499C199434272949"
+				"090A0552C434FBCC"
+				"393875B8722F7AF1"
+			]
+			id: "5A86706C84FDD376"
+			tasks: [
+				{
+					id: "1DD554FEAE9EAB89"
+					type: "item"
+					item: "mw_core:liquid_magic_bucket"
+				}
+				{
+					id: "369F1DCFAA29B920"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "mw_core:creatite_infused_chromatic_steel"
+			x: 6.5d
+			y: -0.5d
+			description: ["Pouring a block of Refined Creatite over a Chromatic Steel ingot creates a Creatite Infused Chromatic Steel ingot."]
+			dependencies: [
+				"606A536F9D535C42"
+				"445F3B3F2D300AAE"
+			]
+			id: "7C8AB82CF7F6C180"
+			tasks: [
+				{
+					id: "1ADA666760E1AC7F"
+					type: "item"
+					item: "mw_core:creatite_infused_chromatic_steel"
+				}
+				{
+					id: "0B2E5383AFACC76A"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "mw_core:radiant_quartz_dust"
+			x: 8.0d
+			y: 0.5d
+			dependencies: ["3C5417195BD3C0F8"]
+			id: "4E30354C361E34A8"
+			tasks: [
+				{
+					id: "73F0651DFA06AA41"
+					type: "item"
+					item: "mw_core:radiant_quartz_dust"
+				}
+				{
+					id: "1D4A50A39F9BD2E3"
+					type: "checkmark"
+					title: "AUtomated"
+				}
+			]
+		}
+		{
+			title: "Refined Creatite"
+			icon: "mw_core:molten_pure_creatite_bucket"
+			x: 6.0d
+			y: -2.5d
+			description: ["The main output from refining Creatite."]
+			dependencies: ["5995DC424102A3A9"]
+			id: "606A536F9D535C42"
+			tasks: [
+				{
+					id: "3382517100EEBAC8"
+					type: "item"
+					item: "mw_core:molten_pure_creatite_bucket"
+				}
+				{
+					id: "35926BFD7540AC7E"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "mw_core:chromatic_steel"
+			x: 8.0d
+			y: -2.0d
+			description: ["Compacting Molten Steel with Chromatic Dust fuses them together into an ingot."]
+			dependencies: [
+				"023632EECB6D19DF"
+				"4999815143E064C3"
+			]
+			id: "445F3B3F2D300AAE"
+			tasks: [
+				{
+					id: "2F83BF8A3751165E"
+					type: "item"
+					item: "mw_core:chromatic_steel"
+				}
+				{
+					id: "35E9B5D09FAA6AF2"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Refining Molten Creatite"
+			icon: "mw_core:molten_creatite_bucket"
+			x: 7.0d
+			y: -5.0d
+			dependencies: ["3C8E8A75CDCA6F3F"]
+			id: "5995DC424102A3A9"
+			tasks: [
+				{
+					id: "4B7B002B8223D3F6"
+					type: "item"
+					item: "mw_core:molten_creatite_bucket"
+				}
+				{
+					id: "3007D04769568570"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "mw_core:chromatic_dust"
+			x: 9.0d
+			y: -3.0d
+			dependencies: [
+				"0768ACCD5F3BC5F6"
+				"7112EDE808F8FFA3"
+			]
+			id: "023632EECB6D19DF"
+			tasks: [
+				{
+					id: "4C2136D1C661333B"
+					type: "item"
+					item: "mw_core:chromatic_dust"
+				}
+				{
+					id: "15A19F3E9D1E8DA0"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Molten Steel"
+			x: 10.5d
+			y: -2.0d
+			subtitle: "[Already Automated]"
+			dependencies: ["27D7BDB7E46792B1"]
+			id: "4999815143E064C3"
+			tasks: [{
+				id: "5CAF11F4D9B872EF"
+				type: "item"
+				item: "tconstruct:molten_steel_bucket"
+			}]
+		}
+		{
+			x: 11.5d
+			y: -6.0d
+			subtitle: "[Already Automated]"
+			dependencies: ["77924B5E6AABAC09"]
+			id: "7112EDE808F8FFA3"
+			tasks: [{
+				id: "6A28DC7A7C3FD67A"
+				type: "item"
+				item: "create:cinder_flour"
+			}]
+		}
+		{
+			title: "Chromatic Waste"
+			icon: "mw_core:chromatic_waste_bucket"
+			x: 9.0d
+			y: -6.5d
+			description: ["Chromatic Waste is the secondary result when Refining Creatite."]
+			dependencies: ["5995DC424102A3A9"]
+			id: "0768ACCD5F3BC5F6"
+			tasks: [
+				{
+					id: "17C8E2009F563293"
+					type: "item"
+					item: "mw_core:chromatic_waste_bucket"
+				}
+				{
+					id: "4D042A74B23420A7"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "mw_core:radiant_quartz"
+			x: 9.0d
+			y: 1.5d
+			dependencies: [
+				"75E154870BE6BA78"
+				"1FED7B583C1FA8F0"
+			]
+			id: "3C5417195BD3C0F8"
+			tasks: [
+				{
+					id: "3D85B3B0507ADF19"
+					type: "item"
+					item: "mw_core:radiant_quartz"
+				}
+				{
+					id: "6609E329DC2E1B1C"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: 7.5d
+			y: 3.0d
+			subtitle: "[Already Automated]"
+			dependencies: ["3B950FF479671BE7"]
+			id: "75E154870BE6BA78"
+			tasks: [{
+				id: "743D87991E51A6F9"
+				type: "item"
+				item: "minecraft:quartz"
+			}]
+		}
+		{
+			title: "Molten Lumium"
+			icon: "tconstruct:molten_lumium_bucket"
+			x: 11.0d
+			y: 2.5d
+			description: ["Alloying Molten Tin, Molten Silver and Energized Glowstone will produce Molten Lumium."]
+			dependencies: [
+				"1D0CE1DC3ED47731"
+				"4773B58A0994B72A"
+				"6B18E2CC3ECCDE92"
+			]
+			id: "1FED7B583C1FA8F0"
+			tasks: [
+				{
+					id: "332C70341AF6D29C"
+					type: "item"
+					item: "tconstruct:molten_lumium_bucket"
+				}
+				{
+					id: "6773B035F2BC0D7A"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Molten Tin"
+			icon: "tconstruct:molten_tin_bucket"
+			x: 11.0d
+			y: 0.0d
+			description: ["Molten Gold can be refined into 180mb of Molten Tin."]
+			dependencies: ["5357B98790C35306"]
+			id: "4773B58A0994B72A"
+			tasks: [
+				{
+					id: "6EB9905A6A7B09CF"
+					type: "item"
+					item: "tconstruct:molten_tin_bucket"
+				}
+				{
+					id: "334E5D8F51B93A0A"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Molten Silver"
+			icon: "tconstruct:molten_silver_bucket"
+			x: 12.0d
+			y: 1.5d
+			description: ["Molten Gold can be refined into 90mb of Molten Silver."]
+			dependencies: ["5357B98790C35306"]
+			id: "1D0CE1DC3ED47731"
+			tasks: [
+				{
+					id: "25FDD5413E02622B"
+					type: "item"
+					item: "tconstruct:molten_silver_bucket"
+				}
+				{
+					id: "189EE82C6B485A6A"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "thermal:glowstone_bucket"
+			x: 12.0d
+			y: 3.5d
+			description: ["Melting Glowstone in a Magma Crucible creates Energized Glowstone."]
+			dependencies: ["2E2677811D647B0C"]
+			id: "6B18E2CC3ECCDE92"
+			tasks: [
+				{
+					id: "7EF453AFA7AAA79D"
+					type: "item"
+					item: "thermal:glowstone_bucket"
+				}
+				{
+					id: "1CB46F4D67DA8B14"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "minecraft:glowstone_dust"
+			x: 9.5d
+			y: 4.0d
+			description: ["Haunting Redstone Dust creates Glowstone Dust."]
+			dependencies: ["2820FE44386F0666"]
+			id: "2E2677811D647B0C"
+			tasks: [
+				{
+					id: "7AE63A856BDFD2B1"
+					type: "item"
+					item: "minecraft:glowstone_dust"
+				}
+				{
+					id: "4F6D4855DDA2DFDD"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: 12.5d
+			y: -1.0d
+			subtitle: "[Already Automated]"
+			dependencies: ["75D87AE28C7B1A03"]
+			id: "5357B98790C35306"
+			tasks: [{
+				id: "6458BAC6E0AB542B"
+				type: "item"
+				item: "tconstruct:molten_gold_bucket"
+			}]
+		}
+		{
+			icon: "minecraft:enchanted_golden_apple"
+			x: 5.0d
+			y: 8.0d
+			description: ["Surrounding an Apple with Arcane Gold Ingots created an Enchanted Golden Apple."]
+			dependencies: ["07F252B49264958F"]
+			id: "393875B8722F7AF1"
+			tasks: [
+				{
+					id: "06F9368715382467"
+					type: "item"
+					item: "minecraft:enchanted_golden_apple"
+				}
+				{
+					id: "453AF75B09F7AB99"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Enderslime"
+			icon: "tconstruct:ender_slime_bucket"
+			x: 2.5d
+			y: 8.0d
+			dependencies: ["1BBF0D15D6A65693"]
+			id: "499C199434272949"
+			tasks: [
+				{
+					id: "534D55DC495FE919"
+					type: "item"
+					item: "tconstruct:ender_slime_bucket"
+				}
+				{
+					id: "463A43450FD189C7"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "minecraft:blaze_powder"
+			x: 7.5d
+			y: 7.0d
+			description: ["Blaze Rods can be crushed into Blaze Powder."]
+			dependencies: ["24942A7A139679A2"]
+			id: "46877398DA7DA7C1"
+			tasks: [
+				{
+					id: "789D4C6E4EA7D570"
+					type: "item"
+					item: "minecraft:blaze_powder"
+				}
+				{
+					id: "2F6927DD0C1C9D8B"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Liquid Experience"
+			icon: "create_things_and_misc:slime_bucket"
+			x: 6.5d
+			y: 8.0d
+			description: ["Disenchanting an Enchanted Golden Apple will grant some Liquid Experience."]
+			dependencies: [
+				"0FEC88E4E94049B3"
+				"393875B8722F7AF1"
+			]
+			id: "090A0552C434FBCC"
+			tasks: [
+				{
+					id: "19C33DB2D4BB746A"
+					type: "item"
+					icon: "create_things_and_misc:slime_bucket"
+					item: "create:experience_nugget"
+				}
+				{
+					id: "71933D0D8EAF52F0"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "forbidden_arcanus:arcane_gold_ingot"
+			x: 6.0d
+			y: 10.0d
+			dependencies: ["442D678138DF93CF"]
+			id: "07F252B49264958F"
+			tasks: [
+				{
+					id: "417D901512EBE382"
+					type: "item"
+					item: "forbidden_arcanus:arcane_gold_ingot"
+				}
+				{
+					id: "2E2FE6B06956E318"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "forbidden_arcanus:arcane_gold_nugget"
+			x: 6.5d
+			y: 11.5d
+			dependencies: ["0E59DDF0096CF5E3"]
+			id: "442D678138DF93CF"
+			tasks: [
+				{
+					id: "408C1696FD5BE1FB"
+					type: "item"
+					item: "forbidden_arcanus:arcane_gold_nugget"
+				}
+				{
+					id: "601334861D96DC63"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "forbidden_arcanus:golden_orchid_seeds"
+			x: 7.5d
+			y: 12.5d
+			description: ["The Golden Orchid is an astounding plant. It has the ability to grow Arcane Gold Nuggets on it's branches."]
+			dependencies: ["23876A6665AFA5F1"]
+			id: "0E59DDF0096CF5E3"
+			tasks: [
+				{
+					id: "65CC01C49AA32E80"
+					type: "item"
+					item: "forbidden_arcanus:golden_orchid_seeds"
+				}
+				{
+					id: "426217A6EE7DC9C8"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: 4.5d
+			y: 9.5d
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "604C130B010FFD14"
+			tasks: [{
+				id: "2EB6AC1118318BDA"
+				type: "item"
+				item: "tconstruct:ender_slime_sapling"
+			}]
+		}
+		{
+			icon: "minecraft:blaze_rod"
+			x: 8.5d
+			y: 9.0d
+			description: ["Casting Blazing Blood into Rod Casts creates Blaze Rods."]
+			dependencies: ["608EB7DE3A0DAB31"]
+			id: "24942A7A139679A2"
+			tasks: [
+				{
+					id: "5C97CD802968EDA7"
+					type: "item"
+					item: "minecraft:blaze_rod"
+				}
+				{
+					id: "2D3BAD9BF3DE4E66"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: 7.0d
+			y: 9.5d
+			shape: "hexagon"
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "0FEC88E4E94049B3"
+			tasks: [{
+				id: "2451E458597B4D96"
+				type: "item"
+				item: "create_enchantment_industry:disenchanter"
+			}]
+		}
+		{
+			icon: "mw_core:insulation_cube"
+			x: -0.5d
+			y: 3.5d
+			dependencies: [
+				"3C068FDB20CDCA8E"
+				"499C199434272949"
+				"58375446A211ACED"
+				"71434EA63DF6B4D6"
+			]
+			id: "4BA59AEAA9E983D0"
+			tasks: [
+				{
+					id: "48366F4C2A0F04AC"
+					type: "item"
+					item: "mw_core:insulation_cube"
+				}
+				{
+					id: "6AC2534C981CC6D1"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "mw_core:obsidian_fibre"
+			x: -3.0d
+			y: 4.5d
+			dependencies: [
+				"4621F35168CEA862"
+				"622B52659D49FFF9"
+				"46E299CC69C91808"
+				"3821D428A909E72A"
+			]
+			id: "3C068FDB20CDCA8E"
+			tasks: [
+				{
+					id: "35B031F211285519"
+					type: "item"
+					item: "mw_core:obsidian_fibre"
+				}
+				{
+					id: "06FF7BDBBD6CEDE1"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "create:polished_rose_quartz"
+			x: -5.5d
+			y: 4.0d
+			dependencies: ["6A15441DAD2C4CEE"]
+			id: "4621F35168CEA862"
+			tasks: [
+				{
+					id: "631132B17B67E4C3"
+					type: "item"
+					item: "create:polished_rose_quartz"
+				}
+				{
+					id: "0EDE3498621F30AE"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "thermal:cured_rubber"
+			x: -4.5d
+			y: 3.5d
+			dependencies: ["49BF2C876D567449"]
+			id: "3821D428A909E72A"
+			tasks: [
+				{
+					id: "74407F6C16B2E7A7"
+					type: "item"
+					item: "thermal:cured_rubber"
+				}
+				{
+					id: "433CEFC7970D3E97"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "create:powdered_obsidian"
+			x: -6.5d
+			y: 5.0d
+			dependencies: ["7E8ECBE5423048AE"]
+			id: "622B52659D49FFF9"
+			tasks: [
+				{
+					id: "2D79BC9D66BD51A2"
+					type: "item"
+					item: "create:powdered_obsidian"
+				}
+				{
+					id: "57A8DEE223E05327"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "thermal:rubber"
+			x: -7.0d
+			y: 1.5d
+			description: ["Compact  Latex in a Basin to make Rubber."]
+			dependencies: ["300BA6918F129BE1"]
+			id: "49BF2C876D567449"
+			tasks: [
+				{
+					id: "199A94EE89A8B7AA"
+					type: "item"
+					item: "thermal:rubber"
+				}
+				{
+					id: "51C7F464075A6B2F"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "thermal:latex_bucket"
+			x: -9.0d
+			y: 0.5d
+			description: ["Latex can be extracted from Jungle Trees."]
+			dependencies: ["3A72FC65CF526499"]
+			id: "300BA6918F129BE1"
+			tasks: [
+				{
+					id: "048B3681E5E51334"
+					type: "item"
+					item: "thermal:latex_bucket"
+				}
+				{
+					id: "1FB26F91CD03FDD4"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: -11.0d
+			y: 1.5d
+			dependencies: ["1F15E89A8D999E39"]
+			id: "3A72FC65CF526499"
+			tasks: [{
+				id: "793ECC6046DAA4E9"
+				type: "item"
+				item: "minecraft:jungle_sapling"
+			}]
+		}
+		{
+			icon: "create:rose_quartz"
+			x: -7.0d
+			y: 3.0d
+			dependencies: [
+				"7DD91950C3AF622D"
+				"27A88ED4293875C9"
+			]
+			id: "6A15441DAD2C4CEE"
+			tasks: [
+				{
+					id: "07BCDAD392E1C817"
+					type: "item"
+					item: "create:rose_quartz"
+				}
+				{
+					id: "21B01484D40DCAF4"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			icon: "thermal:redstone_bucket"
+			x: -9.0d
+			y: 5.0d
+			dependencies: ["3BF1B6316E1B7B31"]
+			id: "7DD91950C3AF622D"
+			tasks: [
+				{
+					id: "606A7C009AE9E348"
+					type: "item"
+					item: "thermal:redstone_bucket"
+				}
+				{
+					id: "5C2C76B05DB62C63"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: -8.5d
+			y: 2.5d
+			subtitle: "[Already Automated]"
+			dependencies: ["3689BE542395F8FB"]
+			id: "27A88ED4293875C9"
+			tasks: [{
+				id: "7B766E73A52477E1"
+				type: "item"
+				item: "minecraft:quartz"
+			}]
+		}
+		{
+			x: -11.0d
+			y: 5.5d
+			subtitle: "[Already Automated]"
+			dependencies: ["59017C29F8392BE2"]
+			id: "3BF1B6316E1B7B31"
+			tasks: [{
+				id: "69D8D45DF39941D0"
+				type: "item"
+				item: "minecraft:redstone"
+			}]
+		}
+		{
+			icon: "minecraft:obsidian"
+			x: -8.0d
+			y: 6.0d
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "7E8ECBE5423048AE"
+			tasks: [
+				{
+					id: "0FBE9CA7F99A56D1"
+					type: "item"
+					item: "minecraft:obsidian"
+				}
+				{
+					id: "6D2BAE97159FF0C8"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Molten Obsidian"
+			icon: "tconstruct:molten_obsidian_bucket"
+			x: -6.0d
+			y: 6.5d
+			dependencies: ["7E8ECBE5423048AE"]
+			id: "46E299CC69C91808"
+			tasks: [
+				{
+					id: "0409A627120371D1"
+					type: "item"
+					item: "tconstruct:molten_obsidian_bucket"
+				}
+				{
+					id: "472938551E76836A"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Orchid Catalyst"
+			x: 8.5d
+			y: 14.0d
+			subtitle: "No Need To Automate"
+			dependencies: [
+				"28FA24335CB2B58B"
+				"2911B111CC5D6C0B"
+				"144FF2C7ABAE3F3A"
+				"1DA1FC77885A4E36"
+			]
+			id: "23876A6665AFA5F1"
+			tasks: [{
+				id: "144354A7FDEC65E9"
+				type: "item"
+				item: "forbidden_arcanus:arcane_gold_ingot"
+			}]
+		}
+		{
+			x: 7.0d
+			y: 16.0d
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "2911B111CC5D6C0B"
+			tasks: [{
+				id: "41BCC331DD3E7DF0"
+				type: "item"
+				item: "forbidden_arcanus:arcane_crystal_dust"
+			}]
+		}
+		{
+			x: 9.5d
+			y: 15.0d
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "28FA24335CB2B58B"
+			tasks: [{
+				id: "076BF512FAA227D4"
+				type: "item"
+				item: "minecraft:gold_ingot"
+			}]
+		}
+		{
+			x: 10.5d
+			y: 14.0d
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "144FF2C7ABAE3F3A"
+			tasks: [{
+				id: "21F5730C37859947"
+				type: "item"
+				item: "minecraft:charcoal"
+			}]
+		}
+		{
+			x: 8.5d
+			y: 15.5d
+			description: ["Mundabitur Dust is a transformative powder made from a combination of dusts and items."]
+			dependencies: [
+				"2C7B9A1BDA7B8060"
+				"32F3F3117AD42860"
+				"71FD0C262BA2F2C1"
+				"541D367ACA0AC1B7"
+				"4BFD081AF0C5338A"
+			]
+			id: "1DA1FC77885A4E36"
+			tasks: [{
+				id: "5CD687106CF5CDCA"
+				type: "item"
+				item: "forbidden_arcanus:mundabitur_dust"
+			}]
+		}
+		{
+			x: 10.5d
+			y: 15.0d
+			dependencies: [
+				"4BFA5D7EB5B2B8D0"
+				"5881AB80D61DFB4E"
+			]
+			id: "32F3F3117AD42860"
+			tasks: [{
+				id: "474528A67D9D7F5F"
+				type: "item"
+				item: "minecraft:phantom_membrane"
+			}]
+		}
+		{
+			x: 8.0d
+			y: 17.5d
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "71FD0C262BA2F2C1"
+			tasks: [{
+				id: "7EA8874D4516F066"
+				type: "item"
+				item: "minecraft:gunpowder"
+			}]
+		}
+		{
+			x: 9.5d
+			y: 16.0d
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "4BFD081AF0C5338A"
+			tasks: [{
+				id: "4EA9E078ED89FE3E"
+				type: "item"
+				item: "minecraft:bone_meal"
+			}]
+		}
+		{
+			x: 9.5d
+			y: 17.0d
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "541D367ACA0AC1B7"
+			tasks: [{
+				id: "1E316FBC2E9825ED"
+				type: "item"
+				item: "minecraft:blaze_powder"
+			}]
+		}
+		{
+			x: 8.5d
+			y: 16.5d
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "2C7B9A1BDA7B8060"
+			tasks: [{
+				id: "04E831EA798BFFB5"
+				type: "item"
+				item: "minecraft:redstone"
+			}]
+		}
+		{
+			x: 11.5d
+			y: 15.5d
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "5881AB80D61DFB4E"
+			tasks: [{
+				id: "1B5B36D08E32410B"
+				type: "item"
+				item: "mw_core:skyslime_crystal_dust"
+			}]
+		}
+		{
+			x: 10.5d
+			y: 16.5d
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "4BFA5D7EB5B2B8D0"
+			tasks: [{
+				id: "6B4E0F88BC9F6B73"
+				type: "item"
+				item: "minecraft:rotten_flesh"
+			}]
+		}
+		{
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "tconstruct:textures/gui/modifiers/harvest/melting.png"
+				}
+			}
+			x: 8.5d
+			y: 11.0d
+			shape: "hexagon"
+			description: ["Constructing a Smeltery around a Blaze Spawner is an easy way to automate Blazing Blood."]
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "608EB7DE3A0DAB31"
+			tasks: [
+				{
+					id: "56E3B2A56BFD7D32"
+					type: "checkmark"
+					title: "Blaze Melting"
+				}
+				{
+					id: "2DDF01E9E44CB522"
+					type: "item"
+					item: "tconstruct:blazing_blood_bucket"
+				}
+			]
+		}
+		{
+			x: 8.5d
+			y: 6.0d
+			subtitle: "[Already Automated]"
+			dependencies: ["33BC39F4FCEA433B"]
+			id: "2820FE44386F0666"
+			tasks: [{
+				id: "0371394F18C1EF47"
+				type: "item"
+				item: "minecraft:redstone"
+			}]
+		}
+		{
+			x: 8.0d
+			y: -8.5d
+			description: ["Creatite Ore can be found deep within The Nether."]
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "3C8E8A75CDCA6F3F"
+			tasks: [{
+				id: "6711485B23EC117C"
+				type: "item"
+				item: "mw_core:creatite"
+			}]
+		}
+		{
+			icon: "mw_core:creatite_dust"
+			x: 9.5d
+			y: -9.5d
+			dependencies: ["3C8E8A75CDCA6F3F"]
+			id: "3904738CC660C8C7"
+			tasks: [
+				{
+					id: "3268128907F0B428"
+					type: "item"
+					item: "mw_core:creatite_dust"
+				}
+				{
+					id: "193413F173AC3A92"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Creatite Duplication"
+			icon: "thermal:machine_crystallizer"
+			x: 10.0d
+			y: -8.0d
+			shape: "hexagon"
+			description: ["Chromatic Waste has the ability to duplicate Gemstones from their Dust form."]
+			dependencies: [
+				"3904738CC660C8C7"
+				"0768ACCD5F3BC5F6"
+			]
+			id: "2ECCDB6E9E528D23"
+			tasks: [
+				{
+					id: "28A53307F868229E"
+					type: "item"
+					item: "mw_core:creatite"
+				}
+				{
+					id: "601A94762ECF8E9F"
+					type: "item"
+					item: "thermal:machine_crystallizer"
+				}
+				{
+					id: "629AD8B5E475E3F5"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: 2.5d
+			y: 9.5d
+			shape: "hexagon"
+			dependencies: ["604C130B010FFD14"]
+			id: "1BBF0D15D6A65693"
+			tasks: [{
+				id: "35B1D8161FF7677A"
+				type: "item"
+				item: "thermal:device_tree_extractor"
+			}]
+		}
+		{
+			x: -13.0d
+			y: 3.0d
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "1F15E89A8D999E39"
+			tasks: [{
+				id: "00783872C9B1C273"
+				type: "biome"
+				icon: "minecraft:jungle_log"
+				biome: "minecraft:jungle"
+			}]
+		}
+		{
+			title: "Nether Quartz Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: 7.5d
+			y: 5.0d
+			shape: "gear"
+			subtitle: "Automated in Chapter 1"
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "3B950FF479671BE7"
+			tasks: [{
+				id: "3B8064EC99068A3E"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Redstone Dust Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: 9.5d
+			y: 8.0d
+			shape: "gear"
+			subtitle: "Automated in Chapter 2"
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "33BC39F4FCEA433B"
+			tasks: [{
+				id: "0A9AB6C87A2C2C47"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Molten Gold Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: 13.0d
+			y: -3.0d
+			shape: "gear"
+			subtitle: "Automated in Chapter 2"
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "75D87AE28C7B1A03"
+			tasks: [{
+				id: "1CA5C4606E3BC7C9"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Cinder Flour Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: 11.5d
+			y: -8.5d
+			shape: "gear"
+			subtitle: "Automated in Chapter 2"
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "77924B5E6AABAC09"
+			tasks: [{
+				id: "4AC0C47BEB87D478"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Nether Quartz Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: -10.5d
+			y: 3.0d
+			shape: "gear"
+			subtitle: "Automated in Chapter 1"
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "3689BE542395F8FB"
+			tasks: [{
+				id: "0F385FBC21ADE6DA"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Redstone Dust Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: -12.0d
+			y: 4.0d
+			shape: "gear"
+			subtitle: "Automated in Chapter 2"
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "59017C29F8392BE2"
+			tasks: [{
+				id: "0EDC88B5A7D5CF92"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Molten Steel Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: 11.5d
+			y: -4.0d
+			shape: "gear"
+			subtitle: "Automated in Chapter 3a"
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "27D7BDB7E46792B1"
+			tasks: [{
+				id: "225450F7354248BE"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Molten Ender"
+			icon: "tconstruct:molten_ender_bucket"
+			x: 0.0d
+			y: 8.0d
+			description: ["Mixing Blood and Ender Slime will make Molten Ender."]
+			dependencies: [
+				"499C199434272949"
+				"3A5267D75624F820"
+			]
+			id: "0A8D74900F15E16C"
+			tasks: [
+				{
+					id: "4BA4596685B9890C"
+					type: "item"
+					item: "tconstruct:molten_ender_bucket"
+				}
+				{
+					id: "2AF0CA9B79B78771"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Molten Enderium"
+			icon: "tconstruct:molten_enderium_bucket"
+			x: -2.0d
+			y: 5.0d
+			dependencies: [
+				"4EE86B5132E7D1B8"
+				"5CB5287D27C5C7CD"
+				"0A8D74900F15E16C"
+			]
+			id: "71434EA63DF6B4D6"
+			tasks: [
+				{
+					id: "717134054672F16B"
+					type: "item"
+					item: "tconstruct:molten_enderium_bucket"
+				}
+				{
+					id: "28509C51F25CEC0E"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Molten Diamond"
+			x: -3.5d
+			y: 6.0d
+			subtitle: "[Already Automated]"
+			dependencies: ["6F35829C446EC1AB"]
+			id: "5CB5287D27C5C7CD"
+			tasks: [{
+				id: "3275981FB5203CFC"
+				type: "item"
+				item: "tconstruct:molten_diamond_bucket"
+			}]
+		}
+		{
+			title: "Molten Lead"
+			x: -2.0d
+			y: 6.5d
+			subtitle: "[Already Automated]"
+			dependencies: ["124161EDDFB38486"]
+			id: "4EE86B5132E7D1B8"
+			tasks: [{
+				id: "5DA177EC68C7BD77"
+				type: "item"
+				item: "tconstruct:molten_lead_bucket"
+			}]
+		}
+		{
+			x: 0.5d
+			y: 6.5d
+			dependencies: ["0A8D74900F15E16C"]
+			id: "32EAC3F9283E6FF8"
+			tasks: [{
+				id: "4339456EEF6D7B0E"
+				type: "item"
+				item: "minecraft:ender_pearl"
+			}]
+		}
+		{
+			title: "Resonant Ender"
+			x: -0.5d
+			y: 5.0d
+			dependencies: ["32EAC3F9283E6FF8"]
+			id: "58375446A211ACED"
+			tasks: [{
+				id: "6220D5BE8396868B"
+				type: "item"
+				item: "thermal:ender_bucket"
+			}]
+		}
+		{
+			title: "Blood"
+			x: -0.5d
+			y: 9.5d
+			dependencies: ["0B5E26591D090102"]
+			id: "3A5267D75624F820"
+			tasks: [{
+				id: "2BF93933A26D5699"
+				type: "item"
+				item: "tconstruct:blood_bucket"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 10.0d
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "0B5E26591D090102"
+			tasks: [{
+				id: "639326022A07FABB"
+				type: "item"
+				item: "tconstruct:blood_slime_sapling"
+			}]
+		}
+		{
+			title: "Molten Lead Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: -2.5d
+			y: 8.5d
+			shape: "gear"
+			subtitle: "Automated in Chapter 3"
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "124161EDDFB38486"
+			tasks: [{
+				id: "0FCD02341035DF27"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Molten Diamond Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: -4.5d
+			y: 8.0d
+			shape: "gear"
+			subtitle: "Automated in Chapter 3a"
+			hide_dependency_lines: true
+			dependencies: ["1C9328C10043749C"]
+			id: "6F35829C446EC1AB"
+			tasks: [{
+				id: "7DE94BF6E0CA7AB2"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+	]
 	quest_links: [ ]
 }

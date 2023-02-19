@@ -1,0 +1,7 @@
+#Disable all optimizations of Lightspeed. Can be used to measure the launch time without the optimizations.
+disableAllOptimzations = false
+
+[Optimizations]
+	#Reduces the number of accesses to the file system to improve the launch time.
+	minimizeFilesystemReadOperations = true
+

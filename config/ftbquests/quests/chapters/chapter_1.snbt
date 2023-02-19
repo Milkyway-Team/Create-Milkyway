@@ -62,6 +62,7 @@
 							value: "minecraft:logs"
 						}
 					}
+					consume_items: false
 				}
 				{
 					id: "5D58A22AC1EA0776"
@@ -91,6 +92,7 @@
 							value: "minecraft:planks"
 						}
 					}
+					consume_items: false
 				}
 				{
 					id: "540335A3CDB66CC6"
@@ -112,6 +114,7 @@
 					id: "2C30788140CF8A02"
 					type: "item"
 					item: "tconstruct:pattern"
+					consume_items: false
 				}
 				{
 					id: "762C000AF98E5CCE"
@@ -135,6 +138,7 @@
 					id: "123CC98655046B2A"
 					type: "item"
 					item: "minecraft:andesite"
+					consume_items: false
 				}
 				{
 					id: "44069EAB9BADF91E"
@@ -157,6 +161,7 @@
 					id: "7E1DC0F81147AAAF"
 					type: "item"
 					item: "create:andesite_alloy"
+					consume_items: false
 				}
 				{
 					id: "119300F88873FE23"
@@ -178,6 +183,7 @@
 					id: "2241C8990B74427B"
 					type: "item"
 					item: "tconstruct:molten_iron_bucket"
+					consume_items: false
 				}
 				{
 					id: "535E0700DF636A75"
@@ -198,6 +204,7 @@
 					id: "2F84F3456D036767"
 					type: "item"
 					item: "minecraft:iron_nugget"
+					consume_items: false
 				}
 				{
 					id: "27D7767C4E9FD28F"
@@ -221,6 +228,7 @@
 					id: "2C0E8F1FE872AA5F"
 					type: "item"
 					item: "mw_core:basic_mechanism"
+					consume_items: false
 				}
 				{
 					id: "7F6C4C755AC4B82A"
@@ -252,6 +260,7 @@
 					id: "7E46079D3283A314"
 					type: "item"
 					item: "minecraft:gravel"
+					consume_items: false
 				}
 				{
 					id: "4BACD123EF334770"
@@ -273,6 +282,7 @@
 					id: "2506AD3367395DD7"
 					type: "item"
 					item: "minecraft:cobblestone"
+					consume_items: false
 				}
 				{
 					id: "773E6CBD4E761B4B"
@@ -294,6 +304,7 @@
 					id: "081E0A5324508F94"
 					type: "item"
 					item: "tconstruct:molten_quartz_bucket"
+					consume_items: false
 				}
 				{
 					id: "6CB06CE2D483F948"
@@ -318,6 +329,7 @@
 					id: "79B096A3100A1B68"
 					type: "item"
 					item: "minecraft:soul_sand"
+					consume_items: false
 				}
 				{
 					id: "1B9EB01851C95C4B"
@@ -338,6 +350,7 @@
 					id: "5D34A820FEC5BF6E"
 					type: "item"
 					item: "minecraft:sand"
+					consume_items: false
 				}
 				{
 					id: "750C5BC146A8D8CE"
@@ -368,6 +381,7 @@
 				id: "32A2E07214299DC6"
 				type: "item"
 				item: "minecraft:quartz"
+				consume_items: false
 			}]
 		}
 	]

@@ -24,6 +24,7 @@
 			icon: "farmersdelight:lime_canvas_sign"
 			x: -2.0d
 			y: -5.5d
+			description: ["Cobalt Mechanisms unlock access to Thermal."]
 			dependencies: ["58D2C0B12357186B"]
 			hide: true
 			id: "266393D12E3D6B5F"

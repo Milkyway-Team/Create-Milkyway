@@ -17,6 +17,7 @@
 			shape: "gear"
 			subtitle: "Lots has changed since you were last here..."
 			dependencies: ["2A39249976E79176"]
+			hide: true
 			size: 3.0d
 			id: "11CF00C9EEC3C9C8"
 			tasks: [{

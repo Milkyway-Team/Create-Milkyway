@@ -173,6 +173,5 @@
       "y": 50,
       "type": "custommachinery:slot"
     }
-  ],
-  "catalysts": ["custommachinery:magic_spawner", "custommachinery:stone_generator"]
+  ]
 }

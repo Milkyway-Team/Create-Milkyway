@@ -7,6 +7,447 @@
 	icon: "mw_core:manyullyn_mechanism"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
-	quests: [ ]
+	quests: [
+		{
+			icon: "farmersdelight:lime_canvas_sign"
+			x: 0.0d
+			y: -2.0d
+			dependencies: ["068568D3D5E20DAC"]
+			hide: true
+			id: "37AE7A9BB96E088D"
+			tasks: [{
+				id: "572B6FD6917270CC"
+				type: "checkmark"
+				title: "INFO"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 16.5d
+			shape: "gear"
+			dependencies: [
+				"072947164A6EE54B"
+				"2EF0AF48B2528150"
+				"677039658F2D1441"
+			]
+			size: 3.0d
+			id: "58ED9D8E07A1F7EE"
+			tasks: [{
+				id: "7A371574DFB28AA0"
+				type: "item"
+				item: "create:creative_motor"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 13.0d
+			dependencies: [
+				"5869CFF7DCE5E1E1"
+				"6C64093B277F3A90"
+				"2E005CFA0BE219EF"
+				"509E5C69C64C0FBB"
+				"163FA76F1668A00C"
+			]
+			id: "677039658F2D1441"
+			tasks: [{
+				id: "15DC75984014874D"
+				type: "item"
+				item: "mw_core:manyullyn_mechanism"
+			}]
+			rewards: [{
+				id: "5AF8A941B1AFF156"
+				type: "item"
+				item: "mw_core:music_disc_venture"
+			}]
+		}
+		{
+			title: "Waystones"
+			x: 4.5d
+			y: 14.625d
+			shape: "gear"
+			dependencies: ["677039658F2D1441"]
+			size: 2.25d
+			id: "60FD16B64B0E3D79"
+			tasks: [
+				{
+					id: "41A07C9B99F698CB"
+					type: "item"
+					item: "waystones:waystone"
+				}
+				{
+					id: "0EFDA4C1B41EDE90"
+					type: "item"
+					title: "Sharestone"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "waystones:sharestone"
+						}
+					}
+				}
+				{
+					id: "19193916D71DAA17"
+					type: "item"
+					item: "waystones:portstone"
+				}
+			]
+		}
+		{
+			x: 2.5d
+			y: 11.5d
+			dependencies: ["509E5C69C64C0FBB"]
+			id: "2E005CFA0BE219EF"
+			tasks: [{
+				id: "7C52B4677457FC67"
+				type: "item"
+				item: "mw_core:manyullyn_sheet"
+			}]
+		}
+		{
+			x: 1.0d
+			y: 11.0d
+			dependencies: ["7ED2E116A5C6B514"]
+			id: "509E5C69C64C0FBB"
+			tasks: [{
+				id: "1C57F9A7C8073899"
+				type: "item"
+				item: "tconstruct:manyullyn_ingot"
+			}]
+		}
+		{
+			x: 1.0d
+			y: 9.0d
+			dependencies: [
+				"0E9507A5C7211C05"
+				"7B69ACD2EF580FE9"
+			]
+			id: "7ED2E116A5C6B514"
+			tasks: [{
+				id: "43D719041BBD63B0"
+				type: "item"
+				item: "tconstruct:molten_manyullyn_bucket"
+			}]
+		}
+		{
+			x: 2.5d
+			y: 8.5d
+			dependencies: ["3416A6FFA236FD19"]
+			id: "7B69ACD2EF580FE9"
+			tasks: [{
+				id: "2C127CF93A50D27E"
+				type: "item"
+				item: "tconstruct:molten_cobalt_bucket"
+			}]
+		}
+		{
+			x: 0.5d
+			y: 7.5d
+			dependencies: ["16BEC17694BD8C02"]
+			id: "0E9507A5C7211C05"
+			tasks: [{
+				id: "6C4EA289EB8B7A3E"
+				type: "item"
+				item: "tconstruct:molten_debris_bucket"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 6.0d
+			description: ["Refined Magic can warp Netherrack into Ancient Debris."]
+			dependencies: [
+				"37CD9D99235C8A5A"
+				"5DC40B799F294DAB"
+			]
+			id: "16BEC17694BD8C02"
+			tasks: [{
+				id: "12E932CA35667DA7"
+				type: "item"
+				item: "minecraft:ancient_debris"
+			}]
+		}
+		{
+			x: 3.0d
+			y: 5.0d
+			dependencies: ["254AC517648F601E"]
+			id: "5DC40B799F294DAB"
+			tasks: [{
+				id: "30113F206FD1FFDB"
+				type: "item"
+				item: "mw_core:refined_magic_bucket"
+			}]
+		}
+		{
+			x: 5.0d
+			y: 4.5d
+			dependencies: ["7E98C99B304B4012"]
+			id: "254AC517648F601E"
+			tasks: [{
+				id: "15FEEBDEF9C91BB9"
+				type: "item"
+				item: "mw_core:liquid_magic_bucket"
+			}]
+		}
+		{
+			x: 0.5d
+			y: 4.5d
+			dependencies: ["12822E8BAB724028"]
+			id: "37CD9D99235C8A5A"
+			tasks: [{
+				id: "7F34F0FD1D6F8936"
+				type: "item"
+				item: "minecraft:netherrack"
+			}]
+		}
+		{
+			x: -0.5d
+			y: 11.0d
+			dependencies: ["072ADCEE4E3DB48F"]
+			id: "5869CFF7DCE5E1E1"
+			tasks: [{
+				id: "4685EB2BDAF00CAB"
+				type: "item"
+				item: "tconstruct:molten_ender_bucket"
+			}]
+		}
+		{
+			x: -2.0d
+			y: 11.5d
+			dependencies: ["3ADB679F9B032D5D"]
+			id: "6C64093B277F3A90"
+			tasks: [{
+				id: "079CE846706D8A71"
+				type: "item"
+				item: "mw_core:creative_ingot"
+			}]
+		}
+		{
+			x: -3.0d
+			y: 12.5d
+			dependencies: ["425F6D06C8548526"]
+			id: "163FA76F1668A00C"
+			tasks: [{
+				id: "7480D231E972A770"
+				type: "item"
+				item: "mw_core:insulation_sheet"
+			}]
+		}
+		{
+			title: "Insulation Sheet Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: -4.0d
+			y: 10.5d
+			shape: "gear"
+			hide_dependency_lines: true
+			dependencies: ["19EB7C2B21C04FDE"]
+			id: "425F6D06C8548526"
+			tasks: [{
+				id: "4C6E967D0F9F01BF"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Ingot of Creativity Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: -2.5d
+			y: 9.5d
+			shape: "gear"
+			hide_dependency_lines: true
+			dependencies: ["19EB7C2B21C04FDE"]
+			id: "3ADB679F9B032D5D"
+			tasks: [{
+				id: "42725A1DE0444103"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Molten Ender Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: -1.0d
+			y: 9.0d
+			shape: "gear"
+			hide_dependency_lines: true
+			dependencies: ["19EB7C2B21C04FDE"]
+			id: "072ADCEE4E3DB48F"
+			tasks: [{
+				id: "0C80761EA9D5246F"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Netherrack Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: 0.0d
+			y: 2.5d
+			shape: "gear"
+			hide_dependency_lines: true
+			dependencies: ["19EB7C2B21C04FDE"]
+			id: "12822E8BAB724028"
+			tasks: [{
+				id: "7B5AC5032EA897D7"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			title: "Liquid Magic Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: 6.5d
+			y: 3.0d
+			shape: "gear"
+			hide_dependency_lines: true
+			dependencies: ["19EB7C2B21C04FDE"]
+			id: "7E98C99B304B4012"
+			tasks: [{
+				id: "78FB04EB29DF9059"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			x: -5.0d
+			y: 18.5d
+			dependencies: ["28490C7AE51FED44"]
+			id: "2EF0AF48B2528150"
+			tasks: [{
+				id: "60F69480D642247A"
+				type: "item"
+				item: "mw_core:creative_alloy_plating"
+			}]
+		}
+		{
+			title: "Molten Cobalt Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: 4.0d
+			y: 7.5d
+			shape: "gear"
+			hide_dependency_lines: true
+			dependencies: ["19EB7C2B21C04FDE"]
+			id: "3416A6FFA236FD19"
+			tasks: [{
+				id: "4635BE80AF5CBCE1"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			x: -4.5d
+			y: 14.5d
+			dependencies: ["44AFF341C45D6AD6"]
+			id: "072947164A6EE54B"
+			tasks: [{
+				id: "716C9246B96AAFBD"
+				type: "item"
+				item: "mw_core:creative_alloy"
+			}]
+		}
+		{
+			title: "Creative Alloy Already Automated"
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: -5.5d
+			y: 13.0d
+			shape: "gear"
+			hide_dependency_lines: true
+			dependencies: ["19EB7C2B21C04FDE"]
+			id: "44AFF341C45D6AD6"
+			tasks: [{
+				id: "0B8256896B7D31E2"
+				type: "checkmark"
+				title: "Already Automated"
+			}]
+		}
+		{
+			x: -5.0d
+			y: 16.5d
+			dependencies: ["072947164A6EE54B"]
+			id: "28490C7AE51FED44"
+			tasks: [{
+				id: "78ACDA13FDF6F1AA"
+				type: "item"
+				item: "mw_core:molten_creativity_bucket"
+			}]
+		}
+		{
+			icon: "create:brass_hand"
+			x: 2.5d
+			y: -2.0d
+			dependencies: ["37AE7A9BB96E088D"]
+			id: "19EB7C2B21C04FDE"
+			tasks: [{
+				id: "79D63100348F4EBC"
+				type: "checkmark"
+				title: "Chapter 5 START!"
+			}]
+		}
+		{
+			icon: "mw_core:rave_tube"
+			x: 3.0d
+			y: 19.0d
+			subtitle: "I appreciate it!"
+			description: [
+				"Hey, so it looks like you made it! Maybe you automated everything, maybe you didn't. It doesn't really matter as long as you had fun and enjoyed yourself!"
+				"I have plans to update Milkyway in the future with more content. Especially when the Simulated addons release. For now stay tuned for any future mods or packs I release!"
+			]
+			dependencies: ["58ED9D8E07A1F7EE"]
+			id: "080680923A07DA5F"
+			tasks: [
+				{
+					id: "455B195887BACBAE"
+					type: "checkmark"
+					title: "Thanks For Playing!"
+				}
+				{
+					id: "1F2D63B84D6B780B"
+					type: "item"
+					item: "create:creative_motor"
+				}
+			]
+			rewards: [
+				{
+					id: "2E32C54F235881E7"
+					type: "item"
+					item: "mw_core:milkfur_plush"
+				}
+				{
+					id: "2A5D64D0D24E2B9B"
+					type: "item"
+					item: "mw_core:pouffy_plush"
+				}
+				{
+					id: "46D24FF31E5159F4"
+					type: "item"
+					item: "randomium:randomium_ore"
+					count: 16
+				}
+				{
+					id: "0262791FA39A5E47"
+					type: "item"
+					item: "mw_core:rave_tube"
+					count: 4
+				}
+				{
+					id: "50B8077B6DD6270E"
+					type: "item"
+					item: {
+						id: "mw_core:pouffys_charm"
+						Count: 1b
+						tag: { }
+					}
+				}
+				{
+					id: "292FC7C9FEE784BA"
+					type: "item"
+					item: {
+						id: "mw_core:milks_charm"
+						Count: 1b
+						tag: { }
+					}
+				}
+			]
+		}
+	]
 	quest_links: [ ]
 }
