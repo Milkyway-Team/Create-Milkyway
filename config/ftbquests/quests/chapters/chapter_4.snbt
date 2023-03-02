@@ -37,6 +37,11 @@
 				type: "item"
 				item: "create:creative_motor"
 			}]
+			rewards: [{
+				id: "43667C5E1B331C3C"
+				type: "item"
+				item: "mw_core:music_disc_venture"
+			}]
 		}
 		{
 			x: 0.0d
@@ -53,11 +58,6 @@
 				id: "15DC75984014874D"
 				type: "item"
 				item: "mw_core:manyullyn_mechanism"
-			}]
-			rewards: [{
-				id: "5AF8A941B1AFF156"
-				type: "item"
-				item: "mw_core:music_disc_venture"
 			}]
 		}
 		{

@@ -13,7 +13,7 @@
 			icon: "minecraft:dirt"
 			disable_toast: true
 			x: -3.5d
-			y: 3.5d
+			y: 10.5d
 			shape: "hexagon"
 			subtitle: "2 Silver"
 			repeatable: true
@@ -47,7 +47,7 @@
 			icon: "minecraft:sand"
 			disable_toast: true
 			x: -2.5d
-			y: 3.5d
+			y: 10.5d
 			shape: "hexagon"
 			subtitle: "4 Silver"
 			repeatable: true
@@ -81,7 +81,7 @@
 			icon: "minecraft:gravel"
 			disable_toast: true
 			x: -1.5d
-			y: 3.5d
+			y: 10.5d
 			shape: "hexagon"
 			subtitle: "2 Silver"
 			repeatable: true
@@ -115,7 +115,7 @@
 			icon: "minecraft:clay"
 			disable_toast: true
 			x: -0.5d
-			y: 3.5d
+			y: 10.5d
 			shape: "hexagon"
 			subtitle: "6 Silver"
 			repeatable: true
@@ -149,7 +149,7 @@
 			icon: "minecraft:ice"
 			disable_toast: true
 			x: 0.5d
-			y: 3.5d
+			y: 10.5d
 			shape: "hexagon"
 			subtitle: "16 Silver"
 			repeatable: true
@@ -183,7 +183,7 @@
 			icon: "minecraft:blackstone"
 			disable_toast: true
 			x: 1.5d
-			y: 3.5d
+			y: 10.5d
 			shape: "hexagon"
 			subtitle: "12 Silver"
 			repeatable: true
@@ -217,7 +217,7 @@
 			icon: "tconstruct:grout"
 			disable_toast: true
 			x: 2.5d
-			y: 3.5d
+			y: 10.5d
 			shape: "hexagon"
 			subtitle: "12 Silver"
 			repeatable: true
@@ -251,7 +251,7 @@
 			icon: "minecraft:cobblestone"
 			disable_toast: true
 			x: 3.5d
-			y: 3.5d
+			y: 10.5d
 			shape: "hexagon"
 			subtitle: "1 Silver"
 			repeatable: true
@@ -285,7 +285,7 @@
 			icon: "minecraft:granite"
 			disable_toast: true
 			x: -2.5d
-			y: 4.5d
+			y: 11.5d
 			shape: "hexagon"
 			subtitle: "3 Silver"
 			repeatable: true
@@ -319,7 +319,7 @@
 			icon: "minecraft:diorite"
 			disable_toast: true
 			x: -1.5d
-			y: 4.5d
+			y: 11.5d
 			shape: "hexagon"
 			subtitle: "3 Silver"
 			repeatable: true
@@ -353,7 +353,7 @@
 			icon: "minecraft:andesite"
 			disable_toast: true
 			x: -0.5d
-			y: 4.5d
+			y: 11.5d
 			shape: "hexagon"
 			subtitle: "3 Silver"
 			repeatable: true
@@ -387,7 +387,7 @@
 			icon: "create:scoria"
 			disable_toast: true
 			x: 0.5d
-			y: 4.5d
+			y: 11.5d
 			shape: "hexagon"
 			subtitle: "3 Silver"
 			repeatable: true
@@ -421,7 +421,7 @@
 			icon: "create:scorchia"
 			disable_toast: true
 			x: 1.5d
-			y: 4.5d
+			y: 11.5d
 			shape: "hexagon"
 			subtitle: "3 Silver"
 			repeatable: true
@@ -455,7 +455,7 @@
 			icon: "minecraft:obsidian"
 			disable_toast: true
 			x: 2.5d
-			y: 4.5d
+			y: 11.5d
 			shape: "hexagon"
 			subtitle: "8 Silver"
 			repeatable: true
@@ -488,8 +488,8 @@
 			title: "16x Oak Log"
 			icon: "minecraft:oak_log"
 			disable_toast: true
-			x: -4.0d
-			y: 6.0d
+			x: -2.0d
+			y: 6.5d
 			shape: "hexagon"
 			subtitle: "4 Silver"
 			repeatable: true
@@ -522,8 +522,8 @@
 			title: "16x Birch Log"
 			icon: "minecraft:birch_log"
 			disable_toast: true
-			x: -3.0d
-			y: 6.0d
+			x: 0.0d
+			y: 6.5d
 			shape: "hexagon"
 			subtitle: "4 Silver"
 			repeatable: true
@@ -556,8 +556,8 @@
 			title: "16x Spruce Log"
 			icon: "minecraft:spruce_log"
 			disable_toast: true
-			x: -2.0d
-			y: 6.0d
+			x: -1.0d
+			y: 6.5d
 			shape: "hexagon"
 			subtitle: "4 Silver"
 			repeatable: true
@@ -590,8 +590,8 @@
 			title: "16x Jungle Log"
 			icon: "minecraft:jungle_log"
 			disable_toast: true
-			x: -1.0d
-			y: 6.0d
+			x: -2.0d
+			y: 5.5d
 			shape: "hexagon"
 			subtitle: "4 Silver"
 			repeatable: true
@@ -624,8 +624,8 @@
 			title: "16x Acacia Log"
 			icon: "minecraft:acacia_log"
 			disable_toast: true
-			x: 0.0d
-			y: 6.0d
+			x: -1.0d
+			y: 5.5d
 			shape: "hexagon"
 			subtitle: "4 Silver"
 			repeatable: true
@@ -658,8 +658,8 @@
 			title: "16x Dark Oak Log"
 			icon: "minecraft:dark_oak_log"
 			disable_toast: true
-			x: 1.0d
-			y: 6.0d
+			x: 0.0d
+			y: 5.5d
 			shape: "hexagon"
 			subtitle: "4 Silver"
 			repeatable: true
@@ -692,8 +692,8 @@
 			title: "16x Crimson Stem"
 			icon: "minecraft:crimson_stem"
 			disable_toast: true
-			x: 2.0d
-			y: 6.0d
+			x: 1.0d
+			y: 5.5d
 			shape: "hexagon"
 			subtitle: "8 Silver"
 			repeatable: true
@@ -726,8 +726,8 @@
 			title: "16x Warped Stem"
 			icon: "minecraft:warped_stem"
 			disable_toast: true
-			x: 3.0d
-			y: 6.0d
+			x: 2.0d
+			y: 5.5d
 			shape: "hexagon"
 			subtitle: "8 Silver"
 			repeatable: true
@@ -760,8 +760,8 @@
 			title: "16x Blossom Log"
 			icon: "quark:blossom_log"
 			disable_toast: true
-			x: 4.0d
-			y: 6.0d
+			x: 1.0d
+			y: 6.5d
 			shape: "hexagon"
 			subtitle: "4 Silver"
 			repeatable: true
@@ -795,7 +795,7 @@
 			icon: "minecraft:iron_ingot"
 			disable_toast: true
 			x: -3.5d
-			y: 7.5d
+			y: 13.0d
 			shape: "hexagon"
 			subtitle: "16 Silver"
 			repeatable: true
@@ -829,7 +829,7 @@
 			icon: "create:zinc_ingot"
 			disable_toast: true
 			x: -2.5d
-			y: 7.5d
+			y: 13.0d
 			shape: "hexagon"
 			subtitle: "16 Silver"
 			repeatable: true
@@ -863,7 +863,7 @@
 			icon: "minecraft:copper_ingot"
 			disable_toast: true
 			x: -1.5d
-			y: 7.5d
+			y: 13.0d
 			shape: "hexagon"
 			subtitle: "16 Silver"
 			repeatable: true
@@ -897,7 +897,7 @@
 			icon: "thermal:nickel_ingot"
 			disable_toast: true
 			x: -0.5d
-			y: 7.5d
+			y: 13.0d
 			shape: "hexagon"
 			subtitle: "32 Silver"
 			repeatable: true
@@ -931,7 +931,7 @@
 			icon: "thermal:lead_ingot"
 			disable_toast: true
 			x: 0.5d
-			y: 7.5d
+			y: 13.0d
 			shape: "hexagon"
 			subtitle: "32 Silver"
 			repeatable: true
@@ -965,7 +965,7 @@
 			icon: "minecraft:gold_ingot"
 			disable_toast: true
 			x: 1.5d
-			y: 7.5d
+			y: 13.0d
 			shape: "hexagon"
 			subtitle: "48 Silver"
 			repeatable: true
@@ -999,7 +999,7 @@
 			icon: "mw_core:aluminium_ingot"
 			disable_toast: true
 			x: 2.5d
-			y: 7.5d
+			y: 13.0d
 			shape: "hexagon"
 			subtitle: "16 Silver"
 			repeatable: true
@@ -1033,7 +1033,7 @@
 			icon: "alloyed:bronze_ingot"
 			disable_toast: true
 			x: 3.5d
-			y: 7.5d
+			y: 13.0d
 			shape: "hexagon"
 			subtitle: "48 Silver"
 			repeatable: true
@@ -1067,7 +1067,7 @@
 			icon: "create:andesite_alloy"
 			disable_toast: true
 			x: -3.5d
-			y: 8.5d
+			y: 14.0d
 			shape: "hexagon"
 			subtitle: "8 Silver"
 			repeatable: true
@@ -1101,7 +1101,7 @@
 			icon: "create:brass_ingot"
 			disable_toast: true
 			x: -2.5d
-			y: 8.5d
+			y: 14.0d
 			shape: "hexagon"
 			subtitle: "48 Silver"
 			repeatable: true
@@ -1135,7 +1135,7 @@
 			icon: "thermal:invar_ingot"
 			disable_toast: true
 			x: -1.5d
-			y: 8.5d
+			y: 14.0d
 			shape: "hexagon"
 			subtitle: "64 Silver"
 			repeatable: true
@@ -1169,7 +1169,7 @@
 			icon: "thermal:silver_ingot"
 			disable_toast: true
 			x: -0.5d
-			y: 8.5d
+			y: 14.0d
 			shape: "hexagon"
 			subtitle: "16 Silver"
 			repeatable: true
@@ -1203,7 +1203,7 @@
 			icon: "thermal:tin_ingot"
 			disable_toast: true
 			x: 0.5d
-			y: 8.5d
+			y: 14.0d
 			shape: "hexagon"
 			subtitle: "16 Silver"
 			repeatable: true
@@ -1237,7 +1237,7 @@
 			icon: "forbidden_arcanus:arcane_gold_ingot"
 			disable_toast: true
 			x: 1.5d
-			y: 8.5d
+			y: 14.0d
 			shape: "hexagon"
 			subtitle: "2 Gold"
 			repeatable: true
@@ -1271,7 +1271,7 @@
 			icon: "forbidden_arcanus:obsidian_ingot"
 			disable_toast: true
 			x: 2.5d
-			y: 8.5d
+			y: 14.0d
 			shape: "hexagon"
 			subtitle: "16 Silver"
 			repeatable: true
@@ -1305,7 +1305,7 @@
 			icon: "minecraft:coal"
 			disable_toast: true
 			x: 3.5d
-			y: 8.5d
+			y: 14.0d
 			shape: "hexagon"
 			subtitle: "4 Silver"
 			repeatable: true
@@ -1339,7 +1339,7 @@
 			icon: "minecraft:flint"
 			disable_toast: true
 			x: -3.5d
-			y: 9.5d
+			y: 15.0d
 			shape: "hexagon"
 			subtitle: "4 Silver"
 			repeatable: true
@@ -1373,7 +1373,7 @@
 			icon: "thermal:cinnabar"
 			disable_toast: true
 			x: -2.5d
-			y: 9.5d
+			y: 15.0d
 			shape: "hexagon"
 			subtitle: "16 Silver"
 			repeatable: true
@@ -1407,7 +1407,7 @@
 			icon: "minecraft:redstone"
 			disable_toast: true
 			x: -1.5d
-			y: 9.5d
+			y: 15.0d
 			shape: "hexagon"
 			subtitle: "8 Silver"
 			repeatable: true
@@ -1441,7 +1441,7 @@
 			icon: "minecraft:diamond"
 			disable_toast: true
 			x: -0.5d
-			y: 9.5d
+			y: 15.0d
 			shape: "hexagon"
 			subtitle: "1 Gold"
 			repeatable: true
@@ -1475,7 +1475,7 @@
 			icon: "minecraft:lapis_lazuli"
 			disable_toast: true
 			x: 0.5d
-			y: 9.5d
+			y: 15.0d
 			shape: "hexagon"
 			subtitle: "32 Silver"
 			repeatable: true
@@ -1509,7 +1509,7 @@
 			icon: "minecraft:emerald"
 			disable_toast: true
 			x: 1.5d
-			y: 9.5d
+			y: 15.0d
 			shape: "hexagon"
 			subtitle: "1 Gold"
 			repeatable: true
@@ -1543,7 +1543,7 @@
 			icon: "thermal:sulfur"
 			disable_toast: true
 			x: 2.5d
-			y: 9.5d
+			y: 15.0d
 			shape: "hexagon"
 			subtitle: "8 Silver"
 			repeatable: true
@@ -1577,7 +1577,7 @@
 			icon: "thermal:apatite"
 			disable_toast: true
 			x: 3.5d
-			y: 9.5d
+			y: 15.0d
 			shape: "hexagon"
 			subtitle: "8 Silver"
 			repeatable: true
@@ -1611,7 +1611,7 @@
 			icon: "thermal:niter"
 			disable_toast: true
 			x: -4.0d
-			y: 10.5d
+			y: 16.0d
 			shape: "hexagon"
 			subtitle: "8 Silver"
 			repeatable: true
@@ -1645,7 +1645,7 @@
 			icon: "minecraft:quartz"
 			disable_toast: true
 			x: -3.0d
-			y: 10.5d
+			y: 16.0d
 			shape: "hexagon"
 			subtitle: "24 Silver"
 			repeatable: true
@@ -1679,7 +1679,7 @@
 			icon: "ae2:certus_quartz_crystal"
 			disable_toast: true
 			x: -2.0d
-			y: 10.5d
+			y: 16.0d
 			shape: "hexagon"
 			subtitle: "24 Silver"
 			repeatable: true
@@ -1713,7 +1713,7 @@
 			icon: "ae2:fluix_crystal"
 			disable_toast: true
 			x: -1.0d
-			y: 10.5d
+			y: 16.0d
 			shape: "hexagon"
 			subtitle: "32 Silver"
 			repeatable: true
@@ -1747,7 +1747,7 @@
 			icon: "thermal:cured_rubber"
 			disable_toast: true
 			x: 0.0d
-			y: 10.5d
+			y: 16.0d
 			shape: "hexagon"
 			subtitle: "16 Silver"
 			repeatable: true
@@ -1781,7 +1781,7 @@
 			icon: "forbidden_arcanus:rune"
 			disable_toast: true
 			x: 1.0d
-			y: 10.5d
+			y: 16.0d
 			shape: "hexagon"
 			subtitle: "32 Silver"
 			repeatable: true
@@ -1815,7 +1815,7 @@
 			icon: "forbidden_arcanus:arcane_crystal"
 			disable_toast: true
 			x: 2.0d
-			y: 10.5d
+			y: 16.0d
 			shape: "hexagon"
 			subtitle: "16 Silver"
 			repeatable: true
@@ -1849,7 +1849,7 @@
 			icon: "mw_core:creatite"
 			disable_toast: true
 			x: 3.0d
-			y: 10.5d
+			y: 16.0d
 			shape: "hexagon"
 			subtitle: "4 Gold"
 			repeatable: true
@@ -1883,7 +1883,7 @@
 			icon: "minecraft:scaffolding"
 			disable_toast: true
 			x: -1.5d
-			y: 12.5d
+			y: 4.0d
 			shape: "hexagon"
 			subtitle: "2 Silver"
 			repeatable: true
@@ -1917,7 +1917,7 @@
 			icon: "minecraft:white_wool"
 			disable_toast: true
 			x: -0.5d
-			y: 12.5d
+			y: 4.0d
 			shape: "hexagon"
 			subtitle: "8 Silver"
 			repeatable: true
@@ -1951,7 +1951,7 @@
 			icon: "minecraft:sponge"
 			disable_toast: true
 			x: 0.5d
-			y: 12.5d
+			y: 4.0d
 			shape: "hexagon"
 			subtitle: "16 Silver"
 			repeatable: true
@@ -1985,7 +1985,7 @@
 			icon: "minecraft:cobweb"
 			disable_toast: true
 			x: 1.5d
-			y: 12.5d
+			y: 4.0d
 			shape: "hexagon"
 			subtitle: "16 Silver"
 			repeatable: true
@@ -2019,7 +2019,7 @@
 			icon: "farmersdelight:rice_bag"
 			disable_toast: true
 			x: -2.5d
-			y: 14.5d
+			y: 8.0d
 			shape: "hexagon"
 			subtitle: "4 Silver"
 			repeatable: true
@@ -2053,7 +2053,7 @@
 			icon: "farmersdelight:straw"
 			disable_toast: true
 			x: -1.5d
-			y: 14.5d
+			y: 8.0d
 			shape: "hexagon"
 			subtitle: "8 Silver"
 			repeatable: true
@@ -2087,7 +2087,7 @@
 			icon: "minecraft:sugar_cane"
 			disable_toast: true
 			x: -0.5d
-			y: 14.5d
+			y: 8.0d
 			shape: "hexagon"
 			subtitle: "3 Silver"
 			repeatable: true
@@ -2121,7 +2121,7 @@
 			icon: "minecraft:kelp"
 			disable_toast: true
 			x: 0.5d
-			y: 14.5d
+			y: 8.0d
 			shape: "hexagon"
 			subtitle: "3 Silver"
 			repeatable: true
@@ -2155,7 +2155,7 @@
 			icon: "minecraft:bamboo"
 			disable_toast: true
 			x: 1.5d
-			y: 14.5d
+			y: 8.0d
 			shape: "hexagon"
 			subtitle: "5 Silver"
 			repeatable: true
@@ -2189,7 +2189,7 @@
 			icon: "minecraft:sweet_berries"
 			disable_toast: true
 			x: 2.5d
-			y: 14.5d
+			y: 8.0d
 			shape: "hexagon"
 			subtitle: "11 Silver"
 			repeatable: true
@@ -2223,7 +2223,7 @@
 			icon: "minecraft:vine"
 			disable_toast: true
 			x: -2.5d
-			y: 15.5d
+			y: 9.0d
 			shape: "hexagon"
 			subtitle: "7 Silver"
 			repeatable: true
@@ -2257,7 +2257,7 @@
 			icon: "create:tree_fertilizer"
 			disable_toast: true
 			x: -1.5d
-			y: 15.5d
+			y: 9.0d
 			shape: "hexagon"
 			subtitle: "8 Silver"
 			repeatable: true
@@ -2291,7 +2291,7 @@
 			icon: "thermal:phytogro"
 			disable_toast: true
 			x: -0.5d
-			y: 15.5d
+			y: 9.0d
 			shape: "hexagon"
 			subtitle: "8 Silver"
 			repeatable: true
@@ -2835,7 +2835,7 @@
 			icon: "minecraft:slime_ball"
 			disable_toast: true
 			x: -3.0d
-			y: 22.0d
+			y: 21.0d
 			shape: "hexagon"
 			subtitle: "24 Silver"
 			repeatable: true
@@ -2869,7 +2869,7 @@
 			icon: "minecraft:string"
 			disable_toast: true
 			x: -2.0d
-			y: 22.0d
+			y: 21.0d
 			shape: "hexagon"
 			subtitle: "5 Silver"
 			repeatable: true
@@ -2903,7 +2903,7 @@
 			icon: "minecraft:feather"
 			disable_toast: true
 			x: -1.0d
-			y: 22.0d
+			y: 21.0d
 			shape: "hexagon"
 			subtitle: "6 Silver"
 			repeatable: true
@@ -2937,7 +2937,7 @@
 			icon: "minecraft:gunpowder"
 			disable_toast: true
 			x: 0.0d
-			y: 22.0d
+			y: 21.0d
 			shape: "hexagon"
 			subtitle: "7 Silver"
 			repeatable: true
@@ -2971,7 +2971,7 @@
 			icon: "minecraft:leather"
 			disable_toast: true
 			x: 1.0d
-			y: 22.0d
+			y: 21.0d
 			shape: "hexagon"
 			subtitle: "8 Silver"
 			repeatable: true
@@ -3005,7 +3005,7 @@
 			icon: "minecraft:ink_sac"
 			disable_toast: true
 			x: 2.0d
-			y: 22.0d
+			y: 21.0d
 			shape: "hexagon"
 			subtitle: "8 Silver"
 			repeatable: true
@@ -3039,7 +3039,7 @@
 			icon: "minecraft:experience_bottle"
 			disable_toast: true
 			x: 3.0d
-			y: 22.0d
+			y: 21.0d
 			shape: "hexagon"
 			subtitle: "8 Silver"
 			repeatable: true
@@ -3073,7 +3073,7 @@
 			icon: "minecraft:shulker_shell"
 			disable_toast: true
 			x: 3.5d
-			y: 21.0d
+			y: 20.0d
 			shape: "hexagon"
 			subtitle: "2 Gold"
 			repeatable: true
@@ -3107,7 +3107,7 @@
 			icon: "minecraft:spider_eye"
 			disable_toast: true
 			x: -3.5d
-			y: 21.0d
+			y: 20.0d
 			shape: "hexagon"
 			subtitle: "10 Silver"
 			repeatable: true
@@ -3141,7 +3141,7 @@
 			icon: "minecraft:ender_pearl"
 			disable_toast: true
 			x: -2.5d
-			y: 21.0d
+			y: 20.0d
 			shape: "hexagon"
 			subtitle: "48 Silver"
 			repeatable: true
@@ -3175,7 +3175,7 @@
 			icon: "minecraft:rotten_flesh"
 			disable_toast: true
 			x: -1.5d
-			y: 21.0d
+			y: 20.0d
 			shape: "hexagon"
 			subtitle: "3 Silver"
 			repeatable: true
@@ -3209,7 +3209,7 @@
 			icon: "minecraft:blaze_rod"
 			disable_toast: true
 			x: -0.5d
-			y: 21.0d
+			y: 20.0d
 			shape: "hexagon"
 			subtitle: "20 Silver"
 			repeatable: true
@@ -3243,7 +3243,7 @@
 			icon: "minecraft:bone"
 			disable_toast: true
 			x: 0.5d
-			y: 21.0d
+			y: 20.0d
 			shape: "hexagon"
 			subtitle: "8 Silver"
 			repeatable: true
@@ -3277,7 +3277,7 @@
 			icon: "minecraft:prismarine_shard"
 			disable_toast: true
 			x: 1.5d
-			y: 21.0d
+			y: 20.0d
 			shape: "hexagon"
 			subtitle: "16 Silver"
 			repeatable: true
@@ -3311,7 +3311,7 @@
 			icon: "minecraft:prismarine_crystals"
 			disable_toast: true
 			x: 2.5d
-			y: 21.0d
+			y: 20.0d
 			shape: "hexagon"
 			subtitle: "24 Silver"
 			repeatable: true
@@ -3345,7 +3345,7 @@
 			icon: "minecraft:phantom_membrane"
 			disable_toast: true
 			x: -1.5d
-			y: 23.0d
+			y: 22.0d
 			shape: "hexagon"
 			subtitle: "48 Silver"
 			repeatable: true
@@ -3379,7 +3379,7 @@
 			icon: "create:blaze_cake"
 			disable_toast: true
 			x: -0.5d
-			y: 23.0d
+			y: 22.0d
 			shape: "hexagon"
 			subtitle: "16 Silver"
 			repeatable: true
@@ -3413,7 +3413,7 @@
 			icon: "forbidden_arcanus:arcane_bone_meal"
 			disable_toast: true
 			x: 0.5d
-			y: 15.5d
+			y: 9.0d
 			shape: "hexagon"
 			subtitle: "16 Silver"
 			repeatable: true
@@ -3447,7 +3447,7 @@
 			icon: "tconstruct:necrotic_bone"
 			disable_toast: true
 			x: 0.5d
-			y: 23.0d
+			y: 22.0d
 			shape: "hexagon"
 			subtitle: "16 Silver"
 			repeatable: true
@@ -3480,7 +3480,7 @@
 			icon: "quark:shale"
 			disable_toast: true
 			x: -3.5d
-			y: 4.5d
+			y: 11.5d
 			shape: "hexagon"
 			subtitle: "3 Silver"
 			repeatable: true
@@ -3513,7 +3513,7 @@
 			icon: "forbidden_arcanus:soul"
 			disable_toast: true
 			x: -2.5d
-			y: 23.0d
+			y: 22.0d
 			shape: "hexagon"
 			subtitle: "32 Silver"
 			repeatable: true
@@ -3546,7 +3546,7 @@
 			icon: "thermal:basalz_rod"
 			disable_toast: true
 			x: 1.5d
-			y: 23.0d
+			y: 22.0d
 			shape: "hexagon"
 			subtitle: "10 Silver"
 			repeatable: true
@@ -3579,7 +3579,7 @@
 			icon: "forbidden_arcanus:nipa"
 			disable_toast: true
 			x: 1.5d
-			y: 15.5d
+			y: 9.0d
 			shape: "hexagon"
 			subtitle: "32 Silver"
 			repeatable: true
@@ -3612,7 +3612,7 @@
 			icon: "forbidden_arcanus:yellow_orchid"
 			disable_toast: true
 			x: 2.5d
-			y: 15.5d
+			y: 9.0d
 			shape: "hexagon"
 			subtitle: "32 Silver"
 			repeatable: true
@@ -3645,7 +3645,7 @@
 			icon: "mw_core:chromatic_dust"
 			disable_toast: true
 			x: 2.5d
-			y: 23.0d
+			y: 22.0d
 			shape: "hexagon"
 			subtitle: "1 Gold"
 			repeatable: true
@@ -3678,7 +3678,7 @@
 			icon: "minecraft:amethyst_shard"
 			disable_toast: true
 			x: 4.0d
-			y: 10.5d
+			y: 16.0d
 			shape: "hexagon"
 			subtitle: "8 Silver"
 			repeatable: true
@@ -3711,7 +3711,7 @@
 			icon: "quark:jasper"
 			disable_toast: true
 			x: 3.5d
-			y: 4.5d
+			y: 11.5d
 			shape: "hexagon"
 			subtitle: "3 Silver"
 			repeatable: true
@@ -3721,6 +3721,7 @@
 				type: "item"
 				item: "thermal:silver_coin"
 				count: 10L
+				consume_items: true
 			}]
 			rewards: [
 				{
@@ -3731,6 +3732,39 @@
 				}
 				{
 					id: "6257DDBEEC2CF1AB"
+					type: "custom"
+					title: "Repeatable"
+					icon: "thermal:machine_cycle_augment"
+					auto: "no_toast"
+				}
+			]
+		}
+		{
+			title: "16x Azalea Log"
+			icon: "quark:azalea_log"
+			disable_toast: true
+			x: 2.0d
+			y: 6.5d
+			shape: "hexagon"
+			subtitle: "4 Silver"
+			repeatable: true
+			id: "302C01F30EA8BD17"
+			tasks: [{
+				id: "4C731A7423233AE9"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 10L
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "65B2859F6FE6CD71"
+					type: "item"
+					auto: "enabled"
+					item: "kubejs:trade_card_azalea_log"
+				}
+				{
+					id: "2E9A7EB6BE60532B"
 					type: "custom"
 					title: "Repeatable"
 					icon: "thermal:machine_cycle_augment"

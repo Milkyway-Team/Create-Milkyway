@@ -1,0 +1,14 @@
+{
+	id: "2DCD6F61ECC43D39"
+	order_index: 4
+	title: "silver coin starter"
+	loot_size: 1
+	rewards: [
+		{ item: "thermal:silver_coin" }
+		{ item: "thermal:silver_coin", count: 4 }
+		{ item: "thermal:silver_coin", count: 8 }
+		{ item: "thermal:silver_coin", count: 16 }
+		{ item: "thermal:silver_coin", count: 24 }
+		{ item: "thermal:silver_coin", count: 32 }
+	]
+}

@@ -1,0 +1,20 @@
+{
+	id: "3719CAE9C36924CF"
+	order_index: 3
+	title: "Inscriber Press"
+	loot_size: 1
+	rewards: [
+		{ item: "mw_core:upgrade_processor_press" }
+		{ item: "ae2:calculation_processor_press" }
+		{ item: "ae2:engineering_processor_press" }
+		{ item: "ae2:logic_processor_press" }
+		{ item: "ae2:silicon_press" }
+		{
+			item: {
+				id: "ae2:name_press"
+				Count: 1b
+				tag: { }
+			}
+		}
+	]
+}

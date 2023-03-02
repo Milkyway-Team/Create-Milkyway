@@ -88,7 +88,6 @@ onEvent('item.registry', event => {
         { in: MC('birch_log', 64), out: S(2) },
         { in: MC('crimson_stem', 64), out: S(4) },
         { in: MC('warped_stem', 64), out: S(4) },
-
         { in: AP('twisted_log', 64), out: S(6) },
         { in: QA('blossom_log', 64), out: S(2) },
         { in: QA('azalea_log', 64), out: S(4) },
@@ -112,20 +111,16 @@ onEvent('item.registry', event => {
         { in: MC('diorite', 64), out: S(1) },
         { in: MC('sandstone', 64), out: S(1) },
         { in: CR('limestone', 64), out: S(1) },
-
         { in: QA('shale', 64), out: S(1) },
         { in: QA('jasper', 64), out: S(1) },
-
         { in: TE('cinnabar', 8), out: S(6) },
         { in: TE('sulfur', 16), out: S(6) },
         { in: TE('niter', 16), out: S(6) },
         { in: MC('lapis_lazuli', 16), out: S(6) },
         { in: TE('apatite', 16), out: S(4) },
-
         { in: CR('crushed_silver_ore', 16), out: S(12) },
         { in: CR('crushed_tin_ore', 16), out: S(8) },
         { in: MW('crushed_creatite_ore', 16), out: G(16) },
-
         { in: MC('diamond', 1), out: S(14) },
         { in: MC('coal', 16), out: S(2) },
     ])
@@ -257,23 +252,22 @@ onEvent('item.registry', event => {
     ])
 
     profession("Smithing", 0xFFC93C, 0xFF7A00, [
-        { in: MC('iron_boots'), out: S(2) },
-        { in: MC('iron_leggings'), out: S(4) },
-        { in: MC('iron_chestplate'), out: S(4) },
-        { in: TC('blank_cast'), out: S(1) },
-        { in: TC('ingot_cast'), out: S(2) },
-        { in: TC('pickaxe_head_cast'), out: S(3) },
-        { in: TC('gem_cast'), out: S(4) },
-        { in: MC('iron_helmet'), out: S(3) },
-        { in: MC('golden_boots'), out: S(4) },
-        { in: MC('golden_leggings'), out: S(7) },
-        { in: MC('golden_chestplate'), out: S(8) },
-        { in: MC('golden_helmet'), out: S(5) },
-        { in: MC('golden_apple'), out: S(10) },
-        { in: MC('arrow', 32), out: S(3) },
-        { in: MC('iron_sword'), out: S(1) },
-        { in: TC('#modifiable/held'), out: S(1) },
-        { in: MC('golden_sword'), out: S(2) }
+        { in: MC('iron_boots'), out: S(2) },//
+        { in: MC('iron_leggings'), out: S(4) },//
+        { in: MC('iron_chestplate'), out: S(4) },//
+        { in: TC('ingot_cast'), out: S(2) },//
+        { in: TC('pick_head_cast'), out: S(3) },//
+        { in: TC('gem_cast'), out: S(4) },//
+        { in: MC('iron_helmet'), out: S(3) },//
+        { in: MC('golden_boots'), out: S(4) },//
+        { in: MC('golden_leggings'), out: S(7) },//
+        { in: MC('golden_chestplate'), out: S(8) },//
+        { in: MC('golden_helmet'), out: S(5) },//
+        { in: MC('golden_apple'), out: S(10) },//
+        { in: MC('arrow', 32), out: S(3) },//
+        { in: MC('iron_sword'), out: S(1) },//
+        { in: TC('#modifiable/held'), out: S(1) },//
+        { in: MC('golden_sword'), out: S(2) }//
     ])
 
     trade("Exchange Currencies", 0xEBA83A, 0xF4F4F4, [

@@ -21,7 +21,16 @@ let sheetSet = (name, rarity) => {
 	event.create('reprocessed_' + id + '_sheet').texture("kubejs:item/reprocessed_" + id + "_sheet").displayName('Reprocessed ' + name + ' Sheet').rarity(rarity ? rarity : RARITY_COMMON)
 	event.create('reinforced_' + id + '_sheet').texture("kubejs:item/reinforced_" + id + "_sheet").displayName('Reinforced ' + name + ' Sheet').rarity(rarity ? rarity : RARITY_COMMON)
 }
-sheetSet('Zinc')
+	sheetSet('Zinc')
+
+let metalSet = (name, rarity) => {
+	let id = name.toLowerCase()
+	event.create(id + '_ingot').texture("kubejs:item/" + id + "_ingot").displayName(name + ' Ingot').rarity(rarity ? rarity : RARITY_COMMON)
+	event.create(id + '_nugget').texture("kubejs:item/" + id + "_nugget").displayName(name + ' Nugget').rarity(rarity ? rarity : RARITY_COMMON)
+	event.create(id + '_sheet').texture("kubejs:item/" + id + "_sheet").displayName(name + ' Sheet').rarity(rarity ? rarity : RARITY_COMMON)
+}
+    //metalSet('Bronze')
+	//metalSet('Steel')
 	let mechanism = (name, rarity) => {
 		let id = name.toLowerCase()
 		event.create(id + '_mechanism').texture("kubejs:item/" + id + "_mechanism").displayName(name + ' Mechanism').rarity(rarity ? rarity : RARITY_COMMON)
@@ -46,5 +55,6 @@ onEvent('block.registry', event => {
 			.renderType(layer)
 	}
 	machine('Refined', "cutout")
+
 })
 

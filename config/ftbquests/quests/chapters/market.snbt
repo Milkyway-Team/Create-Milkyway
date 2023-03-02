@@ -11,8 +11,8 @@
 		{
 			title: "Sleepless"
 			icon: "minecraft:cyan_bed"
-			x: -7.0d
-			y: 2.5d
+			x: -6.5d
+			y: 5.0d
 			subtitle: "10 Silver"
 			description: ["Your last resort in case the sundown beat you to it."]
 			id: "5D17CB247942013A"
@@ -126,8 +126,8 @@
 			title: "Corporate Dinner"
 			icon: "farmersdelight:steak_and_potatoes"
 			disable_toast: true
-			x: -7.0d
-			y: -1.5d
+			x: -11.0d
+			y: -2.0d
 			subtitle: "10 Silver"
 			description: ["Sometimes you have to treat yourself and the co-workers to a nice meal."]
 			id: "09DC2E2BE2BE32F4"
@@ -175,8 +175,8 @@
 		{
 			title: "Landfill Pickup"
 			icon: "minecraft:dirt"
-			x: -6.0d
-			y: -0.5d
+			x: -7.0d
+			y: -1.5d
 			subtitle: "15 Silver"
 			description: ["Early on it might help to import some dirt for base building."]
 			id: "4B01606CE7AF3121"
@@ -212,8 +212,8 @@
 		{
 			title: "Enderpack"
 			icon: "minecraft:shulker_box"
-			x: -4.0d
-			y: -0.5d
+			x: -3.0d
+			y: 0.0d
 			subtitle: "4 Gold"
 			description: ["It's like a backpack but classy."]
 			id: "4FD46F841CCD59F8"
@@ -246,8 +246,8 @@
 		{
 			title: "1-Up!"
 			icon: "minecraft:totem_of_undying"
-			x: -8.0d
-			y: -0.5d
+			x: -9.0d
+			y: 0.5d
 			subtitle: "4 Gold"
 			id: "6D9F2FBEB7CC5195"
 			tasks: [{
@@ -267,8 +267,8 @@
 		{
 			title: "Where mob ?"
 			icon: "create:haunted_bell"
-			x: -4.0d
-			y: 1.5d
+			x: -0.5d
+			y: 1.0d
 			subtitle: "45 Silver"
 			description: ["As seen on TV: This Magical Bell can detect unlit areas around it. Free shipping, bonus cursed campfire. What a Deal!"]
 			id: "4B52A04818075900"
@@ -296,8 +296,8 @@
 		{
 			title: "Playing with Fire"
 			icon: "thermal:explosive_grenade"
-			x: -6.0d
-			y: 3.5d
+			x: -9.5d
+			y: 4.0d
 			subtitle: "32 Silver"
 			description: ["A little testing selection of Thermal Weaponry."]
 			id: "1CC29991D5F248CA"
@@ -339,8 +339,8 @@
 		{
 			title: "Gardener's Starter Pack"
 			icon: "forbidden_arcanus:cherry_flower_vines"
-			x: -7.0d
-			y: 0.5d
+			x: -14.5d
+			y: -0.5d
 			subtitle: "24 Silver"
 			id: "42384DE39AA48976"
 			tasks: [{
@@ -387,8 +387,8 @@
 		{
 			title: "Painter's Starter Kit"
 			icon: "minecraft:painting"
-			x: -6.0d
-			y: 1.5d
+			x: -4.0d
+			y: 3.5d
 			subtitle: "24 Silver"
 			id: "61B040CD0832EFC0"
 			tasks: [{
@@ -451,10 +451,10 @@
 			]
 		}
 		{
-			title: "Railway Starter Pack"
+			title: "Mineshaft Starter Pack"
 			icon: "minecraft:minecart"
-			x: -5.0d
-			y: -1.5d
+			x: -1.5d
+			y: -2.5d
 			subtitle: "24 Silver"
 			id: "117587D824D23D69"
 			tasks: [{
@@ -501,8 +501,8 @@
 		{
 			title: "Pet Owner's Starter Pack"
 			icon: "minecraft:tropical_fish"
-			x: -8.0d
-			y: 1.5d
+			x: -12.5d
+			y: 2.0d
 			subtitle: "24 Silver"
 			id: "2D75D1864FB1EF75"
 			tasks: [{
@@ -548,8 +548,8 @@
 		{
 			title: "Instant Aesthetics"
 			icon: "minecraft:oak_leaves"
-			x: -5.0d
-			y: 0.5d
+			x: -4.0d
+			y: -2.0d
 			subtitle: "24 Silver"
 			description: ["Not too stoked with your facade? Not a problem! Foliage solves everything."]
 			id: "7D93DAB3E8ACF953"
@@ -604,8 +604,8 @@
 			title: "No, not the bees!"
 			icon: "minecraft:bee_nest"
 			disable_toast: true
-			x: -5.0d
-			y: 2.5d
+			x: -6.0d
+			y: 1.5d
 			subtitle: "48 Silver"
 			repeatable: true
 			id: "003E0D1CE60B166A"
@@ -971,7 +971,7 @@
 			title: "Shipments"
 			icon: "thermal:machine_press"
 			disable_toast: true
-			x: -6.0d
+			x: -6.5d
 			y: -7.0d
 			shape: "hexagon"
 			id: "14105A03A4D53107"
@@ -982,10 +982,124 @@
 				count: 32L
 				consume_items: true
 			}]
-			rewards: [{
-				id: "41E2956742CCFEF9"
+			rewards: [
+				{
+					id: "41E2956742CCFEF9"
+					type: "item"
+					item: "thermal:machine_press"
+				}
+				{
+					id: "3AB970D8EB632F12"
+					type: "item"
+					item: "thermal:dynamo_stirling"
+				}
+			]
+		}
+		{
+			title: "Railway Starter Pack"
+			icon: "create:track"
+			x: 1.5d
+			y: -1.0d
+			subtitle: "8 Gold"
+			description: ["Everything you'll need to start a train building empire!"]
+			dependencies: ["32FE250DD6950ABE"]
+			hide: false
+			id: "2C47FB25257D7FD2"
+			tasks: [{
+				id: "5B318119ECF1D14C"
 				type: "item"
-				item: "thermal:machine_press"
+				item: "thermal:gold_coin"
+				count: 8L
+			}]
+			rewards: [
+				{
+					id: "6D5050756172B0B3"
+					type: "item"
+					item: "create:track_station"
+				}
+				{
+					id: "0D2323F46CE6C5A4"
+					type: "item"
+					item: "create:controls"
+				}
+				{
+					id: "3D5639B87FD67EAD"
+					type: "item"
+					item: "create:railway_casing"
+					count: 16
+				}
+				{
+					id: "31954041E7A6E124"
+					type: "item"
+					item: "create:track"
+					count: 64
+				}
+				{
+					id: "1325E74AA8ABEC89"
+					type: "item"
+					item: "railways:red_conductor_cap"
+				}
+				{
+					id: "51747A32F8CEB91C"
+					type: "item"
+					item: "create:train_door"
+					count: 4
+				}
+			]
+		}
+		{
+			title: "Inscriber Import"
+			icon: "ae2:silicon_press"
+			disable_toast: true
+			x: -1.0d
+			y: 3.5d
+			subtitle: "48 Silver"
+			description: ["At the expence of 48 Silver coins, an Inscriber Press of YOUR CHOICE is yours!"]
+			dependencies: ["0279C9E65A622D89"]
+			repeatable: true
+			id: "4ED6E19C611A9CBB"
+			tasks: [{
+				id: "7B96DFCF759480A6"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 48L
+				consume_items: true
+			}]
+			rewards: [{
+				id: "5ABB5E368E0B91D0"
+				type: "choice"
+				title: "Inscriber Press"
+				icon: "ae2:sky_stone_chest"
+				exclude_from_claim_all: true
+				table_id: 3970427651858441423L
+			}]
+		}
+		{
+			title: "Exchange Currencies"
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "thermal:textures/item/gold_coin_4.png"
+				}
+			}
+			disable_toast: true
+			x: -5.5d
+			y: -7.0d
+			shape: "hexagon"
+			repeatable: true
+			id: "0399D9B8ECB7565A"
+			tasks: [{
+				id: "39D7321A8AAB9BAB"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 32L
+				consume_items: true
+			}]
+			rewards: [{
+				id: "3305AD7A786E5253"
+				type: "item"
+				item: "kubejs:trade_card_exchange_currencies"
 			}]
 		}
 	]

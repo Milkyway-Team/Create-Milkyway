@@ -142,6 +142,7 @@
 				{
 					id: "67FD854FD7DD647B"
 					type: "item"
+					icon: "alloyed:bronze_ingot"
 					item: "alloyed:bronze_ingot"
 				}
 				{

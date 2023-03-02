@@ -1,0 +1,33 @@
+{
+	id: "59982B15AAD803EE"
+	order_index: 5
+	title: "Cobalt"
+	icon: "tconstruct:cobalt_ingot"
+	loot_size: 1
+	use_title: true
+	rewards: [
+		{ item: "mw_core:cobalt_mechanism", count: 4 }
+		{
+			item: {
+				id: "create_things_and_misc:mending_rune"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+		}
+		{ item: "thermal:silver_coin", count: 48 }
+		{ item: "thermal:lead_ingot", count: 16 }
+		{ item: "thermal:rf_coil", count: 8 }
+	]
+	loot_crate: {
+		drops: {
+			boss: 0
+			passive: 0
+			monster: 0
+		}
+		color: 3958215
+		item_name: "Cobalt Crate"
+		string_id: "cobalt"
+	}
+}

@@ -7,7 +7,7 @@
 	#The active cosmetic for the category: hand
 	active_cosmetic_hand = ""
 	#The active cosmetic for the category: face
-	active_cosmetic_face = ""
+	active_cosmetic_face = "purple_scarf"
 	#The active cosmetic for the category: special
 	active_cosmetic_special = ""
 

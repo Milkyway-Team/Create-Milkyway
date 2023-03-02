@@ -1,0 +1,11 @@
+{
+  "entity.minecraft.villager.spacecatcustomprofessions.flux_engineer": "Flux Engineer",
+  "entity.minecraft.villager.flux_engineer": "Flux Engineer",
+
+  "entity.minecraft.villager.spacecatcustomprofessions.fluix_researcher": "Fluix Researcher",
+  "entity.minecraft.villager.fluix_researcher": "Fluix Researcher",
+
+  "entity.minecraft.villager.spacecatcustomprofessions.mechanical_engineer": "Mechanical Engineer",
+  "entity.minecraft.villager.mechanical_engineer": "Mechanical Engineer"
+
+}

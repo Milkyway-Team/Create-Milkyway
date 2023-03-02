@@ -5,6 +5,6 @@
 		"0": "minecraft:block/stone",
 		"1": "minecraft:block/stone",
 		"2": "forbidden_arcanus:block/xpetrified_ore_layer",
-		"particle": "cesarzorak:block/xpetrified_ore"
+		"particle": "minecraft:block/stone"
   }
 }
