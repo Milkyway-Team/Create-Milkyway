@@ -72,11 +72,11 @@ onEvent("morejs.villager.trades", (event) => {
     event.addTrade(mEng, 3, ['6x ' + EM, CR('polished_rose_quartz')], '1x ' + CR('electron_tube'));
     event.addTrade(mEng, 3, ['6x ' + EM, CR('iron_sheet')], '1x ' + CR('super_glue'));
     create_sheet_metals.forEach(e => {
-        event.addTrade(mEng, 4, ['4x ' + EM, F('#ingots/' + e)], 'create:' + e + '_sheet');
+        event.addTrade(mEng, 4, ['4x ' + EM, '#forge:ingots/' + e], 'create:' + e + '_sheet');
     })
     event.addTrade(mEng, 4, ['4x ' + EM, MC('gold_ingot')], CR('golden_sheet'));
     mw_sheet_metals.forEach(e => {
-        event.addTrade(mEng, 4, ['4x ' + EM, F('#ingots/' + e)], MW(e + '_sheet'));
+        event.addTrade(mEng, 4, ['4x ' + EM, '#forge:ingots/' + e], MW(e + '_sheet'));
     })
     event.addTrade(mEng, 5, ['48x ' + EM, MW('basic_mechanism')], '1x ' + CR('precision_mechanism'));
     event.addTrade(mEng, 5, ['16x ' + EM], '1x ' + CR('schedule'));

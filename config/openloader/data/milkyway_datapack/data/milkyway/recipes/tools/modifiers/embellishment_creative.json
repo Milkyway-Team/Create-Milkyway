@@ -1,0 +1,23 @@
+{
+  "type": "tconstruct:swappable_modifier",
+  "inputs": [
+    {
+      "item": "mw_core:creative_ingot"
+    },             
+    {
+      "item": "mw_core:creative_ingot"
+    },            
+    {
+      "item": "mw_core:creative_ingot"
+    }
+  ],
+  "tools": [
+    {
+      "tag": "tconstruct:modifiable/embellishment/metal"
+    }
+  ],
+  "result": {
+    "name": "tconstruct:embellishment",
+    "value": "milkyway:creative"
+  }
+}

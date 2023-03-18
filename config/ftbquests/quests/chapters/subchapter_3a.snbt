@@ -505,7 +505,7 @@
 			tasks: [{
 				id: "2F3C89F79E9150EA"
 				type: "item"
-				item: "kubejs:tiny_certus_crystal"
+				item: "ae2:tiny_certus_crystal"
 			}]
 		}
 		{
@@ -516,7 +516,7 @@
 			tasks: [{
 				id: "6A550F2241B17D4E"
 				type: "item"
-				item: "kubejs:small_certus_crystal"
+				item: "ae2:small_certus_crystal"
 			}]
 		}
 		{

@@ -181,6 +181,7 @@ onEvent('recipes', event => {
     customMachines(event)
     trading(event)
     trickierWindmills(event)
+    crushing(event)
 	log.push('Recipes Updated')
 
 	})
@@ -201,6 +202,7 @@ function trickierWindmills(event) {
 
 }
 function tweaks(event){
+
     nml_foods.forEach(e => {
         foodCooking(event, ['minecraft:' + e], [MW('coal_dust')], [MC('cooked_' + e)])
     })
@@ -216,7 +218,7 @@ function tweaks(event){
     ], MW('chromatic_dust'))
 
 
-    event.stonecutting('8x refinedstorage:cable', KJ('refined_machine'))
+    event.stonecutting('8x refinedstorage:cable', 'milkyway:refined_machine')
     event.custom({
         "type": "createbigcannons:melting",
         "ingredients": [
@@ -318,23 +320,24 @@ function tweaks(event){
             ]).transitionalItem(via).loops(1).id('milkyway:assembly_' + to.split(':')[1])
     }
     let unProcSheet = (fromId, metal) => {
-        event.recipes.createSequencedAssembly([KJ('unprocessed_' + metal + '_sheet')], fromId + ':' + metal + '_sheet', [
-            event.recipes.createFilling(KJ('unprocessed_' + metal + '_sheet'), [KJ('unprocessed_' + metal + '_sheet'), Fluid.of(TE("creosote"), 500)]),
-            event.recipes.createFilling(KJ('unprocessed_' + metal + '_sheet'), [KJ('unprocessed_' + metal + '_sheet'), Fluid.of(TC('molten_' + metal), 90)]),
-            event.recipes.createFilling(KJ('unprocessed_' + metal + '_sheet'), [KJ('unprocessed_' + metal + '_sheet'), Fluid.of(MC("water"), 500)]),
-            ]).transitionalItem(KJ('unprocessed_' + metal + '_sheet')).loops(1).id('milkyway:assembly_' + KJ('unprocessed_' + metal + '_sheet').split(':')[1])
-        event.recipes.createSequencedAssembly([KJ('sturdy_' + metal + '_sheet')], KJ('unprocessed_' + metal + '_sheet'), [
-            event.recipes.createPressing(KJ('unprocessed_' + metal + '_sheet'), KJ('unprocessed_' + metal + '_sheet')),
-        ]).transitionalItem(KJ('unprocessed_' + metal + '_sheet')).loops(15).id('milkyway:assembly_' + KJ('sturdy_' + metal + '_sheet').split(':')[1])
-        event.recipes.createSequencedAssembly([KJ('reprocessed_' + metal + '_sheet')], KJ('sturdy_' + metal + '_sheet'), [
-            event.recipes.createFilling(KJ('reprocessed_' + metal + '_sheet'), [KJ('reprocessed_' + metal + '_sheet'), Fluid.of(TE("crude_oil"), 500)]),
-            event.recipes.createDeploying(KJ('reprocessed_' + metal + '_sheet'), [KJ('reprocessed_' + metal + '_sheet'), KJ('sturdy_' + metal + '_sheet')]),
-            event.recipes.createFilling(KJ('reprocessed_' + metal + '_sheet'), [KJ('reprocessed_' + metal + '_sheet'), Fluid.of(TC('molten_' + metal), 90)]),
-            event.recipes.createFilling(KJ('reprocessed_' + metal + '_sheet'), [KJ('reprocessed_' + metal + '_sheet'), Fluid.of(MC("water"), 500)]),
-        ]).transitionalItem(KJ('reprocessed_' + metal + '_sheet')).loops(1).id('milkyway:assembly_' + KJ('reprocessed_' + metal + '_sheet').split(':')[1])
-        event.recipes.createSequencedAssembly([KJ('reinforced_' + metal + '_sheet')], KJ('reprocessed_' + metal + '_sheet'), [
-            event.recipes.createPressing(KJ('reprocessed_' + metal + '_sheet'), KJ('reprocessed_' + metal + '_sheet')),
-        ]).transitionalItem(KJ('reprocessed_' + metal + '_sheet')).loops(15).id('milkyway:assembly_' + KJ('reinforced_' + metal + '_sheet').split(':')[1])
+        event.recipes.createSequencedAssembly([MW('unprocessed_' + metal + '_sheet')], fromId + ':' + metal + '_sheet', [
+            event.recipes.createFilling(MW('unprocessed_' + metal + '_sheet'), [MW('unprocessed_' + metal + '_sheet'), Fluid.of(TE("creosote"), 500)]),
+            event.recipes.createFilling(MW('unprocessed_' + metal + '_sheet'), [MW('unprocessed_' + metal + '_sheet'), Fluid.of(TC('molten_' + metal), 90)]),
+            event.recipes.createFilling(MW('unprocessed_' + metal + '_sheet'), [MW('unprocessed_' + metal + '_sheet'), Fluid.of(MC("water"), 500)]),
+            event.recipes.createPressing(MW('unprocessed_' + metal + '_sheet'), MW('unprocessed_' + metal + '_sheet')),
+            ]).transitionalItem(MW('unprocessed_' + metal + '_sheet')).loops(1).id('milkyway:assembly_' + MW('unprocessed_' + metal + '_sheet').split(':')[1])
+        event.recipes.createSequencedAssembly([MW('sturdy_' + metal + '_sheet')], MW('unprocessed_' + metal + '_sheet'), [
+            event.recipes.createPressing(MW('unprocessed_' + metal + '_sheet'), MW('unprocessed_' + metal + '_sheet')),
+        ]).transitionalItem(MW('unprocessed_' + metal + '_sheet')).loops(15).id('milkyway:assembly_' + MW('sturdy_' + metal + '_sheet').split(':')[1])
+        event.recipes.createSequencedAssembly([MW('reprocessed_' + metal + '_sheet')], MW('sturdy_' + metal + '_sheet'), [
+            event.recipes.createFilling(MW('reprocessed_' + metal + '_sheet'), [MW('reprocessed_' + metal + '_sheet'), Fluid.of(TE("crude_oil"), 500)]),
+            event.recipes.createDeploying(MW('reprocessed_' + metal + '_sheet'), [MW('reprocessed_' + metal + '_sheet'), MW('sturdy_' + metal + '_sheet')]),
+            event.recipes.createFilling(MW('reprocessed_' + metal + '_sheet'), [MW('reprocessed_' + metal + '_sheet'), Fluid.of(TC('molten_' + metal), 90)]),
+            event.recipes.createFilling(MW('reprocessed_' + metal + '_sheet'), [MW('reprocessed_' + metal + '_sheet'), Fluid.of(MC("water"), 500)]),
+        ]).transitionalItem(MW('reprocessed_' + metal + '_sheet')).loops(1).id('milkyway:assembly_' + MW('reprocessed_' + metal + '_sheet').split(':')[1])
+        event.recipes.createSequencedAssembly([MW('reinforced_' + metal + '_sheet')], MW('reprocessed_' + metal + '_sheet'), [
+            event.recipes.createPressing(MW('reprocessed_' + metal + '_sheet'), MW('reprocessed_' + metal + '_sheet')),
+        ]).transitionalItem(MW('reprocessed_' + metal + '_sheet')).loops(15).id('milkyway:assembly_' + MW('reinforced_' + metal + '_sheet').split(':')[1])
     }
     unProcSheet('createaddition', 'zinc')
 
@@ -343,41 +346,29 @@ function tweaks(event){
     seqAss3(CR('precision_mechanism'), CSA('incomplete_steam_engine'), CR('brass_sheet'), CR('andesite_alloy'), MC('compass'), CSA('steam_engine'))
     seqAss3(MW('basic_mechanism'), CSA('incomplete_heat_engine'), CR('andesite_alloy'), CR('copper_nugget'), CR('iron_sheet'), CSA('heat_engine'))
     seqAss3(MW('copper_mechanism'), CSA('incomplete_hydraulic_engine'), CR('copper_sheet'), MC('compass'), Item.of('minecraft:potion', '{Potion:"minecraft:water"}'), CSA('hydraulic_engine'))
-    seqAss3(CR('precision_mechanism'), KJ('incomplete_refined_mechanism'), RS('silicon'), 'createaddition:capacitor', MW('lead_sheet'), KJ('refined_mechanism'))
+    seqAss3(CR('precision_mechanism'), MW('incomplete_refined_mechanism'), RS('silicon'), 'createaddition:capacitor', MW('lead_sheet'), MW('refined_mechanism'))
     seqAss3(FD('canvas'), FD('canvas'), IE('hemp_fiber'), F('#shears'), IE('hemp_fiber'), IE('hemp_fabric'))
 
-    grow(AE2("certus_crystal_seed"), KJ('growing_certus_seed'), KJ('tiny_certus_crystal'))
-    grow(AE2("fluix_crystal_seed"), KJ('growing_fluix_seed'), KJ('tiny_fluix_crystal'))
+    grow(AE2("certus_crystal_seed"), AE2('growing_certus_seed'), AE2('tiny_certus_crystal'))
+    grow(AE2("fluix_crystal_seed"), AE2('growing_fluix_seed'), AE2('tiny_fluix_crystal'))
 
-    grow(KJ("tiny_certus_crystal"), KJ('growing_tiny_certus_crystal'), KJ('small_certus_crystal'))
-    grow(KJ("tiny_fluix_crystal"), KJ('growing_tiny_fluix_crystal'), KJ('small_fluix_crystal'))
+    grow(AE2("tiny_certus_crystal"), AE2('growing_tiny_certus_crystal'), AE2('small_certus_crystal'))
+    grow(AE2("tiny_fluix_crystal"), AE2('growing_tiny_fluix_crystal'), AE2('small_fluix_crystal'))
 
-    grow(KJ("small_certus_crystal"), KJ('growing_small_certus_crystal'), AE2('certus_quartz_crystal'))
-    grow(KJ("small_fluix_crystal"), KJ('growing_small_fluix_crystal'), AE2('fluix_crystal'))
+    grow(AE2("small_certus_crystal"), AE2('growing_small_certus_crystal'), AE2('certus_quartz_crystal'))
+    grow(AE2("small_fluix_crystal"), AE2('growing_small_fluix_crystal'), AE2('fluix_crystal'))
 
 
-    event.shaped(KJ('refined_machine'), [
+    event.shaped('milkyway:refined_machine', [
         'LLL',
         'AMA',
         'ZZZ'
     ], {
-        Z: KJ('sturdy_zinc_sheet'),
+        Z: MW('sturdy_zinc_sheet'),
         A: RS('advanced_processor'),
-        M: KJ('refined_mechanism'),
+        M: MW('refined_mechanism'),
         L: MW('sturdy_lead_sheet')
     }).id('milkyway:refined_machine')
-    event.shaped(TE('machine_press'), [
-        'BFB',
-        'SGS',
-        'IMI'
-    ], {
-        B: KJ('sturdy_zinc_sheet'),
-        S: AL('steel_sheet'),
-        I: MW('sturdy_iron_sheet'),
-        M: MW('cobalt_mechanism'),
-        G: CR('track_station'),
-        F: CR('brass_funnel')
-    }).id('milkyway:capitalism-inator')
     event.shapeless(MW('basic_mechanism'), [F('#cogwheels'), CR('andesite_alloy'), F('#ingots/iron'), MC('#planks')])
     event.shaped('thermal:rf_coil', [
         'R',
@@ -386,15 +377,7 @@ function tweaks(event){
     ], {
         R: '#forge:dusts/redstone',
         G: '#forge:ingots/gold'
-    })
-    event.shaped('thermal:rf_coil', [
-        'R  ',
-        ' G ',
-        '  R'
-    ], {
-        R: '#forge:dusts/redstone',
-        G: '#forge:ingots/gold'
-    })
+    }).id('thermal:rf_coil_vertical')
     event.shaped('create:steam_engine', [
         ' B ',
         ' SC',
@@ -404,20 +387,20 @@ function tweaks(event){
         S: 'alloyed:steel_ingot',
         E: CSA('steam_engine'),
         B: 'create:brass_sheet'
-    })
+    }).id('milkyway:steam_engine')
 
     event.replaceOutput({id: 'mw_core:refinery/tin_refining'}, 'tconstruct:molten_iron', 'tconstruct:molten_lead')
     event.recipes.createCrushing([
         '3x thermal:tin_nugget',
         Item.of('thermal:apatite').withChance(0.5)
-    ], 'quark:jasper')
+    ], 'quark:jasper').id('milkyway:crushing/jasper')
     event.custom({
         "type": "thermal:rock_gen",
         "adjacent": "minecraft:dripstone_block",
         "result": {
             "item": "quark:jasper"
         }
-    })
+    }).id('milkyway:rock_gen/jasper')
     event.custom({
         "type": "create:compacting",
         "ingredients": [
@@ -431,7 +414,7 @@ function tweaks(event){
             "amount": 50
         }
     ]
-    })
+    }).id('milkyway:compacting/ethanol')
 
     event.custom({
         "type": "create:mixing",
@@ -454,7 +437,7 @@ function tweaks(event){
                 "amount": 16
             }
         ]
-    })
+    }).id('milkyway:mixing/biodiesel')
     event.custom({
         "type": "create:mixing",
         "ingredients": [
@@ -473,7 +456,7 @@ function tweaks(event){
                 "amount": 8
             }
         ]
-    })
+    }).id('milkyway:mixing/phenolic_resin')
     event.custom({
         "type": "create:mixing",
         "ingredients": [
@@ -491,7 +474,7 @@ function tweaks(event){
                 "amount": 8
             }
         ]
-    })
+    }).id('milkyway:mixing/acetaldehyde')
     event.custom({
         "type": "create:mixing",
         "ingredients": [
@@ -509,7 +492,7 @@ function tweaks(event){
                 "count": 1
             }
         ]
-    })
+    }).id('milkyway:mixing/ancient_debris')
 event.custom({
   "type": "create:mixing",
   "ingredients": [
@@ -527,7 +510,7 @@ event.custom({
       "count": 1
     }
   ]
-})
+}).id('milkyway:mixing/andesite')
 
     event.custom({
         "type": "create:mixing",
@@ -546,7 +529,7 @@ event.custom({
                 "count": 1
             }
         ]
-    })
+    }).id('milkyway:mixing/diorite')
     event.custom({
         "type": "create:mixing",
         "ingredients": [
@@ -564,7 +547,25 @@ event.custom({
                 "count": 1
             }
         ]
-    })
+    }).id('milkyway:mixing/granite')
+    event.custom({
+        "type": "create:mixing",
+        "ingredients": [
+            {
+                "item": "minecraft:granite"
+            },
+            {
+                "fluid": "tconstruct:molten_quartz",
+                "amount": 50
+            }
+        ],
+        "results": [
+            {
+                "item": "minecraft:andesite",
+                "count": 1
+            }
+        ]
+    }).id('milkyway:mixing/andesite_from_granite')
 event.custom({
   "type": "create:mixing",
   "ingredients": [
@@ -720,7 +721,7 @@ event.custom({
             P: MC(wt + '_planks'),
             S: MC(wt + '_slab'),
             C: QA(wt + '_chest')
-        })
+        }).id('milkyway:' + wt + '_drawer_1')
         event.shaped(SD(wt + '_full_drawers_2', 1), [
             'PSP',
             'SCS',
@@ -729,7 +730,7 @@ event.custom({
             P: MC(wt + '_planks'),
             S: SD(wt + '_full_drawers_1'),
             C: BD(wt + '_furniture_kit')
-        })
+        }).id('milkyway:' + wt + '_drawer_2')
         event.shaped(SD(wt + '_full_drawers_4', 1), [
             'PSP',
             'SCS',
@@ -738,14 +739,13 @@ event.custom({
             P: MC(wt + '_planks'),
             S: SD(wt + '_full_drawers_2'),
             C: BD(wt + '_furniture_kit')
-        })
+        }).id('milkyway:' + wt + '_drawer_3')
     })
 }
 
 function basicMechanism(event) {
 
 }
-
 function cobaltMechanism(event){
 	event.remove({ id: "thermal:machine_crystallizer" })
 	cobaltMachine(event, TE("machine_crystallizer"), CR("fluid_tank"), CR("rose_quartz_lamp"), TE("signalum_gear"), MW("sturdy_copper_sheet"))
@@ -794,21 +794,23 @@ function customMachines(event){
         .requireItem("forbidden_arcanus:arcane_crystal_dust", "fuel")
         .produceEnergyPerTick(1)
         .produceItem(Item.of("create:experience_nugget", "output3"))
+
 }
 function trading(event) {
     let trade = (card_id, ingredient, output) => {
         event.custom({
-            type: 'thermal:press',
-            ingredients: [
-                Ingredient.of(ingredient).toJson(),
-                Ingredient.of(card_id).toJson(),
-            ],
-            result: [
-                Item.of(output).toResultJson()
-            ],
-            energy: 1000
+            "type": "create:mixing",
+                "ingredients": [
+                   Ingredient.of(ingredient).toJson(),
+                   Ingredient.of(card_id).toJson(),
+                ],
+                "results": [
+                   Item.of(output).toResultJson(),
+                    Item.of(card_id).toResultJson(),
+                ],
         })
     }
+
 //+ ingredient + '_'
     global.trades.forEach(element => {
         if (global.transactions[element])
@@ -823,4 +825,57 @@ function trading(event) {
                 trade(KJ('profession_card_' + element), transaction.in, transaction.out)
             })
     });
+
+    global.specProfessions.forEach(element => {
+        if (global.transactions[element])
+            global.transactions[element].forEach(transaction => {
+                trade(KJ('specialized_profession_card_' + element), transaction.in, transaction.out)
+            })
+    });
+}
+let slimes = ['sky', 'ender']
+
+function crushing(event) {
+    let sift4 = (mesh, ingredient, output1, chance1, output2, chance2, output3, chance3, output4, chance4) => {
+        event.custom({
+            "type": "createsifter:sifting",
+            "ingredients": [
+                {
+                    "item": `createsifter:${mesh}_mesh`
+                },
+                {
+                    "item": ingredient
+                }
+            ],
+            "processingTime": 500,
+            "results": [
+                {
+                    "chance": chance1,
+                    "item": output1
+                },
+                {
+                    "chance": chance2,
+                    "item": output2
+                },
+                {
+                    "chance": chance3,
+                    "item": output3
+                },
+                {
+                    "chance": chance4,
+                    "item": output4
+                }
+            ]
+        }).id(`milkyway:sifting/${mesh}_mesh/` + ingredient.split(':')[1])
+    }
+    slimes.forEach(e => {
+        sift4('zinc', `tconstruct:${e}_slime_dirt`, `tconstruct:${e}_slime_ball`, 0.5, `tconstruct:${e}_slime_crystal`, 0.25, `mw_core:${e}slime_crystal_dust`, 0.5, `tconstruct:budding_${e}_slime_crystal`, 0.01)
+    })
+    sift4('zinc', `tconstruct:ichor_slime_dirt`, `tconstruct:ichor_slime_ball`, 0.5, `tconstruct:ichor_slime_crystal`, 0.25, `mw_core:ichor_crystal_dust`, 0.5, `tconstruct:budding_ichor_slime_crystal`, 0.01)
+    sift4('zinc', 'tconstruct:earth_slime_dirt', 'minecraft:slime_ball', 0.5, 'tconstruct:earth_slime_crystal', 0.25, 'mw_core:earthslime_crystal_dust', 0.5, 'tconstruct:budding_earth_slime_crystal', 0.01)
+    //event.recipes.createCrushing([
+    //    Item.of('thermal:apatite').withChance(0.5),
+    //    Item.of('thermal:apatite').withChance(0.5)
+    //], 'quark:jasper').id('milkyway:crushing/jasper')
+    //event.recipes.createsifterSifting([Item.of('minecraft:slime_ball').withChance(0.5).toJson(),Item.of('tconstruct:earth_slime_crystal').withChance(0.25).toJson(),Item.of('mw_core:earthslime_crystal_dust').withChance(0.5).toJson(),Item.of('tconstruct:budding_earth_slime_crystal').withChance(0.01).toJson()], ['tconstruct:earth_slime_dirt','createsifter:zinc_mesh'])
 }

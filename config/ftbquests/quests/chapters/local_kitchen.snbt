@@ -1,0 +1,1919 @@
+{
+	id: "04A2E0DD281C2FFB"
+	group: "76E7DC80C9223355"
+	order_index: 1
+	filename: "local_kitchen"
+	title: "Local Kitchen"
+	icon: "farmersdelight:cooking_pot"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Farmer's Delight"
+			x: 0.0d
+			y: 0.0d
+			subtitle: "Delicious Foods Await!"
+			dependencies: ["11CF00C9EEC3C9C8"]
+			id: "65DCCF7E4634AEF3"
+			tasks: [{
+				id: "063C69D997E841F7"
+				type: "item"
+				item: "farmersdelight:stove"
+			}]
+		}
+		{
+			title: "Cooking Pot"
+			x: -5.0d
+			y: 3.5d
+			subtitle: "A Watched Pot Never Boils."
+			dependencies: ["65DCCF7E4634AEF3"]
+			id: "2B76B101BAEF716E"
+			tasks: [{
+				id: "79EC9BEEE7E39701"
+				type: "item"
+				item: "farmersdelight:cooking_pot"
+			}]
+		}
+		{
+			x: -3.0d
+			y: 0.0d
+			subtitle: "Bonk"
+			description: ["Skillets are a useful tool for cooking, or beating in your enemies skull!"]
+			dependencies: ["65DCCF7E4634AEF3"]
+			id: "17AA8C7607981BA8"
+			tasks: [{
+				id: "7800E83DCBF4DC41"
+				type: "item"
+				item: {
+					id: "farmersdelight:skillet"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+		}
+		{
+			title: "Farmer's Respite"
+			x: -6.5d
+			y: 3.0d
+			subtitle: "Put The Kettle on!"
+			dependencies: ["65DCCF7E4634AEF3"]
+			id: "0835EBB8A946E369"
+			tasks: [{
+				id: "5A3500A49EF00E8C"
+				type: "item"
+				item: "farmersrespite:kettle"
+			}]
+		}
+		{
+			title: "Miner's Delight"
+			x: -3.0d
+			y: 3.5d
+			subtitle: "Down And Down Into The Deep"
+			dependencies: ["65DCCF7E4634AEF3"]
+			id: "1015705116B3F1D7"
+			tasks: [{
+				id: "044ED13F68A29146"
+				type: "item"
+				item: "miners_delight:copper_pot"
+			}]
+		}
+		{
+			x: -1.0d
+			y: 3.5d
+			subtitle: "Bowl Alternative"
+			description: ["Have you ever been stuck in a cave without any bowls for your newly cooked Stew/Soup? Don't worry! Copper Cups can hold soups and stews but only if they're cooked in a Copper Pot."]
+			dependencies: ["1015705116B3F1D7"]
+			id: "3A9E3200FE1DAB3E"
+			tasks: [{
+				id: "1CB3A99505775B9B"
+				type: "item"
+				item: "miners_delight:copper_cup"
+			}]
+		}
+		{
+			x: 0.5d
+			y: 4.5d
+			dependencies: ["3A9E3200FE1DAB3E"]
+			id: "3AB9FD54E1ECC46A"
+			tasks: [{
+				id: "046599A8EBFC4B96"
+				type: "item"
+				title: "Soup Cups"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "farmersdelight:soup_cups"
+					}
+				}
+				consume_items: true
+			}]
+			rewards: [{
+				id: "3C439FEC66595B53"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 4
+			}]
+		}
+		{
+			x: -8.0d
+			y: 3.0d
+			dependencies: ["0835EBB8A946E369"]
+			id: "05B3BA372377DA00"
+			tasks: [{
+				id: "718839F0AB2EB67E"
+				type: "item"
+				item: "farmersrespite:tea_seeds"
+			}]
+		}
+		{
+			x: -10.0d
+			y: 2.5d
+			dependencies: ["05B3BA372377DA00"]
+			id: "7BFB5A3966E50D15"
+			tasks: [{
+				id: "46423749E4ABC3FE"
+				type: "item"
+				item: "farmersrespite:green_tea_leaves"
+			}]
+		}
+		{
+			x: -10.0d
+			y: 0.5d
+			dependencies: ["7BFB5A3966E50D15"]
+			id: "22AD4DBDDD58F814"
+			tasks: [{
+				id: "68161097D213CB76"
+				type: "item"
+				item: "farmersrespite:yellow_tea_leaves"
+			}]
+		}
+		{
+			x: -10.0d
+			y: -1.5d
+			dependencies: ["22AD4DBDDD58F814"]
+			id: "5A7F02E497E2285E"
+			tasks: [{
+				id: "76A83F61848C0201"
+				type: "item"
+				item: "farmersrespite:black_tea_leaves"
+			}]
+		}
+		{
+			x: -12.5d
+			y: 3.0d
+			dependencies: ["7BFB5A3966E50D15"]
+			id: "45ACEC4FF7547F52"
+			tasks: [{
+				id: "73ED74CF2753E904"
+				type: "item"
+				title: "Green Tea"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "farmersrespite:drinks/green_tea"
+					}
+				}
+			}]
+			rewards: [{
+				id: "3A3BFC16C1E1B16A"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 4
+			}]
+		}
+		{
+			x: -12.5d
+			y: 1.0d
+			dependencies: ["22AD4DBDDD58F814"]
+			id: "0472196D65B4D40B"
+			tasks: [{
+				id: "03A52C8FA3172B54"
+				type: "item"
+				title: "Yellow Tea"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "farmersrespite:drinks/yellow_tea"
+					}
+				}
+			}]
+			rewards: [{
+				id: "40FE8906B6C9F2E3"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 4
+			}]
+		}
+		{
+			x: -12.5d
+			y: -1.0d
+			dependencies: ["5A7F02E497E2285E"]
+			id: "7AB1DDF01FED5D59"
+			tasks: [{
+				id: "45DCB5400179DEE9"
+				type: "item"
+				title: "Black Tea"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "farmersrespite:drinks/black_tea"
+					}
+				}
+			}]
+			rewards: [{
+				id: "7C8008C6966F74C2"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 4
+			}]
+		}
+		{
+			x: -12.5d
+			y: 2.0d
+			dependencies: ["7BFB5A3966E50D15"]
+			id: "116E9C9F7E054B6A"
+			tasks: [{
+				id: "63A0046ACD7A158A"
+				type: "item"
+				item: "farmersrespite:green_tea_cookie"
+			}]
+			rewards: [{
+				id: "4AD1B896D197C2DB"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 4
+			}]
+		}
+		{
+			x: -12.5d
+			y: 0.0d
+			dependencies: ["22AD4DBDDD58F814"]
+			id: "315E5CCC65CFB391"
+			tasks: [{
+				id: "36979C34975AB109"
+				type: "item"
+				item: "farmersrespite:tea_curry"
+			}]
+			rewards: [{
+				id: "6AF1690B61B2DE4F"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 4
+			}]
+		}
+		{
+			x: -12.5d
+			y: -2.0d
+			dependencies: ["5A7F02E497E2285E"]
+			id: "3DBABAC151C0DCAC"
+			tasks: [{
+				id: "6884801479615805"
+				type: "item"
+				item: "farmersrespite:black_cod"
+			}]
+			rewards: [{
+				id: "7C4454196717AB78"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 4
+			}]
+		}
+		{
+			x: -8.0d
+			y: -0.5d
+			dependencies: [
+				"5A7F02E497E2285E"
+				"7BFB5A3966E50D15"
+				"22AD4DBDDD58F814"
+			]
+			id: "4847630BFC62B396"
+			tasks: [{
+				id: "1542300F9D548322"
+				type: "item"
+				item: "create:builders_tea"
+			}]
+			rewards: [{
+				id: "0F862B3E89F5AB16"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 4
+			}]
+		}
+		{
+			x: -8.0d
+			y: 1.5d
+			dependencies: [
+				"5A7F02E497E2285E"
+				"7BFB5A3966E50D15"
+				"22AD4DBDDD58F814"
+			]
+			id: "03FCF99C152AB132"
+			tasks: [{
+				id: "029FFF4C8B03A04E"
+				type: "item"
+				title: "Dandelion Tea"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "farmersrespite:drinks/dandelion_tea"
+					}
+				}
+			}]
+			rewards: [{
+				id: "24AD76E3E1F3972E"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 4
+			}]
+		}
+		{
+			x: -8.0d
+			y: 5.0d
+			dependencies: ["0835EBB8A946E369"]
+			id: "031CD06A96593637"
+			tasks: [{
+				id: "2CAA91D20DA16013"
+				type: "item"
+				item: "farmersrespite:coffee_berries"
+			}]
+		}
+		{
+			x: -10.0d
+			y: 5.0d
+			dependencies: ["031CD06A96593637"]
+			id: "1E49DD0287BF7FED"
+			tasks: [{
+				id: "0191B0DFBE39C8C8"
+				type: "item"
+				item: "farmersrespite:coffee_beans"
+			}]
+		}
+		{
+			x: -12.5d
+			y: 5.0d
+			dependencies: ["1E49DD0287BF7FED"]
+			id: "3A604318057217B6"
+			tasks: [{
+				id: "167676EA39C92F85"
+				type: "item"
+				item: "farmersrespite:blazing_chili"
+			}]
+			rewards: [{
+				id: "1B8578F74949B20A"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 4
+			}]
+		}
+		{
+			x: -12.5d
+			y: 6.0d
+			dependencies: ["1E49DD0287BF7FED"]
+			id: "6CA3BECABCECEF65"
+			tasks: [{
+				id: "6C63D1B9D822D667"
+				type: "item"
+				item: "farmersrespite:coffee_cake"
+			}]
+			rewards: [{
+				id: "0BC144426AFB3308"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 4
+			}]
+		}
+		{
+			x: -12.5d
+			y: 4.0d
+			dependencies: ["1E49DD0287BF7FED"]
+			id: "7500C0C15AD2A1C5"
+			tasks: [{
+				id: "42ADFEEBFFE6519D"
+				type: "item"
+				title: "Coffee"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "farmersrespite:drinks/coffee"
+					}
+				}
+			}]
+			rewards: [{
+				id: "7AD4169FEAB878A0"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 4
+			}]
+		}
+		{
+			x: -4.0d
+			y: 5.0d
+			subtitle: "Massive Food"
+			description: ["Large Meals can be placed in the world. You use a Bowl to take a portion of the meal."]
+			dependencies: ["2B76B101BAEF716E"]
+			id: "6AD754662D43733A"
+			tasks: [{
+				id: "129AADAC356D68EF"
+				type: "item"
+				title: "Large Meals"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "farmersdelight:large_meals"
+					}
+				}
+			}]
+			rewards: [{
+				id: "37708180B7DAD0E3"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 4
+			}]
+		}
+		{
+			x: -7.0d
+			y: 1.0d
+			dependencies: ["0835EBB8A946E369"]
+			id: "70B2A865CE00D110"
+			tasks: [{
+				id: "5B1F60210D7666C3"
+				type: "item"
+				item: "farmersrespite:rose_hips"
+			}]
+		}
+		{
+			x: -6.0d
+			y: 0.0d
+			dependencies: ["70B2A865CE00D110"]
+			id: "05EB23039EDEA3C9"
+			tasks: [{
+				id: "524288BCF8B53B2C"
+				type: "item"
+				title: "Rose Hip Tea"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "farmersrespite:drinks/rose_hip_tea"
+					}
+				}
+			}]
+			rewards: [{
+				id: "1C50E2ACE5076810"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 4
+			}]
+		}
+		{
+			x: -7.0d
+			y: -0.5d
+			dependencies: ["70B2A865CE00D110"]
+			id: "7CF7A028093FA40F"
+			tasks: [{
+				id: "3FB8B0D41D101503"
+				type: "item"
+				item: "farmersrespite:rose_hip_pie"
+			}]
+			rewards: [{
+				id: "3165C6088FD36234"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 4
+			}]
+		}
+		{
+			x: -1.5d
+			y: 5.0d
+			dependencies: ["3A9E3200FE1DAB3E"]
+			id: "3D1D159EF65FCE8A"
+			tasks: [{
+				id: "1E6D0779B6A8EE1D"
+				type: "item"
+				title: "Stew Cups"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "farmersdelight:stew_cups"
+					}
+				}
+				consume_items: true
+			}]
+			rewards: [{
+				id: "09997030E400725A"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 4
+			}]
+		}
+		{
+			x: -5.0d
+			y: 5.0d
+			dependencies: ["2B76B101BAEF716E"]
+			id: "6D5ED8097553F8A9"
+			tasks: [{
+				id: "6D80EB5BF71184A7"
+				type: "item"
+				title: "Soups"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "farmersdelight:soups"
+					}
+				}
+			}]
+			rewards: [{
+				id: "71A19573C2B82887"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 4
+			}]
+		}
+		{
+			x: -6.0d
+			y: 5.0d
+			dependencies: ["2B76B101BAEF716E"]
+			id: "02C9D5561D62C290"
+			tasks: [{
+				id: "7DFD0C105D1441BC"
+				type: "item"
+				title: "Stews"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "farmersdelight:stews"
+					}
+				}
+			}]
+			rewards: [{
+				id: "34507B724868D001"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 4
+			}]
+		}
+		{
+			x: -2.5d
+			y: 6.0d
+			subtitle: "Who Knows What We'll Find Beneath"
+			description: ["Cave Carrots grow in underground caves so that you, yes, you, won't go hungry whilst exploring."]
+			dependencies: ["1015705116B3F1D7"]
+			id: "654824A18278988B"
+			tasks: [{
+				id: "79777C83C503865D"
+				type: "item"
+				item: "miners_delight:cave_carrot"
+			}]
+		}
+		{
+			title: "A Full Catalogue"
+			x: -2.5d
+			y: -1.5d
+			subtitle: "Finally, I Have Them All"
+			description: ["Cooking Guides can be used to automate cooking with a Blaze Stove."]
+			dependencies: ["65DCCF7E4634AEF3"]
+			id: "71E05BF8D8EA49C7"
+			tasks: [
+				{
+					id: "6DAD792F232852C1"
+					type: "item"
+					item: {
+						id: "create_central_kitchen:cooking_guide"
+						Count: 1b
+						ForgeCaps: {
+							Parent: { }
+						}
+					}
+				}
+				{
+					id: "7B5B95EB8508DBA0"
+					type: "item"
+					item: {
+						id: "create_central_kitchen:brewing_guide"
+						Count: 1b
+						ForgeCaps: {
+							Parent: {
+								NeedWater: 0b
+							}
+						}
+					}
+				}
+				{
+					id: "72E32FF41AE7A786"
+					type: "item"
+					item: {
+						id: "create_central_kitchen:miners_cooking_guide"
+						Count: 1b
+						ForgeCaps: {
+							Parent: { }
+						}
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "2BD9EF978C5C902C"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 12
+				}
+				{
+					id: "23DB57EC1D394329"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 64
+				}
+			]
+		}
+		{
+			title: "Brewin' and Chewin'"
+			x: -8.0d
+			y: -2.5d
+			subtitle: "Cheers!"
+			dependencies: ["65DCCF7E4634AEF3"]
+			id: "4C3BC259DE6FC82A"
+			tasks: [{
+				id: "2D97B02477833ADD"
+				type: "item"
+				item: "brewinandchewin:keg"
+			}]
+		}
+		{
+			x: -6.5d
+			y: -3.0d
+			dependencies: ["4C3BC259DE6FC82A"]
+			id: "581D2D744AE57384"
+			tasks: [{
+				id: "2466D613EB45DCE8"
+				type: "item"
+				item: "brewinandchewin:tankard"
+			}]
+		}
+		{
+			x: -4.5d
+			y: -5.0d
+			hide_dependency_lines: true
+			dependencies: [
+				"581D2D744AE57384"
+				"35E8506A02F7F437"
+			]
+			id: "7C35EC385804D1D4"
+			tasks: [{
+				id: "656046A399E30EBC"
+				type: "item"
+				title: "Mead"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "brewinandchewin:drinks/mead"
+					}
+				}
+			}]
+			rewards: [
+				{
+					id: "4DE027A958B4C8B2"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 16
+				}
+				{
+					id: "4AE4A0D93F1E0707"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+			]
+		}
+		{
+			x: -3.5d
+			y: -5.0d
+			hide_dependency_lines: true
+			dependencies: [
+				"581D2D744AE57384"
+				"35E8506A02F7F437"
+			]
+			id: "4BBD804EC8B0667B"
+			tasks: [{
+				id: "384145F35687D745"
+				type: "item"
+				title: "Withering Dross"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "brewinandchewin:drinks/withering_dross"
+					}
+				}
+			}]
+			rewards: [
+				{
+					id: "717F7F876E3FDEA0"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 16
+				}
+				{
+					id: "3EFA3A845D5CDD55"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+			]
+		}
+		{
+			x: -3.5d
+			y: -7.0d
+			hide_dependency_lines: true
+			dependencies: [
+				"581D2D744AE57384"
+				"35E8506A02F7F437"
+			]
+			id: "18CA0A9715A1CDD4"
+			tasks: [{
+				id: "1B0207818C2FC5E9"
+				type: "item"
+				title: "Saccharine Rum"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "brewinandchewin:drinks/saccharine_rum"
+					}
+				}
+			}]
+			rewards: [
+				{
+					id: "5544AE03A5946309"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 16
+				}
+				{
+					id: "327122ACFA6EA0A3"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+			]
+		}
+		{
+			x: -2.5d
+			y: -5.0d
+			hide_dependency_lines: true
+			dependencies: [
+				"581D2D744AE57384"
+				"35E8506A02F7F437"
+			]
+			id: "5A82DFDF9D4FABAA"
+			tasks: [{
+				id: "64A79F0D33E1610E"
+				type: "item"
+				title: "Egg Grog"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "brewinandchewin:drinks/egg_grog"
+					}
+				}
+			}]
+			rewards: [
+				{
+					id: "1D3BDBF78DE33639"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 16
+				}
+				{
+					id: "41E06ABCB1A3F955"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+			]
+		}
+		{
+			x: -2.5d
+			y: -7.0d
+			hide_dependency_lines: true
+			dependencies: [
+				"581D2D744AE57384"
+				"35E8506A02F7F437"
+			]
+			id: "5324BDA41E8F5813"
+			tasks: [{
+				id: "6B45EF2D7ACB6ADC"
+				type: "item"
+				title: "Dread Nog"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "brewinandchewin:drinks/dread_nog"
+					}
+				}
+			}]
+			rewards: [
+				{
+					id: "139FD34B8678B7A7"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 16
+				}
+				{
+					id: "6C22ECB271B8661C"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+			]
+		}
+		{
+			x: -2.5d
+			y: -6.0d
+			hide_dependency_lines: true
+			dependencies: [
+				"581D2D744AE57384"
+				"35E8506A02F7F437"
+			]
+			id: "3F608BC05A869DF1"
+			tasks: [{
+				id: "36EA2EF42014EA34"
+				type: "item"
+				title: "Rice Wine"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "brewinandchewin:drinks/rice_wine"
+					}
+				}
+			}]
+			rewards: [
+				{
+					id: "4619E5748958D7AB"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 16
+				}
+				{
+					id: "6039E24D26E64B22"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+			]
+		}
+		{
+			x: -5.5d
+			y: -4.0d
+			hide_dependency_lines: true
+			dependencies: [
+				"581D2D744AE57384"
+				"35E8506A02F7F437"
+			]
+			id: "7625ECE142ACCAAC"
+			tasks: [{
+				id: "4A320AEDEFEF90E5"
+				type: "item"
+				title: "Beer"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "brewinandchewin:drinks/beer"
+					}
+				}
+			}]
+			rewards: [
+				{
+					id: "3FF0D0B0A6DF2035"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 16
+				}
+				{
+					id: "1D55A23DE555D223"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+			]
+		}
+		{
+			x: -2.5d
+			y: -4.0d
+			hide_dependency_lines: true
+			dependencies: [
+				"581D2D744AE57384"
+				"35E8506A02F7F437"
+			]
+			id: "67DEFD814B25C6F4"
+			tasks: [{
+				id: "17DFE541B1D8C355"
+				type: "item"
+				title: "Pale Jane"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "brewinandchewin:drinks/pale_jane"
+					}
+				}
+			}]
+			rewards: [
+				{
+					id: "21460AC1830CA7B3"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 16
+				}
+				{
+					id: "2C844755132B5CDF"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+			]
+		}
+		{
+			x: -3.5d
+			y: -4.0d
+			hide_dependency_lines: true
+			dependencies: [
+				"581D2D744AE57384"
+				"35E8506A02F7F437"
+			]
+			id: "1783383AB320966D"
+			tasks: [{
+				id: "09920CA8139A20D5"
+				type: "item"
+				title: "Salty Folly"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "brewinandchewin:drinks/salty_folly"
+					}
+				}
+			}]
+			rewards: [
+				{
+					id: "2CD33ED4A7C50FFF"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 16
+				}
+				{
+					id: "2D51FC1F5AAADE33"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+			]
+		}
+		{
+			x: -4.5d
+			y: -4.0d
+			hide_dependency_lines: true
+			dependencies: [
+				"581D2D744AE57384"
+				"35E8506A02F7F437"
+			]
+			id: "7BAB5731D3A0336E"
+			tasks: [{
+				id: "4B761F9F1C468CEC"
+				type: "item"
+				title: "Vodka"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "brewinandchewin:drinks/vodka"
+					}
+				}
+			}]
+			rewards: [
+				{
+					id: "28B708E4B2A17D10"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 16
+				}
+				{
+					id: "7E31560D9E9765A2"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+			]
+		}
+		{
+			x: -5.5d
+			y: -5.0d
+			hide_dependency_lines: true
+			dependencies: [
+				"581D2D744AE57384"
+				"35E8506A02F7F437"
+			]
+			id: "12AFB96B10AC2B95"
+			tasks: [{
+				id: "1CA0D807B1877772"
+				type: "item"
+				title: "Strongroot Ale"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "brewinandchewin:drinks/strongroot_ale"
+					}
+				}
+			}]
+			rewards: [
+				{
+					id: "787E9E4BEFC6BDBB"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 16
+				}
+				{
+					id: "5EC9E8742F71E49A"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+			]
+		}
+		{
+			x: -4.5d
+			y: -7.0d
+			hide_dependency_lines: true
+			dependencies: [
+				"581D2D744AE57384"
+				"35E8506A02F7F437"
+			]
+			id: "33321422DF55B621"
+			tasks: [{
+				id: "48AD41AC256920B6"
+				type: "item"
+				title: "Steel Toe Stout"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "brewinandchewin:drinks/steel_toe_stout"
+					}
+				}
+			}]
+			rewards: [
+				{
+					id: "4D74FCE1A907E343"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 16
+				}
+				{
+					id: "5E3E30988420D49B"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+			]
+		}
+		{
+			x: -5.5d
+			y: -6.0d
+			hide_dependency_lines: true
+			dependencies: [
+				"581D2D744AE57384"
+				"35E8506A02F7F437"
+			]
+			id: "25295A8597675A64"
+			tasks: [{
+				id: "40E28F9B567EB6B6"
+				type: "item"
+				title: "Kombucha"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "brewinandchewin:drinks/kombucha"
+					}
+				}
+			}]
+			rewards: [
+				{
+					id: "3F4CBEB6B27319A3"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 16
+				}
+				{
+					id: "1C28BF45E7E069FE"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+			]
+		}
+		{
+			x: -4.5d
+			y: -6.0d
+			hide_dependency_lines: true
+			dependencies: [
+				"581D2D744AE57384"
+				"35E8506A02F7F437"
+			]
+			id: "059C188982C75374"
+			tasks: [{
+				id: "70BC54CF6D90F112"
+				type: "item"
+				title: "Red Rum"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "brewinandchewin:drinks/red_rum"
+					}
+				}
+			}]
+			rewards: [
+				{
+					id: "5EEB45C7E95F1EAA"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 16
+				}
+				{
+					id: "2340A6D5866CE521"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+			]
+		}
+		{
+			x: -3.5d
+			y: -6.0d
+			hide_dependency_lines: true
+			dependencies: [
+				"581D2D744AE57384"
+				"35E8506A02F7F437"
+			]
+			id: "7472515E7858A504"
+			tasks: [{
+				id: "6ED4AD8F2D86BD1F"
+				type: "item"
+				title: "Bloody Mary"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "brewinandchewin:drinks/bloody_mary"
+					}
+				}
+			}]
+			rewards: [
+				{
+					id: "14E855048589E4AA"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 16
+				}
+				{
+					id: "7FC72331CA71DE27"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+			]
+		}
+		{
+			x: -5.5d
+			y: -7.0d
+			hide_dependency_lines: true
+			dependencies: [
+				"581D2D744AE57384"
+				"35E8506A02F7F437"
+			]
+			id: "29037FC4587A325A"
+			tasks: [{
+				id: "3FD815DD50277245"
+				type: "item"
+				title: "Glittering Grenadine"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "brewinandchewin:drinks/glittering_grenadine"
+					}
+				}
+			}]
+			rewards: [
+				{
+					id: "07D7356E853CB04B"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 16
+				}
+				{
+					id: "15BC71DC0149C5A3"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+			]
+		}
+		{
+			x: -12.5d
+			y: -5.5d
+			dependencies: ["4C3BC259DE6FC82A"]
+			id: "70EAA73A4396B5E3"
+			tasks: [{
+				id: "159C228D83B99461"
+				type: "item"
+				item: "brewinandchewin:jerky"
+			}]
+		}
+		{
+			x: -11.5d
+			y: -6.0d
+			dependencies: ["4C3BC259DE6FC82A"]
+			id: "598CB08F0CA2D845"
+			tasks: [{
+				id: "0C71B67ABF6BA3EF"
+				type: "item"
+				item: "brewinandchewin:kimchi"
+			}]
+		}
+		{
+			x: -10.5d
+			y: -6.5d
+			dependencies: ["4C3BC259DE6FC82A"]
+			id: "20873223B704F2AC"
+			tasks: [{
+				id: "3AAEEB9679EA30E4"
+				type: "item"
+				item: "brewinandchewin:pickled_pickles"
+			}]
+		}
+		{
+			x: -9.5d
+			y: -7.0d
+			dependencies: ["4C3BC259DE6FC82A"]
+			id: "22DC905D4C8A4FBD"
+			tasks: [{
+				id: "65151D2FC6D98B4B"
+				type: "item"
+				item: "brewinandchewin:kippers"
+			}]
+		}
+		{
+			x: -8.5d
+			y: -7.5d
+			dependencies: ["4C3BC259DE6FC82A"]
+			id: "599343301EB9F46A"
+			tasks: [{
+				id: "7CDC07623F04520A"
+				type: "item"
+				item: "brewinandchewin:cocoa_fudge"
+			}]
+		}
+		{
+			x: -6.5d
+			y: -8.0d
+			dependencies: ["4C3BC259DE6FC82A"]
+			id: "388D5535778F4D63"
+			tasks: [{
+				id: "14863B027FF14898"
+				type: "item"
+				item: "brewinandchewin:unripe_flaxen_cheese_wheel"
+			}]
+		}
+		{
+			x: -7.5d
+			y: -8.0d
+			dependencies: ["4C3BC259DE6FC82A"]
+			id: "48F60564F22E2784"
+			tasks: [{
+				id: "3B0A61CBF3C77A45"
+				type: "item"
+				item: "brewinandchewin:unripe_scarlet_cheese_wheel"
+			}]
+		}
+		{
+			x: -7.5d
+			y: -9.5d
+			dependencies: ["48F60564F22E2784"]
+			id: "03414124C7F93B8E"
+			tasks: [{
+				id: "5F121343709D287C"
+				type: "item"
+				item: "brewinandchewin:scarlet_cheese_wheel"
+			}]
+		}
+		{
+			x: -6.5d
+			y: -9.5d
+			dependencies: ["388D5535778F4D63"]
+			id: "13E5C57D0426BEE7"
+			tasks: [{
+				id: "3BDB38797D650532"
+				type: "item"
+				item: "brewinandchewin:flaxen_cheese_wheel"
+			}]
+		}
+		{
+			x: -6.5d
+			y: -11.0d
+			dependencies: ["13E5C57D0426BEE7"]
+			id: "79AE9EBE47EDBCC9"
+			tasks: [{
+				id: "6F43C7388A3FC96D"
+				type: "item"
+				item: "brewinandchewin:flaxen_cheese_wedge"
+			}]
+		}
+		{
+			x: -5.0d
+			y: -11.5d
+			dependencies: ["79AE9EBE47EDBCC9"]
+			id: "0E67CEF4E0400240"
+			tasks: [{
+				id: "5261299F70492785"
+				type: "item"
+				item: "brewinandchewin:pizza"
+			}]
+		}
+		{
+			x: -6.5d
+			y: -12.5d
+			dependencies: ["79AE9EBE47EDBCC9"]
+			id: "74813269C25C01AD"
+			tasks: [{
+				id: "7F6ED975D894994A"
+				type: "item"
+				item: "brewinandchewin:ham_and_cheese_sandwich"
+			}]
+		}
+		{
+			title: "Nether's Delight"
+			x: 0.0d
+			y: -3.0d
+			subtitle: "Hellish Cuisine"
+			dependencies: ["65DCCF7E4634AEF3"]
+			id: "3DA918C6447A1BFF"
+			tasks: [{
+				id: "45E22AAF38F69B0A"
+				type: "item"
+				item: "nethersdelight:blackstone_stove"
+			}]
+		}
+		{
+			x: 2.5d
+			y: -6.5d
+			dependencies: ["3DA918C6447A1BFF"]
+			id: "40ADA13A95402563"
+			tasks: [{
+				id: "01DF3494FA9D7B2F"
+				type: "item"
+				item: "nethersdelight:soul_compost"
+			}]
+		}
+		{
+			x: 3.5d
+			y: -7.5d
+			dependencies: ["40ADA13A95402563"]
+			id: "5500673EC80D26D5"
+			tasks: [{
+				id: "1C32963FFAB5DDA6"
+				type: "item"
+				item: "nethersdelight:rich_soul_soil"
+			}]
+		}
+		{
+			x: 2.0d
+			y: -3.0d
+			subtitle: "Use A Knife"
+			dependencies: ["3DA918C6447A1BFF"]
+			id: "4283BE97B2013430"
+			tasks: [{
+				id: "7E9266E6B730EFE9"
+				type: "kill"
+				title: "Kill a Hoglin"
+				icon: "minecraft:hoglin_spawn_egg"
+				entity: "minecraft:hoglin"
+				value: 1L
+			}]
+		}
+		{
+			x: 4.0d
+			y: -3.0d
+			dependencies: ["4283BE97B2013430"]
+			id: "2EBD4C4438661031"
+			tasks: [{
+				id: "54CAB935A8EFEFA5"
+				type: "item"
+				item: "nethersdelight:hoglin_hide"
+			}]
+		}
+		{
+			x: 5.5d
+			y: -3.0d
+			dependencies: ["2EBD4C4438661031"]
+			id: "6145FF2191A0AE44"
+			tasks: [{
+				id: "494DED9440B6EF27"
+				type: "item"
+				item: "nethersdelight:raw_stuffed_hoglin"
+			}]
+		}
+		{
+			x: 7.0d
+			y: -3.0d
+			dependencies: ["6145FF2191A0AE44"]
+			id: "6D99C99689846488"
+			tasks: [{
+				id: "63C5249BE2A3886C"
+				type: "item"
+				item: "nethersdelight:stuffed_hoglin"
+			}]
+			rewards: [
+				{
+					id: "26609BE7597565A8"
+					type: "item"
+					item: "thermal:gold_coin"
+					count: 2
+				}
+				{
+					id: "4B4F6784A9E8A9ED"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 64
+				}
+			]
+		}
+		{
+			x: 4.5d
+			y: -1.5d
+			dependencies: ["2EBD4C4438661031"]
+			id: "6D30F76A0BC9ACF6"
+			tasks: [{
+				id: "69644789DD97CEB5"
+				type: "item"
+				item: "nethersdelight:hoglin_mount"
+			}]
+		}
+		{
+			x: 3.0d
+			y: -4.0d
+			dependencies: ["4283BE97B2013430"]
+			id: "1320678382639803"
+			tasks: [{
+				id: "78E4900A4CF6D99E"
+				type: "item"
+				item: "nethersdelight:hoglin_loin"
+			}]
+		}
+		{
+			x: 8.0d
+			y: -2.0d
+			dependencies: ["6D99C99689846488"]
+			id: "6426EE11BB401D9C"
+			tasks: [{
+				id: "1B134770822598C2"
+				type: "item"
+				item: "nethersdelight:hoglin_ear"
+			}]
+			rewards: [
+				{
+					id: "4D001CED71F6251D"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+				{
+					id: "551D05E753DE1ADC"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 16
+				}
+			]
+		}
+		{
+			x: 9.0d
+			y: -2.0d
+			dependencies: ["6D99C99689846488"]
+			id: "126A66CE121B1462"
+			tasks: [{
+				id: "70BB949C82A975A6"
+				type: "item"
+				item: "nethersdelight:plate_of_stuffed_hoglin_roast"
+			}]
+			rewards: [
+				{
+					id: "067CAC56E6D76C3D"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+				{
+					id: "065EA8B5A76A8EBC"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 16
+				}
+			]
+		}
+		{
+			x: 10.0d
+			y: -2.0d
+			dependencies: ["6D99C99689846488"]
+			id: "1DEC80A881BAF1B9"
+			tasks: [{
+				id: "03913F3E08287ADC"
+				type: "item"
+				item: "nethersdelight:plate_of_stuffed_hoglin_ham"
+			}]
+			rewards: [
+				{
+					id: "525E809582BDC60A"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+				{
+					id: "3F3DBC4D3F23FCFE"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 16
+				}
+			]
+		}
+		{
+			x: 11.0d
+			y: -2.0d
+			dependencies: ["6D99C99689846488"]
+			id: "75C64EAEA5AF92F5"
+			tasks: [{
+				id: "0790171FF6441911"
+				type: "item"
+				item: "nethersdelight:plate_of_stuffed_hoglin_snout"
+			}]
+			rewards: [
+				{
+					id: "70EE3D1FC0FA02C0"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+				{
+					id: "5066009C10900EC0"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 16
+				}
+			]
+		}
+		{
+			x: 4.5d
+			y: -4.5d
+			subtitle: "Explosive Marbles"
+			description: ["PropelPearls are used to make Magma Gelatin but be careful, They will explode if you try to break them by hand! You can use Shears to safely harvest them."]
+			dependencies: ["3DA918C6447A1BFF"]
+			id: "0E481E7D55AEEB20"
+			tasks: [{
+				id: "55811F7D1F88334B"
+				type: "item"
+				item: "nethersdelight:propelpearl"
+			}]
+		}
+		{
+			x: 4.0d
+			y: -6.0d
+			subtitle: "Use A Knife"
+			dependencies: ["3DA918C6447A1BFF"]
+			id: "223614E8BD3BB13D"
+			tasks: [{
+				id: "44D47ABD72C8FAB3"
+				type: "kill"
+				title: "Kill a Strider"
+				icon: "minecraft:strider_spawn_egg"
+				entity: "minecraft:strider"
+				value: 1L
+			}]
+		}
+		{
+			x: 5.0d
+			y: -7.0d
+			dependencies: ["223614E8BD3BB13D"]
+			id: "4D40A3A8C867BF95"
+			tasks: [{
+				id: "554F1173686B25B4"
+				type: "item"
+				item: "nethersdelight:strider_slice"
+			}]
+		}
+		{
+			x: 5.5d
+			y: -5.5d
+			dependencies: [
+				"4D40A3A8C867BF95"
+				"0E481E7D55AEEB20"
+			]
+			id: "51D41B372EC507A9"
+			tasks: [{
+				id: "0BC7E7D2ABADD759"
+				type: "item"
+				item: "nethersdelight:nether_skewer"
+			}]
+		}
+		{
+			x: 6.5d
+			y: -7.5d
+			dependencies: ["4D40A3A8C867BF95"]
+			id: "44D0E69B835B33C6"
+			tasks: [{
+				id: "61F73B2DDB8E8855"
+				type: "item"
+				item: "nethersdelight:grilled_strider"
+			}]
+		}
+		{
+			x: 5.5d
+			y: -8.5d
+			dependencies: ["4D40A3A8C867BF95"]
+			id: "6DEDF56721FC47A6"
+			tasks: [{
+				id: "2082137CE3E3A979"
+				type: "item"
+				item: "nethersdelight:strider_moss_stew"
+			}]
+		}
+		{
+			title: "Ender's Delight"
+			x: 1.0d
+			y: 1.5d
+			subtitle: "Extra-Terrestrial Ingredients"
+			dependencies: ["65DCCF7E4634AEF3"]
+			id: "41B6F07C47FF49C1"
+			tasks: [{
+				id: "5ACA4BA5024A7FB5"
+				type: "item"
+				item: "endersdelight:endstone_stove"
+			}]
+		}
+		{
+			x: 3.0d
+			y: 1.0d
+			subtitle: "One Shell of a Bowl"
+			description: ["Crafted from a Shulker Shell, Shulker Bowls can be used as an alternative to Wooden Bowls for serving food created from Ender Ingredients."]
+			dependencies: ["41B6F07C47FF49C1"]
+			id: "67025E31429F1E58"
+			tasks: [{
+				id: "6E04CC81D1495F79"
+				type: "item"
+				item: "endersdelight:shulker_bowl"
+			}]
+			rewards: [{
+				id: "246C4E0FB561C656"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 12
+			}]
+		}
+		{
+			x: 4.5d
+			y: 0.0d
+			dependencies: ["67025E31429F1E58"]
+			id: "015183AC94F5F17B"
+			tasks: [{
+				id: "24D5959D9058D56A"
+				type: "item"
+				title: "Shulker Bowl Meals"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "endersdelight:shulker_bowl_foods"
+					}
+				}
+			}]
+			rewards: [{
+				id: "2D50F196C30D4F59"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 12
+			}]
+		}
+		{
+			x: -5.0d
+			y: -2.5d
+			dependencies: ["4C3BC259DE6FC82A"]
+			optional: true
+			id: "35E8506A02F7F437"
+			tasks: [{
+				id: "540744F8607428DD"
+				type: "item"
+				item: "bundledelight:copper_tankard"
+			}]
+		}
+		{
+			x: -7.5d
+			y: -12.0d
+			dependencies: ["79AE9EBE47EDBCC9"]
+			id: "3D0B3AD3F7A45148"
+			tasks: [{
+				id: "610EA326E56A177F"
+				type: "item"
+				item: "bundledelight:cheeseburger"
+			}]
+		}
+		{
+			x: -8.5d
+			y: -10.5d
+			dependencies: ["03414124C7F93B8E"]
+			id: "16DD82E9E625EB5F"
+			tasks: [{
+				id: "00778FE3D53F855D"
+				type: "item"
+				item: "brewinandchewin:scarlet_cheese_wedge"
+			}]
+		}
+		{
+			x: -8.5d
+			y: -12.0d
+			dependencies: ["16DD82E9E625EB5F"]
+			id: "19F6505105172E23"
+			tasks: [{
+				id: "64DA775242C021B3"
+				type: "item"
+				item: "bundledelight:scarlet_cheeseburger"
+			}]
+		}
+		{
+			x: -10.5d
+			y: -2.5d
+			dependencies: ["5A7F02E497E2285E"]
+			id: "0C6B317CB43E9B1B"
+			tasks: [{
+				id: "58F2ACECDCF38863"
+				type: "item"
+				item: "bundledelight:powdered_black_tea_leaves"
+			}]
+		}
+		{
+			x: -10.5d
+			y: -0.5d
+			dependencies: ["22AD4DBDDD58F814"]
+			id: "3DCF01B97BB4AB97"
+			tasks: [{
+				id: "15CD96261D7835FE"
+				type: "item"
+				item: "bundledelight:powdered_yellow_tea_leaves"
+			}]
+		}
+		{
+			x: -10.5d
+			y: 1.5d
+			dependencies: ["7BFB5A3966E50D15"]
+			id: "3C26A2F30EF42574"
+			tasks: [{
+				id: "427139CC4E8709EE"
+				type: "item"
+				item: "bundledelight:powdered_green_tea_leaves"
+			}]
+		}
+		{
+			x: -5.5d
+			y: 1.5d
+			dependencies: ["0835EBB8A946E369"]
+			id: "596847611A16EC19"
+			tasks: [{
+				id: "6771B5E8D3569A1A"
+				type: "item"
+				title: "Purulent Tea"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "farmersrespite:drinks/purulent_tea"
+					}
+				}
+			}]
+		}
+		{
+			x: -10.5d
+			y: 4.0d
+			dependencies: ["1E49DD0287BF7FED"]
+			id: "068C16B33EABD7C4"
+			tasks: [{
+				id: "047DCB9D4BE694B9"
+				type: "item"
+				item: "bundledelight:powdered_coffee_beans"
+			}]
+		}
+		{
+			x: -11.5d
+			y: -0.5d
+			dependencies: ["3DCF01B97BB4AB97"]
+			id: "716404C5ABC0D803"
+			tasks: [{
+				id: "7F10C5CCD1B985FE"
+				type: "item"
+				item: "bundledelight:yellow_tea_powder_basket"
+			}]
+		}
+		{
+			x: -11.5d
+			y: -2.5d
+			dependencies: ["0C6B317CB43E9B1B"]
+			id: "2F6E8276F5B44217"
+			tasks: [{
+				id: "6280B5C8FFDA8F09"
+				type: "item"
+				item: "bundledelight:black_tea_powder_basket"
+			}]
+		}
+		{
+			x: -11.5d
+			y: 1.5d
+			dependencies: ["3C26A2F30EF42574"]
+			id: "7C84B9982498C33F"
+			tasks: [{
+				id: "30398C86C3AF9D79"
+				type: "item"
+				item: "bundledelight:green_tea_powder_basket"
+			}]
+		}
+		{
+			x: -11.5d
+			y: 4.0d
+			dependencies: ["068C16B33EABD7C4"]
+			id: "7FFF0CAFB8D2ABBF"
+			tasks: [{
+				id: "501614F8173E317C"
+				type: "item"
+				item: "bundledelight:coffee_powder_basket"
+			}]
+		}
+		{
+			x: -9.5d
+			y: 4.0d
+			dependencies: ["1E49DD0287BF7FED"]
+			id: "3827A98A2D8CA14E"
+			tasks: [{
+				id: "4260D9033A71ABE1"
+				type: "item"
+				item: "bundledelight:coffee_bean_crate"
+			}]
+		}
+		{
+			x: -9.5d
+			y: 1.5d
+			dependencies: ["7BFB5A3966E50D15"]
+			id: "17E4250BC7D87295"
+			tasks: [{
+				id: "324D9D36C4E2C58F"
+				type: "item"
+				item: "bundledelight:green_tea_leaf_crate"
+			}]
+		}
+		{
+			x: -9.5d
+			y: -0.5d
+			dependencies: ["22AD4DBDDD58F814"]
+			id: "5EB3ECFADF60CE8F"
+			tasks: [{
+				id: "5EB7B123A0109C0A"
+				type: "item"
+				item: "bundledelight:yellow_tea_leaf_crate"
+			}]
+		}
+		{
+			x: -9.5d
+			y: -2.5d
+			dependencies: ["5A7F02E497E2285E"]
+			id: "11F5100CC89D2F7F"
+			tasks: [{
+				id: "54A1DB300A0F6389"
+				type: "item"
+				item: "bundledelight:black_tea_leaf_crate"
+			}]
+		}
+	]
+	quest_links: [ ]
+}

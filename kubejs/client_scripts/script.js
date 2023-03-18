@@ -13,5 +13,10 @@ onEvent('client.generate_assets', event => {
     rename('create:brass_hand', "Nickel Hand")
     rename('mw_core:incomplete_manyullyn_mechanism', "Incomplete Manyullyn Mechanism")
     rename('thermal:machine_press', "Capitalism-inator")
+    rename('createsifter:string_mesh', "Crude Mesh")
+    rename('createsifter:andesite_mesh', "Basic Mesh")
+    rename('createsifter:zinc_mesh', "Improved Mesh")
+    rename('createsifter:brass_mesh', "Advanced Mesh")
+
     console.info('Custom Item Names Reloaded!')
 })

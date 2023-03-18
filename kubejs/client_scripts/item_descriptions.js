@@ -16,4 +16,11 @@ onEvent('item.tooltip', event => {
             .createTabs()
             .addInformation(tooltip);
     });
+    event.addAdvanced('kubejs:action_mechanism', (item, _, tooltip) => {
+        new ItemDescription(Palette.Purple)
+            .withSummary(Component.translate('item.mw_core.action_mechanism.tooltip.summary'))
+            // Create expects localized strings instead of components here, so we localize ourselves (.string)
+            .createTabs()
+            .addInformation(tooltip);
+    });
 });

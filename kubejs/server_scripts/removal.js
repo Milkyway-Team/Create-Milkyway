@@ -33,7 +33,13 @@ let tool_types = ['pickaxe', 'axe', 'shovel', 'hoe', 'sword']
 
 let cck = ['create:crafting/kinetics/']
 let ccl = ['create:crafting/logistics/']
+let ccm = ['create:crafting/materials/']
 let aen = ['ae2:network/']
+let tm = ['thermal:machines/']
+let sml = ['smelter']
+let pulv = ['pulverizer']
+let crys = ['crystallizer']
+
 onEvent('recipes', event => {
     log.push('Removing Recipes')
     unwantedRecipes(event)
@@ -59,10 +65,15 @@ function remMetalCraft(mod, metal) {
 function blastRem(event, recipeOutput) {
     event.remove({ output: recipeOutput, type: 'minecraft:blasting'} );
 }
+let unwanted_IE_metals = ['aluminum', 'lead', 'nickel', 'silver']
+
 function unwantedRecipes(event) {
 
     function replaceIn(originIn, newIn) {
-        event.replaceInput({}, originIn, newIn)
+        event.replaceInput({}, originIn, newIn);
+    }
+    function replaceInById(id, originIn, newIn) {
+        event.replaceInput({ id: id }, originIn, newIn);
     }
     function removeRecID(recipeId) {
         event.remove({ id: recipeId });
@@ -73,6 +84,8 @@ function unwantedRecipes(event) {
     function removeRecOut(recipeOutput) {
         event.remove({ output: recipeOutput });
     }
+    replaceInById('brewinandchewin:fermenting/steel_toe_stout', 'minecraft:iron_ingot', 'alloyed:steel_ingot')
+
     removeRecID(/refinedstorage:.*pattern.*/)
     removeRecID(/refinedstorage:.*quartz_enriched_iron.*/)
     removeRecID('immersiveengineering:crafting/survey_tools')
@@ -144,9 +157,25 @@ function unwantedRecipes(event) {
     smeltingRemove(event, TE('enderium_ingot'))
     smeltingRemove(event, IE('ingot_aluminum'))
     smeltingRemove(event, IE('nugget_aluminum'))
+    smeltingRemove(event, MC('netherite_ingot'))
+    smeltingRemove(event, IE('ingot_nickel'))
+    smeltingRemove(event, IE('ingot_silver'))
+    smeltingRemove(event, IE('ingot_electrum'))
+    smeltingRemove(event, IE('ingot_steel'))
+    smeltingRemove(event, IE('ingot_constantan'))
+    smeltingRemove(event, IE('ingot_uranium'))
+    smeltingRemove(event, IE('ingot_lead'))
+    smeltingRemove(event, IE())
+    smeltingRemove(event, IE())
+    smeltingRemove(event, IE())
 
+    event.remove({ output: TC('cobalt_ingot'), type: 'minecraft:blasting'} );
 
-
+    unwanted_IE_metals.forEach(e => {
+        removeRecOut(IE('ingot_' + e))
+        removeRecOut(IE('nugget_' + e))
+        removeRecOut(IE('storage_' + e))
+    })
 
 
 
@@ -243,7 +272,8 @@ removeByID(ccl + 'content_observer')
 removeByID(ccl + 'content_observerfrom_conversion')
 removeByID(ccl + 'stockpile_switchfrom_conversion')
 removeByID(ccl + 'display_link')
-
+removeByID(ccl + 'andesite_alloy')
+removeByID(ccl + 'andesite_alloy_from_zinc')
 removeByID(aen + 'blocks/spatial_io_port')
 removeByID(aen + 'blocks/io_port')
 removeByID(aen + 'blocks/interfaces_interface')
@@ -278,7 +308,105 @@ removeByID(RS('disk_drive'))
 removeByID(RS('fluid_interface'))
 removeByID(RS('interface'))
 removeByID(RS('security_manager'))
+removeByID(RS('network_receiver'))
+removeByID(RS('network_transmitter'))
+removeByID(RS('relay'))
+removeByID(RS('external_storage'))
+removeByID(RS('cable'))
 removeByID(RS('security_card'))
+
+removeByID(TE('enderium_dust_2'))
+removeByID(TE('lumium_dust_4'))
+removeByID(TE('signalum_dust_4'))
+removeByID(TE('constantan_dust_2'))
+removeByID(TE('invar_dust_3'))
+removeByID(TE('electrum_dust_2'))
+removeByID(TE('bronze_dust_4'))
+
+
+removeByID(tm + sml + '/' + sml + '_iron_dust')
+removeByID(tm + sml + '/' + sml + '_bronze_dust')
+removeByID(tm + sml + '/' + sml + '_gold_dust')
+removeByID(tm + sml + '/' + sml + '_copper_dust')
+removeByID(tm + sml + '/' + sml + '_lead_dust')
+removeByID(tm + sml + '/' + sml + '_nickel_dust')
+removeByID(tm + sml + '/' + sml + '_silver_dust')
+removeByID(tm + sml + '/' + sml + '_alloy_electrum')
+removeByID(tm + sml + '/' + sml + '_alloy_signalum')
+removeByID(tm + sml + '/' + sml + '_alloy_constantan')
+removeByID(tm + sml + '/' + sml + '_alloy_lumium')
+removeByID(tm + sml + '/' + sml + '_alloy_bronze')
+removeByID(tm + sml + '/' + sml + '_alloy_invar')
+removeByID(tm + sml + '/' + sml + '_alloy_enderium')
+removeByID(tm + sml + '/' + sml + '_alloy_netherite')
+removeByID(tm + sml + '/' + sml + '_raw_nickel')
+removeByID(tm + sml + '/' + sml + '_raw_gold')
+
+removeByID(tm + pulv + '/' + pulv + '_iron_ingot_to_dust')
+removeByID(tm + pulv + '/' + pulv + '_silver_ingot_to_dust')
+removeByID(tm + pulv + '/' + pulv + '_copper_ingot_to_dust')
+removeByID(tm + pulv + '/' + pulv + '_gold_ingot_to_dust')
+removeByID(tm + pulv + '/' + pulv + '_lead_ingot_to_dust')
+removeByID(tm + pulv + '/' + pulv + '_nickel_ingot_to_dust')
+removeByID(tm + pulv + '/' + pulv + '_tin_ingot_to_dust')
+removeByID(tm + pulv + '/' + pulv + '_sulfur')
+removeByID(tm + pulv + '/' + pulv + '_emerald')
+removeByID(tm + pulv + '/' + pulv + '_apatite')
+removeByID(tm + pulv + '/' + pulv + '_diamond')
+removeByID(tm + pulv + '/' + pulv + '_cinnabar')
+removeByID(tm + pulv + '/' + pulv + '_quartz')
+removeByID(tm + pulv + '/' + pulv + '_lapis')
+removeByID(tm + pulv + '/' + pulv + '_niter')
+
+removeByID(tm + crys + '/' + crys + '_' + 'amethyst_cluster')
+removeByID(tm + crys + '/' + crys + '_' + 'emerald')
+removeByID(tm + crys + '/' + crys + '_' + 'cinnabar')
+removeByID(tm + crys + '/' + crys + '_' + 'apatite')
+removeByID(tm + crys + '/' + crys + '_' + 'quartz')
+removeByID(tm + crys + '/' + crys + '_' + 'sulfur')
+removeByID(tm + crys + '/' + crys + '_' + 'diamond')
+removeByID(tm + crys + '/' + crys + '_' + 'lapis')
+removeByID(tm + crys + '/' + crys + '_' + 'niter')
+
+removeByID("create:mixing/andesite_alloy_from_zinc")
+removeByID("create:mixing/andesite_alloy")
+removeByID("create:splashing/immersiveengineering/crushed_aluminum_ore")
+//removeByID("tconstruct:smeltery/entity_melting/bee")
+//removeByID("tconstruct:smeltery/melting/slime/honey_block")
+removeByID("thermal:machines/crucible/crucible_honey_block_to_honey")
+removeByID("ae2:materials/advancedcard")
+removeByID("ae2:materials/basiccard")
+removeByID("thermal:rubber_from_dandelion")
+removeByID("create:splashing/red_sand")
+removeByID("create:splashing/gravel")
+removeByID("ae2:misc/tank_sky_stone")
+removeByID("create:sequenced_assembly/precision_mechanism")
+removeByID("thermal:machine_press")
+removeByID("thermal:machine_refinery")
+removeByID("ae2:materials/annihilationcore")
+removeByID("ae2:materials/formationcore")
+removeByID("create:crafting/materials/electron_tube")
+//removeByID("tconstruct:smeltery/casting/seared/smeltery_controller")
+removeByID("create:mechanical_crafting/potato_cannon")
+removeByID("create:mechanical_crafting/wand_of_symmetry")
+removeByID("tconstruct:smeltery/seared/drain")
+removeByID("tconstruct:smeltery/seared/chute")
+removeByID("tconstruct:smeltery/seared/duct")
+removeByID("tconstruct:smeltery/scorched/drain")
+removeByID("tconstruct:smeltery/scorched/chute")
+removeByID("tconstruct:smeltery/scorched/duct")
+//removeByID("tconstruct:smeltery/casting/scorched/foundry_controller")
+removeByID("alloyed:mixing/steel_ingot")
+removeByID("thermal:fluid_cell")
+removeByID("thermal:rubber_from_vine")
+removeByID("thermal:rubber_3")
+removeByID("thermal:energy_cell")
+removeByID("thermal:energy_cell_frame")
+removeByID(/thermal:earth_charge.*_from_.*/)
+//removeByID()
+//removeByID()
+//removeByID()
+
 
 
 

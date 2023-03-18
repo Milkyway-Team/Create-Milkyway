@@ -1,0 +1,13 @@
+
+[endrem]
+	#Decides if it's possible to obtain the evil eye when trading with a Cleric
+	is_evil_eye_obtainable = true
+	#Percentage chance of eyes breaking when thrown
+	eye_break_chance = 10
+	#Toggle Ender Eyes Actions (Throwing and Placing in Portal Frames)
+	ender_eyes = false
+	#Decides if it's possible to obtain the cryptic eye when enchanting
+	is_cryptic_eye_obtainable = true
+	#Decides whether or not you can remove an ender eye from a frame
+	can_remove_eye = false
+

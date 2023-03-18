@@ -14,6 +14,8 @@ let MW = (id, x) => MOD("mw_core", id, x)
 let QA = (id, x) => MOD("quark", id, x)
 let AL = (id, x) => MOD('alloyed', id, x)
 let FA = (id, x) => MOD("forbidden_arcanus", id, x)
+let IE = (id, x) => MOD("immersiveengineering", id, x)
+
 
 //
 
@@ -23,6 +25,7 @@ onEvent('item.registry', event => {
     global.trades = []
     global.professions = []
     global.transactions = []
+    global.specProfessions = []
 
     let profession = (name, c1, c2, transactions) => {
         let id = name.toLowerCase().replace("'", "").split(' ').join('_')
@@ -50,8 +53,103 @@ onEvent('item.registry', event => {
             .unstackable()
     }
 
+    let specializedProfession = (type, name, c1, c2, transactions) => {
+        let id = name.toLowerCase().replace("'", "").split(' ').join('_')
+        global.specProfessions.push(id)
+        global.transactions[id] = transactions
+        event.create(`specialized_profession_card_${id}`)
+            .color(1, c1)
+            .color(2, c2)
+            .parentModel("kubejs:item/specialized_profession_card")
+            .texture("kubejs:item/specialized_profession_card_0")
+            .displayName(`Specialized ${type} Profession: ${name}`)
+            .unstackable()
+    }
+
     let S = (x) => TE('silver_coin', x)
     let G = (x) => TE('gold_coin', x)
+
+    specializedProfession('Ore', 'Carbon', 0x101418, 0xf000ff, [
+        { in: MC('coal_ore', 4), out: S(16)},
+        { in: MC('deepslate_coal_ore', 4), out: S(24)},
+        { in: MW('crushed_coal_ore', 8), out: S(16)},
+        { in: MW('coal_dust', 16), out: S(24)},
+    ])
+    specializedProfession('Ore', 'Dwarven', 0xb85c14, 0xf000ff, [
+        { in: MC('iron_ore', 4), out: S(16)},
+        { in: MC('copper_ore', 4), out: S(16)},
+        { in: MW('aluminium_ore', 4), out: S(16)},
+        { in: TE('silver_ore', 4), out: S(16)},
+        { in: TE('nickel_ore', 4), out: S(16)},
+        { in: TE('tin_ore', 4), out: S(16)},
+        { in: TE('lead_ore', 4), out: S(16)},
+        { in: IE('ore_uranium', 4), out: S(16)},
+
+        { in: MC('deepslate_iron_ore', 4), out: S(32)},
+        { in: MC('deepslate_copper_ore', 4), out: S(32)},
+        { in: MW('deepslate_aluminium_ore', 4), out: S(32)},
+        { in: TE('deepslate_silver_ore', 4), out: S(32)},
+        { in: TE('deepslate_nickel_ore', 4), out: S(32)},
+        { in: TE('deepslate_tin_ore', 4), out: S(32)},
+        { in: TE('deepslate_lead_ore', 4), out: S(32)},
+        { in: IE('deepslate_ore_uranium', 4), out: S(32)},
+
+        { in: MC('raw_iron', 8), out: S(24)},
+        { in: MC('raw_copper', 8), out: S(24)},
+        { in: MW('raw_aluminium', 8), out: S(24)},
+        { in: TE('raw_silver', 8), out: S(24)},
+        { in: TE('raw_nickel', 8), out: S(24)},
+        { in: TE('raw_tin', 8), out: S(24)},
+        { in: TE('raw_lead', 8), out: S(24)},
+        { in: IE('raw_uranium', 8), out: S(24)},
+
+        { in: CR('crushed_iron_ore', 8), out: S(16)},
+        { in: CR('crushed_copper_ore', 8), out: S(16)},
+        { in: CR('crushed_aluminum_ore', 8), out: S(16)},
+        { in: CR('crushed_silver_ore', 8), out: S(16)},
+        { in: CR('crushed_nickel_ore', 8), out: S(16)},
+        { in: CR('crushed_tin_ore', 8), out: S(16)},
+        { in: CR('crushed_lead_ore', 8), out: S(16)},
+        { in: CR('crushed_uranium_ore', 8), out: S(16)},
+
+        { in: MW('iron_ore_dust', 8), out: S(16)},
+        { in: MW('copper_ore_dust', 8), out: S(16)},
+        { in: MW('aluminium_ore_dust', 8), out: S(16)},
+        { in: MW('silver_ore_dust', 8), out: S(16)},
+        { in: MW('nickel_ore_dust', 8), out: S(16)},
+        { in: MW('tin_ore_dust', 8), out: S(16)},
+        { in: MW('lead_ore_dust', 8), out: S(16)},
+        { in: MW('uranium_ore_dust', 8), out: S(16)},
+
+        { in: TE('iron_dust', 8), out: S(32)},
+        { in: TE('copper_dust', 8), out: S(32)},
+        { in: MW('aluminium_dust', 8), out: S(32)},
+        { in: TE('silver_dust', 8), out: S(32)},
+        { in: TE('nickel_dust', 8), out: S(32)},
+        { in: TE('tin_dust', 8), out: S(32)},
+        { in: TE('lead_dust', 8), out: S(32)},
+        { in: MW('uranium_dust', 8), out: S(32)},
+
+    ])
+    specializedProfession('Ore', 'Prospector', 0xce9012, 0xf000ff, [
+        { in: MC('gold_ore', 4), out: S(16)},
+        { in: MC('deepslate_gold_ore', 4), out: S(32)},
+        { in: MC('raw_gold', 8), out: S(24)},
+        { in: CR('crushed_gold_ore', 8), out: S(16)},
+        { in: MW('gold_ore_dust', 8), out: S(16)},
+        { in: TE('gold_dust', 8), out: S(32)},
+        { in: MC('golden_apple', 2), out: S(32)},
+        { in: MC('golden_carrot', 4), out: S(24)},
+    ])
+
+    profession("Beginner", 0x00FF13, 0x31FFED, [
+        { in: MC('raw_iron', 4), out: S(2)},
+        { in: MC('raw_copper', 4), out: S(2)},
+        { in: CR('raw_zinc', 4), out: S(2)},
+        { in: MW('raw_aluminium', 4), out: S(2)},
+        { in: MC('emerald', 16), out: S(4)},
+        { in: QA('#runes'), out: S(12)},
+    ])
 
     profession("Farming", 0xFFCC29, 0x81B214, [
         { in: FD('carrot_crate'), out: S(1) },
@@ -306,7 +404,7 @@ onEvent('item.registry', event => {
         if (simulate)
             return
 
-        let silver = unit == S
+        let silver = unit === S
         let split = item.split('x')
         let amount = split[0]
         let id = split.splice(1).join('x').replace(' ', '')

@@ -1,0 +1,406 @@
+{
+	id: "1671F79B7566F52D"
+	order_index: 7
+	title: "Embellished Shields"
+	loot_size: 1
+	hide_tooltip: true
+	use_title: true
+	rewards: [
+		{
+			item: {
+				id: "tconstruct:plate_shield"
+				Count: 1b
+				tag: {
+					tic_stats: {
+						"tconstruct:armor_toughness": 2.0f
+						"tconstruct:block_amount": 100.0f
+						"tconstruct:block_angle": 180.0f
+						"tconstruct:durability": 500.0f
+					}
+					tic_broken: 0b
+					tic_modifiers: [
+						{
+							name: "tconstruct:embellishment"
+							level: 1s
+						}
+						{
+							name: "tconstruct:blocking"
+							level: 1s
+						}
+					]
+					tic_upgrades: [{
+						name: "tconstruct:embellishment"
+						level: 1s
+					}]
+					Damage: 0
+					tic_persistent_data: {
+						abilities: 1
+						"tconstruct:embellishment": "tconstruct:copper"
+						defense: 4
+						upgrades: 1
+					}
+				}
+			}
+		}
+		{
+			item: {
+				id: "tconstruct:plate_shield"
+				Count: 1b
+				tag: {
+					tic_stats: {
+						"tconstruct:armor_toughness": 2.0f
+						"tconstruct:block_amount": 100.0f
+						"tconstruct:block_angle": 180.0f
+						"tconstruct:durability": 500.0f
+					}
+					tic_broken: 0b
+					tic_modifiers: [
+						{
+							name: "tconstruct:embellishment"
+							level: 1s
+						}
+						{
+							name: "tconstruct:blocking"
+							level: 1s
+						}
+					]
+					tic_upgrades: [{
+						name: "tconstruct:embellishment"
+						level: 1s
+					}]
+					Damage: 0
+					tic_persistent_data: {
+						abilities: 1
+						"tconstruct:embellishment": "tconstruct:iron"
+						defense: 4
+						upgrades: 1
+					}
+				}
+			}
+		}
+		{
+			item: {
+				id: "tconstruct:plate_shield"
+				Count: 1b
+				tag: {
+					tic_stats: {
+						"tconstruct:armor_toughness": 2.0f
+						"tconstruct:block_amount": 100.0f
+						"tconstruct:block_angle": 180.0f
+						"tconstruct:durability": 500.0f
+					}
+					tic_broken: 0b
+					tic_modifiers: [
+						{
+							name: "tconstruct:embellishment"
+							level: 1s
+						}
+						{
+							name: "tconstruct:blocking"
+							level: 1s
+						}
+					]
+					tic_upgrades: [{
+						name: "tconstruct:embellishment"
+						level: 1s
+					}]
+					Damage: 0
+					tic_persistent_data: {
+						abilities: 1
+						"tconstruct:embellishment": "tconstruct:silver"
+						defense: 4
+						upgrades: 1
+					}
+				}
+			}
+		}
+		{
+			item: {
+				id: "tconstruct:plate_shield"
+				Count: 1b
+				tag: {
+					tic_stats: {
+						"tconstruct:armor_toughness": 2.0f
+						"tconstruct:block_amount": 100.0f
+						"tconstruct:block_angle": 180.0f
+						"tconstruct:durability": 500.0f
+					}
+					tic_broken: 0b
+					tic_modifiers: [
+						{
+							name: "tconstruct:embellishment"
+							level: 1s
+						}
+						{
+							name: "tconstruct:blocking"
+							level: 1s
+						}
+					]
+					tic_upgrades: [{
+						name: "tconstruct:embellishment"
+						level: 1s
+					}]
+					Damage: 0
+					tic_persistent_data: {
+						abilities: 1
+						"tconstruct:embellishment": "tconstruct:brass"
+						defense: 4
+						upgrades: 1
+					}
+				}
+			}
+		}
+		{
+			item: {
+				id: "tconstruct:plate_shield"
+				Count: 1b
+				tag: {
+					tic_stats: {
+						"tconstruct:armor_toughness": 2.0f
+						"tconstruct:block_amount": 100.0f
+						"tconstruct:block_angle": 180.0f
+						"tconstruct:durability": 500.0f
+					}
+					tic_broken: 0b
+					tic_modifiers: [
+						{
+							name: "tconstruct:embellishment"
+							level: 1s
+						}
+						{
+							name: "tconstruct:blocking"
+							level: 1s
+						}
+					]
+					tic_upgrades: [{
+						name: "tconstruct:embellishment"
+						level: 1s
+					}]
+					Damage: 0
+					tic_persistent_data: {
+						abilities: 1
+						"tconstruct:embellishment": "tconstruct:zinc"
+						defense: 4
+						upgrades: 1
+					}
+				}
+			}
+		}
+		{
+			item: {
+				id: "tconstruct:plate_shield"
+				Count: 1b
+				tag: {
+					tic_stats: {
+						"tconstruct:armor_toughness": 2.0f
+						"tconstruct:block_amount": 100.0f
+						"tconstruct:block_angle": 180.0f
+						"tconstruct:durability": 500.0f
+					}
+					tic_broken: 0b
+					tic_modifiers: [
+						{
+							name: "tconstruct:embellishment"
+							level: 1s
+						}
+						{
+							name: "tconstruct:blocking"
+							level: 1s
+						}
+					]
+					tic_upgrades: [{
+						name: "tconstruct:embellishment"
+						level: 1s
+					}]
+					Damage: 0
+					tic_persistent_data: {
+						abilities: 1
+						"tconstruct:embellishment": "tconstruct:lead"
+						defense: 4
+						upgrades: 1
+					}
+				}
+			}
+		}
+		{
+			item: {
+				id: "tconstruct:plate_shield"
+				Count: 1b
+				tag: {
+					tic_stats: {
+						"tconstruct:armor_toughness": 2.0f
+						"tconstruct:block_amount": 100.0f
+						"tconstruct:block_angle": 180.0f
+						"tconstruct:durability": 500.0f
+					}
+					tic_broken: 0b
+					tic_modifiers: [
+						{
+							name: "tconstruct:embellishment"
+							level: 1s
+						}
+						{
+							name: "tconstruct:blocking"
+							level: 1s
+						}
+					]
+					tic_upgrades: [{
+						name: "tconstruct:embellishment"
+						level: 1s
+					}]
+					Damage: 0
+					tic_persistent_data: {
+						abilities: 1
+						"tconstruct:embellishment": "tconstruct:uranium"
+						defense: 4
+						upgrades: 1
+					}
+				}
+			}
+		}
+		{
+			item: {
+				id: "tconstruct:plate_shield"
+				Count: 1b
+				tag: {
+					tic_stats: {
+						"tconstruct:armor_toughness": 2.0f
+						"tconstruct:block_amount": 100.0f
+						"tconstruct:block_angle": 180.0f
+						"tconstruct:durability": 500.0f
+					}
+					tic_broken: 0b
+					tic_modifiers: [
+						{
+							name: "tconstruct:embellishment"
+							level: 1s
+						}
+						{
+							name: "tconstruct:blocking"
+							level: 1s
+						}
+					]
+					tic_upgrades: [{
+						name: "tconstruct:embellishment"
+						level: 1s
+					}]
+					Damage: 0
+					tic_persistent_data: {
+						abilities: 1
+						"tconstruct:embellishment": "tconstruct:aluminum"
+						defense: 4
+						upgrades: 1
+					}
+				}
+			}
+		}
+		{
+			item: {
+				id: "tconstruct:plate_shield"
+				Count: 1b
+				tag: {
+					tic_stats: {
+						"tconstruct:armor_toughness": 2.0f
+						"tconstruct:block_amount": 100.0f
+						"tconstruct:block_angle": 180.0f
+						"tconstruct:durability": 500.0f
+					}
+					tic_broken: 0b
+					tic_modifiers: [
+						{
+							name: "tconstruct:embellishment"
+							level: 1s
+						}
+						{
+							name: "tconstruct:blocking"
+							level: 1s
+						}
+					]
+					tic_upgrades: [{
+						name: "tconstruct:embellishment"
+						level: 1s
+					}]
+					Damage: 0
+					tic_persistent_data: {
+						abilities: 1
+						"tconstruct:embellishment": "tconstruct:gold"
+						defense: 4
+						upgrades: 1
+					}
+				}
+			}
+		}
+		{
+			item: {
+				id: "tconstruct:plate_shield"
+				Count: 1b
+				tag: {
+					tic_stats: {
+						"tconstruct:armor_toughness": 2.0f
+						"tconstruct:block_amount": 100.0f
+						"tconstruct:block_angle": 180.0f
+						"tconstruct:durability": 500.0f
+					}
+					tic_broken: 0b
+					tic_modifiers: [
+						{
+							name: "tconstruct:embellishment"
+							level: 1s
+						}
+						{
+							name: "tconstruct:blocking"
+							level: 1s
+						}
+					]
+					tic_upgrades: [{
+						name: "tconstruct:embellishment"
+						level: 1s
+					}]
+					Damage: 0
+					tic_persistent_data: {
+						abilities: 1
+						"tconstruct:embellishment": "tconstruct:tin"
+						defense: 4
+						upgrades: 1
+					}
+				}
+			}
+		}
+		{
+			item: {
+				id: "tconstruct:plate_shield"
+				Count: 1b
+				tag: {
+					tic_stats: {
+						"tconstruct:armor_toughness": 2.0f
+						"tconstruct:block_amount": 100.0f
+						"tconstruct:block_angle": 180.0f
+						"tconstruct:durability": 500.0f
+					}
+					tic_broken: 0b
+					tic_modifiers: [
+						{
+							name: "tconstruct:embellishment"
+							level: 1s
+						}
+						{
+							name: "tconstruct:blocking"
+							level: 1s
+						}
+					]
+					tic_upgrades: [{
+						name: "tconstruct:embellishment"
+						level: 1s
+					}]
+					Damage: 0
+					tic_persistent_data: {
+						abilities: 1
+						"tconstruct:embellishment": "tconstruct:nickel"
+						defense: 4
+						upgrades: 1
+					}
+				}
+			}
+		}
+	]
+}

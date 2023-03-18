@@ -1,0 +1,18 @@
+{
+	id: "0E2C007F87199CE4"
+	order_index: 6
+	title: "Hedges"
+	icon: "quark:flowering_azalea_hedge"
+	loot_size: 1
+	use_title: true
+	rewards: [
+		{ item: "quark:oak_hedge", count: 32 }
+		{ item: "quark:birch_hedge", count: 32 }
+		{ item: "quark:spruce_hedge", count: 32 }
+		{ item: "quark:jungle_hedge", count: 32 }
+		{ item: "quark:acacia_hedge", count: 32 }
+		{ item: "quark:dark_oak_hedge", count: 32 }
+		{ item: "quark:azalea_hedge", count: 32 }
+		{ item: "quark:flowering_azalea_hedge", count: 32 }
+	]
+}

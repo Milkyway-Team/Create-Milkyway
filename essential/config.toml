@@ -49,6 +49,7 @@
 		host_world_ip_warning = false
 		screeenshot_toast_duration = 1
 		update_notifications = false
+		screenshot_toast_duration = 1
 		message_sound = true
 		online_friend_alert = true
 		message_notifications = true

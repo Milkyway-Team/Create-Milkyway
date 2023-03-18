@@ -15,11 +15,18 @@
 			y: 5.0d
 			subtitle: "10 Silver"
 			description: ["Your last resort in case the sundown beat you to it."]
+			dependencies: ["04A7A7E4A605D66C"]
 			id: "5D17CB247942013A"
 			tasks: [{
 				id: "0783860FB502A201"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: {
+					id: "ftbquests:custom_icon"
+					Count: 1b
+					tag: {
+						Icon: "thermal:textures/item/silver_coin_1.png"
+					}
+				}
 				item: "thermal:silver_coin"
 				count: 10L
 				consume_items: true
@@ -41,6 +48,7 @@
 				""
 				"Have a look around. I'm sure you'll find something of use."
 			]
+			dependencies: ["04A7A7E4A605D66C"]
 			size: 2.0d
 			id: "0F870BEA235D662D"
 			tasks: [{
@@ -57,7 +65,10 @@
 			shape: "circle"
 			subtitle: "Gold -> Silver"
 			description: ["Here you can exchange a Gold Coin back to a Stack of Silver."]
-			dependencies: ["0F870BEA235D662D"]
+			dependencies: [
+				"0F870BEA235D662D"
+				"04A7A7E4A605D66C"
+			]
 			repeatable: true
 			id: "5326F6482C45D22A"
 			tasks: [{
@@ -94,7 +105,10 @@
 			shape: "circle"
 			subtitle: "Silver -> Gold"
 			description: ["Some trades require you to hand in Gold Coins. These are worth a stack of Silver each."]
-			dependencies: ["0F870BEA235D662D"]
+			dependencies: [
+				"0F870BEA235D662D"
+				"04A7A7E4A605D66C"
+			]
 			repeatable: true
 			id: "1A566C74B1F7F050"
 			tasks: [{
@@ -130,11 +144,18 @@
 			y: -2.0d
 			subtitle: "10 Silver"
 			description: ["Sometimes you have to treat yourself and the co-workers to a nice meal."]
+			dependencies: ["04A7A7E4A605D66C"]
 			id: "09DC2E2BE2BE32F4"
 			tasks: [{
 				id: "6235F365D702DF2B"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: {
+					id: "ftbquests:custom_icon"
+					Count: 1b
+					tag: {
+						Icon: "thermal:textures/item/silver_coin_1.png"
+					}
+				}
 				item: "thermal:silver_coin"
 				count: 10L
 				consume_items: true
@@ -179,11 +200,18 @@
 			y: -1.5d
 			subtitle: "15 Silver"
 			description: ["Early on it might help to import some dirt for base building."]
+			dependencies: ["04A7A7E4A605D66C"]
 			id: "4B01606CE7AF3121"
 			tasks: [{
 				id: "188BEC2BA245DB13"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 15b }
+				icon: {
+					id: "ftbquests:custom_icon"
+					Count: 1b
+					tag: {
+						Icon: "thermal:textures/item/silver_coin_2.png"
+					}
+				}
 				item: "thermal:silver_coin"
 				count: 15L
 				consume_items: true
@@ -216,6 +244,7 @@
 			y: 0.0d
 			subtitle: "4 Gold"
 			description: ["It's like a backpack but classy."]
+			dependencies: ["04A7A7E4A605D66C"]
 			id: "4FD46F841CCD59F8"
 			tasks: [{
 				id: "709557A517B0143F"
@@ -249,11 +278,18 @@
 			x: -9.0d
 			y: 0.5d
 			subtitle: "4 Gold"
+			dependencies: ["04A7A7E4A605D66C"]
 			id: "6D9F2FBEB7CC5195"
 			tasks: [{
 				id: "165B9A886A26BCC8"
 				type: "item"
-				icon: { id: "thermal:gold_coin", Count: 4b }
+				icon: {
+					id: "ftbquests:custom_icon"
+					Count: 1b
+					tag: {
+						Icon: "thermal:textures/item/gold_coin_1.png"
+					}
+				}
 				item: "thermal:gold_coin"
 				count: 4L
 				consume_items: true
@@ -271,11 +307,18 @@
 			y: 1.0d
 			subtitle: "45 Silver"
 			description: ["As seen on TV: This Magical Bell can detect unlit areas around it. Free shipping, bonus cursed campfire. What a Deal!"]
+			dependencies: ["04A7A7E4A605D66C"]
 			id: "4B52A04818075900"
 			tasks: [{
 				id: "4FB1B4787D648565"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 35b }
+				icon: {
+					id: "ftbquests:custom_icon"
+					Count: 1b
+					tag: {
+						Icon: "thermal:textures/item/silver_coin_3.png"
+					}
+				}
 				item: "thermal:silver_coin"
 				count: 45L
 				consume_items: true
@@ -300,11 +343,18 @@
 			y: 4.0d
 			subtitle: "32 Silver"
 			description: ["A little testing selection of Thermal Weaponry."]
+			dependencies: ["04A7A7E4A605D66C"]
 			id: "1CC29991D5F248CA"
 			tasks: [{
 				id: "2BF8F9E5070C6122"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 32b }
+				icon: {
+					id: "ftbquests:custom_icon"
+					Count: 1b
+					tag: {
+						Icon: "thermal:textures/item/silver_coin_3.png"
+					}
+				}
 				item: "thermal:silver_coin"
 				count: 32L
 				consume_items: true
@@ -342,6 +392,7 @@
 			x: -14.5d
 			y: -0.5d
 			subtitle: "24 Silver"
+			dependencies: ["04A7A7E4A605D66C"]
 			id: "42384DE39AA48976"
 			tasks: [{
 				id: "05BB5DFA82280C0C"
@@ -390,11 +441,18 @@
 			x: -4.0d
 			y: 3.5d
 			subtitle: "24 Silver"
+			dependencies: ["04A7A7E4A605D66C"]
 			id: "61B040CD0832EFC0"
 			tasks: [{
 				id: "6404722100F1DEF7"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 24b }
+				icon: {
+					id: "ftbquests:custom_icon"
+					Count: 1b
+					tag: {
+						Icon: "thermal:textures/item/silver_coin_2.png"
+					}
+				}
 				item: "thermal:silver_coin"
 				count: 24L
 				consume_items: true
@@ -456,11 +514,18 @@
 			x: -1.5d
 			y: -2.5d
 			subtitle: "24 Silver"
+			dependencies: ["04A7A7E4A605D66C"]
 			id: "117587D824D23D69"
 			tasks: [{
 				id: "06C835DB602D6F9F"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 24b }
+				icon: {
+					id: "ftbquests:custom_icon"
+					Count: 1b
+					tag: {
+						Icon: "thermal:textures/item/silver_coin_2.png"
+					}
+				}
 				item: "thermal:silver_coin"
 				count: 24L
 				consume_items: true
@@ -504,11 +569,18 @@
 			x: -12.5d
 			y: 2.0d
 			subtitle: "24 Silver"
+			dependencies: ["04A7A7E4A605D66C"]
 			id: "2D75D1864FB1EF75"
 			tasks: [{
 				id: "3AA788B63B6A73EF"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 24b }
+				icon: {
+					id: "ftbquests:custom_icon"
+					Count: 1b
+					tag: {
+						Icon: "thermal:textures/item/silver_coin_3.png"
+					}
+				}
 				item: "thermal:silver_coin"
 				count: 24L
 				consume_items: true
@@ -552,11 +624,18 @@
 			y: -2.0d
 			subtitle: "24 Silver"
 			description: ["Not too stoked with your facade? Not a problem! Foliage solves everything."]
+			dependencies: ["04A7A7E4A605D66C"]
 			id: "7D93DAB3E8ACF953"
 			tasks: [{
 				id: "06028A67C6DCCD00"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 24b }
+				icon: {
+					id: "ftbquests:custom_icon"
+					Count: 1b
+					tag: {
+						Icon: "thermal:textures/item/silver_coin_3.png"
+					}
+				}
 				item: "thermal:silver_coin"
 				count: 24L
 				consume_items: true
@@ -598,6 +677,13 @@
 					item: "minecraft:spruce_fence"
 					count: 16
 				}
+				{
+					id: "3B515CE80E1ACDAE"
+					type: "choice"
+					icon: "quark:flowering_azalea_hedge"
+					exclude_from_claim_all: true
+					table_id: 1021191763233709284L
+				}
 			]
 		}
 		{
@@ -607,6 +693,7 @@
 			x: -6.0d
 			y: 1.5d
 			subtitle: "48 Silver"
+			dependencies: ["04A7A7E4A605D66C"]
 			repeatable: true
 			id: "003E0D1CE60B166A"
 			tasks: [
@@ -676,6 +763,7 @@
 			x: -9.5d
 			y: -6.0d
 			shape: "hexagon"
+			dependencies: ["04A7A7E4A605D66C"]
 			repeatable: true
 			id: "7077EAC1AFB5D59E"
 			tasks: [{
@@ -714,6 +802,7 @@
 			x: -8.5d
 			y: -6.0d
 			shape: "hexagon"
+			dependencies: ["04A7A7E4A605D66C"]
 			repeatable: true
 			id: "2A051D2F0F3B9081"
 			tasks: [{
@@ -752,6 +841,7 @@
 			x: -7.5d
 			y: -6.0d
 			shape: "hexagon"
+			dependencies: ["04A7A7E4A605D66C"]
 			repeatable: true
 			id: "080D70C020C84E7C"
 			tasks: [{
@@ -790,6 +880,7 @@
 			x: -6.5d
 			y: -6.0d
 			shape: "hexagon"
+			dependencies: ["04A7A7E4A605D66C"]
 			repeatable: true
 			id: "61806B49E570D58F"
 			tasks: [{
@@ -828,6 +919,7 @@
 			x: -5.5d
 			y: -6.0d
 			shape: "hexagon"
+			dependencies: ["04A7A7E4A605D66C"]
 			repeatable: true
 			id: "4C92281F1097BD44"
 			tasks: [{
@@ -866,6 +958,7 @@
 			x: -4.5d
 			y: -6.0d
 			shape: "hexagon"
+			dependencies: ["04A7A7E4A605D66C"]
 			repeatable: true
 			id: "6F0D060D378BC0F0"
 			tasks: [{
@@ -904,6 +997,7 @@
 			x: -3.5d
 			y: -6.0d
 			shape: "hexagon"
+			dependencies: ["04A7A7E4A605D66C"]
 			repeatable: true
 			id: "133BF4C329483B0D"
 			tasks: [{
@@ -942,6 +1036,7 @@
 			x: -2.5d
 			y: -6.0d
 			shape: "hexagon"
+			dependencies: ["04A7A7E4A605D66C"]
 			repeatable: true
 			id: "09F01AE099C3ED34"
 			tasks: [{
@@ -968,41 +1063,16 @@
 			]
 		}
 		{
-			title: "Shipments"
-			icon: "thermal:machine_press"
-			disable_toast: true
-			x: -6.5d
-			y: -7.0d
-			shape: "hexagon"
-			id: "14105A03A4D53107"
-			tasks: [{
-				id: "05294F6A45D0023A"
-				type: "item"
-				item: "thermal:silver_coin"
-				count: 32L
-				consume_items: true
-			}]
-			rewards: [
-				{
-					id: "41E2956742CCFEF9"
-					type: "item"
-					item: "thermal:machine_press"
-				}
-				{
-					id: "3AB970D8EB632F12"
-					type: "item"
-					item: "thermal:dynamo_stirling"
-				}
-			]
-		}
-		{
 			title: "Railway Starter Pack"
 			icon: "create:track"
 			x: 1.5d
 			y: -1.0d
 			subtitle: "8 Gold"
 			description: ["Everything you'll need to start a train building empire!"]
-			dependencies: ["32FE250DD6950ABE"]
+			dependencies: [
+				"32FE250DD6950ABE"
+				"04A7A7E4A605D66C"
+			]
 			hide: false
 			id: "2C47FB25257D7FD2"
 			tasks: [{
@@ -1055,7 +1125,10 @@
 			y: 3.5d
 			subtitle: "48 Silver"
 			description: ["At the expence of 48 Silver coins, an Inscriber Press of YOUR CHOICE is yours!"]
-			dependencies: ["0279C9E65A622D89"]
+			dependencies: [
+				"0279C9E65A622D89"
+				"04A7A7E4A605D66C"
+			]
 			repeatable: true
 			id: "4ED6E19C611A9CBB"
 			tasks: [{
@@ -1084,9 +1157,10 @@
 				}
 			}
 			disable_toast: true
-			x: -5.5d
+			x: -6.0d
 			y: -7.0d
 			shape: "hexagon"
+			dependencies: ["04A7A7E4A605D66C"]
 			repeatable: true
 			id: "0399D9B8ECB7565A"
 			tasks: [{
@@ -1101,6 +1175,164 @@
 				type: "item"
 				item: "kubejs:trade_card_exchange_currencies"
 			}]
+		}
+		{
+			title: "Eternal Wrench"
+			icon: {
+				id: "create:wrench"
+				Count: 1b
+				tag: {
+					Damage: 0
+					Repair: 1b
+					Modifier: "forbidden_arcanus:eternal"
+				}
+			}
+			x: -8.0d
+			y: 2.5d
+			subtitle: "2 Gold"
+			dependencies: ["04A7A7E4A605D66C"]
+			id: "7833DEE95B415915"
+			tasks: [{
+				id: "671C509D76F9717F"
+				type: "item"
+				item: "thermal:gold_coin"
+				count: 2L
+				consume_items: true
+			}]
+			rewards: [{
+				id: "2D8392DAE25216A9"
+				type: "item"
+				item: {
+					id: "create:wrench"
+					Count: 1b
+					tag: {
+						Damage: 0
+						Repair: 1b
+						Modifier: "forbidden_arcanus:eternal"
+					}
+				}
+			}]
+		}
+		{
+			icon: "kubejs:trade_card_ender_pearl"
+			disable_toast: true
+			x: -6.0d
+			y: -9.0d
+			dependencies: ["04A7A7E4A605D66C"]
+			size: 2.0d
+			id: "3F1AB3D4CC1DE5B6"
+			tasks: [
+				{
+					id: "0BDC556407D589BF"
+					type: "checkmark"
+					title: "Mixin' It Up With Capitalism"
+					disable_toast: true
+				}
+				{
+					id: "676084076BE9FA5B"
+					type: "item"
+					disable_toast: true
+					item: "create:mechanical_mixer"
+				}
+			]
+			rewards: [
+				{
+					id: "3B04D3271AC0D36E"
+					type: "item"
+					item: "kubejs:profession_card_beginner"
+				}
+				{
+					id: "133C08E544C76562"
+					type: "custom"
+					title: "Chapter Unlock: Trading"
+					icon: "create:crafting_blueprint"
+					team_reward: false
+					auto: "enabled"
+				}
+				{
+					id: "09F37E18C5B587F7"
+					type: "item"
+					icon: {
+						id: "ftbquests:custom_icon"
+						Count: 1b
+						tag: {
+							Icon: "thermal:textures/item/silver_coin_4.png"
+						}
+					}
+					item: "thermal:silver_coin"
+					count: 32
+					random_bonus: 96
+				}
+			]
+		}
+		{
+			title: "Bomb Factory"
+			icon: "thermal:fire_tnt"
+			x: -12.0d
+			y: 4.5d
+			hide_dependency_lines: true
+			dependencies: [
+				"04A7A7E4A605D66C"
+				"1CC29991D5F248CA"
+			]
+			id: "0D3D18693097450A"
+			tasks: [{
+				id: "454483F40189F666"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 64L
+				consume_items: true
+			}]
+			rewards: [
+				{
+					id: "719FCB2086B2195C"
+					type: "item"
+					item: "thermal:fire_tnt"
+					count: 4
+				}
+				{
+					id: "02EB2F7DE00CE7BB"
+					type: "item"
+					item: "thermal:ice_tnt"
+					count: 4
+				}
+				{
+					id: "69A2FDC3BFD91FB9"
+					type: "item"
+					item: "thermal:lightning_tnt"
+					count: 4
+				}
+				{
+					id: "718B88D85CE986F4"
+					type: "item"
+					item: "thermal:earth_tnt"
+					count: 4
+				}
+				{
+					id: "31099CB3648A201B"
+					type: "item"
+					item: "thermal:ender_tnt"
+					count: 4
+				}
+				{
+					id: "09524F8268D3B49D"
+					type: "item"
+					item: "thermal:glowstone_tnt"
+					count: 4
+				}
+				{
+					id: "16220997821D0F01"
+					type: "item"
+					item: "thermal:redstone_tnt"
+					count: 4
+				}
+				{
+					id: "26DCBCDB7F2AF599"
+					type: "item"
+					item: "thermal:slime_tnt"
+					count: 4
+				}
+			]
 		}
 	]
 	quest_links: [ ]

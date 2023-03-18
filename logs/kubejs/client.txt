@@ -1,10 +1,12 @@
-[18:00:35] [INFO ] Loaded script client_scripts:hephaestus_forge.js in 0.005 s
-[18:00:35] [INFO ] Loaded script client_scripts:ie.js in 0.0 s
-[18:00:35] [INFO ] Loaded script client_scripts:item_descriptions.js in 0.017 s
-[18:00:35] [INFO ] Loaded script client_scripts:jei.js in 0.001 s
-[18:00:35] [INFO ] Loaded script client_scripts:radiant_quartz.js in 0.002 s
-[18:00:35] [INFO ] Hello, World! (You will see this line every time client resources reload)
-[18:00:35] [INFO ] Loaded script client_scripts:script.js in 0.001 s
-[18:00:35] [INFO ] Loaded script client_scripts:thermal.js in 0.003 s
-[18:00:35] [INFO ] Loaded 7/7 KubeJS client scripts in 0.155 s
-[18:00:48] [INFO ] Custom Item Names Reloaded!
+[12:32:16] [INFO ] Loaded script client_scripts:hephaestus_forge.js in 0.009 s
+[12:32:16] [INFO ] Loaded script client_scripts:ie.js in 0.002 s
+[12:32:16] [INFO ] Loaded script client_scripts:item_descriptions.js in 0.002 s
+[12:32:16] [INFO ] Loaded script client_scripts:jei.js in 0.002 s
+[12:32:16] [INFO ] Loaded script client_scripts:radiant_quartz.js in 0.001 s
+[12:32:16] [INFO ] Hello, World! (You will see this line every time client resources reload)
+[12:32:16] [INFO ] Loaded script client_scripts:script.js in 0.001 s
+[12:32:16] [INFO ] Loaded script client_scripts:thermal.js in 0.015 s
+[12:32:16] [INFO ] Loaded 7/7 KubeJS client scripts in 0.089 s
+[12:32:16] [INFO ] Ponder tags event is currently not reloadable. Only scenes were reloaded.
+[12:32:17] [INFO ] Custom Item Names Reloaded!
+[12:32:17] [INFO ] Custom Item Names Reloaded!

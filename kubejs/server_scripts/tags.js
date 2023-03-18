@@ -8,6 +8,8 @@ let TC = (id, x) => MOD("tconstruct", id, x)
 let MC = (id, x) => MOD("minecraft", id, x)
 let KJ = (id, x) => MOD("kubejs", id, x)
 let FD = (id, x) => MOD("farmersdelight", id, x)
+let FR = (id, x) => MOD("farmersrespite", id, x)
+
 let AC = (id, x) => MOD("aquaculture", id, x)
 let SD = (id, x) => MOD("storagedrawers", id, x)
 let SP = (id, x) => MOD("supplementaries", id, x)
@@ -30,6 +32,9 @@ let dustMetals = ['iron', 'lead', 'copper', 'nickel', 'gold', 'silver', 'tin']
 let wood_types = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'crimson', 'warped']
 let tool_types = ['pickaxe', 'axe', 'shovel', 'hoe', 'sword']
 let coin_metals = ['nickel', 'enderium', 'lumium', 'signalum', 'constantan', 'invar', 'electrum', 'bronze', 'silver', 'lead', 'tin', 'netherite', 'copper', 'gold', 'iron', 'rose_gold', 'steel']
+let unwanted_IE_metals = ['aluminum', 'lead', 'nickel', 'silver']
+let unwanted_IE_alloys = ['steel', 'electrum', 'constantan']
+let ow_vanilla_metals = ['iron', 'copper', 'gold']
 function blacklist(item){
     onEvent('item.tags', event => {
         event.get('randomium:blacklist')
@@ -50,6 +55,20 @@ function tagRem(tag, remove){
     event.get(tag)
         .remove(remove)
 })}
+function blokTagAdd(tag, add){
+    onEvent('block.tags', event => {
+        event.get(tag)
+            .add(add)
+    })}
+function blokTagRem(tag, remove){
+    onEvent('block.tags', event => {
+        event.get(tag)
+            .remove(remove)
+    })}
+function genericTagRem(event, tag, remove){
+        event.get(tag)
+            .remove(remove)
+    }
 onEvent('item.tags', event => {
     colours.forEach(element => {
         event.get(F('glazed_terracotta')).add(MC(`${element}_glazed_terracotta`))
@@ -63,13 +82,15 @@ onEvent('item.tags', event => {
     });
     event.get('thermal:crafting/dies').add('#forge:trade_cards')
     event.get('thermal:crafting/dies').add('#forge:profession_cards')
+    event.get('mw_industry_additions:cards').add(['#forge:profession_cards', '#forge:trade_cards'])
+
     event.get("tconstruct:anvil_metal")
     //.remove("#forge:storage_blocks/nethersteel")
     event.get('forge:dusts/processed/tin')
         .add(TE('tin_dust'))
     event.get('forge:dusts/tin')
         .remove(TE('tin_dust'))
-        .add(KJ('tin_ore_dust'))
+        .add(MW('tin_ore_dust'))
     event.get('create:upright_on_belt')
         .add(/mw_core:.*_plush/)
         .add(/mw_core:sweet_berry_juice/)
@@ -93,7 +114,15 @@ onEvent('block.tags', event => {
     event.get("create:windmill_sails")
         .remove(MC('#wool'))
         .remove(CR('sail_frame'))
+
 })
+unwanted_IE_metals.forEach(e => {
+    blokTagRem(['forge:ores_in_ground/stone', 'forge:ore_rates/singular'], [IE('ore_' + e)])
+    blokTagRem(['forge:ores_in_ground/deepslate', 'forge:ore_rates/singular'], [IE('deepslate_ore_' + e)])
+
+    blokTagRem(F('ores/' + e), [IE('ore_' + e), IE('deepslate_ore_' + e)])
+})
+
 tagRem(F('silicon'), [AE2('silicon')])
 tagRem(F('ingots/bronze'), [TE('bronze_ingot')])
 tagRem(F('ingots/steel'), [TE('steel_ingot')])
@@ -110,14 +139,14 @@ coin_metals.forEach(e => {
     tagRem(F('coins/' + e), [TE(e + '_coin')])
     tagRem(F('coins'), [TE(e + '_coin')])
 })
+blokTagAdd(F('stone_gold_ores'), [MC('gold_ore'), MC('deepslate_gold_ore')])
 
 
 
 //IE TAGS
-let unwanted_IE_metals = ['aluminum', 'lead', 'nickel', 'silver']
-let unwanted_IE_alloys = ['steel', 'electrum', 'constantan']
-let ow_vanilla_metals = ['iron', 'copper', 'gold']
+
 unwanted_IE_metals.forEach(e => {
+    tagRem([/forge:ores_in_ground.*/, /forge:ore_rates.*/], [IE('ore_' + e), IE('deepslate_ore_' + e)])
     tagRem(F('ores/' + e), [IE('ore_' + e), IE('deepslate_ore_' + e)])
     tagRem(F('storage_blocks/raw_' + e), [IE('raw_block_' + e)])
     tagRem(F('ingots/' + e), [IE('ingot_' + e)])
@@ -143,4 +172,16 @@ tagRem(F('dusts/wood'), [IE('dust_wood')])
 tagRem(F('rods/steel'), [IE('stick_steel')])
 tagRem(F('tools/wrench'), [IE('hammer')])
 tagRem(F('slag'), [IE('slag')])
+tagAdd(FD('stew_cups'), /miners_delight:.*_stew_cup/)
+tagAdd(FD('soup_cups'), /miners_delight:.*_soup_cup/)
+tagAdd(FD('large_meals'), /farmersdelight:.*_block/)
+tagAdd(FD('large_meals'), ['miners_delight:stuffed_squid', 'endersdelight:stuffed_shulker'])
+tagAdd(FD('soups'), /farmersdelight:.*_soup/)
+tagAdd(FD('stews'), /farmersdelight:.*_stew/)
+tagAdd(FD('soups'), ['alexsdelight:acacia_blossom_soup', 'miners_delight:cave_soup', MC('beetroot_soup')])
+tagAdd(FD('stews'), /minecraft:.*_stew/)
+tagAdd(FD('stews'), /endersdelight:.*_stew_.*/)
+tagAdd('endersdelight:shulker_bowl_foods', ['endersdelight:chorus_stew', 'endersdelight:endermite_stew', 'endersdelight:twisted_cereal', 'endersdelight:pearl_pasta', 'endersdelight:ender_paella'])
+
+
 

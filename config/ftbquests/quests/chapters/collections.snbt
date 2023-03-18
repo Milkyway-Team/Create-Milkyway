@@ -1149,7 +1149,7 @@
 			tasks: [{
 				id: "0496BA83842DB7CD"
 				type: "item"
-				item: "kubejs:refined_mechanism"
+				item: "mw_core:refined_mechanism"
 			}]
 		}
 		{

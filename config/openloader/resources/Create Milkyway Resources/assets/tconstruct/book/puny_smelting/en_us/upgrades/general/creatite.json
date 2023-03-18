@@ -1,0 +1,13 @@
+{
+  "modifier_id": "mw_core:creatite",
+  "text": [
+    {
+      "text": "Bursting With Creativity"
+    }
+  ],
+  "effects": [
+    "Large increase in durability, mining speed, attack damage, and armor",
+    "Single Level",
+    "Requires 1 Upgrade Slot"
+  ]
+}

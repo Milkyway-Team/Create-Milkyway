@@ -49,11 +49,24 @@
 				type: "item"
 				item: "mw_core:cobalt_mechanism"
 			}]
-			rewards: [{
-				id: "4AC911EF35B004D3"
-				type: "item"
-				item: "mw_core:music_disc_thermal_rise"
-			}]
+			rewards: [
+				{
+					id: "4AC911EF35B004D3"
+					type: "item"
+					item: "mw_core:music_disc_thermal_rise"
+				}
+				{
+					id: "6327FB19A1032F3C"
+					type: "item"
+					item: {
+						id: "ftbquests:lootcrate"
+						Count: 1b
+						tag: {
+							type: "cobalt"
+						}
+					}
+				}
+			]
 		}
 		{
 			title: "Molten Lead"

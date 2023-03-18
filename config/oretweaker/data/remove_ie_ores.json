@@ -1,0 +1,84 @@
+{
+  "oreConfig": [
+    {
+      "ore": "immersiveengineering:ore_aluminum",
+      "fillers": [],
+      "minY": -1,
+      "maxY": -1,
+      "maxVeinSize": -1,
+      "spawnRate": -1.0,
+      "discardChanceOnAirExposure": -1.0,
+      "replace": true
+    },
+    {
+      "ore": "immersiveengineering:ore_lead",
+      "fillers": [],
+      "minY": -1,
+      "maxY": -1,
+      "maxVeinSize": -1,
+      "spawnRate": -1.0,
+      "discardChanceOnAirExposure": -1.0,
+      "replace": true
+    },
+    {
+      "ore": "immersiveengineering:ore_silver",
+      "fillers": [],
+      "minY": -1,
+      "maxY": -1,
+      "maxVeinSize": -1,
+      "spawnRate": -1.0,
+      "discardChanceOnAirExposure": -1.0,
+      "replace": true
+    },
+    {
+      "ore": "immersiveengineering:ore_nickel",
+      "fillers": [],
+      "minY": -1,
+      "maxY": -1,
+      "maxVeinSize": -1,
+      "spawnRate": -1.0,
+      "discardChanceOnAirExposure": -1.0,
+      "replace": true
+    },
+    {
+      "ore": "immersiveengineering:deepslate_ore_aluminum",
+      "fillers": [],
+      "minY": -1,
+      "maxY": -1,
+      "maxVeinSize": -1,
+      "spawnRate": -1.0,
+      "discardChanceOnAirExposure": -1.0,
+      "replace": true
+    },
+    {
+      "ore": "immersiveengineering:deepslate_ore_lead",
+      "fillers": [],
+      "minY": -1,
+      "maxY": -1,
+      "maxVeinSize": -1,
+      "spawnRate": -1.0,
+      "discardChanceOnAirExposure": -1.0,
+      "replace": true
+    },
+    {
+      "ore": "immersiveengineering:deepslate_ore_silver",
+      "fillers": [],
+      "minY": -1,
+      "maxY": -1,
+      "maxVeinSize": -1,
+      "spawnRate": -1.0,
+      "discardChanceOnAirExposure": -1.0,
+      "replace": true
+    },
+    {
+      "ore": "immersiveengineering:deepslate_ore_nickel",
+      "fillers": [],
+      "minY": -1,
+      "maxY": -1,
+      "maxVeinSize": -1,
+      "spawnRate": -1.0,
+      "discardChanceOnAirExposure": -1.0,
+      "replace": true
+    }
+  ]
+}
