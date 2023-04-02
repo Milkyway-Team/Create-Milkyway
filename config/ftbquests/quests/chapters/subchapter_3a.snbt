@@ -1,7 +1,7 @@
 {
 	id: "44206B2FB11C35F8"
-	group: "26C9462713CC8837"
-	order_index: 6
+	group: "5520096E8E4841AE"
+	order_index: 5
 	filename: "subchapter_3a"
 	title: "Sub-Chapter 3a"
 	icon: "mw_core:logic_mechanism"
@@ -10,10 +10,13 @@
 	quests: [
 		{
 			icon: "farmersdelight:lime_canvas_sign"
-			x: 0.0d
-			y: -2.5d
+			x: -2.5d
+			y: -1.5d
 			description: ["Logic Mechanisms unlock Applied Energistics 2 and all it's storage helpers!"]
-			dependencies: ["799F6769884BAAAD"]
+			dependencies: [
+				"799F6769884BAAAD"
+				"69F408FACD85C2DD"
+			]
 			hide: true
 			id: "32F62312B7D4D162"
 			tasks: [{
@@ -24,8 +27,8 @@
 		}
 		{
 			icon: "create:brass_hand"
-			x: 2.5d
-			y: -2.5d
+			x: -1.0d
+			y: -1.5d
 			dependencies: ["32F62312B7D4D162"]
 			id: "2ADAC0B8BF09A42F"
 			tasks: [{
@@ -80,7 +83,7 @@
 		{
 			icon: "ae2:printed_silicon"
 			x: 0.5d
-			y: 9.0d
+			y: 8.5d
 			dependencies: [
 				"63944E30EF00B1C4"
 				"56E5EBABDF0AEAC3"
@@ -101,8 +104,8 @@
 		}
 		{
 			icon: "ae2:printed_logic_processor"
-			x: -0.5d
-			y: 9.5d
+			x: -2.0d
+			y: 11.0d
 			dependencies: [
 				"5C5C9C56C8851E20"
 				"7F2DD91F93148CC3"
@@ -133,7 +136,7 @@
 			}]
 		}
 		{
-			x: -1.0d
+			x: 0.5d
 			y: 7.0d
 			dependencies: ["0279C9E65A622D89"]
 			id: "63944E30EF00B1C4"
@@ -146,7 +149,7 @@
 		{
 			icon: "mw_core:certus_core"
 			x: 1.0d
-			y: 5.0d
+			y: 6.0d
 			description: ["COmbining a shard of Certus QUartz with an Advanced Processor creates a Certus Core which will be a key part of all Applied Energistics machines."]
 			dependencies: [
 				"4DCC48D7D4B619D7"
@@ -169,7 +172,7 @@
 		{
 			icon: "refinedstorage:advanced_processor"
 			x: 2.0d
-			y: 4.0d
+			y: 6.0d
 			dependencies: [
 				"56F964BDDB1BCCA0"
 				"7D7F6429CBCF601F"
@@ -190,8 +193,8 @@
 		}
 		{
 			icon: "refinedstorage:improved_processor"
-			x: 4.0d
-			y: 4.5d
+			x: 3.5d
+			y: 6.0d
 			dependencies: [
 				"633EFB2125A85532"
 				"0F641738544FCAE6"
@@ -212,8 +215,8 @@
 		}
 		{
 			icon: "refinedstorage:basic_processor"
-			x: 6.0d
-			y: 5.0d
+			x: 5.0d
+			y: 6.0d
 			dependencies: [
 				"3CAAA0EBE196B04C"
 				"5DE3AC2B6525923C"
@@ -234,8 +237,8 @@
 		}
 		{
 			icon: "mw_core:core_casing"
-			x: 7.5d
-			y: 4.5d
+			x: 6.5d
+			y: 6.0d
 			description: ["Core Casing is the main ingredient to create primitive Processors."]
 			dependencies: ["5ABC97221F761E3E"]
 			id: "3CAAA0EBE196B04C"
@@ -255,8 +258,8 @@
 		{
 			title: "Growing Certus Quartz"
 			icon: "ae2:certus_quartz_crystal"
-			x: 0.0d
-			y: 4.0d
+			x: 1.0d
+			y: 4.5d
 			dependencies: ["3B3AAA522715339A"]
 			id: "4DCC48D7D4B619D7"
 			tasks: [
@@ -273,8 +276,8 @@
 			]
 		}
 		{
-			x: 5.5d
-			y: 1.0d
+			x: 1.0d
+			y: 2.0d
 			dependencies: [
 				"32A9B55169990D39"
 				"3919A2F5E35E3A0B"
@@ -288,7 +291,7 @@
 			}]
 		}
 		{
-			x: 8.0d
+			x: 1.0d
 			y: 0.5d
 			subtitle: "[Already Automated]"
 			dependencies: ["3663AB6030B54209"]
@@ -300,8 +303,8 @@
 			}]
 		}
 		{
-			x: -2.5d
-			y: 3.0d
+			x: -1.0d
+			y: 2.0d
 			dependencies: ["2ADAC0B8BF09A42F"]
 			id: "32A9B55169990D39"
 			tasks: [{
@@ -312,8 +315,9 @@
 		}
 		{
 			icon: "create:iron_sheet"
-			x: 8.5d
-			y: 5.0d
+			x: 8.0d
+			y: 6.0d
+			hide_dependency_lines: true
 			dependencies: ["5DE3AC2B6525923C"]
 			id: "5ABC97221F761E3E"
 			tasks: [
@@ -330,8 +334,9 @@
 			]
 		}
 		{
-			x: 2.5d
-			y: 5.0d
+			x: 2.0d
+			y: 7.0d
+			hide_dependency_lines: true
 			dependencies: ["2C55BD11CCF57406"]
 			id: "7D7F6429CBCF601F"
 			tasks: [{
@@ -341,8 +346,8 @@
 			}]
 		}
 		{
-			x: 4.5d
-			y: 3.5d
+			x: 3.5d
+			y: 4.5d
 			subtitle: "[Already Automated]"
 			dependencies: ["6BA631E8E1E29949"]
 			id: "0F641738544FCAE6"
@@ -354,8 +359,8 @@
 		}
 		{
 			title: "Molten Iron"
-			x: 6.0d
-			y: 6.5d
+			x: 5.0d
+			y: 9.5d
 			subtitle: "[Already Automated]"
 			dependencies: ["1A113538450D74E2"]
 			id: "5DE3AC2B6525923C"
@@ -367,7 +372,7 @@
 		}
 		{
 			icon: "mw_core:data_tube"
-			x: 4.5d
+			x: 3.5d
 			y: 9.5d
 			dependencies: [
 				"396BC8AFF3B320A3"
@@ -389,7 +394,7 @@
 		}
 		{
 			icon: "create:experience_nugget"
-			x: 4.0d
+			x: 3.5d
 			y: 8.0d
 			dependencies: ["551BB04B1EEF3F51"]
 			id: "396BC8AFF3B320A3"
@@ -409,7 +414,7 @@
 		{
 			icon: "thermal:diamond_gear"
 			x: 6.0d
-			y: 10.5d
+			y: 11.0d
 			dependencies: ["2C55BD11CCF57406"]
 			id: "4057976A51270973"
 			tasks: [
@@ -428,8 +433,8 @@
 		{
 			title: "Growing Diamonds"
 			icon: "minecraft:diamond"
-			x: 7.5d
-			y: 10.0d
+			x: 8.0d
+			y: 11.0d
 			description: ["You can mix Diamond Dust in a basin with Water to create a Diamond."]
 			dependencies: ["4427BA11ECB98CA5"]
 			id: "2C55BD11CCF57406"
@@ -448,8 +453,8 @@
 		}
 		{
 			icon: "thermal:diamond_dust"
-			x: 8.5d
-			y: 8.5d
+			x: 9.5d
+			y: 11.0d
 			description: ["Deepslate can be pulverized for a small chance of creating Diamond Dust."]
 			dependencies: ["5A146A7F684E3A51"]
 			id: "4427BA11ECB98CA5"
@@ -468,8 +473,8 @@
 		}
 		{
 			title: "Find a Meteorite"
-			x: -2.5d
-			y: 6.0d
+			x: -2.0d
+			y: 7.0d
 			shape: "octagon"
 			hide_dependency_lines: true
 			dependencies: ["2ADAC0B8BF09A42F"]
@@ -484,8 +489,8 @@
 		{
 			title: "Sand Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: 9.5d
-			y: 0.0d
+			x: 2.5d
+			y: 0.5d
 			shape: "gear"
 			subtitle: "Automated in Chapter 1"
 			hide_dependency_lines: true
@@ -498,8 +503,8 @@
 			}]
 		}
 		{
-			x: 3.5d
-			y: 2.5d
+			x: 2.5d
+			y: 2.0d
 			dependencies: ["52356C3DA9EEE1A0"]
 			id: "0FA5664056195D0E"
 			tasks: [{
@@ -509,8 +514,8 @@
 			}]
 		}
 		{
-			x: 1.5d
-			y: 3.0d
+			x: 2.5d
+			y: 4.5d
 			dependencies: ["0FA5664056195D0E"]
 			id: "3B3AAA522715339A"
 			tasks: [{
@@ -522,8 +527,8 @@
 		{
 			title: "Molten Gold Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: 6.0d
-			y: 3.0d
+			x: 5.0d
+			y: 4.5d
 			shape: "gear"
 			subtitle: "Automated in Chapter 2"
 			hide_dependency_lines: true
@@ -538,8 +543,8 @@
 		{
 			title: "Certus Soaking"
 			icon: "create:spout"
-			x: 4.5d
-			y: 0.0d
+			x: 1.0d
+			y: 3.0d
 			shape: "hexagon"
 			description: ["Certus Quartz Seeds can be grown faster with a spout and water."]
 			hide_dependency_lines: true
@@ -561,8 +566,8 @@
 		{
 			title: "Molten Iron Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: 8.0d
-			y: 7.0d
+			x: 7.0d
+			y: 9.5d
 			shape: "gear"
 			hide_dependency_lines: true
 			dependencies: ["2ADAC0B8BF09A42F"]
@@ -575,8 +580,8 @@
 		}
 		{
 			icon: "create_sa:heap_of_experience"
-			x: 3.0d
-			y: 6.5d
+			x: 3.5d
+			y: 7.0d
 			hide_dependency_lines: true
 			dependencies: ["2ADAC0B8BF09A42F"]
 			id: "551BB04B1EEF3F51"
@@ -602,8 +607,8 @@
 		}
 		{
 			icon: "ae2:silicon"
-			x: 1.5d
-			y: 7.0d
+			x: -1.0d
+			y: 8.5d
 			description: ["Cooking Nether Quartz will create Silicon."]
 			dependencies: ["32A9B55169990D39"]
 			id: "56E5EBABDF0AEAC3"
@@ -622,8 +627,8 @@
 		}
 		{
 			title: "Molten Gold"
-			x: -2.0d
-			y: 10.5d
+			x: -3.0d
+			y: 11.0d
 			subtitle: "[Already Automated]"
 			dependencies: ["2E8D782A6E43CF2E"]
 			id: "7F2DD91F93148CC3"
@@ -637,8 +642,8 @@
 		{
 			title: "Molten Gold Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: -3.5d
-			y: 11.0d
+			x: -3.0d
+			y: 9.5d
 			shape: "gear"
 			subtitle: "Automated in Chapter 2"
 			hide_dependency_lines: true
@@ -652,8 +657,8 @@
 		}
 		{
 			icon: "minecraft:cobbled_deepslate"
-			x: 10.5d
-			y: 8.0d
+			x: 11.5d
+			y: 11.0d
 			description: ["Cobbled Deeslate can be created with an Igneous Extruder. Place Lava and Packed Ice either side of the Extruder and it will start generating Cobbled Deepslate."]
 			dependencies: [
 				"4446754E39F75334"
@@ -675,8 +680,8 @@
 			]
 		}
 		{
-			x: 13.0d
-			y: 8.5d
+			x: 13.5d
+			y: 11.0d
 			shape: "hexagon"
 			hide_dependency_lines: true
 			dependencies: ["2ADAC0B8BF09A42F"]
@@ -688,8 +693,8 @@
 			}]
 		}
 		{
-			x: 13.0d
-			y: 7.5d
+			x: 13.5d
+			y: 10.0d
 			shape: "hexagon"
 			hide_dependency_lines: true
 			dependencies: ["2ADAC0B8BF09A42F"]
@@ -701,8 +706,8 @@
 			}]
 		}
 		{
-			x: 13.0d
-			y: 9.5d
+			x: 13.5d
+			y: 12.0d
 			shape: "hexagon"
 			hide_dependency_lines: true
 			dependencies: ["2ADAC0B8BF09A42F"]

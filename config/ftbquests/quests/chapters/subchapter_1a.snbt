@@ -1,7 +1,7 @@
 {
 	id: "7844FC220D63EF8B"
-	group: "26C9462713CC8837"
-	order_index: 2
+	group: "5520096E8E4841AE"
+	order_index: 1
 	filename: "subchapter_1a"
 	title: "Sub-Chapter 1a"
 	icon: "mw_core:copper_mechanism"
@@ -10,8 +10,8 @@
 	quests: [
 		{
 			icon: "create:brass_hand"
-			x: -4.0d
-			y: -0.5d
+			x: -2.5d
+			y: 4.0d
 			dependencies: ["4CB93E926C89E0CF"]
 			id: "102D79A7CE69CB39"
 			tasks: [{
@@ -22,8 +22,8 @@
 		}
 		{
 			icon: "farmersdelight:lime_canvas_sign"
-			x: -5.5d
-			y: -0.5d
+			x: -2.5d
+			y: 2.5d
 			description: [
 				"The Copper Mechanism is used for all fluid machinery. It will be required to make some machines but automation is optional."
 				"Due to this being a bonus chapter, if you do wish to automate it you will find it requires use of machines from later chapters to easily automate some resources."
@@ -76,7 +76,7 @@
 		{
 			icon: "alloyed:bronze_sheet"
 			x: -5.5d
-			y: 9.5d
+			y: 10.5d
 			dependencies: ["669A2D21258470E5"]
 			id: "4D8876D092B78FE3"
 			tasks: [
@@ -95,7 +95,7 @@
 		{
 			icon: "thermal:iron_gear"
 			x: -2.5d
-			y: 9.5d
+			y: 10.5d
 			description: ["Cast your Molten Iron into a Gear Cast."]
 			dependencies: ["1D4663EF5C7348C4"]
 			id: "7ECCE72F8FCEFAED"
@@ -134,7 +134,7 @@
 		{
 			icon: "alloyed:bronze_ingot"
 			x: -7.0d
-			y: 8.0d
+			y: 10.5d
 			description: ["Bronze Blend is the only blend that can be Smelted into an Ingot."]
 			dependencies: ["37E003FBD36A2D3C"]
 			id: "669A2D21258470E5"
@@ -178,8 +178,8 @@
 		}
 		{
 			icon: "thermal:tin_dust"
-			x: -8.5d
-			y: 5.5d
+			x: -7.0d
+			y: 5.0d
 			description: ["You can use a Pulverizer to crush Tin Ingots straight to dust."]
 			dependencies: ["3887446B434CB545"]
 			id: "18CE1F4FFC55DEBC"
@@ -198,8 +198,8 @@
 		}
 		{
 			icon: "thermal:copper_dust"
-			x: -5.0d
-			y: 4.5d
+			x: -5.5d
+			y: 6.5d
 			description: ["You can use a Pulverizer to crush Copper Ingots straight to dust."]
 			dependencies: ["6D3FB796223CDB37"]
 			id: "4F657D4D1C32EF5A"
@@ -218,8 +218,8 @@
 		}
 		{
 			icon: "thermal:tin_ingot"
-			x: -8.0d
-			y: 4.0d
+			x: -5.5d
+			y: 5.0d
 			description: ["Nuggets can be compacted in a Basin to create Ingots."]
 			dependencies: ["50AE5DB4679DB577"]
 			id: "3887446B434CB545"
@@ -238,8 +238,8 @@
 		}
 		{
 			icon: "thermal:tin_nugget"
-			x: -9.0d
-			y: 3.0d
+			x: -4.0d
+			y: 5.0d
 			description: ["Three Tin Nuggets are guaranteed when you crush Jasper."]
 			dependencies: ["4042C5D6C4612639"]
 			id: "50AE5DB4679DB577"
@@ -258,8 +258,8 @@
 		}
 		{
 			icon: "quark:jasper"
-			x: -8.0d
-			y: 2.0d
+			x: -2.5d
+			y: 5.0d
 			description: ["Using an Igneous Extruder to combine Lava and Dripstone will create Jasper."]
 			dependencies: ["102D79A7CE69CB39"]
 			id: "4042C5D6C4612639"
@@ -280,7 +280,7 @@
 			title: "Molten Iron"
 			icon: "tconstruct:molten_iron_bucket"
 			x: -1.0d
-			y: 8.0d
+			y: 10.5d
 			dependencies: ["1C56061E4CA77E50"]
 			id: "1D4663EF5C7348C4"
 			tasks: [
@@ -299,7 +299,7 @@
 		{
 			icon: "minecraft:iron_nugget"
 			x: 0.5d
-			y: 5.5d
+			y: 10.5d
 			description: ["Wash your gravel or import it from your Basic Mechanism factory if it starts overflowing."]
 			dependencies: ["36F3798022B3EC5F"]
 			id: "1C56061E4CA77E50"
@@ -318,8 +318,8 @@
 		}
 		{
 			icon: "minecraft:gravel"
-			x: 0.0d
-			y: 4.0d
+			x: 0.5d
+			y: 7.0d
 			description: ["Crush Cobblestone in a Millstone to make Gravel"]
 			dependencies: ["1EDD1CCCE9C0F8CE"]
 			id: "36F3798022B3EC5F"
@@ -337,8 +337,8 @@
 			]
 		}
 		{
-			x: 1.0d
-			y: 3.0d
+			x: 0.5d
+			y: 5.0d
 			subtitle: "[Already Automated]"
 			dependencies: ["0654FE268287E7D6"]
 			id: "1EDD1CCCE9C0F8CE"
@@ -371,8 +371,8 @@
 		{
 			title: "Molten Copper"
 			icon: "tconstruct:molten_copper_bucket"
-			x: -3.0d
-			y: 4.5d
+			x: -2.5d
+			y: 6.5d
 			dependencies: ["43862B73D695C1EC"]
 			id: "188CDA318F8A954A"
 			tasks: [
@@ -390,8 +390,8 @@
 		}
 		{
 			icon: "thermal:machine_refinery"
-			x: -1.5d
-			y: 6.0d
+			x: -1.0d
+			y: 6.5d
 			subtitle: "Split!"
 			description: [
 				"Meet your new friend, The Refinery! Check the ponder to see how to use it. In this instance you will need to convert Molten Iron to Molten Copper."
@@ -414,8 +414,8 @@
 		}
 		{
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: 0.0d
-			y: 2.0d
+			x: -1.0d
+			y: 5.0d
 			shape: "gear"
 			subtitle: "Automated in Chapter 1"
 			hide_dependency_lines: true

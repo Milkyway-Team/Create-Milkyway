@@ -1,3 +1,8 @@
 {
-  "material.milkyway.creative": "Creative"
+  "material.milkyway.creative": "Creative",
+  "item.mw_core.chromatic_waste_bucket.tooltip.summary": "Contains _Chromatic Waste_, ",
+  "item.mw_core.chromatic_waste_bucket.tooltip.condition": "When Used In Recipes",
+  "item.mw_core.chromatic_waste_bucket.tooltip.condition.1": "When Used In A Crystallizer",
+  "item.mw_core.chromatic_waste_bucket.tooltip.behaviour": "_Chromatic Waste_ is very compatible with many machine parts and is used for crafting high tech components",
+    "item.mw_core.chromatic_waste_bucket.tooltip.behaviour.1": "When used in a _Crystallizer_, _Chromatic Waste_ will duplicate _Crystals_ from their respective _Dusts_"
 }

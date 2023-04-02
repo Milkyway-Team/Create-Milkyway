@@ -26,10 +26,9 @@
 			}]
 		}
 		{
-			x: 1.0d
-			y: 1.0d
-			hide_dependency_lines: true
-			dependencies: ["2ECEBAE9D05E8B87"]
+			x: 3.0d
+			y: -4.5d
+			dependencies: ["7B9278C2A5818D30"]
 			id: "61257FBF8525EAC2"
 			tasks: [{
 				id: "1D93D5797B1E3E7D"
@@ -42,9 +41,8 @@
 			}]
 		}
 		{
-			x: 1.5d
-			y: -2.0d
-			hide_dependency_lines: true
+			x: 2.0d
+			y: -1.0d
 			dependencies: ["2ECEBAE9D05E8B87"]
 			id: "1B54415C4F7F4B5E"
 			tasks: [{
@@ -58,8 +56,8 @@
 			}]
 		}
 		{
-			x: -2.0d
-			y: 1.5d
+			x: -1.0d
+			y: -2.5d
 			hide_dependency_lines: true
 			dependencies: ["2ECEBAE9D05E8B87"]
 			id: "200E9C9E41239402"
@@ -76,27 +74,108 @@
 			}]
 		}
 		{
-			x: -3.0d
-			y: -2.0d
-			subtitle: "A buggy mess"
-			description: [
-				"So... here's the thing, I tried to make a cool custom furnace powered by arcane crystal dust."
-				"But it is INCREDIBLY buggy meaning it isn't actually that reliable."
-				"If you somehow find this buried within some Randomium then it's your problem, not mine."
-			]
-			hide_dependency_lines: true
-			dependencies: ["2ECEBAE9D05E8B87"]
-			id: "6C003EFCDE90DAFC"
+			x: 2.0d
+			y: -3.0d
+			dependencies: ["1B54415C4F7F4B5E"]
+			id: "0489D267C3D383BF"
 			tasks: [{
-				id: "343BF7B384B0F1F1"
+				id: "0335B51A3368F6BC"
 				type: "item"
-				item: {
-					id: "custommachinery:custom_machine_item"
-					Count: 1b
-					tag: {
-						machine: "custommachinery:aureal_furnace"
-					}
-				}
+				item: "forbidden_arcanus:arcane_gold_ingot"
+			}]
+		}
+		{
+			x: 3.0d
+			y: -1.0d
+			dependencies: ["0B1293674EDFB499"]
+			id: "093E932C14D5A9CB"
+			tasks: [{
+				id: "0FCE2F8E431FF3AE"
+				type: "item"
+				item: "forbidden_arcanus:darkstone"
+			}]
+		}
+		{
+			x: 3.0d
+			y: -3.0d
+			dependencies: [
+				"35DE3998D9F9DE26"
+				"0489D267C3D383BF"
+			]
+			id: "7B9278C2A5818D30"
+			tasks: [{
+				id: "53D830B815AE18BF"
+				type: "item"
+				item: "forbidden_arcanus:arcane_chiseled_polished_darkstone"
+			}]
+		}
+		{
+			x: 3.0d
+			y: -2.0d
+			dependencies: ["093E932C14D5A9CB"]
+			id: "35DE3998D9F9DE26"
+			tasks: [{
+				id: "685A8349F884F01F"
+				type: "item"
+				item: "forbidden_arcanus:chiseled_polished_darkstone"
+			}]
+		}
+		{
+			title: "The Alchemist"
+			x: 1.0d
+			y: 0.5d
+			dependencies: ["1B54415C4F7F4B5E"]
+			id: "3BF6E7E9244FAF6B"
+			tasks: [{
+				id: "1DEA3EC5EF0F944F"
+				type: "item"
+				item: "milkyway:tome_alchemy"
+			}]
+		}
+		{
+			title: "The Arcane Blacksmith"
+			x: 2.0d
+			y: 0.5d
+			dependencies: ["1B54415C4F7F4B5E"]
+			id: "68A3ED720D332DE9"
+			tasks: [{
+				id: "649BB1B036182EB7"
+				type: "item"
+				item: "milkyway:alloying_tome"
+			}]
+		}
+		{
+			title: "The Necromancer"
+			x: 3.0d
+			y: 0.5d
+			dependencies: ["1B54415C4F7F4B5E"]
+			id: "321BB15118A5432D"
+			tasks: [{
+				id: "7294EDEB8511CF4E"
+				type: "item"
+				item: "milkyway:tome_necromancy"
+			}]
+		}
+		{
+			x: 2.0d
+			y: 2.0d
+			dependencies: ["68A3ED720D332DE9"]
+			id: "12BA5A830DB70CBC"
+			tasks: [{
+				id: "0FB95DB11B6911BA"
+				type: "item"
+				item: "forbidden_arcanus:clibano_core"
+			}]
+		}
+		{
+			x: 3.0d
+			y: 2.0d
+			dependencies: ["321BB15118A5432D"]
+			id: "4A3292D1AF60C3F3"
+			tasks: [{
+				id: "5F1A4C101DD5314D"
+				type: "item"
+				item: "forbidden_arcanus:runic_chiseled_polished_darkstone"
 			}]
 		}
 	]

@@ -2,5 +2,6 @@
 	chapter_groups: [
 		{ id: "76E7DC80C9223355", title: "Side Quests" }
 		{ id: "26C9462713CC8837", title: "Main" }
+		{ id: "5520096E8E4841AE", title: "Chapters" }
 	]
 }

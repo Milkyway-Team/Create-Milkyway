@@ -1,7 +1,7 @@
 {
 	id: "004015E71598A85C"
-	group: "26C9462713CC8837"
-	order_index: 4
+	group: "5520096E8E4841AE"
+	order_index: 3
 	filename: "subchapter_2a"
 	title: "Sub-Chapter 2a"
 	icon: "mw_core:seared_mechanism"
@@ -59,8 +59,8 @@
 		}
 		{
 			icon: "create:iron_sheet"
-			x: -2.5d
-			y: 5.0d
+			x: -3.0d
+			y: 5.5d
 			dependencies: ["7E6D77AB5145745D"]
 			id: "4A473DA6AB6F59BF"
 			tasks: [
@@ -79,7 +79,7 @@
 		{
 			icon: "create:copper_nugget"
 			x: -1.5d
-			y: 4.5d
+			y: 4.0d
 			description: ["You can use a single Mechanical Crafter to seperate an Ingot into 9 Nuggets."]
 			dependencies: ["3A8A05C1BD43E643"]
 			id: "637DEC177A1B4110"
@@ -99,7 +99,7 @@
 		{
 			icon: "tconstruct:seared_brick"
 			x: 0.5d
-			y: 4.5d
+			y: 4.0d
 			description: ["Cooking Grout will create Seared Bricks."]
 			dependencies: ["1FC3FEC9F1C127FB"]
 			id: "0A2B7F279E9362DB"
@@ -119,7 +119,7 @@
 		{
 			icon: "minecraft:glass"
 			x: 1.5d
-			y: 5.0d
+			y: 5.5d
 			dependencies: ["108FC6794CF6FDA5"]
 			id: "26A42BC3E3045AD0"
 			tasks: [
@@ -156,8 +156,8 @@
 		}
 		{
 			icon: "minecraft:sand"
-			x: 3.5d
-			y: 3.5d
+			x: 4.5d
+			y: 5.5d
 			description: ["Crush Gravel to make Sand."]
 			dependencies: ["1F390B390699DF20"]
 			id: "108FC6794CF6FDA5"
@@ -176,7 +176,7 @@
 		}
 		{
 			icon: "tconstruct:grout"
-			x: 1.0d
+			x: 0.5d
 			y: 2.0d
 			description: ["Combining Sand, Gravel and Clay will make Grout."]
 			dependencies: [
@@ -200,8 +200,8 @@
 		}
 		{
 			icon: "minecraft:gravel"
-			x: 2.5d
-			y: 1.0d
+			x: 4.5d
+			y: 1.5d
 			description: ["Crushing Cobblestone creates Gravel"]
 			dependencies: ["4E195F9EB29DAC0B"]
 			id: "1F390B390699DF20"
@@ -220,8 +220,8 @@
 		}
 		{
 			icon: "minecraft:clay_ball"
-			x: 1.5d
-			y: 3.5d
+			x: 3.5d
+			y: 3.0d
 			description: ["Washing sand will create Clay Balls."]
 			dependencies: ["108FC6794CF6FDA5"]
 			id: "131AC4A5E9587D8B"
@@ -239,7 +239,7 @@
 			]
 		}
 		{
-			x: 3.0d
+			x: 4.5d
 			y: -0.5d
 			subtitle: "[Already Automated]"
 			dependencies: ["250136F69BCA2E15"]
@@ -277,8 +277,8 @@
 			]
 		}
 		{
-			x: -2.0d
-			y: 2.5d
+			x: -1.5d
+			y: 2.0d
 			subtitle: "[Already Automated]"
 			dependencies: ["11A526E9D7D59EE6"]
 			id: "3A8A05C1BD43E643"
@@ -290,8 +290,8 @@
 		}
 		{
 			icon: "minecraft:iron_ingot"
-			x: -3.5d
-			y: 3.5d
+			x: -5.0d
+			y: 5.5d
 			dependencies: ["0D3D5E8CAC23FF4B"]
 			id: "7E6D77AB5145745D"
 			tasks: [
@@ -311,7 +311,7 @@
 			title: "Molten Iron Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
 			x: -5.0d
-			y: 1.0d
+			y: 1.5d
 			shape: "gear"
 			subtitle: "Automated in Chapter 1"
 			hide_dependency_lines: true
@@ -326,7 +326,7 @@
 		{
 			title: "Molten Iron"
 			x: -5.0d
-			y: 2.5d
+			y: 3.5d
 			subtitle: "[Already Automated]"
 			dependencies: ["45EF8E32436C1D4D"]
 			id: "0D3D5E8CAC23FF4B"
@@ -340,7 +340,7 @@
 			title: "Copper Ingot Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
 			x: -3.0d
-			y: 1.5d
+			y: 2.0d
 			shape: "gear"
 			subtitle: "Automated in Chapter 1a"
 			hide_dependency_lines: true
@@ -355,7 +355,7 @@
 		{
 			title: "Find the Dripstone Caves"
 			icon: "minecraft:dripstone_block"
-			x: -1.5d
+			x: -0.5d
 			y: 0.5d
 			shape: "octagon"
 			dependencies: ["3F21DA3AB297FB38"]
@@ -378,8 +378,8 @@
 		{
 			title: "Cobblestone Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: 1.5d
-			y: -1.5d
+			x: 4.5d
+			y: -2.0d
 			shape: "gear"
 			subtitle: "Automated in Chapter 1"
 			hide_dependency_lines: true

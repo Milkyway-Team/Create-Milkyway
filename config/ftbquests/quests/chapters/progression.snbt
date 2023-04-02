@@ -12,8 +12,8 @@
 			title: "A New World To Explore"
 			icon: "create:cogwheel"
 			disable_toast: true
-			x: -20.0d
-			y: -2.5d
+			x: -19.5d
+			y: 3.0d
 			shape: "gear"
 			subtitle: "Lots has changed since you were last here..."
 			dependencies: ["04A7A7E4A605D66C"]
@@ -29,10 +29,10 @@
 		{
 			title: "A Basic Start"
 			icon: "mw_core:basic_mechanism"
-			x: -16.5d
-			y: -2.5d
+			x: -17.5d
+			y: -7.5d
 			shape: "gear"
-			dependencies: ["75F74C3D065BD772"]
+			dependencies: ["65C9D4881F5AC82C"]
 			hide: false
 			id: "2C0A2986300275F6"
 			tasks: [{
@@ -44,12 +44,13 @@
 		{
 			title: "Quite The Upgrade"
 			icon: "create:precision_mechanism"
-			x: -14.0d
-			y: -2.5d
+			x: -15.5d
+			y: -6.0d
 			shape: "gear"
 			dependencies: [
-				"2C0A2986300275F6"
 				"552F8F8CE7A6CE21"
+				"329806AFADAAEA2A"
+				"55487FB2FBE542E2"
 			]
 			id: "4CD56BDAF5F61552"
 			tasks: [{
@@ -61,12 +62,12 @@
 		{
 			title: "The Great Thermal Expansion"
 			icon: "mw_core:cobalt_mechanism"
-			x: -11.0d
-			y: -2.5d
+			x: -12.5d
+			y: -9.5d
 			shape: "gear"
 			dependencies: [
-				"4CD56BDAF5F61552"
 				"32FE250DD6950ABE"
+				"02D91D1E5AE8A2A7"
 			]
 			id: "58D2C0B12357186B"
 			tasks: [{
@@ -77,10 +78,9 @@
 		}
 		{
 			icon: "forbidden_arcanus:smelter_prism"
-			x: -18.5d
-			y: -5.0d
-			hide_dependency_lines: true
-			dependencies: ["11CF00C9EEC3C9C8"]
+			x: -17.5d
+			y: -4.5d
+			dependencies: ["5684F3D3F906DB59"]
 			id: "1C0D3D5FBBAC4DF3"
 			tasks: [{
 				id: "7047AF83CFF3FC10"
@@ -91,11 +91,12 @@
 		{
 			title: "So This Is How It Ends..."
 			icon: "mw_core:manyullyn_mechanism"
-			x: -5.0d
-			y: -2.5d
+			x: -1.5d
+			y: -7.5d
 			shape: "gear"
 			subtitle: "One Last Drop of Creativity..."
 			dependencies: ["501D87E236FCB915"]
+			hide: true
 			size: 3.0d
 			id: "068568D3D5E20DAC"
 			tasks: [{
@@ -107,9 +108,15 @@
 		{
 			title: "Imaginative Inventions"
 			icon: "mw_core:creative_alloy"
-			x: -8.5d
-			y: -2.5d
-			dependencies: ["58D2C0B12357186B"]
+			x: -8.0d
+			y: -7.5d
+			shape: "gear"
+			dependencies: [
+				"69F408FACD85C2DD"
+				"49631CA59BDD7D84"
+				"568BDB633E1E4CF3"
+			]
+			hide: true
 			id: "501D87E236FCB915"
 			tasks: [{
 				id: "4BAA22FBE0A415D1"
@@ -120,10 +127,10 @@
 		{
 			title: "The Forbidden Arts"
 			icon: "forbidden_arcanus:hephaestus_forge"
-			x: -11.0d
-			y: -4.0d
-			hide_dependency_lines: true
-			dependencies: ["068568D3D5E20DAC"]
+			x: -12.5d
+			y: -2.0d
+			shape: "gear"
+			dependencies: ["4F5C32ABF9F8E66F"]
 			secret: true
 			id: "747ED96162F5B664"
 			tasks: [{
@@ -134,8 +141,8 @@
 		}
 		{
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: -18.0d
-			y: -2.5d
+			x: -17.0d
+			y: 2.0d
 			shape: "gear"
 			subtitle: "What does this mean?"
 			description: [
@@ -148,6 +155,1380 @@
 				id: "5744BC158A136D75"
 				type: "checkmark"
 				title: "Already Automated?"
+			}]
+		}
+		{
+			x: -19.0d
+			y: -0.5d
+			dependencies: ["11CF00C9EEC3C9C8"]
+			id: "71A91257BE8BDBA7"
+			tasks: [{
+				id: "748ECDDABD6777E9"
+				type: "item"
+				title: "Planks"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "minecraft:planks"
+					}
+				}
+			}]
+		}
+		{
+			x: -17.5d
+			y: -2.0d
+			dependencies: ["0546DFC442013565"]
+			id: "0B1293674EDFB499"
+			tasks: [{
+				id: "6C5BDCA1D0E27CF4"
+				type: "item"
+				item: {
+					id: "minecraft:wooden_pickaxe"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+		}
+		{
+			x: -17.5d
+			y: -3.5d
+			dependencies: ["0B1293674EDFB499"]
+			id: "5684F3D3F906DB59"
+			tasks: [{
+				id: "5322A5C313DC68C8"
+				type: "item"
+				item: "minecraft:furnace"
+			}]
+		}
+		{
+			x: -19.0d
+			y: -2.0d
+			dependencies: ["71A91257BE8BDBA7"]
+			id: "0546DFC442013565"
+			tasks: [{
+				id: "3BB4F355B65C7DB5"
+				type: "item"
+				item: "minecraft:crafting_table"
+			}]
+		}
+		{
+			x: -20.5d
+			y: -2.0d
+			dependencies: ["0546DFC442013565"]
+			id: "259836580D315B5D"
+			tasks: [{
+				id: "109C8E3CAAC40C9A"
+				type: "item"
+				item: "tconstruct:grout"
+				count: 32L
+			}]
+		}
+		{
+			x: -20.5d
+			y: -3.5d
+			dependencies: [
+				"259836580D315B5D"
+				"5684F3D3F906DB59"
+			]
+			id: "62C3D6B35CC6A5CF"
+			tasks: [{
+				id: "3BCB73953D2A3B55"
+				type: "item"
+				item: "tconstruct:seared_brick"
+				count: 32L
+			}]
+		}
+		{
+			x: -20.5d
+			y: -6.5d
+			dependencies: ["62C3D6B35CC6A5CF"]
+			id: "2196003029D01277"
+			tasks: [
+				{
+					id: "4DE8403AB14C9864"
+					type: "item"
+					item: "tconstruct:seared_melter"
+				}
+				{
+					id: "29D4B85837CA31A7"
+					type: "item"
+					title: "Heater"
+					item: {
+						id: "itemfilters:or"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "tconstruct:seared_heater"
+									Count: 1b
+								}
+								{
+									id: "tconstruct:seared_fuel_tank"
+									Count: 1b
+								}
+							]
+						}
+					}
+				}
+			]
+		}
+		{
+			x: -19.0d
+			y: -6.5d
+			dependencies: ["2196003029D01277"]
+			id: "5C769F35A10B04E5"
+			tasks: [{
+				id: "5E3F63CDBB876170"
+				type: "item"
+				item: "create:andesite_alloy"
+			}]
+		}
+		{
+			title: "Basic Processing"
+			x: -15.5d
+			y: -7.5d
+			dependencies: [
+				"2C0A2986300275F6"
+				"552F8F8CE7A6CE21"
+			]
+			id: "329806AFADAAEA2A"
+			tasks: [
+				{
+					id: "1312B7381969A07A"
+					type: "item"
+					item: "create:millstone"
+				}
+				{
+					id: "5E255132F47F0275"
+					type: "item"
+					item: "create:mechanical_press"
+				}
+				{
+					id: "4080361A310D3828"
+					type: "item"
+					item: "create:mechanical_mixer"
+				}
+				{
+					id: "7BD6022BC35050EA"
+					type: "item"
+					item: "create:deployer"
+				}
+			]
+		}
+		{
+			x: -15.5d
+			y: -2.0d
+			dependencies: ["0B1293674EDFB499"]
+			id: "566651A26EA7D42F"
+			tasks: [{
+				id: "6784B0457510C307"
+				type: "item"
+				item: {
+					id: "minecraft:iron_pickaxe"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+		}
+		{
+			x: -15.5d
+			y: -4.0d
+			dependencies: ["566651A26EA7D42F"]
+			id: "55487FB2FBE542E2"
+			tasks: [{
+				id: "3575F0F5C06A3C38"
+				type: "item"
+				item: "minecraft:redstone"
+				count: 64L
+			}]
+		}
+		{
+			title: "Rotational Transport"
+			x: -19.0d
+			y: -5.0d
+			dependencies: ["5C769F35A10B04E5"]
+			id: "2BA3D093BA28AB80"
+			tasks: [
+				{
+					id: "79BA3AB0A1CDF5BB"
+					type: "item"
+					title: "16x Cogwheel"
+					item: {
+						id: "itemfilters:or"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "create:cogwheel"
+									Count: 1b
+								}
+								{
+									id: "extendedgears:dark_oak_cogwheel"
+									Count: 1b
+								}
+								{
+									id: "extendedgears:oak_cogwheel"
+									Count: 1b
+								}
+								{
+									id: "extendedgears:birch_cogwheel"
+									Count: 1b
+								}
+								{
+									id: "extendedgears:jungle_cogwheel"
+									Count: 1b
+								}
+								{
+									id: "extendedgears:acacia_cogwheel"
+									Count: 1b
+								}
+								{
+									id: "extendedgears:warped_cogwheel"
+									Count: 1b
+								}
+								{
+									id: "extendedgears:crimson_cogwheel"
+									Count: 1b
+								}
+							]
+						}
+					}
+					count: 16L
+				}
+				{
+					id: "465BE00687C5833C"
+					type: "item"
+					item: "create:shaft"
+					count: 32L
+				}
+				{
+					id: "22A6D068A96FC9B9"
+					type: "item"
+					title: "16x Large Cogwheel"
+					item: {
+						id: "itemfilters:or"
+						Count: 1b
+						tag: {
+							items: [
+								{
+									id: "create:large_cogwheel"
+									Count: 1b
+								}
+								{
+									id: "extendedgears:large_dark_oak_cogwheel"
+									Count: 1b
+								}
+								{
+									id: "extendedgears:large_oak_cogwheel"
+									Count: 1b
+								}
+								{
+									id: "extendedgears:large_birch_cogwheel"
+									Count: 1b
+								}
+								{
+									id: "extendedgears:large_jungle_cogwheel"
+									Count: 1b
+								}
+								{
+									id: "extendedgears:large_acacia_cogwheel"
+									Count: 1b
+								}
+								{
+									id: "extendedgears:large_warped_cogwheel"
+									Count: 1b
+								}
+								{
+									id: "extendedgears:large_crimson_cogwheel"
+									Count: 1b
+								}
+							]
+						}
+					}
+					count: 16L
+				}
+			]
+		}
+		{
+			x: -20.5d
+			y: -0.5d
+			dependencies: ["71A91257BE8BDBA7"]
+			id: "3041427111D22DC6"
+			tasks: [{
+				id: "1C1E9B469F3DDDE2"
+				type: "item"
+				item: {
+					id: "tconstruct:crafting_station"
+					Count: 1b
+					tag: {
+						texture: ""
+					}
+				}
+			}]
+		}
+		{
+			title: "Tool Building"
+			x: -22.0d
+			y: -0.5d
+			dependencies: ["3041427111D22DC6"]
+			id: "6C6BD2252B383644"
+			tasks: [
+				{
+					id: "7CC59F4063ED024F"
+					type: "item"
+					item: "tconstruct:tinker_station"
+				}
+				{
+					id: "1FACFA0D3B738E15"
+					type: "item"
+					item: "tconstruct:part_builder"
+				}
+			]
+		}
+		{
+			title: "Basic Tools"
+			x: -22.0d
+			y: -2.0d
+			dependencies: [
+				"263D488DF52C5D83"
+				"6C6BD2252B383644"
+			]
+			id: "071B84D56E58F2E2"
+			tasks: [
+				{
+					id: "73EABA83583E2863"
+					type: "item"
+					item: "tconstruct:pick_head_cast"
+				}
+				{
+					id: "07A4C47EF02CC56C"
+					type: "item"
+					item: "tconstruct:tool_binding_cast"
+				}
+				{
+					id: "351E9D391B38C4A5"
+					type: "item"
+					item: "tconstruct:tool_handle_cast"
+				}
+				{
+					id: "6317C29F6B0B54E9"
+					type: "item"
+					item: "tconstruct:small_blade_cast"
+				}
+				{
+					id: "666BF6B285691AAD"
+					type: "item"
+					item: "tconstruct:round_plate_cast"
+				}
+				{
+					id: "69645217A4840A60"
+					type: "item"
+					item: "tconstruct:small_axe_head_cast"
+				}
+			]
+		}
+		{
+			title: "Casting"
+			x: -22.0d
+			y: -3.5d
+			dependencies: ["62C3D6B35CC6A5CF"]
+			id: "263D488DF52C5D83"
+			tasks: [
+				{
+					id: "68CA984323C9CEC6"
+					type: "item"
+					item: "tconstruct:seared_table"
+				}
+				{
+					id: "4AAB2C0A7E11D0CE"
+					type: "item"
+					item: "tconstruct:seared_basin"
+				}
+			]
+		}
+		{
+			x: -20.5d
+			y: -8.0d
+			dependencies: ["2196003029D01277"]
+			id: "0862ECF6CE4CE2F9"
+			tasks: [{
+				id: "2F5A4269A03EEFC1"
+				type: "item"
+				item: "minecraft:copper_ingot"
+			}]
+		}
+		{
+			x: -14.5d
+			y: -7.5d
+			dependencies: ["4CD56BDAF5F61552"]
+			id: "726446E4A5CE3846"
+			tasks: [{
+				id: "508D7A0D8C9D4E91"
+				type: "item"
+				item: "tconstruct:mighty_smelting"
+			}]
+		}
+		{
+			icon: "mw_core:seared_mechanism"
+			x: -14.5d
+			y: -9.0d
+			shape: "gear"
+			dependencies: ["726446E4A5CE3846"]
+			id: "0E544D192C9B03FD"
+			tasks: [{
+				id: "740013048FAE4543"
+				type: "checkmark"
+				title: "The Mighty Smeltery"
+			}]
+		}
+		{
+			title: "Alloying"
+			x: -14.5d
+			y: -10.5d
+			dependencies: ["0E544D192C9B03FD"]
+			id: "37BF2826055DA2D3"
+			tasks: [
+				{
+					id: "337B1D5C9FA4E354"
+					type: "item"
+					item: "create:brass_ingot"
+					count: 16L
+				}
+				{
+					id: "317A394F1301EC08"
+					type: "item"
+					item: "alloyed:bronze_ingot"
+					count: 16L
+				}
+			]
+		}
+		{
+			icon: "mw_core:copper_mechanism"
+			x: -20.5d
+			y: -10.5d
+			shape: "gear"
+			dependencies: [
+				"0862ECF6CE4CE2F9"
+				"37BF2826055DA2D3"
+			]
+			id: "50DBBCDA449A2A0C"
+			tasks: [{
+				id: "7E18AADFFABEAD4E"
+				type: "checkmark"
+				title: "Fluid Manipulation"
+			}]
+		}
+		{
+			x: -12.5d
+			y: -8.0d
+			dependencies: ["6E18228B49ED2557"]
+			id: "02D91D1E5AE8A2A7"
+			tasks: [{
+				id: "6423D061749C9471"
+				type: "item"
+				item: "create:crushing_wheel"
+				count: 2L
+			}]
+		}
+		{
+			icon: "minecraft:iron_nugget"
+			x: -11.5d
+			y: -8.0d
+			dependencies: ["6E18228B49ED2557"]
+			id: "757933AA409807DB"
+			tasks: [{
+				id: "4C48CE93F909B334"
+				type: "checkmark"
+				title: "Metal Decompacting"
+			}]
+		}
+		{
+			icon: "minecraft:iron_block"
+			x: -15.5d
+			y: -8.5d
+			dependencies: ["5E255132F47F0275"]
+			hide: true
+			id: "15D86DCA66EAD281"
+			tasks: [{
+				id: "247382DF02ABFA54"
+				type: "checkmark"
+				title: "Metal Compacting"
+			}]
+		}
+		{
+			icon: "create:wrench"
+			x: -12.5d
+			y: -5.0d
+			dependencies: ["4CD56BDAF5F61552"]
+			id: "53EFA330A0C753FC"
+			tasks: [{
+				id: "385838882B9FAC45"
+				type: "checkmark"
+				title: "Precision Mechanic"
+			}]
+		}
+		{
+			title: "Train Engineer"
+			x: -11.5d
+			y: -6.0d
+			dependencies: ["53EFA330A0C753FC"]
+			id: "30069E34B8DFD768"
+			tasks: [
+				{
+					id: "0989BA6FD76E081A"
+					type: "item"
+					item: "create:controls"
+				}
+				{
+					id: "6A868B484F56E8B0"
+					type: "item"
+					item: "create:track_station"
+				}
+				{
+					id: "70DB5CDEA1A692BE"
+					type: "item"
+					item: "create:track_signal"
+				}
+				{
+					id: "4D8B9ADE94EB6D9D"
+					type: "item"
+					item: "create:track_observer"
+				}
+				{
+					id: "1BF2F5FC58B90605"
+					type: "item"
+					item: "create:railway_casing"
+					count: 16L
+				}
+				{
+					id: "1EE524DB4BD25A87"
+					type: "item"
+					item: "create:track"
+					count: 64L
+				}
+				{
+					id: "0B0451BD63D0F231"
+					type: "item"
+					title: "Conductor Cap"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "railways:conductor_caps"
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Smart Utilities"
+			x: -12.5d
+			y: -6.5d
+			dependencies: ["53EFA330A0C753FC"]
+			id: "6E18228B49ED2557"
+			tasks: [
+				{
+					id: "23818372C595E723"
+					type: "item"
+					item: "create:smart_fluid_pipe"
+				}
+				{
+					id: "5F124EAFEB16799E"
+					type: "item"
+					item: "create:rotation_speed_controller"
+				}
+				{
+					id: "2765EB9F84C4C386"
+					type: "item"
+					item: "create:display_link"
+				}
+				{
+					id: "7ED0727E36A8AEA8"
+					type: "item"
+					item: "create:content_observer"
+				}
+				{
+					id: "1B55282A55CF524A"
+					type: "item"
+					item: "create:stockpile_switch"
+				}
+				{
+					id: "6E2E5EAE80F769B1"
+					type: "item"
+					item: "create:mechanical_arm"
+				}
+				{
+					id: "13B6C195B6E2A66F"
+					type: "item"
+					item: "create:smart_chute"
+				}
+				{
+					id: "6723488E057E4CD5"
+					type: "item"
+					item: "create:mechanical_crafter"
+				}
+			]
+		}
+		{
+			title: "Basic Storage Solutions"
+			x: -17.5d
+			y: -0.5d
+			dependencies: ["0546DFC442013565"]
+			id: "77A13DC10BB5E29A"
+			tasks: [{
+				id: "32AEC85C6F13AD54"
+				type: "item"
+				title: "Chest"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "forge:chests/wooden"
+					}
+				}
+				count: 2L
+			}]
+		}
+		{
+			title: "Starting Rotation"
+			x: -17.5d
+			y: -6.5d
+			dependencies: [
+				"5C769F35A10B04E5"
+				"22A6D068A96FC9B9"
+			]
+			id: "65C9D4881F5AC82C"
+			tasks: [{
+				id: "3D5394ACA2A59D85"
+				type: "item"
+				item: "create:water_wheel"
+			}]
+		}
+		{
+			x: -15.5d
+			y: -0.5d
+			dependencies: ["77A13DC10BB5E29A"]
+			id: "2B42562D08DFC486"
+			tasks: [{
+				id: "3D34C0BED903813A"
+				type: "item"
+				title: "1x1 Storage Drawer"
+				item: {
+					id: "itemfilters:or"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "storagedrawers:oak_full_drawers_1"
+								Count: 1b
+							}
+							{
+								id: "storagedrawers:spruce_full_drawers_1"
+								Count: 1b
+							}
+							{
+								id: "storagedrawers:birch_full_drawers_1"
+								Count: 1b
+							}
+							{
+								id: "storagedrawers:jungle_full_drawers_1"
+								Count: 1b
+							}
+							{
+								id: "storagedrawers:acacia_full_drawers_1"
+								Count: 1b
+							}
+							{
+								id: "storagedrawers:dark_oak_full_drawers_1"
+								Count: 1b
+							}
+							{
+								id: "storagedrawers:crimson_full_drawers_1"
+								Count: 1b
+							}
+							{
+								id: "storagedrawers:warped_full_drawers_1"
+								Count: 1b
+							}
+						]
+					}
+				}
+			}]
+		}
+		{
+			x: -13.5d
+			y: -0.5d
+			dependencies: ["2B42562D08DFC486"]
+			id: "1EE92C0DA3239BF0"
+			tasks: [{
+				id: "6BB5B91AE6B64CAB"
+				type: "item"
+				title: "1x2 Storage Drawer"
+				item: {
+					id: "itemfilters:or"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "storagedrawers:oak_full_drawers_2"
+								Count: 1b
+							}
+							{
+								id: "storagedrawers:spruce_full_drawers_2"
+								Count: 1b
+							}
+							{
+								id: "storagedrawers:birch_full_drawers_2"
+								Count: 1b
+							}
+							{
+								id: "storagedrawers:jungle_full_drawers_2"
+								Count: 1b
+							}
+							{
+								id: "storagedrawers:acacia_full_drawers_2"
+								Count: 1b
+							}
+							{
+								id: "storagedrawers:dark_oak_full_drawers_2"
+								Count: 1b
+							}
+							{
+								id: "storagedrawers:crimson_full_drawers_2"
+								Count: 1b
+							}
+							{
+								id: "storagedrawers:warped_full_drawers_2"
+								Count: 1b
+							}
+						]
+					}
+				}
+			}]
+		}
+		{
+			x: -11.0d
+			y: -0.5d
+			dependencies: ["1EE92C0DA3239BF0"]
+			id: "2F5F6A4482A41A51"
+			tasks: [{
+				id: "68F5964373716AD6"
+				type: "item"
+				title: "2x2 Storage Drawer"
+				item: {
+					id: "itemfilters:or"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "storagedrawers:oak_full_drawers_4"
+								Count: 1b
+							}
+							{
+								id: "storagedrawers:spruce_full_drawers_4"
+								Count: 1b
+							}
+							{
+								id: "storagedrawers:birch_full_drawers_4"
+								Count: 1b
+							}
+							{
+								id: "storagedrawers:jungle_full_drawers_4"
+								Count: 1b
+							}
+							{
+								id: "storagedrawers:acacia_full_drawers_4"
+								Count: 1b
+							}
+							{
+								id: "storagedrawers:dark_oak_full_drawers_4"
+								Count: 1b
+							}
+							{
+								id: "storagedrawers:crimson_full_drawers_4"
+								Count: 1b
+							}
+							{
+								id: "storagedrawers:warped_full_drawers_4"
+								Count: 1b
+							}
+						]
+					}
+				}
+			}]
+		}
+		{
+			x: -11.0d
+			y: -1.5d
+			dependencies: ["2F5F6A4482A41A51"]
+			id: "4FAF2E9B13D71DB2"
+			tasks: [{
+				id: "767A89B36EFFD776"
+				type: "item"
+				item: "refinedstorage:1k_storage_disk"
+			}]
+		}
+		{
+			x: -9.5d
+			y: -1.5d
+			dependencies: [
+				"619053D394D32B76"
+				"4FAF2E9B13D71DB2"
+			]
+			id: "59C77B7FD07070FC"
+			tasks: [{
+				id: "6A37C45B85B15BC4"
+				type: "item"
+				item: "refinedstorage:4k_storage_disk"
+			}]
+		}
+		{
+			x: -11.0d
+			y: -2.5d
+			dependencies: ["418462B40338095D"]
+			id: "1094F5678AE66338"
+			tasks: [{
+				id: "34859536277C499A"
+				type: "item"
+				item: "ae2:cell_component_1k"
+			}]
+		}
+		{
+			x: -9.5d
+			y: -2.5d
+			dependencies: ["1094F5678AE66338"]
+			id: "619053D394D32B76"
+			tasks: [{
+				id: "18828F13A88617E9"
+				type: "item"
+				item: "ae2:cell_component_4k"
+			}]
+		}
+		{
+			x: -8.0d
+			y: -1.5d
+			dependencies: [
+				"234BA6590E10AAB7"
+				"59C77B7FD07070FC"
+			]
+			id: "4AE47D1CBA4AEA17"
+			tasks: [{
+				id: "6B5A98EF4EA3AF98"
+				type: "item"
+				item: "refinedstorage:16k_storage_disk"
+			}]
+		}
+		{
+			x: -8.0d
+			y: -2.5d
+			dependencies: ["619053D394D32B76"]
+			id: "234BA6590E10AAB7"
+			tasks: [{
+				id: "32F370DFDE62E07B"
+				type: "item"
+				item: "ae2:cell_component_16k"
+			}]
+		}
+		{
+			x: -6.5d
+			y: -1.5d
+			dependencies: [
+				"0C43782E23FD5A23"
+				"4AE47D1CBA4AEA17"
+			]
+			id: "251786E452BEA093"
+			tasks: [{
+				id: "50BA06952BAED33E"
+				type: "item"
+				item: "refinedstorage:64k_storage_disk"
+			}]
+		}
+		{
+			x: -6.5d
+			y: -2.5d
+			dependencies: ["234BA6590E10AAB7"]
+			id: "0C43782E23FD5A23"
+			tasks: [{
+				id: "0C098A32D569BD66"
+				type: "item"
+				item: "ae2:cell_component_64k"
+			}]
+		}
+		{
+			x: -11.0d
+			y: -4.0d
+			dependencies: [
+				"1094F5678AE66338"
+				"624A34FC35C033A8"
+			]
+			id: "34B64AC13BFF3D26"
+			tasks: [{
+				id: "385841EEA83979F6"
+				type: "item"
+				title: "1k ME Storage Cell"
+				item: {
+					id: "itemfilters:or"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "ae2:fluid_storage_cell_1k"
+								Count: 1b
+								tag: { }
+							}
+							{
+								id: "ae2:item_storage_cell_1k"
+								Count: 1b
+								tag: { }
+							}
+						]
+					}
+				}
+			}]
+		}
+		{
+			x: -9.5d
+			y: -4.0d
+			dependencies: [
+				"619053D394D32B76"
+				"34B64AC13BFF3D26"
+			]
+			id: "389CFD0B77639058"
+			tasks: [{
+				id: "0A099AAC939AB40F"
+				type: "item"
+				title: "4k ME Storage Cell"
+				item: {
+					id: "itemfilters:or"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "ae2:fluid_storage_cell_4k"
+								Count: 1b
+								tag: { }
+							}
+							{
+								id: "ae2:item_storage_cell_4k"
+								Count: 1b
+								tag: { }
+							}
+						]
+					}
+				}
+			}]
+		}
+		{
+			x: -8.0d
+			y: -4.0d
+			dependencies: [
+				"234BA6590E10AAB7"
+				"389CFD0B77639058"
+			]
+			id: "3CA946B101AFE510"
+			tasks: [{
+				id: "3C0B98A253B5C661"
+				type: "item"
+				title: "16k ME Storage Cell"
+				item: {
+					id: "itemfilters:or"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "ae2:fluid_storage_cell_16k"
+								Count: 1b
+								tag: { }
+							}
+							{
+								id: "ae2:item_storage_cell_16k"
+								Count: 1b
+								tag: { }
+							}
+						]
+					}
+				}
+			}]
+		}
+		{
+			x: -6.5d
+			y: -4.0d
+			dependencies: [
+				"0C43782E23FD5A23"
+				"3CA946B101AFE510"
+			]
+			id: "0EEED2DD339384E9"
+			tasks: [{
+				id: "2D851FF9E697B682"
+				type: "item"
+				title: "64k ME Storage Cell"
+				item: {
+					id: "itemfilters:or"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "ae2:fluid_storage_cell_64k"
+								Count: 1b
+								tag: { }
+							}
+							{
+								id: "ae2:item_storage_cell_64k"
+								Count: 1b
+								tag: { }
+							}
+						]
+					}
+				}
+			}]
+		}
+		{
+			x: -5.0d
+			y: -2.5d
+			dependencies: ["0C43782E23FD5A23"]
+			id: "02A0C08887708DD7"
+			tasks: [{
+				id: "332DBEE7BF36F282"
+				type: "item"
+				item: "ae2:cell_component_256k"
+			}]
+		}
+		{
+			x: -5.0d
+			y: -4.0d
+			dependencies: [
+				"02A0C08887708DD7"
+				"0EEED2DD339384E9"
+			]
+			id: "275A5759B7A7D1E6"
+			tasks: [{
+				id: "5C6DDC7E194BA508"
+				type: "item"
+				title: "256k ME Storage Cell"
+				item: {
+					id: "itemfilters:or"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "ae2:fluid_storage_cell_256k"
+								Count: 1b
+								tag: { }
+							}
+							{
+								id: "ae2:item_storage_cell_256k"
+								Count: 1b
+								tag: { }
+							}
+						]
+					}
+				}
+			}]
+		}
+		{
+			x: -12.5d
+			y: -4.0d
+			dependencies: ["55487FB2FBE542E2"]
+			id: "624A34FC35C033A8"
+			tasks: [{
+				id: "4E8F8BEA5BDA5A57"
+				type: "item"
+				title: "ME Cell Housing"
+				item: {
+					id: "itemfilters:or"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "ae2:item_cell_housing"
+								Count: 1b
+							}
+							{
+								id: "ae2:fluid_cell_housing"
+								Count: 1b
+							}
+						]
+					}
+				}
+			}]
+		}
+		{
+			x: -13.5d
+			y: -6.0d
+			dependencies: ["4CD56BDAF5F61552"]
+			id: "56DAA46593B17AAA"
+			tasks: [{
+				id: "7DA2FD66138CA986"
+				type: "dimension"
+				title: "Visit The Nether"
+				icon: {
+					id: "ftbquests:custom_icon"
+					Count: 1b
+					tag: {
+						Icon: "create:textures/block/incomplete_netherrack.png"
+					}
+				}
+				dimension: "minecraft:the_nether"
+			}]
+		}
+		{
+			x: -13.5d
+			y: -7.5d
+			dependencies: ["56DAA46593B17AAA"]
+			id: "32C2AD81740F2EDE"
+			tasks: [{
+				id: "67B1D0A5AF584679"
+				type: "item"
+				item: "minecraft:quartz"
+			}]
+		}
+		{
+			x: -13.5d
+			y: -9.0d
+			dependencies: ["32C2AD81740F2EDE"]
+			id: "301AED62216B5C44"
+			tasks: [{
+				id: "322C489CF800FE2B"
+				type: "item"
+				item: "refinedstorage:silicon"
+			}]
+		}
+		{
+			x: -13.5d
+			y: -11.0d
+			dependencies: ["301AED62216B5C44"]
+			id: "52F5F395E71C663F"
+			tasks: [{
+				id: "5E6FAA7485419024"
+				type: "item"
+				item: "mw_core:refined_mechanism"
+			}]
+		}
+		{
+			x: -12.0d
+			y: -11.0d
+			dependencies: ["52F5F395E71C663F"]
+			id: "318816E7095BF738"
+			tasks: [{
+				id: "38038C56C8D587E2"
+				type: "item"
+				item: "milkyway:refined_machine"
+			}]
+		}
+		{
+			x: -14.0d
+			y: -16.0d
+			hide_dependency_lines: true
+			dependencies: ["566651A26EA7D42F"]
+			id: "32432F80A9D3BC97"
+			tasks: [{
+				id: "569751F6140AD8E7"
+				type: "item"
+				item: "ae2:certus_quartz_crystal"
+			}]
+		}
+		{
+			x: -14.0d
+			y: -14.5d
+			dependencies: ["32432F80A9D3BC97"]
+			id: "6A88F0E54CE90454"
+			tasks: [{
+				id: "70FA0C358F654C1C"
+				type: "item"
+				item: "mw_core:certus_core"
+			}]
+		}
+		{
+			x: -14.0d
+			y: -13.0d
+			dependencies: ["6A88F0E54CE90454"]
+			id: "168463612201C3E4"
+			tasks: [{
+				id: "2DEA0C5EC886A361"
+				type: "item"
+				item: "mw_core:rave_tube"
+			}]
+		}
+		{
+			x: -12.0d
+			y: -13.0d
+			dependencies: [
+				"318816E7095BF738"
+				"168463612201C3E4"
+			]
+			id: "34362343317A1B5C"
+			tasks: [{
+				id: "0C64EDF2D453E1DD"
+				type: "item"
+				item: "refinedstorage:controller"
+			}]
+		}
+		{
+			x: -10.5d
+			y: -13.0d
+			dependencies: ["318816E7095BF738"]
+			id: "62FBA80406BE1460"
+			tasks: [{
+				id: "216A7FE6E9C73176"
+				type: "item"
+				item: "refinedstorage:disk_drive"
+			}]
+		}
+		{
+			x: -10.5d
+			y: -12.0d
+			dependencies: ["318816E7095BF738"]
+			id: "4176645656A29929"
+			tasks: [{
+				id: "1D669DF062D04191"
+				type: "item"
+				item: "refinedstorage:grid"
+			}]
+		}
+		{
+			x: -10.5d
+			y: -11.0d
+			dependencies: ["318816E7095BF738"]
+			id: "258EA1D407B25982"
+			tasks: [
+				{
+					id: "69FC514699303A9F"
+					type: "item"
+					item: "refinedstorage:interface"
+				}
+				{
+					id: "1663119C266D31AB"
+					type: "item"
+					item: "refinedstorage:fluid_interface"
+				}
+			]
+		}
+		{
+			x: -9.0d
+			y: -11.0d
+			dependencies: ["258EA1D407B25982"]
+			id: "4BD8F4234E016DAD"
+			tasks: [{
+				id: "22B711672EE659C6"
+				type: "item"
+				item: "ae2:interface"
+			}]
+		}
+		{
+			x: -9.0d
+			y: -13.0d
+			dependencies: ["62FBA80406BE1460"]
+			id: "660AF2FFFA3E8BA2"
+			tasks: [{
+				id: "19987257CE73E750"
+				type: "item"
+				item: "ae2:drive"
+			}]
+		}
+		{
+			x: -12.0d
+			y: -14.5d
+			dependencies: ["34362343317A1B5C"]
+			id: "40C0A68A123B7A60"
+			tasks: [{
+				id: "76C8AFBD67BCDA50"
+				type: "item"
+				item: "ae2:controller"
+			}]
+		}
+		{
+			x: -11.0d
+			y: -9.5d
+			dependencies: ["58D2C0B12357186B"]
+			id: "55519581140D0077"
+			tasks: [{
+				id: "3382088D93E33FAA"
+				type: "item"
+				item: "thermal:machine_bottler"
+			}]
+		}
+		{
+			x: -9.5d
+			y: -9.5d
+			dependencies: ["55519581140D0077"]
+			id: "070D6A1AFBFE9864"
+			tasks: [{
+				id: "699D108AFCB712FB"
+				type: "item"
+				item: "ae2:silicon"
+			}]
+		}
+		{
+			icon: "mw_core:logic_mechanism"
+			x: -8.0d
+			y: -9.5d
+			shape: "gear"
+			dependencies: ["070D6A1AFBFE9864"]
+			id: "69F408FACD85C2DD"
+			tasks: [{
+				id: "06B3BCE0355FDED1"
+				type: "checkmark"
+				title: "Thinking Logically"
+			}]
+		}
+		{
+			x: -9.5d
+			y: -8.5d
+			hide_dependency_lines: true
+			dependencies: [
+				"58D2C0B12357186B"
+				"11CF00C9EEC3C9C8"
+				"69F408FACD85C2DD"
+			]
+			id: "2BF5734DFFC8F358"
+			tasks: [{
+				id: "3B3F4F0064A5B2E5"
+				type: "item"
+				item: "thermal:latex_bucket"
+			}]
+		}
+		{
+			x: -9.5d
+			y: -7.5d
+			dependencies: ["2BF5734DFFC8F358"]
+			id: "568BDB633E1E4CF3"
+			tasks: [{
+				id: "6DFBB413F7B87D86"
+				type: "item"
+				item: "thermal:rubber"
+			}]
+		}
+		{
+			x: -6.5d
+			y: -9.5d
+			hide_dependency_lines: true
+			dependencies: [
+				"37BF2826055DA2D3"
+				"11CF00C9EEC3C9C8"
+				"69F408FACD85C2DD"
+			]
+			id: "49631CA59BDD7D84"
+			tasks: [{
+				id: "4EEB423B6AE30C9C"
+				type: "item"
+				item: "mw_core:radiant_quartz"
+			}]
+		}
+		{
+			x: -14.0d
+			y: -2.0d
+			dependencies: ["566651A26EA7D42F"]
+			id: "4F5C32ABF9F8E66F"
+			tasks: [{
+				id: "1E8E8EE5D1829B5D"
+				type: "item"
+				item: "forbidden_arcanus:rune"
+				count: 16L
 			}]
 		}
 	]

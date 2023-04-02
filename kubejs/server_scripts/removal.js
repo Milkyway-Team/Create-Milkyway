@@ -14,6 +14,8 @@ let AC = (id, x) => MOD("aquaculture", id, x)
 let SD = (id, x) => MOD("storagedrawers", id, x)
 let SP = (id, x) => MOD("supplementaries", id, x)
 let MW = (id, x) => MOD("mw_core", id, x)
+let MKW = (id, x) => MOD("milkyway", id, x)
+
 let FA = (id, x) => MOD("forbidden_arcanus", id, x)
 let RS = (id, x) => MOD("refinedstorage", id, x)
 let IE = (id, x) => MOD("immersiveengineering", id, x)
@@ -165,11 +167,11 @@ function unwantedRecipes(event) {
     smeltingRemove(event, IE('ingot_constantan'))
     smeltingRemove(event, IE('ingot_uranium'))
     smeltingRemove(event, IE('ingot_lead'))
-    smeltingRemove(event, IE())
-    smeltingRemove(event, IE())
-    smeltingRemove(event, IE())
+    smeltingRemove(event, AE2('silicon'))
+
 
     event.remove({ output: TC('cobalt_ingot'), type: 'minecraft:blasting'} );
+    event.remove({ output: 'create:scoria', type: 'minecraft:smelting'} );
 
     unwanted_IE_metals.forEach(e => {
         removeRecOut(IE('ingot_' + e))
@@ -191,11 +193,12 @@ function unwantedRecipes(event) {
     event.replaceInput({}, IE('hammer'), TE('wrench'))
     event.replaceInput({}, RS('quartz_enriched_iron'), MW('aluminium_ingot'))
     event.replaceOutput({}, 'ae2:ender_dust', TE('ender_pearl_dust'))
-    event.replaceInput({id: /mw_core:milkyway.machines.cobalt.refinedstorage.*/}, MW('cobalt_mechanism'), KJ('refined_machine'))
-    event.replaceInput({id: /mw_core:milkyway.machines.cobalt.refinedstorage.*/}, MW('reinforced_tin_sheet'), KJ('reinforced_zinc_sheet'))
-    event.replaceInput({id: /mw_core:milkyway.machines.cobalt.refinedstorage.*/}, TE('invar_ingot'), KJ('reinforced_zinc_sheet'))
+    event.replaceInput({id: /mw_core:milkyway.machines.cobalt.refinedstorage.*/}, MW('cobalt_mechanism'), MKW('refined_machine'))
+    event.replaceInput({id: /mw_core:milkyway.machines.cobalt.refinedstorage.*/}, MW('reinforced_tin_sheet'), MW('reinforced_zinc_sheet'))
+    event.replaceInput({id: 'mw_core:milkyway/machines/cobalt/refinedstorage/controller'}, MW('certus_core'), MW('rave_tube'))
+    event.replaceInput({id: /mw_core:milkyway.machines.cobalt.refinedstorage.*/}, TE('invar_ingot'), MW('reinforced_zinc_sheet'))
     event.remove({id: 'mw_core:milkyway/machines/cobalt/refinedstorage/cable'})
-    event.replaceInput({id: /mw_core:milkyway.machines.cobalt.refinedstorage.interface/}, MW('reinforced_lead_sheet'), KJ('reinforced_zinc_sheet'))
+    event.replaceInput({id: /mw_core:milkyway.machines.cobalt.refinedstorage.interface/}, MW('reinforced_lead_sheet'), MW('reinforced_zinc_sheet'))
     event.remove({ type: AE2('inscriber') })
 }
 let main_ores = ['coal', 'iron', 'copper', 'zinc', 'gold', 'redstone', 'lapis', 'diamond', 'emerald']
@@ -323,6 +326,10 @@ removeByID(TE('invar_dust_3'))
 removeByID(TE('electrum_dust_2'))
 removeByID(TE('bronze_dust_4'))
 
+removeByID(/network.cells.fluid.*/)
+removeByID(/network.cells.item.*/)
+removeByID(/mw_core:.*storage_part.*/)
+
 
 removeByID(tm + sml + '/' + sml + '_iron_dust')
 removeByID(tm + sml + '/' + sml + '_bronze_dust')
@@ -403,6 +410,7 @@ removeByID("thermal:rubber_3")
 removeByID("thermal:energy_cell")
 removeByID("thermal:energy_cell_frame")
 removeByID(/thermal:earth_charge.*_from_.*/)
+removeByID(/refinedstorage:coloring_recipes.*/)
 //removeByID()
 //removeByID()
 //removeByID()

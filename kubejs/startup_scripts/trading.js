@@ -141,6 +141,25 @@ onEvent('item.registry', event => {
         { in: MC('golden_apple', 2), out: S(32)},
         { in: MC('golden_carrot', 4), out: S(24)},
     ])
+    specializedProfession('Ore', 'Gemologist', 0x52e383, 0xf000ff, [
+        { in: MC('diamond', 4), out: S(16)},
+        { in: MC('emerald', 4), out: S(16)},
+        { in: MC('redstone', 4), out: S(16)},
+        { in: TE('apatite', 4), out: S(16)},
+        { in: TE('cinnabar', 4), out: S(16)},
+        { in: TE('sulfur', 4), out: S(16)},
+        { in: TE('niter', 4), out: S(16)},
+        { in: AE2('certus_quartz_crystal', 4), out: S(16)},
+        { in: AE2('fluix_crystal', 4), out: S(16)},
+        ])
+    specializedProfession('Ore', 'Sorcerer', 0x66d6db, 0xf000ff, [
+        { in: QA('#runes'), out: S(12)},
+        { in: FA('arcane_crystal', 4), out: S(16)},
+        { in: FA('arcane_gold_ingot', 4), out: S(16)},
+        { in: FA('stellarite_piece', 4), out: G(1)},
+        { in: FA('xpetrified_orb', 4), out: S(16)},
+        { in: MC('lapis_lazuli', 4), out: S(16)},
+        ])
 
     profession("Beginner", 0x00FF13, 0x31FFED, [
         { in: MC('raw_iron', 4), out: S(2)},

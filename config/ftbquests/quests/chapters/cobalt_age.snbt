@@ -1,7 +1,7 @@
 {
 	id: "2DFBD3E344DE2F8E"
-	group: "26C9462713CC8837"
-	order_index: 5
+	group: "5520096E8E4841AE"
+	order_index: 4
 	filename: "cobalt_age"
 	title: "Chapter 3"
 	icon: "mw_core:cobalt_mechanism"
@@ -10,8 +10,8 @@
 	quests: [
 		{
 			icon: "create:brass_hand"
-			x: 0.0d
-			y: -5.5d
+			x: -3.0d
+			y: -3.0d
 			dependencies: ["266393D12E3D6B5F"]
 			id: "44286347C6F6AC67"
 			tasks: [{
@@ -22,8 +22,8 @@
 		}
 		{
 			icon: "farmersdelight:lime_canvas_sign"
-			x: -2.0d
-			y: -5.5d
+			x: -1.0d
+			y: -3.0d
 			description: ["Cobalt Mechanisms unlock access to Thermal."]
 			dependencies: ["58D2C0B12357186B"]
 			hide: true
@@ -90,8 +90,8 @@
 		}
 		{
 			icon: "create:zinc_ingot"
-			x: -1.5d
-			y: 5.5d
+			x: -0.5d
+			y: 5.0d
 			dependencies: ["229215814734628C"]
 			id: "07A5F2C58D197172"
 			tasks: [
@@ -109,8 +109,8 @@
 		}
 		{
 			icon: "tconstruct:cobalt_ingot"
-			x: 0.5d
-			y: 5.5d
+			x: 1.0d
+			y: 6.5d
 			dependencies: ["709C0EFA23C31D47"]
 			id: "22A3CD60B02D1ACB"
 			tasks: [
@@ -127,8 +127,8 @@
 			]
 		}
 		{
-			x: -0.5d
-			y: 5.0d
+			x: -1.5d
+			y: 5.5d
 			description: ["Mechanical Crafting is the only way to automate the construction of Redstone Flux Coils."]
 			dependencies: [
 				"5CA7EA0275FC0C1F"
@@ -142,8 +142,8 @@
 			}]
 		}
 		{
-			x: 1.0d
-			y: 3.5d
+			x: -1.5d
+			y: 4.0d
 			subtitle: "[Already Automated]"
 			dependencies: ["487ED42271AE45D6"]
 			id: "5CA7EA0275FC0C1F"
@@ -154,8 +154,8 @@
 			}]
 		}
 		{
-			x: 0.0d
-			y: 2.5d
+			x: -3.0d
+			y: 5.5d
 			subtitle: "[Already Automated]"
 			dependencies: ["2248C1E1A0AC7CEB"]
 			id: "219BF695E1461900"
@@ -168,8 +168,8 @@
 		{
 			title: "Molten Cobalt"
 			icon: "tconstruct:molten_cobalt_bucket"
-			x: 4.0d
-			y: 3.0d
+			x: 2.5d
+			y: 6.5d
 			description: ["Molten Cobalt is an output from most metal refining recipes."]
 			dependencies: ["63227557E2B93547"]
 			id: "709C0EFA23C31D47"
@@ -190,8 +190,8 @@
 		{
 			title: "Molten Zinc"
 			icon: "tconstruct:molten_zinc_bucket"
-			x: -2.5d
-			y: 4.0d
+			x: 1.0d
+			y: 5.0d
 			dependencies: ["40A7D6E655703913"]
 			id: "229215814734628C"
 			tasks: [
@@ -210,8 +210,8 @@
 		{
 			title: "Refining Molten Tin"
 			icon: "tconstruct:molten_tin_bucket"
-			x: -2.0d
-			y: 2.0d
+			x: 1.0d
+			y: 3.0d
 			dependencies: ["2FD55ADBF5C8D65A"]
 			id: "40A7D6E655703913"
 			tasks: [
@@ -230,7 +230,7 @@
 		{
 			title: "Refining Molten Gold"
 			icon: "tconstruct:molten_gold_bucket"
-			x: -0.5d
+			x: 1.0d
 			y: 0.5d
 			dependencies: ["63227557E2B93547"]
 			id: "2FD55ADBF5C8D65A"
@@ -270,7 +270,7 @@
 		{
 			icon: "thermal:lead_nugget"
 			x: -4.5d
-			y: 5.0d
+			y: 6.5d
 			description: ["Scorchia is rich in Lead! Crushing it will break off chunks of Crushed Lead and Lead Nuggets!"]
 			dependencies: ["35229A5907071191"]
 			id: "69240D98881683E1"
@@ -289,7 +289,7 @@
 		}
 		{
 			icon: "create:scorchia"
-			x: -5.0d
+			x: -4.5d
 			y: 3.0d
 			description: ["Combining Scoria with Black Dye will create Scorchia."]
 			dependencies: [
@@ -312,8 +312,8 @@
 		}
 		{
 			icon: "minecraft:black_dye"
-			x: -4.0d
-			y: 1.5d
+			x: -3.0d
+			y: 3.0d
 			description: ["Crush Charcoal to make Black Dye"]
 			dependencies: ["0D8941A1F6A444B9"]
 			id: "5444ACC4A2743BA4"
@@ -333,7 +333,7 @@
 		{
 			icon: "create:scoria"
 			x: -6.0d
-			y: 1.0d
+			y: 3.0d
 			description: ["Cooking Scoria will result in Soul Sand."]
 			dependencies: ["619760787EF29973"]
 			id: "7F9F2C05DD8FE2BE"
@@ -352,8 +352,8 @@
 		}
 		{
 			icon: "minecraft:soul_sand"
-			x: -4.5d
-			y: 0.0d
+			x: -6.0d
+			y: 1.5d
 			description: ["You'll need to haunt your Sand to get Soul Sand."]
 			dependencies: ["6CCB317A61E1F369"]
 			id: "619760787EF29973"
@@ -371,8 +371,8 @@
 			]
 		}
 		{
-			x: -4.0d
-			y: -1.5d
+			x: -6.0d
+			y: 0.0d
 			subtitle: "[Already Automated]"
 			dependencies: ["4058BED15C956B22"]
 			id: "6CCB317A61E1F369"
@@ -384,8 +384,8 @@
 		}
 		{
 			icon: "minecraft:charcoal"
-			x: -2.5d
-			y: 0.5d
+			x: -3.0d
+			y: 1.5d
 			description: ["Time to cook all those Flammable Logs you've worked so hard to grow!"]
 			dependencies: ["03AF1DFD02A32727"]
 			id: "0D8941A1F6A444B9"
@@ -405,8 +405,8 @@
 		{
 			title: "Flammable Logs"
 			icon: "minecraft:oak_log"
-			x: -1.0d
-			y: -2.0d
+			x: -3.0d
+			y: 0.0d
 			description: ["Whilst you may have constructed a tree farm already for Chapter 1, a new one is reccommended as you will be needing a lot of charcoal."]
 			dependencies: ["44286347C6F6AC67"]
 			id: "03AF1DFD02A32727"
@@ -434,7 +434,7 @@
 			title: "Refining Molten Iron"
 			icon: "tconstruct:molten_iron_bucket"
 			x: 4.0d
-			y: -0.5d
+			y: 0.5d
 			dependencies: [
 				"503A97041C9C5577"
 				"5049B227F0BC4BA1"
@@ -454,8 +454,8 @@
 			]
 		}
 		{
-			x: 2.0d
-			y: -2.0d
+			x: 5.5d
+			y: 0.5d
 			subtitle: "[Already Automated]"
 			dependencies: ["2C522C3F689D3703"]
 			id: "503A97041C9C5577"
@@ -468,8 +468,8 @@
 		{
 			title: "Iron Nuggets Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: 3.5d
-			y: -3.0d
+			x: 5.5d
+			y: -1.5d
 			shape: "gear"
 			subtitle: "Automated in Chapter 1"
 			hide_dependency_lines: true
@@ -484,8 +484,8 @@
 		{
 			title: "Sand Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: -5.0d
-			y: -3.0d
+			x: -6.0d
+			y: -1.5d
 			shape: "gear"
 			subtitle: "Automated in Chapter 1"
 			hide_dependency_lines: true
@@ -500,8 +500,8 @@
 		{
 			title: "Gold Ingot Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: 1.0d
-			y: 1.5d
+			x: -3.0d
+			y: 4.0d
 			shape: "gear"
 			subtitle: "Automated in Chapter 2"
 			hide_dependency_lines: true
@@ -516,8 +516,8 @@
 		{
 			title: "Redstone Dust Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: 2.5d
-			y: 2.5d
+			x: 0.0d
+			y: 4.0d
 			shape: "gear"
 			subtitle: "Automated in Chapter 2"
 			hide_dependency_lines: true
@@ -530,14 +530,8 @@
 			}]
 		}
 		{
-			icon: {
-				id: "ftbquests:custom_icon"
-				Count: 1b
-				tag: {
-					Icon: "custommachinery:textures/gui/base_status_running.png"
-				}
-			}
-			x: 5.5d
+			icon: "thermal:machine_refinery"
+			x: 4.0d
 			y: -1.5d
 			shape: "hexagon"
 			description: ["To get Molten Zinc you will need to refine many molten metals starting with Molten Iron. Descriptions will not be provided for these quests as they all follow the same method."]
@@ -559,8 +553,8 @@
 		}
 		{
 			icon: "mw_core:logic_mechanism"
-			x: -1.0d
-			y: 8.0d
+			x: -0.5d
+			y: 8.5d
 			dependencies: ["427B116E232D4809"]
 			id: "799F6769884BAAAD"
 			tasks: [{

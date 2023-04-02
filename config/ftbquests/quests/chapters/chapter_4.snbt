@@ -1,7 +1,7 @@
 {
 	id: "4C5C15A763A13B7D"
-	group: "26C9462713CC8837"
-	order_index: 8
+	group: "5520096E8E4841AE"
+	order_index: 7
 	filename: "chapter_4"
 	title: "Chapter 5"
 	icon: "mw_core:manyullyn_mechanism"
@@ -10,8 +10,8 @@
 	quests: [
 		{
 			icon: "farmersdelight:lime_canvas_sign"
-			x: 0.0d
-			y: -2.0d
+			x: -2.5d
+			y: 3.5d
 			dependencies: ["068568D3D5E20DAC"]
 			hide: true
 			id: "37AE7A9BB96E088D"
@@ -62,8 +62,8 @@
 		}
 		{
 			title: "Waystones"
-			x: 4.5d
-			y: 14.625d
+			x: 3.375d
+			y: 13.5d
 			shape: "gear"
 			dependencies: ["677039658F2D1441"]
 			size: 2.25d
@@ -94,8 +94,8 @@
 			]
 		}
 		{
-			x: 2.5d
-			y: 11.5d
+			x: 1.0d
+			y: 11.0d
 			dependencies: ["509E5C69C64C0FBB"]
 			id: "2E005CFA0BE219EF"
 			tasks: [{
@@ -105,7 +105,7 @@
 			}]
 		}
 		{
-			x: 1.0d
+			x: 0.0d
 			y: 11.0d
 			dependencies: ["7ED2E116A5C6B514"]
 			id: "509E5C69C64C0FBB"
@@ -116,8 +116,8 @@
 			}]
 		}
 		{
-			x: 1.0d
-			y: 9.0d
+			x: 0.0d
+			y: 9.5d
 			dependencies: [
 				"0E9507A5C7211C05"
 				"7B69ACD2EF580FE9"
@@ -130,8 +130,8 @@
 			}]
 		}
 		{
-			x: 2.5d
-			y: 8.5d
+			x: 1.0d
+			y: 9.5d
 			dependencies: ["3416A6FFA236FD19"]
 			id: "7B69ACD2EF580FE9"
 			tasks: [{
@@ -141,8 +141,8 @@
 			}]
 		}
 		{
-			x: 0.5d
-			y: 7.5d
+			x: 0.0d
+			y: 8.0d
 			dependencies: ["16BEC17694BD8C02"]
 			id: "0E9507A5C7211C05"
 			tasks: [{
@@ -152,8 +152,8 @@
 			}]
 		}
 		{
-			x: 1.5d
-			y: 6.0d
+			x: 0.0d
+			y: 6.5d
 			description: ["Refined Magic can warp Netherrack into Ancient Debris."]
 			dependencies: [
 				"37CD9D99235C8A5A"
@@ -167,8 +167,8 @@
 			}]
 		}
 		{
-			x: 3.0d
-			y: 5.0d
+			x: 1.5d
+			y: 6.5d
 			dependencies: ["254AC517648F601E"]
 			id: "5DC40B799F294DAB"
 			tasks: [{
@@ -178,8 +178,8 @@
 			}]
 		}
 		{
-			x: 5.0d
-			y: 4.5d
+			x: 1.5d
+			y: 5.0d
 			dependencies: ["7E98C99B304B4012"]
 			id: "254AC517648F601E"
 			tasks: [{
@@ -189,8 +189,8 @@
 			}]
 		}
 		{
-			x: 0.5d
-			y: 4.5d
+			x: -1.5d
+			y: 6.5d
 			dependencies: ["12822E8BAB724028"]
 			id: "37CD9D99235C8A5A"
 			tasks: [{
@@ -200,7 +200,7 @@
 			}]
 		}
 		{
-			x: -0.5d
+			x: -2.5d
 			y: 11.0d
 			dependencies: ["072ADCEE4E3DB48F"]
 			id: "5869CFF7DCE5E1E1"
@@ -211,8 +211,8 @@
 			}]
 		}
 		{
-			x: -2.0d
-			y: 11.5d
+			x: -2.5d
+			y: 12.0d
 			dependencies: ["3ADB679F9B032D5D"]
 			id: "6C64093B277F3A90"
 			tasks: [{
@@ -222,8 +222,8 @@
 			}]
 		}
 		{
-			x: -3.0d
-			y: 12.5d
+			x: -2.5d
+			y: 13.0d
 			dependencies: ["425F6D06C8548526"]
 			id: "163FA76F1668A00C"
 			tasks: [{
@@ -235,8 +235,8 @@
 		{
 			title: "Insulation Sheet Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: -4.0d
-			y: 10.5d
+			x: -3.5d
+			y: 13.0d
 			shape: "gear"
 			hide_dependency_lines: true
 			dependencies: ["19EB7C2B21C04FDE"]
@@ -250,8 +250,8 @@
 		{
 			title: "Ingot of Creativity Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: -2.5d
-			y: 9.5d
+			x: -3.5d
+			y: 12.0d
 			shape: "gear"
 			hide_dependency_lines: true
 			dependencies: ["19EB7C2B21C04FDE"]
@@ -265,8 +265,8 @@
 		{
 			title: "Molten Ender Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: -1.0d
-			y: 9.0d
+			x: -3.5d
+			y: 11.0d
 			shape: "gear"
 			hide_dependency_lines: true
 			dependencies: ["19EB7C2B21C04FDE"]
@@ -280,8 +280,8 @@
 		{
 			title: "Netherrack Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: 0.0d
-			y: 2.5d
+			x: -1.5d
+			y: 5.0d
 			shape: "gear"
 			hide_dependency_lines: true
 			dependencies: ["19EB7C2B21C04FDE"]
@@ -295,8 +295,8 @@
 		{
 			title: "Liquid Magic Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: 6.5d
-			y: 3.0d
+			x: 3.0d
+			y: 5.0d
 			shape: "gear"
 			hide_dependency_lines: true
 			dependencies: ["19EB7C2B21C04FDE"]
@@ -321,8 +321,8 @@
 		{
 			title: "Molten Cobalt Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: 4.0d
-			y: 7.5d
+			x: 2.5d
+			y: 9.5d
 			shape: "gear"
 			hide_dependency_lines: true
 			dependencies: ["19EB7C2B21C04FDE"]
@@ -334,7 +334,7 @@
 			}]
 		}
 		{
-			x: -4.5d
+			x: -5.0d
 			y: 14.5d
 			dependencies: ["44AFF341C45D6AD6"]
 			id: "072947164A6EE54B"
@@ -347,7 +347,7 @@
 		{
 			title: "Creative Alloy Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: -5.5d
+			x: -5.0d
 			y: 13.0d
 			shape: "gear"
 			hide_dependency_lines: true
@@ -372,8 +372,8 @@
 		}
 		{
 			icon: "create:brass_hand"
-			x: 2.5d
-			y: -2.0d
+			x: 0.0d
+			y: 3.5d
 			dependencies: ["37AE7A9BB96E088D"]
 			id: "19EB7C2B21C04FDE"
 			tasks: [{
@@ -384,7 +384,7 @@
 		}
 		{
 			icon: "mw_core:rave_tube"
-			x: 3.0d
+			x: 0.0d
 			y: 19.0d
 			subtitle: "I appreciate it!"
 			description: [

@@ -166,6 +166,10 @@ ow_vanilla_metals.forEach(e => {
     tagRem(F('dusts/' + e), [IE('dust_' + e)])
 
 })
+wood_types.forEach(wt => {
+    tagAdd(MW('2x2_drawers'), SD(`${wt}_full_drawers_4`))
+})
+
 tagRem(F('dusts/sulfur'), [IE('dust_sulfur')])
 tagRem(F('dusts/uranium'), [IE('dust_uranium')])
 tagRem(F('dusts/wood'), [IE('dust_wood')])
