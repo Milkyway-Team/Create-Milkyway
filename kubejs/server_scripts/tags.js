@@ -9,7 +9,6 @@ let MC = (id, x) => MOD("minecraft", id, x)
 let KJ = (id, x) => MOD("kubejs", id, x)
 let FD = (id, x) => MOD("farmersdelight", id, x)
 let FR = (id, x) => MOD("farmersrespite", id, x)
-
 let AC = (id, x) => MOD("aquaculture", id, x)
 let SD = (id, x) => MOD("storagedrawers", id, x)
 let SP = (id, x) => MOD("supplementaries", id, x)
@@ -44,6 +43,8 @@ function jeiHide(id){
     onEvent('item.tags', event => {
         event.get('mw_core:jei_hidden')
             .add(id)
+        event.get('randomium:blacklist')
+            .add(id)
     })}
 function tagAdd(tag, add){
     onEvent('item.tags', event => {
@@ -65,6 +66,12 @@ function blokTagRem(tag, remove){
         event.get(tag)
             .remove(remove)
     })}
+function fluidTagAdd(tag, add){
+    onEvent('fluid.tags', event => {
+        event.get(tag)
+            .add(add)
+    })
+}
 function genericTagRem(event, tag, remove){
         event.get(tag)
             .remove(remove)
@@ -101,10 +108,11 @@ blacklist([IE('watermill'), /.*creative.*/, /.*insulation.*/, /ftblibrary.*/, /f
     /mw_core:music_disc.*/, /create:precision_mechanism/, /quark:diamond_heart/, /refinedstorage:.*storage_block.*/, /immersiveengineering:.*blastbrick.*/, /immersiveengineering:.*alloybrick.*/,
     /immersiveengineering:.*cokebrick.*/, IE('fluid_pump'), IE('fluid_pipe'), /refinedstorage:.*quartz_enriched_iron.*/, /refinedstorage:.*portable.*/, /refinedstorage:.*pattern.*/,
     /refinedstorage:.*disk_manipulator.*/, /refinedstorage:.*storage_housing.*/, MW('#jei_hidden'), IE('coal_coke'), IE('windmill'), IE('waterwheel_segment'), IE('windmill_sail'),
+    /thermal:.*augment.*/, /tconstruct:raw_cobalt.*/,
     IE('windmill_blade')])
 jeiHide([/thermal:press.*_die/, RS('#disk_manipulator'), RS('#detector'), RS('#wireless_transmitter'), /refinedstorage:.*storage_block/, RS('storage_monitor'),
     RS('storage_housing'), RS('machine_casing'), RS('wrench'), RS('pattern'), RS('filter'), TE('device_water_gen'), TE('device_fisher'), TE('device_composter'),
-    TE('device_collector'), TE('device_nullifier'), TE('device_potion_diffuser'), TE('machine_furnace'), TE('machine_sawmill'), TE('machine_centrifuge'),
+    TE('device_collector'), TE('device_nullifier'), TE('device_potion_diffuser'), TE('machine_furnace'), TE('machine_sawmill'),
     IE('watermill'), IE('coal_coke'), IE('windmill'), IE('waterwheel_segment'), IE('windmill_sail'), IE('windmill_blade')])
 onEvent('fluid.tags', event => {
     event.get(F("creosote"))
@@ -140,7 +148,9 @@ coin_metals.forEach(e => {
     tagRem(F('coins'), [TE(e + '_coin')])
 })
 blokTagAdd(F('stone_gold_ores'), [MC('gold_ore'), MC('deepslate_gold_ore')])
-
+fluidTagAdd(TC('tooltips/metal'), MKW('copper_concentrate'))
+fluidTagAdd(TC('tooltips/gem_small'), [MKW('molten_monazite'), MKW('molten_heliodor')])
+fluidTagAdd(TC('tooltips/gem_small'), MKW('molten_ekanite'))
 
 
 //IE TAGS

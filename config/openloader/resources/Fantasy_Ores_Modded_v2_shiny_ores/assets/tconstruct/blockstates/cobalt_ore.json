@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tconstruct:block/cobalt_ore_0"
+      },
+      {
+        "model": "tconstruct:block/cobalt_ore_1"
+      },
+      {
+        "model": "tconstruct:block/cobalt_ore_2"
+      },
+      {
+        "model": "tconstruct:block/cobalt_ore_3"
+      }
+    ]
+  }
+}

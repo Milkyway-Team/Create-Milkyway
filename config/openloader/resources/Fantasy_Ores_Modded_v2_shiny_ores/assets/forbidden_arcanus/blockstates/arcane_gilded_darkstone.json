@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "forbidden_arcanus:block/arcane_gilded_darkstone_0"
+      },
+      {
+        "model": "forbidden_arcanus:block/arcane_gilded_darkstone_1"
+      },
+      {
+        "model": "forbidden_arcanus:block/arcane_gilded_darkstone_2"
+      },
+      {
+        "model": "forbidden_arcanus:block/arcane_gilded_darkstone_3"
+      }
+    ]
+  }
+}

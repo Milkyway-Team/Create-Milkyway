@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "druidcraft:block/rockroot_ore_0"
+      },
+      {
+        "model": "druidcraft:block/rockroot_ore_1"
+      },
+      {
+        "model": "druidcraft:block/rockroot_ore_2"
+      },
+      {
+        "model": "druidcraft:block/rockroot_ore_3"
+      }
+    ]
+  }
+}

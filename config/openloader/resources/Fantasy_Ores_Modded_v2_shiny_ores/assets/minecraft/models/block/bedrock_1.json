@@ -1,0 +1,9 @@
+{
+  "credit": "Model created by Zorak Design - Contact me on discord for work: CesarZorak#0808",
+  "parent": "block/fancy_gemstone/gemstone_1",
+  "textures": {
+		"0": "block/bedrock",
+		"1": "block/bedrock",
+		"particle": "block/bedrock"
+  }
+}

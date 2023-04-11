@@ -38,6 +38,7 @@ let native_metals = ['iron', 'zinc', 'lead', 'copper', 'nickel', 'gold', 'silver
 let wood_types = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'crimson', 'warped']
 let tool_types = ['pickaxe', 'axe', 'shovel', 'hoe', 'sword']
 let nml_foods = ['porkchop', 'cod', 'salmon', 'chicken', 'rabbit', 'mutton', 'beef']
+let apRods = ['monazite', 'heliodor', 'ekanite']
 
 let donutCraft = (event, output, center, ring) => {
 	event.shaped(output, [
@@ -102,6 +103,32 @@ let chiller = (event, fluid, cast, output, enrg) => {
         "energy": enrg,
     }).id('milkyway:processing/chilling/' + fluid.split(':')[1])
 }
+let refining = (event, inFluid, outFluid1, outFluid2, outItem) => {
+    event.custom({
+        "type": "thermal:refinery",
+        "ingredient": {
+        "fluid": inFluid,
+            "amount": 270
+    },
+        "result": [
+        {
+            "fluid": outFluid1,
+            "amount": 180,
+            "chance": 0.25
+        },
+        {
+            "fluid": outFluid2,
+            "amount": 90,
+            "chance": 0.5
+        },
+        {
+            "item": outItem,
+            "chance": 0.75
+        }
+    ],
+        "energy": 4000
+    }).id('milkyway:processing/refining/' + inFluid.split(':')[1])
+}
 let materialMelting = (event, input, output, fluidAmount, temp, time) => {
     event.custom({
         "type": "tconstruct:melting",
@@ -114,21 +141,46 @@ let materialMelting = (event, input, output, fluidAmount, temp, time) => {
         },
         "temperature": temp,
         "time": time
-    }).id('milkyway:processing/melting/' + input.split(':')[1])
+    }).id('milkyway:processing/melting/' + input.split(':')[1] + fluidAmount)
 }
-let foodCooking = (event, input, coal, output) => {
+let materialCasting = (event, cast, fluid, amount, result, coolingTime) => {
     event.custom({
-        "type": "farmersdelight:cooking",
-        "ingredients": [
-                Ingredient.of(input).toJson(),
-                Ingredient.of(coal).toJson()
-        ],
-        "result": [
-            Item.of(output).toJson()
-        ],
-        "experience": 0.35,
-        "cookingtime": 180
-    })
+        "type": "tconstruct:casting_table",
+        "cast": {
+            "tag": `tconstruct:casts/single_use/${cast}`
+        },
+        "cast_consumed": true,
+        "fluid": {
+            "name": fluid,
+            "amount": amount
+        },
+        "result": { "item": result },
+        "cooling_time": coolingTime
+    }).id('milkyway:processing/casting/single_use/' + result.split(':')[1])
+    event.custom({
+        "type": "tconstruct:casting_table",
+        "cast": {
+            "tag": `tconstruct:casts/multi_use/${cast}`
+        },
+        "cast_consumed": false,
+        "fluid": {
+            "name": fluid,
+            "amount": amount
+        },
+        "result": { "item": result },
+        "cooling_time": coolingTime
+    }).id('milkyway:processing/casting/multi_use/' + result.split(':')[1])
+}
+let basinCasting = (event, fluid, amount, result, coolingTime) => {
+    event.custom({
+        "type": "tconstruct:casting_basin",
+        "fluid": {
+            "name": fluid,
+            "amount": amount
+        },
+        "result": result,
+        "cooling_time": coolingTime
+    }).id('milkyway:processing/basin_casting/' + result.split(':')[1])
 }
 let draining = (event, output, fluid, fluidAmount, input) => {
     event.recipes.createEmptying([
@@ -165,33 +217,109 @@ function multiSmelt(event, output, input) {
     event.smelting(output, input).id('milkyway:smelting_' + input.split(':')[1])
     event.blasting(output, input).id('milkyway:blasting_' + input.split(':')[1])
 }
-//function tinkerMelting(input1, output) {
-//    return {
-//        "type": "tconstruct:melting",
-//        "ingredient": [
-//            Ingredient.of(input1).toJson(),
-//    ],
-//        "result": [
-//            Fluid.of(output).toResultJson()
-//    ],
-//        "temperature": [],
-//        "time": 79
-//    }
-//}
 onEvent('recipes', event => {
 	log.push('Registering Recipes')
 	basicMechanism(event)
-	tweaks(event)
+    copperMechanism(event)
+    precisionMechanism(event)
+    logicMechanism(event)
 	cobaltMechanism(event)
+    tweaks(event)
     customMachines(event)
     trading(event)
     trickierWindmills(event)
     crushing(event)
+    rubberMatters(event)
 	log.push('Recipes Updated')
 	})
+function basicMechanism(event) {
 
+}
+function cobaltMechanism(event){
+	event.remove({ id: "thermal:machine_crystallizer" })
+	cobaltMachine(event, TE("machine_crystallizer"), CR("fluid_tank"), CR("rose_quartz_lamp"), TE("signalum_gear"), MW("sturdy_copper_sheet"))
+		event.remove({ id: TE("machine_furnace") })
+		event.remove({ id: TE("press_coin_die") })
+		event.remove({ id: TE("press_gear_die") })
+		event.remove({ id: TE("press_packing_2x2_die") })
+		event.remove({ id: TE("press_packing_3x3_die") })
+		event.remove({ id: TE("press_unpacking_die") })
 
+}
+function logicMechanism(event){
+event.shaped(AE2('cell_component_4k'), [
+'CPC',
+'PMP',
+'CPC'
+    ], {
+        C: AE2('calculation_processor_press'),
+        P: AE2('printed_silicon_press'),
+        M: AE2('memory_card_press')
+    })
+    event.custom({
+        "type": "tconstruct:casting_table",
+        "cast": { "item": AE2("calculation_processor_press") },
+        "cast_consumed": false,
+        "fluid": { "tag": "mw_core:molten_certus", "amount": 100 },
+        "result": { "item": AE2("printed_calculation_processor") },
+        "cooling_time": 150
+    }).id('milkyway:processing/casting/calculation_processor')
 
+    event.custom({
+        "type": "tconstruct:casting_table",
+        "cast": { "item": AE2("logic_processor_press") },
+        "cast_consumed": false,
+        "fluid": { "tag": "tconstruct:molten_gold", "amount": 90 },
+        "result": { "item": AE2("printed_logic_processor") },
+        "cooling_time": 150
+    }).id('milkyway:processing/casting/logic_processor')
+    event.custom({
+        "type": "tconstruct:casting_table",
+        "cast": { "item": AE2("engineering_processor_press") },
+        "cast_consumed": false,
+        "fluid": { "tag": "tconstruct:molten_diamond", "amount": 100 },
+        "result": { "item": AE2("printed_engineering_processor") },
+        "cooling_time": 150
+    }).id('milkyway:processing/casting/engineering_processor')
+    event.custom({
+        "type": "tconstruct:casting_table",
+        "cast": { "item": MW("upgrade_processor_press") },
+        "cast_consumed": false,
+        "fluid": { "tag": "mw_core:molten_magisteel", "amount": 90 },
+        "result": { "item": MW("printed_upgrade_circuit") },
+        "cooling_time": 150
+    }).id('milkyway:processing/casting/upgrade_circuit')
+}
+
+function rubberMatters(event) {
+    let overrideTreeOutput = (id, trunk, leaf) => {
+        event.remove({ id: id })
+        event.custom({
+            "type": "thermal:tree_extractor",
+            "trunk": trunk,
+            "leaves": leaf,
+            "result": {
+                "fluid": "thermal:resin",
+                "amount": 25
+            }
+        });
+    }
+
+    overrideTreeOutput(TE('devices/tree_extractor/tree_extractor_jungle'), MC('jungle_log'), MC('jungle_leaves'))
+    overrideTreeOutput(TE('devices/tree_extractor/tree_extractor_spruce'), MC('spruce_log'), MC('spruce_leaves'))
+    overrideTreeOutput(TE('devices/tree_extractor/tree_extractor_dark_oak'), MC('dark_oak_log'), MC('dark_oak_leaves'))
+    event.remove({ id: CR('crafting/kinetics/belt_connector') })
+    event.shaped(CR('belt_connector', 3), [
+        'SSS',
+        'KKK'
+    ], {
+        S: TE('cured_rubber'),
+        K: MC('dried_kelp')
+    })
+    event.recipes.createCompacting('1x ' + TE("rubber"), [Fluid.of(MC('water'), 250), F("#vines", 4)])
+    event.recipes.createCompacting('1x ' + TE("rubber"), [Fluid.of(MC('water'), 250), '4x #minecraft:flowers'])
+    event.recipes.createCompacting('1x ' + TE("rubber"), [Fluid.of(TE('resin'), 250)])
+}
 function trickierWindmills(event) {
     event.remove({ output: 'create:sail_frame' })
     event.remove({ output: 'create:white_sail' })
@@ -205,9 +333,44 @@ function trickierWindmills(event) {
         S: '#forge:rods/wooden'
     }).id('milkyway:processing/crafting/sail_frame')
     itemApplication(event, CR('sail_frame'), IE('hemp_fabric'), CR('white_sail'))
-
 }
 function tweaks(event){
+    event.replaceInput({id: 'thermal:augments/upgrade_augment_1'}, 'thermal:invar_ingot', 'mw_core:invar_sheet')
+    event.replaceInput({id: 'thermal:augments/upgrade_augment_2'}, 'thermal:electrum_ingot', 'mw_core:electrum_sheet')
+    event.replaceInput({id: 'thermal:augments/upgrade_augment_3'}, 'thermal:enderium_ingot', 'mw_core:enderium_sheet')
+    event.replaceInput({id: 'thermal:augments/upgrade_augment_1'}, '#forge:glass', 'create:electron_tube')
+    event.replaceInput({id: 'thermal:augments/upgrade_augment_2'}, 'minecraft:quartz', 'mw_core:data_tube')
+    event.replaceInput({id: 'thermal:augments/upgrade_augment_3'}, '#thermal:glass/hardened', 'mw_core:tech_tube')
+    event.shaped(Item.of('thermal:fluid_upgrade_augment_1', '{AugmentData:{FluidMax:2,RFMax:4,Type:"Fluid"}}'), [
+        'STS',
+        'RGR',
+        'STS'
+    ], {
+        R: 'thermal:cured_rubber',
+        S: 'create:copper_sheet',
+        G: 'thermal:copper_gear',
+        T: 'create:electron_tube'
+    }).id('milkyway:processing/crafting/fluid_upgrade_augment_1')
+    event.shaped(Item.of('thermal:fluid_upgrade_augment_2', '{AugmentData:{FluidMax:3,RFMax:5,Type:"Fluid"}}'), [
+        'STS',
+        'RGR',
+        'STS'
+    ], {
+        R: 'thermal:cinnabar',
+        S: 'mw_core:constantan_sheet',
+        G: 'thermal:fluid_upgrade_augment_1',
+        T: 'mw_core:data_tube'
+    }).id('milkyway:processing/crafting/fluid_upgrade_augment_2')
+    event.shaped(Item.of('thermal:fluid_upgrade_augment_3', '{AugmentData:{FluidMax:4,RFMax:6,Type:"Fluid"}}'), [
+        'STS',
+        'RGR',
+        'STS'
+    ], {
+        R: 'ae2:certus_quartz_crystal',
+        S: 'mw_core:signalum_sheet',
+        G: 'thermal:fluid_upgrade_augment_2',
+        T: 'mw_core:tech_tube'
+    }).id('milkyway:processing/crafting/fluid_upgrade_augment_3')
     event.blasting('create:scoria', 'minecraft:soul_sand').xp(0.7).id('milkyway:processing/smelting/soul_stone')
 //make a recipe for AE2 `cell_housing` (nickel for fluid, invar for item)
     draining(event, 'infernalexp:dimstone', 'thermal:glowstone', 1000, 'minecraft:glowstone')
@@ -222,14 +385,14 @@ function tweaks(event){
         Item.of('minecraft:glowstone_dust').withChance(0.5)
     ], 'infernalexp:dullstone').id('milkyway:processing/crushing/dullstone')
     event.shaped(AE2('fluid_cell_housing'), [
-        'NRN',
-        'RIR',
-        'NRN'
+            'NRN',
+            'RIR',
+            'NRN'
         ], {
-        N: '#forge:ingots/nickel',
-        I: 'mw_core:data_tube',
-        R: 'minecraft:redstone'
-    }
+            N: '#forge:ingots/nickel',
+            I: 'mw_core:data_tube',
+            R: 'minecraft:redstone'
+        }
     ).id('milkyway:processing/crafting/fluid_cell_housing')
     event.shaped(AE2('item_cell_housing'), [
             'NRN',
@@ -241,12 +404,6 @@ function tweaks(event){
             R: 'minecraft:redstone'
         }
     ).id('milkyway:processing/crafting/item_cell_housing')
-
-
-    nml_foods.forEach(e => {
-        foodCooking(event, MC(e), MW('coal_dust'), MC('cooked_' + e))
-    })
-
     //pulverizer(event, F('#ingots/copper'), F('#dusts/processed/copper'), 0.5)
     materialMelting(event, AE2('fluix_crystal'), MW('molten_fluix'), 100, 1450, 580)
     materialMelting(event, AE2('certus_quartz_crystal'), MW('molten_certus'), 100, 1450, 580)
@@ -268,13 +425,124 @@ function tweaks(event){
     materialMelting(event, MW('reinforced_gold_sheet'), TC('molten_gold'), 360, 800, 100)
     materialMelting(event, MW('reinforced_zinc_sheet'), TC('molten_zinc'), 360, 800, 100)
     materialMelting(event, MW('reinforced_lead_sheet'), TC('molten_lead'), 360, 800, 100)
-
+    materialMelting(event, MKW('copper_concentrate'), MKW('copper_concentrate'), 180, 950, 100)
+    apRods.forEach(e => {
+        basinCasting(event, 'milkyway:molten_' + e, 400, 'architects_palette:' + e + '_rod', 200)
+        materialCasting(event, 'rod', 'milkyway:molten_' + e, 100, 'milkyway:' + e + '_rod', 100)
+        materialMelting(event, 'milkyway:' + e + '_dust',  MKW('milkyway:molten_' + e), 100, 1000, 200)
+        materialMelting(event, 'milkyway:' + e + '_rod',  MKW('molten_' + e), 100, 1000, 200)
+        materialMelting(event, 'architects_palette:' + e + '_rod',  MKW('molten_' + e), 400, 1000, 200)
+        event.custom({
+            "type": "thermal:crystallizer",
+            "ingredients": [
+                {
+                    "fluid": "mw_core:chromatic_waste",
+                    "amount": 1000
+                },
+                {
+                    "item": 'milkyway:' + e + '_dust'
+                }
+            ],
+            "result": [
+                {
+                    "item": 'milkyway:' + e + '_rod',
+                    "count": 2
+                }
+            ],
+            "energy": 5000
+        }).id('milkyway:processing/crystallizing/' + e + '_rod')
+    })
+    refining(event, "tconstruct:molten_copper", "tconstruct:molten_gold", "tconstruct:molten_tin", "create:crushed_copper_ore")
+    refining(event, "tconstruct:molten_iron", "tconstruct:molten_copper", "tconstruct:molten_nickel", "create:crushed_iron_ore")
+    refining(event, "tconstruct:molten_nickel", "tconstruct:molten_iron", "tconstruct:molten_lead", "create:crushed_nickel_ore")
+    event.custom({
+        "type": "thermal:crystallizer",
+        "ingredients": [
+            {
+                "fluid": "mw_core:chromatic_waste",
+                "amount": 1000
+            },
+            {
+                "item": 'mw_core:cobalt_dust'
+            }
+        ],
+        "result": [
+            {
+                "item": 'milkyway:cobalt_slag',
+                "count": 2
+            }
+        ],
+        "energy": 5000
+    }).id('milkyway:processing/crystallizing/cobalt_slag')
+    event.custom({
+        "type": "thermal:centrifuge",
+        "ingredient": {
+            "item": "milkyway:cobalt_slag"
+        },
+        "result": [
+            {
+                "item": "mw_core:crushed_cobalt_ore"
+            },
+            {
+                "item": "thermal:rich_slag"
+            },
+            {
+                "item": "thermal:iron_dust"
+            },
+            {
+                "fluid": "tconstruct:molten_copper",
+                "amount": 45
+            }
+        ],
+        "energy": 15000,
+    }).id('milkyway:processing/centrifuge/cobalt_slag')
+    event.custom({
+        "type": "thermal:centrifuge",
+        "ingredient": {
+            "item": "milkyway:copper_concentrate"
+        },
+        "result": [
+            {
+                "item": "create:copper_nugget",
+                "count": 3
+            },
+            {
+                "item": "thermal:iron_dust"
+            },
+            {
+                "fluid": "milkyway:copper_concentrate",
+                "amount": 360
+            }
+        ],
+        "energy": 2000,
+    }).id('milkyway:processing/centrifuge/copper_concentrate')
+    event.custom({
+        "type": "thermal:centrifuge",
+        "ingredient": {
+            "item": "create:crushed_constantan"
+        },
+        "result": [
+            {
+                "item": "create:copper_nugget",
+                "count": 3
+            },
+            {
+                "item": "create:crushed_copper_ore"
+            },
+            {
+                "item": "minecraft:clay_ball"
+            },
+            {
+                "fluid": "tconstruct:molten_gold",
+                "amount": 45
+            }
+        ],
+        "energy": 2000,
+    }).id('milkyway:processing/centrifuge/blister_copper')
     event.recipes.createEmptying([
         CR('cinder_flour'),
         Fluid.of('mw_core:chromatic_waste', 1000)
     ], MW('chromatic_dust')).id('mikyway:processing/emtpying/chromatic_dust')
-
-
     event.stonecutting('8x refinedstorage:cable', 'milkyway:refined_machine')
     event.custom({
         "type": "createbigcannons:melting",
@@ -292,41 +560,7 @@ function tweaks(event){
         "processingTime": 160,
         "heatRequirement": "heated"
     }).id('milkyway:processing/melting/quartz')
-    event.custom({
-        "type": "tconstruct:casting_table",
-        "cast": { "item": AE2("calculation_processor_press") },
-        "cast_consumed": false,
-        "fluid": { "tag": "mw_core:molten_certus", "amount": 100 },
-        "result": { "item": AE2("printed_calculation_processor") },
-        "cooling_time": 150
-    }).id('milkyway:processing/casting/calculation_processor')
 
-    event.custom({
-        "type": "tconstruct:casting_table",
-        "cast": { "item": AE2("logic_processor_press") },
-        "cast_consumed": false,
-        "fluid": { "tag": "tconstruct:molten_gold", "amount": 90 },
-        "result": { "item": AE2("printed_logic_processor") },
-        "cooling_time": 150
-    }).id('milkyway:processing/casting/logic_processor')
-
-    event.custom({
-        "type": "tconstruct:casting_table",
-        "cast": { "item": AE2("engineering_processor_press") },
-        "cast_consumed": false,
-        "fluid": { "tag": "tconstruct:molten_diamond", "amount": 100 },
-        "result": { "item": AE2("printed_engineering_processor") },
-        "cooling_time": 150
-    }).id('milkyway:processing/casting/engineering_processor')
-
-    event.custom({
-        "type": "tconstruct:casting_table",
-        "cast": { "item": MW("upgrade_processor_press") },
-        "cast_consumed": false,
-        "fluid": { "tag": "mw_core:molten_magisteel", "amount": 90 },
-        "result": { "item": MW("printed_upgrade_circuit") },
-        "cooling_time": 150
-    }).id('milkyway:processing/casting/upgrade_circuit')
     //event.recipes.thermal.chiller(AE2("printed_calculation_processor"), [Fluid.of("mw_core:molten_certus", 100), AE2("calculation_processor_press")]).energy(5000)
     //event.recipes.thermal.chiller(AE2("printed_logic_processor"), [Fluid.of("tconstruct:molten_gold", 90), AE2("logic_processor_press")]).energy(5000)
     //event.recipes.thermal.chiller(AE2("printed_engineering_processor"), [Fluid.of("tconstruct:molten_diamond", 100), AE2("engineering_processor_press")]).energy(5000)
@@ -336,17 +570,12 @@ function tweaks(event){
     //chiller(event, [Fluid.of("tconstruct:molten_gold", 90)], [AE2("logic_processor_press")], [AE2("printed_logic_processor")], 5000)
     //chiller(event, [Fluid.of("tconstruct:molten_diamond", 100)], [AE2("engineering_processor_press")], [AE2("printed_engineering_processor")], 5000)
     //chiller(event, [Fluid.of("mw_core:molten_magisteel", 100)], [MW("upgrade_processor_press")], [MW("printed_upgrade_circuit")], 5000)
-
     event.custom(ifiniDeploying(AE2("printed_silicon"), AE2("silicon"), AE2("silicon_press")))
-
-event.recipes.createSequencedAssembly([
-    MW('rave_tube'),
+    event.recipes.createSequencedAssembly([
+        MW('rave_tube'),
     ], MW('certus_core'), [
-    event.recipes.createFilling(MW('certus_core'), [MW('certus_core'), Fluid.of('mw_core:chromatic_waste', 1000)]),
+        event.recipes.createFilling(MW('certus_core'), [MW('certus_core'), Fluid.of('mw_core:chromatic_waste', 1000)]),
     ]).transitionalItem(MW('certus_core')).loops(4).id('milkyway:processing/sequenced_assembly/rave_tube')
-
-
-
     let types = ["calculation", "logic", "engineering"]
     types.forEach(e => {
         let t = AE2('printed_' + e + '_processor')
@@ -382,7 +611,7 @@ event.recipes.createSequencedAssembly([
             event.recipes.createDeploying(via, [via, dep1]),
             event.recipes.createDeploying(via, [via, dep2]),
             event.recipes.createDeploying(via, [via, dep3])
-            ]).transitionalItem(via).loops(1).id('milkyway:processing/sequenced_assembly/' + to.split(':')[1])
+        ]).transitionalItem(via).loops(1).id('milkyway:processing/sequenced_assembly/' + to.split(':')[1])
     }
     let unProcSheet = (fromId, metal) => {
         event.recipes.createSequencedAssembly([MW('unprocessed_' + metal + '_sheet')], fromId + ':' + metal + '_sheet', [
@@ -390,7 +619,7 @@ event.recipes.createSequencedAssembly([
             event.recipes.createFilling(MW('unprocessed_' + metal + '_sheet'), [MW('unprocessed_' + metal + '_sheet'), Fluid.of(TC('molten_' + metal), 90)]),
             event.recipes.createFilling(MW('unprocessed_' + metal + '_sheet'), [MW('unprocessed_' + metal + '_sheet'), Fluid.of(MC("water"), 500)]),
             event.recipes.createPressing(MW('unprocessed_' + metal + '_sheet'), MW('unprocessed_' + metal + '_sheet')),
-            ]).transitionalItem(MW('unprocessed_' + metal + '_sheet')).loops(1).id('milkyway:processing/sequenced_assembly/' + MW('unprocessed_' + metal + '_sheet').split(':')[1])
+        ]).transitionalItem(MW('unprocessed_' + metal + '_sheet')).loops(1).id('milkyway:processing/sequenced_assembly/' + MW('unprocessed_' + metal + '_sheet').split(':')[1])
         event.recipes.createSequencedAssembly([MW('sturdy_' + metal + '_sheet')], MW('unprocessed_' + metal + '_sheet'), [
             event.recipes.createPressing(MW('unprocessed_' + metal + '_sheet'), MW('unprocessed_' + metal + '_sheet')),
         ]).transitionalItem(MW('unprocessed_' + metal + '_sheet')).loops(15).id('milkyway:processing/sequenced_assembly/' + MW('sturdy_' + metal + '_sheet').split(':')[1])
@@ -437,6 +666,13 @@ event.recipes.createSequencedAssembly([
     seqAss3(MW('copper_mechanism'), CSA('incomplete_hydraulic_engine'), CR('copper_sheet'), MC('compass'), Item.of('minecraft:potion', '{Potion:"minecraft:water"}'), CSA('hydraulic_engine'))
     seqAss3(CR('precision_mechanism'), MW('incomplete_refined_mechanism'), RS('silicon'), 'createaddition:capacitor', MW('lead_sheet'), MW('refined_mechanism'))
     seqAss3(FD('canvas'), FD('canvas'), IE('hemp_fiber'), F('#shears'), IE('hemp_fiber'), IE('hemp_fabric'))
+    seqAss3(IE('empty_casing'), 'immersiveengineering:filled_casing', 'thermal:lead_nugget', 'minecraft:gunpowder', 'thermal:lead_nugget', 'immersiveengineering:casull')
+
+    //event.recipes.createSequencedAssembly(['immersiveengineering:casull'], IE('empty_casing'), [
+    //    event.recipes.createDeploying('immersiveengineering:filled_casing', ['immersiveengineering:filled_casing', 'thermal:lead_nugget']),
+    //    event.recipes.createDeploying('immersiveengineering:filled_casing', ['immersiveengineering:filled_casing', 'minecraft:gunpowder']),
+    //    event.recipes.createDeploying('immersiveengineering:filled_casing', ['immersiveengineering:filled_casing', 'thermal:lead_nugget']),
+    //]).transitionalItem('immersiveengineering:filled_casing').loops(1).id('milkyway:processing/sequenced_assembly/casull')
 
     grow(AE2("certus_crystal_seed"), AE2('growing_certus_seed'), AE2('tiny_certus_crystal'))
     grow(AE2("fluix_crystal_seed"), AE2('growing_fluix_seed'), AE2('tiny_fluix_crystal'))
@@ -478,8 +714,13 @@ event.recipes.createSequencedAssembly([
         B: 'create:brass_sheet'
     }).id('milkyway:processing/crafting/steam_engine')
 
-    event.replaceOutput({id: 'mw_core:refinery/tin_refining'}, 'tconstruct:molten_iron', 'tconstruct:molten_lead')
+    event.replaceOutput({id: 'mw_core:crushing/cobalt_ore'}, 'mw_core:crushed_cobalt_ore', 'milkyway:copper_concentrate')
+    //event.replaceOutput({id: 'thermal:compat/tconstruct/smelter_tconstruct_cobalt_ore'}, 'tconstruct:cobalt_ingot', 'milkyway:copper_concentrate')
+
     event.replaceInput({id: 'create:crafting/kinetics/wrench'}, '#forge:plates/gold', 'mw_core:silver_sheet')
+    event.replaceInput({id: 'forbidden_arcanus:bat_soup_1'}, 'forbidden_arcanus:bat_wing', 'miners_delight:bat_wing')
+    event.replaceInput({id: 'forbidden_arcanus:bat_soup_2'}, 'forbidden_arcanus:bat_wing', 'miners_delight:bat_wing')
+
     event.recipes.createCrushing([
         '3x thermal:tin_nugget',
         Item.of('thermal:apatite').withChance(0.5)
@@ -511,16 +752,16 @@ event.recipes.createSequencedAssembly([
     event.custom({
         "type": "create:compacting",
         "ingredients": [
-        {
-            "item": MC('melon_slice')
-        }
-    ],
+            {
+                "item": MC('melon_slice')
+            }
+        ],
         "results": [
-        {
-            "fluid": IE('ethanol'),
-            "amount": 50
-        }
-    ]
+            {
+                "fluid": IE('ethanol'),
+                "amount": 50
+            }
+        ]
     }).id('milkyway:processing/compacting/ethanol')
 
     event.custom({
@@ -600,24 +841,24 @@ event.recipes.createSequencedAssembly([
             }
         ]
     }).id('milkyway:processing/mixing/ancient_debris')
-event.custom({
-  "type": "create:mixing",
-  "ingredients": [
-    {
-      "item": "minecraft:cobblestone"
-    },
-    {
-      "fluid": "tconstruct:molten_quartz",
-      "amount": 50
-    }
-  ],
-  "results": [
-    {
-      "item": "minecraft:andesite",
-      "count": 1
-    }
-  ]
-}).id('milkyway:processing/mixing/andesite')
+    event.custom({
+        "type": "create:mixing",
+        "ingredients": [
+            {
+                "item": "minecraft:cobblestone"
+            },
+            {
+                "fluid": "tconstruct:molten_quartz",
+                "amount": 50
+            }
+        ],
+        "results": [
+            {
+                "item": "minecraft:andesite",
+                "count": 1
+            }
+        ]
+    }).id('milkyway:processing/mixing/andesite')
 
     event.custom({
         "type": "create:mixing",
@@ -673,45 +914,79 @@ event.custom({
             }
         ]
     }).id('milkyway:processing/mixing/andesite_from_granite')
-event.custom({
-  "type": "create:mixing",
-  "ingredients": [
-    {
-      "fluid": "tconstruct:blood",
-      "amount": 50
-    },
-    {
-      "fluid": "tconstruct:ender_slime",
-      "amount": 50
-    }
-  ],
-  "results": [
-    {
-      "fluid": "tconstruct:molten_ender",
-      "amount": 50
-    }
-  ]
-}).id('milkyway:processing/mixing/molten_ender')
-  event.custom({
-  "type": "create:milling",
-  "ingredients": [
-    {
-      "item": "minecraft:gravel"
-    }
-  ],
-  "results": [
-    {
-      "item": "minecraft:sand",
-      "count": 1
-    },
-    {
-      "item": "mw_core:rock_lump",
-      "count": 3,
-      "chance": 0.5
-    }
-  ],
-  "processingTime": 70
-  }).id('milkyway:processing/milling/gravel')
+    event.custom({
+        "type": "create:mixing",
+        "ingredients": [
+            {
+                "fluid": "tconstruct:blood",
+                "amount": 50
+            },
+            {
+                "fluid": "tconstruct:ender_slime",
+                "amount": 50
+            }
+        ],
+        "results": [
+            {
+                "fluid": "tconstruct:molten_ender",
+                "amount": 50
+            }
+        ]
+    }).id('milkyway:processing/mixing/molten_ender')
+    event.custom({
+        "type": "create:mixing",
+        "ingredients": [
+            {
+                "fluid": "tconstruct:molten_iron",
+                "amount": 180
+            },
+            {
+                "fluid": "milkyway:copper_concentrate",
+                "amount": 720
+            },
+            {
+                "item": "milkyway:monazite_dust"
+            },
+            {
+                "item": "milkyway:heliodor_dust"
+            },
+            {
+                "item": "milkyway:ekanite_dust"
+            }
+        ],
+        "results": [
+            {
+                "fluid": "tconstruct:molten_iron",
+                "amount": 45
+            },
+            {
+                "item": "milkyway:cobalt_slag"
+            },
+            {
+                "item": "create:crushed_constantan"
+            }
+        ]
+    }).id('milkyway:processing/mixing/copper_concentrate')
+    event.custom({
+        "type": "create:milling",
+        "ingredients": [
+            {
+                "item": "minecraft:gravel"
+            }
+        ],
+        "results": [
+            {
+                "item": "minecraft:sand",
+                "count": 1
+            },
+            {
+                "item": "mw_core:rock_lump",
+                "count": 3,
+                "chance": 0.5
+            }
+        ],
+        "processingTime": 70
+    }).id('milkyway:processing/milling/gravel')
     event.custom({
         "type": "create:milling",
         "ingredients": [
@@ -732,12 +1007,58 @@ event.custom({
         ],
         "processingTime": 35
     }).id('milkyway:processing/milling/coal')
-  event.remove({ id: "mw_core:crushing/rock" })
+    event.remove({ id: "mw_core:crushing/rock" })
     event.remove({ id: "createaddition:mixing/netherrack" })
     event.remove({ id: "mw_core:crystallizer/certus_quartz" })
     event.remove({ id: "mw_core:crystallizer/fluix" })
     event.remove({ id: "create:crafting/kinetics/steam_engine" })
-
+    apRods.forEach(e => {
+        event.custom({
+            "type": "create:milling",
+            "ingredients": [
+                {
+                    "item": "milkyway:" + e + "_rod"
+                }
+            ],
+            "results": [
+                {
+                    "item": "milkyway:" + e + "_dust",
+                    "count": 1
+                },
+                {
+                    "item": "milkyway:" + e + "_dust",
+                    "count": 2,
+                    "chance": 0.5
+                }
+            ],
+            "processingTime": 70
+        }).id('milkyway:processing/milling/' + e + '_rod')
+    })
+    event.custom({
+        "type": "create:crushing",
+        "ingredients": [
+            {
+                "item": "milkyway:cobalt_slag"
+            }
+        ],
+        "results": [
+            {
+                "item": "tconstruct:cobalt_nugget",
+                "count": 2
+            },
+            {
+                "item": "tconstruct:cobalt_nugget",
+                "count": 3,
+                "chance": 0.5
+            },
+            {
+                "item": "tconstruct:cobalt_nugget",
+                "count": 4,
+                "chance": 0.2
+            }
+        ],
+        "processingTime": 70
+    }).id('milkyway:processing/crushing/cobalt_slag')
 
     donutCraft(event, '8x thermal:oil_sand', MW('ichor_crystal_dust'), MC('sand'))
     event.recipes.createMixing('8x thermal:oil_sand', [
@@ -765,28 +1086,29 @@ event.custom({
     ]).id('milkyway:processing/mixing/oil_red_sand')
     donutCraft(event, '8x forbidden_arcanus:rune', FA('mundabitur_dust'), CR('rose_quartz'))
     event.recipes.createMixing('8x forbidden_arcanus:rune', [
-    FA('mundabitur_dust'),
-    CR('rose_quartz'),
-    CR('rose_quartz'),
-    CR('rose_quartz'),
-    CR('rose_quartz'),
-    CR('rose_quartz'),
-    CR('rose_quartz'),
-    CR('rose_quartz'),
-    CR('rose_quartz')
-  ]).id('milkyway:processing/mixing/rune')
+        FA('mundabitur_dust'),
+        CR('rose_quartz'),
+        CR('rose_quartz'),
+        CR('rose_quartz'),
+        CR('rose_quartz'),
+        CR('rose_quartz'),
+        CR('rose_quartz'),
+        CR('rose_quartz'),
+        CR('rose_quartz')
+    ]).id('milkyway:processing/mixing/rune')
     donutCraft(event, '8x minecraft:phantom_membrane', MW('skyslime_crystal_dust'), MC('rotten_flesh'))
     event.recipes.createMixing('8x minecraft:phantom_membrane', [
-      MW('skyslime_crystal_dust'),
-      MC('rotten_flesh'),
-      MC('rotten_flesh'),
-      MC('rotten_flesh'),
-      MC('rotten_flesh'),
-      MC('rotten_flesh'),
-      MC('rotten_flesh'),
-      MC('rotten_flesh'),
-      MC('rotten_flesh')
+        MW('skyslime_crystal_dust'),
+        MC('rotten_flesh'),
+        MC('rotten_flesh'),
+        MC('rotten_flesh'),
+        MC('rotten_flesh'),
+        MC('rotten_flesh'),
+        MC('rotten_flesh'),
+        MC('rotten_flesh'),
+        MC('rotten_flesh')
     ]).id('milkyway:processing/mixing/phantom_membrane')
+
     event.shaped(RS(`1k_storage_disk`, 1), [
         'RPR',
         'DTD',
@@ -799,14 +1121,14 @@ event.custom({
         T: MW('#2x2_drawers')
     }).id(`milkyway:processing/crafting/1k_storage_disk`)
     event.shaped(FA('clibano_core'), [
-        'RDR',
-        'DTD',
-        'RDR'
-    ], {
-        R: FA('stellarite_piece'),
-        D: FA('darkstone'),
-        T: MC('blast_furnace')
-    }
+            'RDR',
+            'DTD',
+            'RDR'
+        ], {
+            R: FA('stellarite_piece'),
+            D: FA('darkstone'),
+            T: MC('blast_furnace')
+        }
     ).id(`milkyway:processing/crafting/clibano_core`)
     event.replaceInput({ type: "minecraft:crafting"}, F('#gears/iron'), EG('iron_cogwheel'))
     event.replaceInput(F('#gears/iron'), EG('iron_cogwheel'))
@@ -841,6 +1163,30 @@ event.custom({
         }).id(`milkyway:processing/crafting/${c}_conductor_cap`)
     })
     wood_types.forEach(wt =>{
+        let trim = SD(`${wt}_trim`)
+        let plank = MC(`${wt}_planks`)
+        let drawer_sizes = ['1', '2', '4']
+        drawer_sizes.forEach(size => {
+            let full = SD(`${wt}_full_drawers_${size}`)
+            let half = SD(`${wt}_half_drawers_${size}`)
+            //event.remove({ id: full })
+            event.remove({ id: half })
+            //event.stonecutting(full, trim)
+            event.stonecutting(Item.of(half, 2), full)
+        })
+        event.remove({ id: trim })
+        event.shaped(Item.of(trim, 4), [
+            'SSS',
+            'PMP',
+            'SSS'
+        ], {
+            P: CR('zinc_ingot'),
+            M: '#forge:chests/wooden',
+            S: plank
+        })
+        event.stonecutting(SD("upgrade_template"), trim)
+        event.remove({ output: SD("upgrade_template") })
+
         event.shaped(SD(wt + '_full_drawers_1', 1), [
             'PSP',
             'SCS',
@@ -848,7 +1194,7 @@ event.custom({
         ], {
             P: MC(wt + '_planks'),
             S: MC(wt + '_slab'),
-            C: QA(wt + '_chest')
+            C: trim
         }).id('milkyway:processing/crafting/' + wt + '_drawer_1')
         event.shaped(SD(wt + '_full_drawers_2', 1), [
             'PSP',
@@ -870,23 +1216,6 @@ event.custom({
         }).id('milkyway:processing/crafting/' + wt + '_drawer_3')
     })
 }
-
-function basicMechanism(event) {
-
-}
-function cobaltMechanism(event){
-	event.remove({ id: "thermal:machine_crystallizer" })
-	cobaltMachine(event, TE("machine_crystallizer"), CR("fluid_tank"), CR("rose_quartz_lamp"), TE("signalum_gear"), MW("sturdy_copper_sheet"))
-		event.remove({ id: TE("machine_furnace") })
-		event.remove({ id: TE("press_coin_die") })
-		event.remove({ id: TE("press_gear_die") })
-		event.remove({ id: TE("press_packing_2x2_die") })
-		event.remove({ id: TE("press_packing_3x3_die") })
-		event.remove({ id: TE("press_unpacking_die") })
-
-}
-
-
 function customMachines(event){
 
 }

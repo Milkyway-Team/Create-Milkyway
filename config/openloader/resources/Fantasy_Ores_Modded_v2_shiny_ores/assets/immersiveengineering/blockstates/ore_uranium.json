@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "immersiveengineering:block/uranium_ore_0"
+      },
+      {
+        "model": "immersiveengineering:block/uranium_ore_1"
+      },
+      {
+        "model": "immersiveengineering:block/uranium_ore_2"
+      },
+      {
+        "model": "immersiveengineering:block/uranium_ore_3"
+      }
+    ]
+  }
+}

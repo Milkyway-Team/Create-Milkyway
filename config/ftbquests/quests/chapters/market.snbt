@@ -1334,6 +1334,59 @@
 				}
 			]
 		}
+		{
+			title: "Selling Your Soul For Poetry"
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "citadel:textures/item/citadel_book.png"
+				}
+			}
+			x: -2.0d
+			y: 5.5d
+			subtitle: "32 Silver + 1 Soul"
+			dependencies: ["04A7A7E4A605D66C"]
+			id: "1BB42D427E9DC28C"
+			tasks: [
+				{
+					id: "0BB6021E8B9761AD"
+					type: "item"
+					item: "thermal:silver_coin"
+					count: 32L
+				}
+				{
+					id: "7456F73C2AD16B62"
+					type: "item"
+					item: "forbidden_arcanus:soul"
+				}
+			]
+			rewards: [{
+				id: "5D05E3CFA2F0A04F"
+				type: "item"
+				title: "&6Poem&r"
+				icon: {
+					id: "ftbquests:custom_icon"
+					Count: 1b
+					tag: {
+						Icon: "citadel:textures/item/citadel_book.png"
+					}
+				}
+				item: {
+					id: "minecraft:written_book"
+					Count: 1b
+					tag: {
+						pages: [
+							"{\"extra\":[{\"color\":\"#484848\",\"text\":\"URNS and odours bring away!\"},{\"text\":\"\\n\"},{\"color\":\"#484848\",\"text\":\"   Vapours, sighs, darken the day!\"},{\"text\":\"\\n\"},{\"color\":\"#484848\",\"text\":\"Our dole more deadly looks than dying;\"},{\"text\":\"\\n\"},{\"color\":\"#484848\",\"text\":\"   Balms and gums and heavy cheers,\"},{\"text\":\"\\n\"},{\"color\":\"#484848\",\"text\":\"   Sacred vials fill'd with tears,\"},{\"text\":\"\\n\"},{\"color\":\"#484848\",\"text\":\"And clamours through the wild air flying!\"},{\"text\":\"\\n\\n\"},{\"text\":\"   \\n\\n \"}],\"text\":\"\"}"
+							"{\"extra\":[{\"color\":\"#484848\",\"text\":\"Come, all sad and solemn shows,\"},{\"text\":\"\\n\"},{\"color\":\"#484848\",\"text\":\"   That are quick-eyed Pleasure's foes!\"},{\"text\":\"\\n\"},{\"color\":\"#484848\",\"text\":\"   We convent naught else but woes.\"}],\"text\":\"\"}"
+						]
+						title: "Dirge Of The Three Queens"
+						author: "William Shakespeare"
+						resolved: 1b
+					}
+				}
+			}]
+		}
 	]
 	quest_links: [ ]
 }

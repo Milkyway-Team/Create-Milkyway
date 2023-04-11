@@ -1,0 +1,11 @@
+{
+  "credit": "Model created by Zorak Design - Contact me on discord for work: CesarZorak#0808",
+  "parent": "block/fancy_ore_netherite/debris_2",
+  "textures": {
+		"0": "block/netherrack",
+		"1": "block/netherrack",
+		"2": "block/fancy_ores/ancient_debris_top",
+		"3": "block/fancy_ores/ancient_debris_side",
+		"particle": "block/ancient_debris_top"
+  }
+}

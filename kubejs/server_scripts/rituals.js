@@ -1,6 +1,6 @@
 onEvent('recipes', event => {
     log.push('Registering Rituals')
-    summoningRituals(event)
+    alchemyRituals(event)
     alloyingRituals(event)
     necromancyRituals(event)
 
@@ -8,38 +8,107 @@ onEvent('recipes', event => {
 })
 const necroTome = 'milkyway:tome_necromancy'
 const alloyTome = 'milkyway:alloying_tome'
+const alchTome = 'milkyway:tome_alchemy'
 
-function summoningRituals(event){
+function alchemyRituals(event){
     event.recipes.summoningrituals
-        .altar(Ingredient.of("tconstruct:piglin_head"))
-        .itemOutput('3x minecraft:blackstone')
-        .itemOutput('6x minecraft:emerald_block')
-        .mobOutput('villager')
-        .input('5x minecraft:emerald')
-        .input('10x amethyst_shard')
-        .input(Ingredient.of('10x #minecraft:piglin_loved'))
-        .sacrifice('pig', 3)
-        .sacrificeRegion(5, 5)
+        .altar(Ingredient.of(alchTome))
+        .itemOutput('4x thermal:tin_ingot')
+        .itemOutput('2x create:zinc_ingot')
+        .itemOutput(alchTome)
+        .input("3x thermal:lead_ingot")
+        .sacrifice('pig', 6)
+        .blockBelow('architects_palette:sunmetal_pillar')
         .recipeTime(200)
-        .blockBelow(FA('arcane_polished_darkstone_pillar'))
-        .weather('rain')
-        .id('milkyway:summoningrituals/villager');
+        .id('milkyway:summoningrituals/alchemy/lead_ingot');
     event.recipes.summoningrituals
-        .altar(Ingredient.of("forbidden_arcanus:mundabitur_dust"))
-        .itemOutput('32x forbidden_arcanus:arcane_gold_ingot')
-        .input('32x minecraft:gold_ingot')
-        .input('32x forbidden_arcanus:arcane_crystal_dust')
-        .input('16x minecraft:charcoal')
-        .blockBelow(FA('arcane_polished_darkstone_pillar'))
+        .altar(Ingredient.of(alchTome))
+        .itemOutput('4x minecraft:gold_ingot')
+        .itemOutput('2x thermal:tin_ingot')
+        .itemOutput(alchTome)
+        .input("3x minecraft:copper_ingot")
+        .sacrifice('pig', 6)
+        .blockBelow('architects_palette:sunmetal_pillar')
         .recipeTime(200)
-        .id('milkyway:summoningrituals/arcane_gold_ingot');
-
+        .id('milkyway:summoningrituals/alchemy/copper_ingot');
+    event.recipes.summoningrituals
+        .altar(Ingredient.of(alchTome))
+        .itemOutput('4x minecraft:copper_ingot')
+        .itemOutput('2x thermal:nickel_ingot')
+        .itemOutput(alchTome)
+        .input("3x minecraft:iron_ingot")
+        .sacrifice('pig', 6)
+        .blockBelow('architects_palette:sunmetal_pillar')
+        .recipeTime(200)
+        .id('milkyway:summoningrituals/alchemy/iron_ingot');
+    event.recipes.summoningrituals
+        .altar(Ingredient.of(alchTome))
+        .itemOutput('4x minecraft:copper_ingot')
+        .itemOutput('2x thermal:silver_ingot')
+        .itemOutput(alchTome)
+        .input("3x create:zinc_ingot")
+        .sacrifice('pig', 6)
+        .blockBelow('architects_palette:sunmetal_pillar')
+        .recipeTime(200)
+        .id('milkyway:summoningrituals/alchemy/zinc_ingot');
+    event.recipes.summoningrituals
+        .altar(Ingredient.of(alchTome))
+        .itemOutput('4x minecraft:gold_ingot')
+        .itemOutput('2x thermal:nickel_ingot')
+        .itemOutput(alchTome)
+        .input("3x thermal:silver_ingot")
+        .sacrifice('pig', 6)
+        .blockBelow('architects_palette:sunmetal_pillar')
+        .recipeTime(200)
+        .id('milkyway:summoningrituals/alchemy/silver_ingot');
+    event.recipes.summoningrituals
+        .altar(Ingredient.of(alchTome))
+        .itemOutput('4x thermal:tin_ingot')
+        .itemOutput('2x thermal:silver_ingot')
+        .itemOutput(alchTome)
+        .input("3x minecraft:gold_ingot")
+        .sacrifice('pig', 6)
+        .blockBelow('architects_palette:sunmetal_pillar')
+        .recipeTime(200)
+        .id('milkyway:summoningrituals/alchemy/gold_ingot');
+    event.recipes.summoningrituals
+        .altar(Ingredient.of(alchTome))
+        .itemOutput('4x minecraft:iron_ingot')
+        .itemOutput('2x thermal:lead_ingot')
+        .itemOutput(alchTome)
+        .input("3x thermal:nickel_ingot")
+        .sacrifice('pig', 6)
+        .blockBelow('architects_palette:sunmetal_pillar')
+        .recipeTime(200)
+        .id('milkyway:summoningrituals/alchemy/nickel_ingot');
+    event.recipes.summoningrituals
+        .altar(Ingredient.of(alchTome))
+        .itemOutput('4x create:zinc_ingot')
+        .itemOutput('2x minecraft:iron_ingot')
+        .itemOutput(alchTome)
+        .input("3x thermal:tin_ingot")
+        .sacrifice('pig', 6)
+        .blockBelow('architects_palette:sunmetal_pillar')
+        .recipeTime(200)
+        .id('milkyway:summoningrituals/alchemy/tin_ingot');
 }
 function alloyingRituals(event){
     event.recipes.summoningrituals
         .altar(Ingredient.of(alloyTome))
+        .itemOutput('32x forbidden_arcanus:arcane_gold_ingot')
+        .itemOutput(alloyTome)
+        .input("8x forbidden_arcanus:mundabitur_dust")
+        .input('32x minecraft:gold_ingot')
+        .input('32x forbidden_arcanus:arcane_crystal_dust')
+        .input('16x minecraft:charcoal')
+        .sacrifice('pig', 8)
+        .blockBelow('forbidden_arcanus:clibano_core')
+        .recipeTime(200)
+        .id('milkyway:summoningrituals/alloying/arcane_gold_ingot');
+    event.recipes.summoningrituals
+        .altar(Ingredient.of(alloyTome))
         .itemOutput('8x alloyed:bronze_ingot')
-        .itemOutput('milkyway:alloying_tome')
+        .itemOutput(alloyTome)
         .input('thermal:tin_ingot')
         .input('3x minecraft:copper_ingot')
         .input("forbidden_arcanus:mundabitur_dust")
@@ -51,7 +120,7 @@ function alloyingRituals(event){
     event.recipes.summoningrituals
         .altar(Ingredient.of("milkyway:alloying_tome"))
         .itemOutput('4x create:brass_ingot')
-        .itemOutput('milkyway:alloying_tome')
+        .itemOutput(alloyTome)
         .input('create:zinc_ingot')
         .input('minecraft:copper_ingot')
         .input("forbidden_arcanus:mundabitur_dust")
@@ -63,7 +132,7 @@ function alloyingRituals(event){
     event.recipes.summoningrituals
         .altar(Ingredient.of(alloyTome))
         .itemOutput('6x thermal:invar_ingot')
-        .itemOutput('milkyway:alloying_tome')
+        .itemOutput(alloyTome)
         .input('2x minecraft:iron_ingot')
         .input('thermal:nickel_ingot')
         .input("forbidden_arcanus:mundabitur_dust")
@@ -75,7 +144,7 @@ function alloyingRituals(event){
     event.recipes.summoningrituals
         .altar(Ingredient.of(alloyTome))
         .itemOutput('4x tconstruct:rose_gold_ingot')
-        .itemOutput('milkyway:alloying_tome')
+        .itemOutput(alloyTome)
         .input('minecraft:copper_ingot')
         .input('minecraft:gold_ingot')
         .input("forbidden_arcanus:mundabitur_dust")
@@ -87,7 +156,7 @@ function alloyingRituals(event){
     event.recipes.summoningrituals
         .altar(Ingredient.of(alloyTome))
         .itemOutput('4x createbigcannons:cast_iron_ingot')
-        .itemOutput('milkyway:alloying_tome')
+        .itemOutput(alloyTome)
         .input('2x minecraft:iron_ingot')
         .input('tconstruct:pig_iron_ingot')
         .input("forbidden_arcanus:mundabitur_dust")
@@ -99,7 +168,7 @@ function alloyingRituals(event){
     event.recipes.summoningrituals
         .altar(Ingredient.of(alloyTome))
         .itemOutput('8x createbigcannons:nethersteel_ingot')
-        .itemOutput('milkyway:alloying_tome')
+        .itemOutput(alloyTome)
         .input('3x alloyed:steel_ingot')
         .input('minecraft:netherite_scrap')
         .input("forbidden_arcanus:mundabitur_dust")
@@ -111,7 +180,7 @@ function alloyingRituals(event){
     event.recipes.summoningrituals
         .altar(Ingredient.of(alloyTome))
         .itemOutput('2x tconstruct:amethyst_bronze_ingot')
-        .itemOutput('milkyway:alloying_tome')
+        .itemOutput(alloyTome)
         .input('minecraft:copper_ingot')
         .input('minecraft:amethyst_shard')
         .input("forbidden_arcanus:mundabitur_dust")
@@ -124,6 +193,21 @@ function alloyingRituals(event){
 function necromancyRituals(event){
     event.recipes.summoningrituals
         .altar(Ingredient.of(necroTome))
+        .itemOutput(necroTome)
+        .itemOutput('5x minecraft:glass_bottle')
+        .mobOutput('villager')
+        .input('5x minecraft:emerald')
+        .input('5x tconstruct:blood_bottle')
+        .input('2x minecraft:diamond')
+        .input('forbidden_arcanus:soul')
+        .sacrifice('pig', 3)
+        .sacrificeRegion(5, 5)
+        .recipeTime(200)
+        .blockBelow('forbidden_arcanus:runic_chiseled_polished_darkstone', { activated: true })
+        .id('milkyway:summoningrituals/necromancy/villager');
+    event.recipes.summoningrituals
+        .altar(Ingredient.of(necroTome))
+        .itemOutput(necroTome)
         .itemOutput('10x minecraft:glass_bottle')
         .mobOutput(
         SummoningOutput.mob('zombie')
@@ -143,6 +227,7 @@ function necromancyRituals(event){
         .id('milkyway:summoningrituals/necromancy/zombie');
     event.recipes.summoningrituals
         .altar(Ingredient.of(necroTome))
+        .itemOutput(necroTome)
         .itemOutput('10x minecraft:glass_bottle')
         .mobOutput(
             SummoningOutput.mob('husk')
@@ -162,6 +247,7 @@ function necromancyRituals(event){
         .id('milkyway:summoningrituals/necromancy/husk');
     event.recipes.summoningrituals
         .altar(Ingredient.of(necroTome))
+        .itemOutput(necroTome)
         .itemOutput('10x minecraft:glass_bottle')
         .mobOutput(
             SummoningOutput.mob('drowned')
@@ -182,6 +268,7 @@ function necromancyRituals(event){
         .id('milkyway:summoningrituals/necromancy/drowned');
     event.recipes.summoningrituals
         .altar(Ingredient.of(necroTome))
+        .itemOutput(necroTome)
         .mobOutput(
             SummoningOutput.mob('blaze')
                 .count(5)

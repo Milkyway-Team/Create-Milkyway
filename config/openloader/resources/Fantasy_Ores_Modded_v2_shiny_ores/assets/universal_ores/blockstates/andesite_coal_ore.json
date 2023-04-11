@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "universal_ores:block/andesite_coal_ore_0"
+      },
+      {
+        "model": "universal_ores:block/andesite_coal_ore_1"
+      },
+      {
+        "model": "universal_ores:block/andesite_coal_ore_2"
+      },
+      {
+        "model": "universal_ores:block/andesite_coal_ore_3"
+      }
+    ]
+  }
+}

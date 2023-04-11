@@ -1,10 +1,10 @@
-[21:41:54] [INFO ] Loaded script client_scripts:hephaestus_forge.js in 0.013 s
-[21:41:54] [INFO ] Loaded script client_scripts:ie.js in 0.001 s
-[21:41:54] [INFO ] Loaded script client_scripts:item_descriptions.js in 0.051 s
-[21:41:54] [INFO ] Loaded script client_scripts:jei.js in 0.001 s
-[21:41:54] [INFO ] Loaded script client_scripts:radiant_quartz.js in 0.002 s
-[21:41:54] [INFO ] Hello, World! (You will see this line every time client resources reload)
-[21:41:54] [INFO ] Loaded script client_scripts:script.js in 0.0 s
-[21:41:54] [INFO ] Loaded script client_scripts:thermal.js in 0.005 s
-[21:41:54] [INFO ] Loaded 7/7 KubeJS client scripts in 0.152 s
-[21:42:07] [INFO ] Custom Item Names Reloaded!
+[10:27:57] [INFO ] Loaded script client_scripts:hephaestus_forge.js in 0.025 s
+[10:27:57] [INFO ] Loaded script client_scripts:ie.js in 0.0 s
+[10:27:57] [INFO ] Loaded script client_scripts:item_descriptions.js in 0.037 s
+[10:27:57] [INFO ] Loaded script client_scripts:jei.js in 0.001 s
+[10:27:57] [INFO ] Loaded script client_scripts:radiant_quartz.js in 0.003 s
+[10:27:57] [INFO ] Hello, World! (You will see this line every time client resources reload)
+[10:27:57] [INFO ] Loaded script client_scripts:script.js in 0.001 s
+[10:27:57] [INFO ] Loaded script client_scripts:thermal.js in 0.005 s
+[10:27:57] [INFO ] Loaded 7/7 KubeJS client scripts in 0.186 s
+[10:28:10] [INFO ] Custom Item Names Reloaded!

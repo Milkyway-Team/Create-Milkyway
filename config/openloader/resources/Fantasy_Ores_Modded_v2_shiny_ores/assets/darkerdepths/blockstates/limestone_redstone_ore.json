@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "darkerdepths:block/limestone_redstone_ore_0"
+      },
+      {
+        "model": "darkerdepths:block/limestone_redstone_ore_1"
+      },
+      {
+        "model": "darkerdepths:block/limestone_redstone_ore_2"
+      },
+      {
+        "model": "darkerdepths:block/limestone_redstone_ore_3"
+      }
+    ]
+  }
+}

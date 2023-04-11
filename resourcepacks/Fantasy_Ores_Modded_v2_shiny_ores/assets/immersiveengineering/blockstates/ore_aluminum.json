@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "mw_core:block/bauxite_ore_0"
+      },
+      {
+        "model": "mw_core:block/bauxite_ore_1"
+      },
+      {
+        "model": "mw_core:block/bauxite_ore_2"
+      },
+      {
+        "model": "mw_core:block/bauxite_ore_3"
+      }
+    ]
+  }
+}

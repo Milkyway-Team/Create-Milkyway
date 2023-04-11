@@ -178,6 +178,71 @@
 				item: "forbidden_arcanus:runic_chiseled_polished_darkstone"
 			}]
 		}
+		{
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "forbidden_arcanus:textures/item/obsidian_skull_shield.png"
+				}
+			}
+			x: 3.0d
+			y: 3.5d
+			dependencies: ["4A3292D1AF60C3F3"]
+			id: "6DE5323D9AB25EDA"
+			tasks: [{
+				id: "5571051BF3C6D06F"
+				type: "checkmark"
+				title: "Necromancy Rituals"
+			}]
+		}
+		{
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "tconstruct:textures/item/materials/reinforcement/seared.png"
+				}
+			}
+			x: 2.0d
+			y: 3.5d
+			dependencies: ["12BA5A830DB70CBC"]
+			id: "02CF381A9BB889BC"
+			tasks: [{
+				id: "23723E4466B4C16B"
+				type: "checkmark"
+				title: "Alloying Rituals"
+			}]
+		}
+		{
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "create_enchantment_industry:textures/item/hyper_experience_bottle.png"
+				}
+			}
+			x: 1.0d
+			y: 3.5d
+			dependencies: ["1E6DF8118E9EDEB6"]
+			id: "45F0845F7D92EC24"
+			tasks: [{
+				id: "6E29FD3109A4D8FA"
+				type: "checkmark"
+				title: "Alchemy Rituals"
+			}]
+		}
+		{
+			x: 1.0d
+			y: 2.0d
+			dependencies: ["3BF6E7E9244FAF6B"]
+			id: "1E6DF8118E9EDEB6"
+			tasks: [{
+				id: "21184A8B76BBEAAA"
+				type: "item"
+				item: "architects_palette:sunmetal_pillar"
+			}]
+		}
 	]
 	quest_links: [ ]
 }

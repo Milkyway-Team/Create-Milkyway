@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "forbidden_arcanus:block/stella_arcanum_0"
+      },
+      {
+        "model": "forbidden_arcanus:block/stella_arcanum_1"
+      },
+      {
+        "model": "forbidden_arcanus:block/stella_arcanum_2"
+      },
+      {
+        "model": "forbidden_arcanus:block/stella_arcanum_3"
+      }
+    ]
+  }
+}

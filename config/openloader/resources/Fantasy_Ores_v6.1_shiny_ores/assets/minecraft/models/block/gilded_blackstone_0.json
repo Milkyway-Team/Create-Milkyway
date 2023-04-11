@@ -1,0 +1,10 @@
+{
+  "credit": "Model created by Zorak Design - Contact me on discord for work: CesarZorak#0808",
+  "parent": "block/fancy_ore_nugget/nugget_0",
+  "textures": {
+		"0": "block/blackstone",
+		"1": "block/blackstone_top",
+		"2": "block/fancy_ores/gilded_gold_ore",
+		"particle": "block/blackstone"
+  }
+}

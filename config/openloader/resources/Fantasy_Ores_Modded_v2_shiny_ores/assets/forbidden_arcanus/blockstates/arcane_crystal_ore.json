@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "forbidden_arcanus:block/arcane_crystal_ore_0"
+      },
+      {
+        "model": "forbidden_arcanus:block/arcane_crystal_ore_1"
+      },
+      {
+        "model": "forbidden_arcanus:block/arcane_crystal_ore_2"
+      },
+      {
+        "model": "forbidden_arcanus:block/arcane_crystal_ore_3"
+      }
+    ]
+  }
+}

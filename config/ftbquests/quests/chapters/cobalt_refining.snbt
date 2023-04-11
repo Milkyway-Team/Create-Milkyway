@@ -1,0 +1,474 @@
+{
+	id: "24A025E794F0508D"
+	group: "76E7DC80C9223355"
+	order_index: 2
+	filename: "cobalt_refining"
+	title: "Cobalt Refining"
+	icon: {
+		id: "ftbquests:custom_icon"
+		Count: 1b
+		tag: {
+			Icon: "mw_core:textures/item/crushed_cobalt_ore.png"
+		}
+	}
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "ftblibrary:textures/icons/lock.png"
+				}
+			}
+			x: -0.5d
+			y: -5.0d
+			subtitle: "&5Why on earth would it be easy?&r"
+			dependencies: ["20F8FC20001DEAA3"]
+			id: "34BAAE9981EB6CDA"
+			tasks: [{
+				id: "48A82E6C42A5A91D"
+				type: "checkmark"
+				title: "&4You really thought it'd be easy?&r"
+			}]
+		}
+		{
+			x: -0.5d
+			y: -3.0d
+			dependencies: ["34BAAE9981EB6CDA"]
+			id: "3E52668FEC5EBC56"
+			tasks: [{
+				id: "7AC2B3091CED39EB"
+				type: "observation"
+				title: "&3Observe Nether Cobalt Ore&r"
+				icon: "tconstruct:cobalt_ore"
+				timer: 0L
+				observe_type: 0
+				to_observe: "tconstruct:cobalt_ore"
+			}]
+		}
+		{
+			x: -0.5d
+			y: -1.0d
+			subtitle: "Where Cobalt?"
+			dependencies: ["3E52668FEC5EBC56"]
+			id: "6A80F0FBC1DD4CA0"
+			tasks: [{
+				id: "11E6B2111965B626"
+				type: "item"
+				item: "milkyway:copper_concentrate"
+			}]
+		}
+		{
+			x: 1.5d
+			y: -1.0d
+			dependencies: ["6A80F0FBC1DD4CA0"]
+			id: "48DC67EBE6000029"
+			tasks: [{
+				id: "1AE38412C52E022A"
+				type: "item"
+				item: "milkyway:copper_concentrate_bucket"
+			}]
+		}
+		{
+			x: 5.5d
+			y: -1.0d
+			subtitle: "May Contain Gold"
+			dependencies: ["4DE5CECE2F5B13CB"]
+			id: "56ECBD7F21623029"
+			tasks: [{
+				id: "48A4C1F1BB8CEA03"
+				type: "item"
+				item: "create:crushed_constantan"
+			}]
+		}
+		{
+			x: 7.5d
+			y: -1.0d
+			dependencies: ["56ECBD7F21623029"]
+			id: "670CB74C7C5A61AB"
+			tasks: [{
+				id: "333DD92FA1FBFDC7"
+				type: "item"
+				item: "create:crushed_copper_ore"
+			}]
+		}
+		{
+			title: "Rods"
+			x: 3.5d
+			y: -7.0d
+			subtitle: "Shiny Glowing Hell Sticks"
+			description: ["Found growing from &6Basalt&r clumps anywhere in the &6Nether&r."]
+			hide_dependency_lines: true
+			dependencies: ["34BAAE9981EB6CDA"]
+			hide: true
+			id: "355F6E5C1FB7DC3F"
+			tasks: [
+				{
+					id: "50077A318F7681F7"
+					type: "item"
+					item: "architects_palette:monazite_rod"
+				}
+				{
+					id: "1672F52E4CACA118"
+					type: "item"
+					item: "architects_palette:ekanite_rod"
+				}
+				{
+					id: "0C305E610F4C2AB1"
+					type: "item"
+					item: "architects_palette:heliodor_rod"
+				}
+			]
+		}
+		{
+			title: "&9Mixing&r"
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "create:textures/item/whisk.png"
+				}
+			}
+			x: 3.5d
+			y: -1.0d
+			dependencies: [
+				"48DC67EBE6000029"
+				"142A3B6788AA8DD7"
+			]
+			id: "4DE5CECE2F5B13CB"
+			tasks: [
+				{
+					id: "0346F3347936292B"
+					type: "item"
+					item: "milkyway:copper_concentrate_bucket"
+				}
+				{
+					id: "7CB984D83F154B2C"
+					type: "item"
+					item: "tconstruct:molten_iron_bucket"
+				}
+				{
+					id: "62BD2C2469197787"
+					type: "item"
+					item: "milkyway:monazite_dust"
+				}
+				{
+					id: "7B03ABB1AD6CD7D1"
+					type: "item"
+					item: "milkyway:ekanite_dust"
+				}
+				{
+					id: "226EBA6CFE841B28"
+					type: "item"
+					item: "milkyway:heliodor_dust"
+				}
+			]
+		}
+		{
+			title: "&9Crystallizing&r"
+			icon: "tconstruct:ender_slime_crystal"
+			x: 5.5d
+			y: -3.0d
+			dependencies: [
+				"52902BE87F8FAC8E"
+				"142A3B6788AA8DD7"
+			]
+			id: "0541A1550DECB764"
+			tasks: [
+				{
+					id: "1463BE5479FE99C8"
+					type: "item"
+					item: "milkyway:monazite_rod"
+				}
+				{
+					id: "2CFC9AF83BAD0E24"
+					type: "item"
+					item: "milkyway:ekanite_rod"
+				}
+				{
+					id: "4D4266D4CB503A39"
+					type: "item"
+					item: "milkyway:heliodor_rod"
+				}
+			]
+		}
+		{
+			title: "Chromatic Waste"
+			x: 7.5d
+			y: -3.0d
+			hide_dependency_lines: true
+			dependencies: ["34BAAE9981EB6CDA"]
+			hide: true
+			id: "52902BE87F8FAC8E"
+			tasks: [{
+				id: "6A95FDE3C0BC5761"
+				type: "item"
+				item: "mw_core:chromatic_waste_bucket"
+			}]
+		}
+		{
+			x: 7.5d
+			y: 3.0d
+			dependencies: ["660D6C2866714CE4"]
+			id: "24DD80C02F66D6C8"
+			tasks: [{
+				id: "29365FC952591DE3"
+				type: "item"
+				item: "tconstruct:molten_cobalt_bucket"
+			}]
+		}
+		{
+			title: "&9Melting&r"
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "tconstruct:textures/gui/modifiers/harvest/melting.png"
+				}
+			}
+			x: 3.5d
+			y: -5.0d
+			dependencies: ["355F6E5C1FB7DC3F"]
+			id: "080079CAA90C08B8"
+			tasks: [
+				{
+					id: "13AA9EC01BCC90AA"
+					type: "item"
+					item: "architects_palette:monazite_rod"
+				}
+				{
+					id: "46C93BFDBC37C29E"
+					type: "item"
+					item: "architects_palette:ekanite_rod"
+				}
+				{
+					id: "5D72F7DBDA6E0E6D"
+					type: "item"
+					item: "architects_palette:heliodor_rod"
+				}
+			]
+		}
+		{
+			title: "&9Melting&r"
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "tconstruct:textures/gui/modifiers/harvest/melting.png"
+				}
+			}
+			x: 5.5d
+			y: 3.0d
+			dependencies: [
+				"0759A66A0352DB97"
+				"6AA1F634819F1E52"
+			]
+			id: "660D6C2866714CE4"
+			tasks: [{
+				id: "5EDF08CA5A2CEDBB"
+				type: "item"
+				title: "Cobalt"
+				item: {
+					id: "itemfilters:or"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "mw_core:crushed_cobalt_ore"
+								Count: 1b
+							}
+							{
+								id: "tconstruct:cobalt_nugget"
+								Count: 1b
+							}
+						]
+					}
+				}
+			}]
+		}
+		{
+			title: "Molten"
+			x: 1.5d
+			y: -5.0d
+			dependencies: ["080079CAA90C08B8"]
+			id: "0C1CBEA2B13580E9"
+			tasks: [
+				{
+					id: "4020DDFD5B5BAE1F"
+					type: "item"
+					item: "milkyway:molten_monazite_bucket"
+				}
+				{
+					id: "6CD98E5B8E574288"
+					type: "item"
+					item: "milkyway:molten_ekanite_bucket"
+				}
+				{
+					id: "0F770D323FC17D63"
+					type: "item"
+					item: "milkyway:molten_heliodor_bucket"
+				}
+			]
+		}
+		{
+			title: "Smaller Rods"
+			x: 1.5d
+			y: -3.0d
+			dependencies: ["0C1CBEA2B13580E9"]
+			id: "21A4C7F9060CC731"
+			tasks: [
+				{
+					id: "45E4A77B4B169401"
+					type: "item"
+					item: "milkyway:monazite_rod"
+				}
+				{
+					id: "5E420D738228F035"
+					type: "item"
+					item: "milkyway:ekanite_rod"
+				}
+				{
+					id: "16531FE8D519DE97"
+					type: "item"
+					item: "milkyway:heliodor_rod"
+				}
+			]
+		}
+		{
+			x: 3.5d
+			y: 1.0d
+			dependencies: ["4DE5CECE2F5B13CB"]
+			id: "44670C93B865BEC6"
+			tasks: [{
+				id: "4576EC1E41F99AC6"
+				type: "item"
+				item: "milkyway:cobalt_slag"
+			}]
+		}
+		{
+			x: 3.5d
+			y: 3.0d
+			dependencies: ["44670C93B865BEC6"]
+			id: "0759A66A0352DB97"
+			tasks: [{
+				id: "7B845F49BBC80BEB"
+				type: "item"
+				item: "mw_core:crushed_cobalt_ore"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 3.0d
+			dependencies: ["0759A66A0352DB97"]
+			id: "1CD6E1210F455E6B"
+			tasks: [{
+				id: "10242E0986D6B775"
+				type: "item"
+				item: "mw_core:cobalt_ore_dust"
+			}]
+		}
+		{
+			title: "&9Crystallizing&r"
+			icon: "tconstruct:ender_slime_crystal"
+			x: -0.5d
+			y: 1.0d
+			dependencies: ["0609E3CE86A2C13F"]
+			id: "7BF3D316E42D939C"
+			tasks: [{
+				id: "0376E955D5B47BA2"
+				type: "item"
+				item: "mw_core:cobalt_dust"
+			}]
+		}
+		{
+			x: -0.5d
+			y: 3.0d
+			dependencies: ["1CD6E1210F455E6B"]
+			id: "0609E3CE86A2C13F"
+			tasks: [{
+				id: "41119F618B762ADA"
+				type: "item"
+				item: "mw_core:cobalt_dust"
+			}]
+		}
+		{
+			title: "&6Double Slag&r"
+			icon: { id: "milkyway:cobalt_slag", Count: 2b }
+			x: 1.5d
+			y: 1.0d
+			dependencies: ["7BF3D316E42D939C"]
+			id: "66E44A900CAA0121"
+			tasks: [{
+				id: "30E13F7645CAC0C7"
+				type: "item"
+				item: "milkyway:cobalt_slag"
+				count: 2L
+			}]
+		}
+		{
+			x: 3.5d
+			y: -3.0d
+			dependencies: ["21A4C7F9060CC731"]
+			id: "142A3B6788AA8DD7"
+			tasks: [
+				{
+					id: "41F495792227389B"
+					type: "item"
+					item: "milkyway:monazite_dust"
+				}
+				{
+					id: "101C00E9588E0B2A"
+					type: "item"
+					item: "milkyway:ekanite_dust"
+				}
+				{
+					id: "47B251C889CB723C"
+					type: "item"
+					item: "milkyway:heliodor_dust"
+				}
+			]
+		}
+		{
+			title: "&6Double Rods&r"
+			icon: { id: "milkyway:ekanite_rod", Count: 2b }
+			x: 5.5d
+			y: -5.0d
+			dependencies: ["0541A1550DECB764"]
+			id: "5831D1C811B0539E"
+			tasks: [
+				{
+					id: "1FF439CCEC70612E"
+					type: "item"
+					item: "milkyway:monazite_rod"
+					count: 2L
+				}
+				{
+					id: "20ECC362526F9E6A"
+					type: "item"
+					item: "milkyway:ekanite_rod"
+					count: 2L
+				}
+				{
+					id: "2EB4CC78889F4F4F"
+					type: "item"
+					item: "milkyway:heliodor_rod"
+					count: 2L
+				}
+			]
+		}
+		{
+			x: 5.5d
+			y: 1.0d
+			dependencies: ["44670C93B865BEC6"]
+			id: "6AA1F634819F1E52"
+			tasks: [{
+				id: "519B77E171A99227"
+				type: "item"
+				item: "tconstruct:cobalt_nugget"
+			}]
+		}
+	]
+	quest_links: [ ]
+}

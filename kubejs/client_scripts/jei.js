@@ -7,3 +7,4 @@ onEvent('jei.hide.items', event => {
 onEvent('jei.remove.categories', event => {
 	event.remove([IE('arcfurnace'), IE('arcfurnace_recycling'), IE('blastfurnace'), IE('blastfurnace_fuel'), IE('alloysmelter'), IE('bottlingmachine'), IE('fermenter'), IE('metalpress'), IE('mixer'), IE('refinery'), IE('sawmill'), IE('squeezer')])
 })
+

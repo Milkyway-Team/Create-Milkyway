@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "randomium:block/randomium_ore_0"
+      },
+      {
+        "model": "randomium:block/randomium_ore_1"
+      },
+      {
+        "model": "randomium:block/randomium_ore_2"
+      },
+      {
+        "model": "randomium:block/randomium_ore_3"
+      }
+    ]
+  }
+}

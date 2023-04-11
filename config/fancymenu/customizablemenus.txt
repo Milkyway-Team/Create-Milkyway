@@ -1,0 +1,14 @@
+type = customizablemenus
+
+net.minecraft.client.gui.screens.PauseScreen {
+}
+
+mezz.jei.gui.recipes.RecipesGui {
+}
+
+cofh.thermal.expansion.client.gui.machine.MachineCentrifugeScreen {
+}
+
+net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen {
+}
+

@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "astralsorcery:block/aquamarine_sand_ore_0"
+      },
+      {
+        "model": "astralsorcery:block/aquamarine_sand_ore_1"
+      },
+      {
+        "model": "astralsorcery:block/aquamarine_sand_ore_2"
+      },
+      {
+        "model": "astralsorcery:block/aquamarine_sand_ore_3"
+      }
+    ]
+  }
+}

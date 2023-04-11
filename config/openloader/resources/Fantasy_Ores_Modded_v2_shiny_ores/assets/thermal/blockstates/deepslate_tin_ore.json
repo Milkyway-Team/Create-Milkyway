@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "thermal:block/deepslate_tin_ore_0"
+      },
+      {
+        "model": "thermal:block/deepslate_tin_ore_1"
+      },
+      {
+        "model": "thermal:block/deepslate_tin_ore_2"
+      },
+      {
+        "model": "thermal:block/deepslate_tin_ore_3"
+      }
+    ]
+  }
+}

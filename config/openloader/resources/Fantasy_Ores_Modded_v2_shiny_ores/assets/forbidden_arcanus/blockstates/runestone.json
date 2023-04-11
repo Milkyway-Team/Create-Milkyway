@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "forbidden_arcanus:block/runestone_0"
+      },
+      {
+        "model": "forbidden_arcanus:block/runestone_1"
+      },
+      {
+        "model": "forbidden_arcanus:block/runestone_2"
+      },
+      {
+        "model": "forbidden_arcanus:block/runestone_3"
+      }
+    ]
+  }
+}

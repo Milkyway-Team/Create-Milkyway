@@ -1,0 +1,30 @@
+{
+	id: "15FC7A7F63ABEE84"
+	order_index: 8
+	title: "Poetry"
+	icon: {
+		id: "ftbquests:custom_icon"
+		Count: 1b
+		tag: {
+			Icon: "citadel:textures/item/citadel_book.png"
+		}
+	}
+	loot_size: 1
+	hide_tooltip: true
+	use_title: true
+	rewards: [{
+		item: {
+			id: "minecraft:written_book"
+			Count: 1b
+			tag: {
+				pages: [
+					"{\"extra\":[{\"color\":\"#484848\",\"text\":\"URNS and odours bring away!\"},{\"text\":\"\\n\"},{\"color\":\"#484848\",\"text\":\"   Vapours, sighs, darken the day!\"},{\"text\":\"\\n\"},{\"color\":\"#484848\",\"text\":\"Our dole more deadly looks than dying;\"},{\"text\":\"\\n\"},{\"color\":\"#484848\",\"text\":\"   Balms and gums and heavy cheers,\"},{\"text\":\"\\n\"},{\"color\":\"#484848\",\"text\":\"   Sacred vials fill'd with tears,\"},{\"text\":\"\\n\"},{\"color\":\"#484848\",\"text\":\"And clamours through the wild air flying!\"},{\"text\":\"\\n\\n\"},{\"text\":\"   \\n\\n \"}],\"text\":\"\"}"
+					"{\"extra\":[{\"color\":\"#484848\",\"text\":\"Come, all sad and solemn shows,\"},{\"text\":\"\\n\"},{\"color\":\"#484848\",\"text\":\"   That are quick-eyed Pleasure's foes!\"},{\"text\":\"\\n\"},{\"color\":\"#484848\",\"text\":\"   We convent naught else but woes.\"}],\"text\":\"\"}"
+				]
+				title: "Dirge Of The Three Queens"
+				author: "William Shakespeare"
+				resolved: 1b
+			}
+		}
+	}]
+}

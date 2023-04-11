@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "techreborn:block/deepslate_sheldonite_ore_0"
+      },
+      {
+        "model": "techreborn:block/deepslate_sheldonite_ore_1"
+      },
+      {
+        "model": "techreborn:block/deepslate_sheldonite_ore_2"
+      },
+      {
+        "model": "techreborn:block/deepslate_sheldonite_ore_3"
+      }
+    ]
+  }
+}

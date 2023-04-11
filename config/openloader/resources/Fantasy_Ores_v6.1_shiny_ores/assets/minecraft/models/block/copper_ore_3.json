@@ -1,0 +1,10 @@
+{
+  "credit": "Model created by Zorak Design - Contact me on discord for work: CesarZorak#0808",
+  "parent": "block/fancy_ore_classic/classic_3",
+  "textures": {
+		"0": "block/stone",
+		"1": "block/stone",
+		"2": "block/fancy_ores/copper_ore",
+		"particle": "block/stone"
+  }
+}

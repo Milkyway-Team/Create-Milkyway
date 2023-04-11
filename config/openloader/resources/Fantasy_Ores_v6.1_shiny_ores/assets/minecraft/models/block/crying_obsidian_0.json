@@ -1,0 +1,9 @@
+{
+  "credit": "Model created by Zorak Design - Contact me on discord for work: CesarZorak#0808",
+  "parent": "block/fancy_gemstone/gemstone_0",
+  "textures": {
+		"0": "block/crying_obsidian",
+		"1": "block/crying_obsidian",
+		"particle": "block/crying_obsidian"
+  }
+}

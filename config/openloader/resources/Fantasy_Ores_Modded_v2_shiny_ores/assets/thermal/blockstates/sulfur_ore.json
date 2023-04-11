@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "thermal:block/sulfur_ore_0"
+      },
+      {
+        "model": "thermal:block/sulfur_ore_1"
+      },
+      {
+        "model": "thermal:block/sulfur_ore_2"
+      },
+      {
+        "model": "thermal:block/sulfur_ore_3"
+      }
+    ]
+  }
+}

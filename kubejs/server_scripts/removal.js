@@ -77,6 +77,9 @@ function unwantedRecipes(event) {
     function replaceInById(id, originIn, newIn) {
         event.replaceInput({ id: id }, originIn, newIn);
     }
+    function replaceOutById(id, originOut, newOut) {
+        event.replaceOutput({ id: id }, originOut, newOut);
+    }
     function removeRecID(recipeId) {
         event.remove({ id: recipeId });
     }
@@ -85,6 +88,9 @@ function unwantedRecipes(event) {
     }
     function removeRecOut(recipeOutput) {
         event.remove({ output: recipeOutput });
+    }
+    function removeRecIn(recipeInput) {
+        event.remove({ input: recipeInput });
     }
     replaceInById('brewinandchewin:fermenting/steel_toe_stout', 'minecraft:iron_ingot', 'alloyed:steel_ingot')
 
@@ -117,9 +123,19 @@ function unwantedRecipes(event) {
     removeRecID(/refinedstorage:.*wireless_transmitter/)
     removeRecID(RS('filter'))
     removeRecID(/mw_core:compacting.*coin/)
+    removeRecID(/mw_core:mixer.mixer_alloying.*/)
+    removeRecID('immersiveengineering:crusher/ore_cobalt')
+    removeRecID('tconstruct:smeltery/melting/metal/cobalt/ore_singular')
+    removeRecID('mw_core:refinery/copper_refining')
+    removeRecID('mw_core:refinery/nickel_refining')
+    removeRecID('mw_core:refinery/iron_refining')
+    removeRecID('thermal:compat/tconstruct/smelter_tconstruct_cobalt_ore')
+    removeRecID('thermal:compat/tconstruct/smelter_tconstruct_raw_cobalt')
+    removeRecID('immersiveengineering:crusher/raw_ore_cobalt')
+    removeRecID('immersiveengineering:crusher/raw_block_cobalt')
 
     removeRecTyp([IE('alloy'), IE('arc_furnace'), IE('blast_furnace_fuel'), IE('blast_furnace'), IE('bottling_machine'), IE('coke_oven'), IE('fermenter'),
-        IE('metal_press'), IE('mixer'), IE('refinery'), IE('sawmill'), IE('squeezer'), TE('centrifuge')])
+        IE('metal_press'), IE('mixer'), IE('refinery'), IE('sawmill'), IE('squeezer')])
 
 
     removeRecOut(RS('processor_binding'))
@@ -132,7 +148,7 @@ function unwantedRecipes(event) {
     removeRecOut(TE('device_potion_diffuser'))
     removeRecOut(TE('machine_furnace'))
     removeRecOut(TE('machine_sawmill'))
-    removeRecOut(TE('machine_centrifuge'))
+    //removeRecOut(TE('machine_centrifuge'))
     removeRecOut(TE('machine_crafter'))
     removeRecOut(TE('machine_brewer'))
     removeRecOut(TE('machine_chiller'))
@@ -178,7 +194,8 @@ function unwantedRecipes(event) {
         removeRecOut(IE('nugget_' + e))
         removeRecOut(IE('storage_' + e))
     })
-
+    removeRecIn(/tconstruct:raw_cobalt.*/)
+replaceOutById('immersiveengineering:crusher/ingot_cobalt', '#forge:dusts/cobalt', 'mw_core:cobalt_dust')
 
 
 

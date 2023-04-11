@@ -171,7 +171,11 @@
 			x: 2.5d
 			y: 6.5d
 			description: ["Molten Cobalt is an output from most metal refining recipes."]
-			dependencies: ["63227557E2B93547"]
+			dependencies: [
+				"20F8FC20001DEAA3"
+				"24DD80C02F66D6C8"
+			]
+			hide: true
 			id: "709C0EFA23C31D47"
 			tasks: [
 				{
@@ -561,6 +565,19 @@
 				id: "2030B48387F141EF"
 				type: "checkmark"
 				title: "A Logical Way Forward"
+			}]
+		}
+		{
+			icon: "tconstruct:cobalt_ore"
+			x: 2.5d
+			y: 5.0d
+			hide_dependency_lines: true
+			dependencies: ["44286347C6F6AC67"]
+			id: "20F8FC20001DEAA3"
+			tasks: [{
+				id: "6CA54253B9FE4945"
+				type: "checkmark"
+				title: "&4Cobalt Refining&r"
 			}]
 		}
 	]

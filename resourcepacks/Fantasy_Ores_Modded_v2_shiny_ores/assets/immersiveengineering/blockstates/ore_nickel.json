@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "thermal:block/nickel_ore_0"
+      },
+      {
+        "model": "thermal:block/nickel_ore_1"
+      },
+      {
+        "model": "thermal:block/nickel_ore_2"
+      },
+      {
+        "model": "thermal:block/nickel_ore_3"
+      }
+    ]
+  }
+}

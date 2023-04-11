@@ -1,0 +1,684 @@
+{
+	id: "3B33666416A7D893"
+	group: ""
+	order_index: 5
+	filename: "ores"
+	title: "Milestones"
+	icon: "mw_core:chromatic_waste_bucket"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "I Am A Dwarf And I'm Digging A Hole"
+			icon: {
+				id: "minecraft:iron_pickaxe"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: -9.0d
+			y: -7.0d
+			subtitle: "Diggy Diggy Hole"
+			dependencies: ["04A7A7E4A605D66C"]
+			id: "03D087E4FD02ED15"
+			tasks: [
+				{
+					id: "37FA28EA6AC49E14"
+					type: "questsadditions:break"
+					title: "Break 1,000 Coal Ore"
+					block_type: 1
+					block: "forge:ores/coal"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "3E09AC454C8E800B"
+					type: "questsadditions:break"
+					title: "Break 1,000 Iron Ore"
+					block_type: 1
+					block: "forge:ores/iron"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "066D7C257F677B29"
+					type: "questsadditions:break"
+					title: "Break 1,000 Copper Ore"
+					block_type: 1
+					block: "forge:ores/copper"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "6931CEC2335C55EB"
+					type: "questsadditions:break"
+					title: "Break 1,000 Gold Ore"
+					block_type: 1
+					block: "forge:stone_gold_ores"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "1466EE3C4DFAB73F"
+					type: "questsadditions:break"
+					title: "Break 1,000 Silver Ore"
+					block_type: 1
+					block: "forge:ores/silver"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "40CD2C40614821E9"
+					type: "questsadditions:break"
+					title: "Break 1,000 Lead Ore"
+					block_type: 1
+					block: "forge:ores/lead"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "1B5A38359EF3563B"
+					type: "questsadditions:break"
+					title: "Break 1,000 Tin Ore"
+					block_type: 1
+					block: "forge:ores/tin"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "7CE8FAE5FF5A97C2"
+					type: "questsadditions:break"
+					title: "Break 1,000 Nickel Ore"
+					block_type: 1
+					block: "forge:ores/nickel"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "74728821288943D9"
+					type: "questsadditions:break"
+					title: "Break 1,000 Bauxite Ore"
+					block_type: 1
+					block: "forge:ores/aluminum"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "2C8D0BEABEFB2682"
+					type: "questsadditions:break"
+					title: "Break 1,000 Uranium Ore"
+					block_type: 1
+					block: "forge:ores/uranium"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "219733689EB0A1AC"
+					type: "questsadditions:break"
+					title: "Break 1,000 Zinc Ore"
+					block_type: 1
+					block: "forge:ores/zinc"
+					value: 1000L
+					checkItem: false
+				}
+			]
+			rewards: [
+				{
+					id: "55BA84CDA02B1637"
+					type: "item"
+					item: "thermal:gold_coin"
+					count: 16
+					random_bonus: 48
+				}
+				{
+					id: "1A6E965DADC621CF"
+					type: "item"
+					item: "tconstruct:molten_iron_bucket"
+					random_bonus: 3
+				}
+				{
+					id: "63E265689035BE97"
+					type: "item"
+					item: {
+						id: "tconstruct:crossbow"
+						Count: 1b
+						tag: {
+							tic_multipliers: {
+								"tconstruct:durability": 2.0f
+							}
+							tic_stats: {
+								"tconstruct:attack_speed": 1.0f
+								"tconstruct:attack_damage": 0.5f
+								"tconstruct:durability": 336.0f
+								"tconstruct:accuracy": 0.75f
+								"tconstruct:velocity": 1.05f
+								"tconstruct:draw_speed": 0.9f
+							}
+							tic_broken: 0b
+							tic_modifiers: [
+								{
+									name: "tconstruct:dwarven"
+									level: 2s
+								}
+								{
+									name: "tconstruct:stringy"
+									level: 1s
+								}
+							]
+							tic_materials: [
+								"tconstruct:copper"
+								"tconstruct:copper"
+								"tconstruct:string"
+							]
+							Damage: 0
+							tic_persistent_data: {
+								abilities: 1
+								upgrades: 3
+							}
+						}
+					}
+				}
+				{
+					id: "495E30B93B33EE3F"
+					type: "item"
+					item: "immersiveengineering:silver"
+					count: 16
+					random_bonus: 112
+				}
+				{
+					id: "424EDE65D06B319E"
+					type: "choice"
+					icon: {
+						id: "tconstruct:plate_shield"
+						Count: 1b
+						tag: {
+							tic_stats: {
+								"tconstruct:armor_toughness": 2.0f
+								"tconstruct:block_amount": 100.0f
+								"tconstruct:block_angle": 180.0f
+								"tconstruct:durability": 500.0f
+							}
+							tic_broken: 0b
+							tic_modifiers: [
+								{
+									name: "tconstruct:embellishment"
+									level: 1s
+								}
+								{
+									name: "tconstruct:blocking"
+									level: 1s
+								}
+							]
+							tic_upgrades: [{
+								name: "tconstruct:embellishment"
+								level: 1s
+							}]
+							Damage: 0
+							tic_persistent_data: {
+								abilities: 1
+								"tconstruct:embellishment": "tconstruct:brass"
+								defense: 4
+								upgrades: 1
+							}
+						}
+					}
+					exclude_from_claim_all: true
+					table_id: 1617345988264391981L
+				}
+			]
+		}
+		{
+			title: "Arcane Exploitation"
+			icon: {
+				id: "forbidden_arcanus:slimec_pickaxe"
+				Count: 1b
+				tag: {
+					Damage: 0
+					Enchantments: [{
+						lvl: 1s
+						id: "minecraft:silk_touch"
+					}]
+				}
+			}
+			x: -4.5d
+			y: -7.0d
+			subtitle: "Magic Rocks Make My Chests Go Funny"
+			dependencies: ["04A7A7E4A605D66C"]
+			id: "17D3BAD392EA129E"
+			tasks: [
+				{
+					id: "37CA305ABB835FC2"
+					type: "questsadditions:break"
+					title: "Break 1,000 Lapis Lazuli Ore"
+					block_type: 1
+					block: "forge:ores/lapis"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "760E72FB7707E804"
+					type: "questsadditions:break"
+					title: "Break 1,000 Arcane Crystal Ore"
+					block_type: 1
+					block: "forbidden_arcanus:arcane_crystal_ores"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "002828F65D10F6D6"
+					type: "questsadditions:break"
+					title: "Break 1,000 Xpetrified Ore"
+					block_type: 1
+					block: "forge:ores/xpetrified_ore"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "15F0A925DDC56939"
+					type: "questsadditions:break"
+					title: "Break 500 Stella Arcanum"
+					block_type: 1
+					block: "forge:ores/stella_arcanum"
+					value: 500L
+					checkItem: false
+				}
+			]
+			rewards: [
+				{
+					id: "28FB546FD9D25EC2"
+					type: "item"
+					item: "thermal:gold_coin"
+					count: 48
+					random_bonus: 16
+				}
+				{
+					id: "51AADD5E70DF0721"
+					type: "item"
+					item: {
+						id: "forbidden_arcanus:slimec_pickaxe"
+						Count: 1b
+						tag: {
+							Damage: 0
+							Enchantments: [{
+								lvl: 1s
+								id: "minecraft:silk_touch"
+							}]
+						}
+					}
+				}
+				{
+					id: "2D042B29F0F7D11A"
+					type: "item"
+					item: "forbidden_arcanus:xpetrified_orb"
+					count: 16
+					random_bonus: 16
+				}
+				{
+					id: "63D87A9A8FF697CF"
+					type: "item"
+					item: "mw_core:crushed_lapis_ore"
+					count: 32
+				}
+			]
+		}
+		{
+			title: "Quite a Random Find"
+			icon: "randomium:randomium"
+			x: -3.0d
+			y: -7.0d
+			subtitle: "Incredibly Unpredictable"
+			dependencies: ["04A7A7E4A605D66C"]
+			id: "0470EB80D5AF5F74"
+			tasks: [
+				{
+					id: "75546FF873508773"
+					type: "questsadditions:break"
+					title: "Break 300 Randomium Ore"
+					block_type: 0
+					block: "randomium:randomium_ore"
+					value: 300L
+					checkItem: false
+				}
+				{
+					id: "433A6EE2A257C7FB"
+					type: "questsadditions:break"
+					title: "Break 300 End Randomium Ore"
+					block_type: 0
+					block: "randomium:randomium_ore_end"
+					value: 300L
+					checkItem: false
+				}
+				{
+					id: "3D30E2966FE41108"
+					type: "questsadditions:break"
+					title: "Break 300 Deepslate Randomium Ore"
+					block_type: 0
+					block: "randomium:randomium_ore_deepslate"
+					value: 300L
+					checkItem: false
+				}
+			]
+			rewards: [
+				{
+					id: "5D8FC2DDC565E289"
+					type: "item"
+					item: "thermal:gold_coin"
+					count: 32
+				}
+				{
+					id: "0DD996497D76FD29"
+					type: "item"
+					item: "randomium:randomium"
+				}
+				{
+					id: "407ED62C5E4DC9EB"
+					type: "item"
+					item: "mw_core:radiant_quartz_dust"
+					count: 16
+				}
+				{
+					id: "4F70BC4BC409C20C"
+					type: "item"
+					item: "thermal:silver_coin"
+					random_bonus: 63
+				}
+			]
+		}
+		{
+			title: "Rip n' Tear"
+			icon: {
+				id: "minecraft:netherite_pickaxe"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: -7.5d
+			y: -7.0d
+			subtitle: "Mining Straight To Hell"
+			dependencies: ["04A7A7E4A605D66C"]
+			id: "6A6A401730853605"
+			tasks: [
+				{
+					id: "57AC0FCFD47EDAEB"
+					type: "questsadditions:break"
+					title: "Break 1,000 Nether Cobalt Ore"
+					block_type: 1
+					block: "forge:ores/cobalt"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "57929944FECA76CD"
+					type: "questsadditions:break"
+					title: "Break 1,000 Nether Gold Ore"
+					block_type: 0
+					block: "minecraft:nether_gold_ore"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "3255D01D07FC08C6"
+					type: "questsadditions:break"
+					title: "Break 1,000 Nether Quartz Ore"
+					block_type: 0
+					block: "minecraft:nether_quartz_ore"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "13F75C4B7DF22EE5"
+					type: "questsadditions:break"
+					title: "Break 500 Nether Creatite Ore"
+					block_type: 0
+					block: "mw_core:creatite_ore"
+					value: 500L
+					checkItem: false
+				}
+				{
+					id: "7BA703E1DE6BE462"
+					type: "questsadditions:break"
+					title: "Break 500 Ancient Debris"
+					block_type: 0
+					block: "minecraft:ancient_debris"
+					value: 500L
+					checkItem: false
+				}
+			]
+			rewards: [
+				{
+					id: "2CF78E1DC6207A13"
+					type: "item"
+					item: "thermal:gold_coin"
+					count: 16
+					random_bonus: 32
+				}
+				{
+					id: "49120A144D2770C1"
+					type: "item"
+					item: "nethersdelight:hoglin_mount"
+				}
+				{
+					id: "158575D80212BDEC"
+					type: "item"
+					item: "minecraft:piglin_banner_pattern"
+				}
+			]
+		}
+		{
+			title: "OoOoO Shiny"
+			icon: "minecraft:emerald"
+			x: -6.0d
+			y: -7.0d
+			subtitle: "Shiny Rocks Are Fun!"
+			dependencies: ["04A7A7E4A605D66C"]
+			id: "2F81B9348B4DEB4B"
+			tasks: [
+				{
+					id: "3353CBE874FCF743"
+					type: "questsadditions:break"
+					title: "Break 1,000 Diamond Ore"
+					block_type: 1
+					block: "forge:ores/diamond"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "47AB3391239610B2"
+					type: "questsadditions:break"
+					title: "Break 1,000 Cinnabar Ore"
+					block_type: 1
+					block: "forge:ores/cinnabar"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "1BEE83D7362C029A"
+					type: "questsadditions:break"
+					title: "Break 1,000 Redstone Ore"
+					block_type: 1
+					block: "forge:ores/redstone"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "33380089680BEFB1"
+					type: "questsadditions:break"
+					title: "Break 1,000 Sulfur Ore"
+					block_type: 1
+					block: "forge:ores/sulfur"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "1AFC63B0E92934E0"
+					type: "questsadditions:break"
+					title: "Break 1,000 Niter Ore"
+					block_type: 1
+					block: "forge:ores/niter"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "02696A605A1F173C"
+					type: "questsadditions:break"
+					title: "Break 1,000 Emerald Ore"
+					block_type: 1
+					block: "forge:ores/emerald"
+					value: 1000L
+					checkItem: false
+				}
+				{
+					id: "6A2C1057E73F4998"
+					type: "questsadditions:break"
+					title: "Break 1,000 Certus Quartz Ore"
+					block_type: 1
+					block: "forge:ores/certus_quartz"
+					value: 1000L
+					checkItem: false
+				}
+			]
+			rewards: [
+				{
+					id: "7E5FCE62CBED526E"
+					type: "item"
+					item: "thermal:gold_coin"
+					count: 32
+					random_bonus: 16
+				}
+				{
+					id: "20800EE974B8BAF1"
+					type: "item"
+					item: "mw_core:chromatic_dust"
+					count: 16
+					random_bonus: 32
+				}
+				{
+					id: "63C2A465C5C4C05E"
+					type: "item"
+					item: "quark:diamond_heart"
+				}
+				{
+					id: "6DE0553975861346"
+					type: "item"
+					item: "thermal:redstone_tnt"
+					count: 4
+				}
+			]
+		}
+		{
+			title: "Specialized Profession: Dwarven"
+			icon: "kubejs:specialized_profession_card_dwarven"
+			x: -8.0d
+			y: -10.0d
+			dependencies: [
+				"219733689EB0A1AC"
+				"2C8D0BEABEFB2682"
+				"3E09AC454C8E800B"
+				"066D7C257F677B29"
+				"7CE8FAE5FF5A97C2"
+				"40CD2C40614821E9"
+				"1466EE3C4DFAB73F"
+				"1B5A38359EF3563B"
+				"74728821288943D9"
+			]
+			id: "678E1375E5763308"
+			tasks: [{
+				id: "4FD02384B46800E7"
+				type: "item"
+				item: "thermal:gold_coin"
+				count: 16L
+				consume_items: true
+			}]
+			rewards: [{
+				id: "6887F58528F0E78E"
+				type: "item"
+				item: "kubejs:specialized_profession_card_dwarven"
+			}]
+		}
+		{
+			title: "Specialized Profession: Carbon"
+			icon: "kubejs:specialized_profession_card_carbon"
+			x: -10.0d
+			y: -10.0d
+			dependencies: ["37FA28EA6AC49E14"]
+			id: "7144093F36ADD37A"
+			tasks: [{
+				id: "7D56D8F400D57FD1"
+				type: "item"
+				item: "thermal:gold_coin"
+				count: 16L
+				consume_items: true
+			}]
+			rewards: [{
+				id: "72141CE470039C22"
+				type: "item"
+				item: "kubejs:specialized_profession_card_carbon"
+			}]
+		}
+		{
+			title: "Specialized Profession: Prospector"
+			icon: "kubejs:specialized_profession_card_prospector"
+			x: -9.0d
+			y: -10.0d
+			dependencies: [
+				"6931CEC2335C55EB"
+				"57929944FECA76CD"
+			]
+			id: "66D96ED7B7085126"
+			tasks: [{
+				id: "22F1D685D1E95214"
+				type: "item"
+				item: "thermal:gold_coin"
+				count: 16L
+			}]
+			rewards: [{
+				id: "726464285507D45B"
+				type: "item"
+				item: "kubejs:specialized_profession_card_prospector"
+			}]
+		}
+		{
+			title: "Specialized Profession: Gemologist"
+			icon: "kubejs:specialized_profession_card_gemologist"
+			x: -7.0d
+			y: -10.0d
+			hide_dependency_lines: true
+			dependencies: ["2F81B9348B4DEB4B"]
+			id: "085138D56F67184C"
+			tasks: [{
+				id: "559052DD033D68D2"
+				type: "item"
+				item: "thermal:gold_coin"
+				count: 16L
+			}]
+			rewards: [{
+				id: "669BE0C3B1B8C219"
+				type: "item"
+				item: "kubejs:specialized_profession_card_gemologist"
+			}]
+		}
+		{
+			title: "Specialized Profession: Sorcerer"
+			icon: "kubejs:specialized_profession_card_sorcerer"
+			x: -6.0d
+			y: -10.0d
+			hide_dependency_lines: true
+			dependencies: ["17D3BAD392EA129E"]
+			id: "1EDD6D2E53F8B9AF"
+			tasks: [{
+				id: "672D6BD3461C42DF"
+				type: "item"
+				item: "thermal:gold_coin"
+				count: 16L
+			}]
+			rewards: [{
+				id: "7F8323EDAF10AEC2"
+				type: "item"
+				item: "kubejs:specialized_profession_card_sorcerer"
+			}]
+		}
+	]
+	quest_links: [ ]
+}
