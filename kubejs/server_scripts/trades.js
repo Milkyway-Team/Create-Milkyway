@@ -121,3 +121,8 @@ onEvent("morejs.villager.trades", (event) => {
 
 
 })
+onEvent("morejs.wanderer.trades", (event) => {
+    event.addTrade(2, ['8x ' + EM], '1x ' + 'milkyway:tome_alchemy');
+    event.addTrade(2, ['8x ' + EM], '1x ' + 'milkyway:alloying_tome');
+    event.addTrade(2, ['8x ' + EM], '1x ' + 'milkyway:tome_necromancy');
+})

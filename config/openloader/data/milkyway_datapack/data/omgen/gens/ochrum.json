@@ -1,0 +1,9 @@
+{
+    "primary": "#tconstruct:molten_gold",
+    "secondary": "#minecraft:water",
+    "secondary_pos": "Neighbour",
+  
+    "gens": [
+      [1, "create:ochrum"]
+    ]
+  }

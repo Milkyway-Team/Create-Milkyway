@@ -105,15 +105,6 @@
 					checkItem: false
 				}
 				{
-					id: "2C8D0BEABEFB2682"
-					type: "questsadditions:break"
-					title: "Break 1,000 Uranium Ore"
-					block_type: 1
-					block: "forge:ores/uranium"
-					value: 1000L
-					checkItem: false
-				}
-				{
 					id: "219733689EB0A1AC"
 					type: "questsadditions:break"
 					title: "Break 1,000 Zinc Ore"
@@ -180,13 +171,6 @@
 					}
 				}
 				{
-					id: "495E30B93B33EE3F"
-					type: "item"
-					item: "immersiveengineering:silver"
-					count: 16
-					random_bonus: 112
-				}
-				{
 					id: "424EDE65D06B319E"
 					type: "choice"
 					icon: {
@@ -225,6 +209,12 @@
 					}
 					exclude_from_claim_all: true
 					table_id: 1617345988264391981L
+				}
+				{
+					id: "320DFA5CE4AFB293"
+					type: "item"
+					item: "tconstruct:efln_ball"
+					count: 16
 				}
 			]
 		}
@@ -570,11 +560,10 @@
 		{
 			title: "Specialized Profession: Dwarven"
 			icon: "kubejs:specialized_profession_card_dwarven"
-			x: -8.0d
-			y: -10.0d
+			x: -7.0d
+			y: -9.5d
 			dependencies: [
 				"219733689EB0A1AC"
-				"2C8D0BEABEFB2682"
 				"3E09AC454C8E800B"
 				"066D7C257F677B29"
 				"7CE8FAE5FF5A97C2"
@@ -600,8 +589,8 @@
 		{
 			title: "Specialized Profession: Carbon"
 			icon: "kubejs:specialized_profession_card_carbon"
-			x: -10.0d
-			y: -10.0d
+			x: -9.0d
+			y: -9.5d
 			dependencies: ["37FA28EA6AC49E14"]
 			id: "7144093F36ADD37A"
 			tasks: [{
@@ -620,8 +609,8 @@
 		{
 			title: "Specialized Profession: Prospector"
 			icon: "kubejs:specialized_profession_card_prospector"
-			x: -9.0d
-			y: -10.0d
+			x: -8.0d
+			y: -9.5d
 			dependencies: [
 				"6931CEC2335C55EB"
 				"57929944FECA76CD"
@@ -642,8 +631,8 @@
 		{
 			title: "Specialized Profession: Gemologist"
 			icon: "kubejs:specialized_profession_card_gemologist"
-			x: -7.0d
-			y: -10.0d
+			x: -6.0d
+			y: -9.5d
 			hide_dependency_lines: true
 			dependencies: ["2F81B9348B4DEB4B"]
 			id: "085138D56F67184C"
@@ -662,8 +651,8 @@
 		{
 			title: "Specialized Profession: Sorcerer"
 			icon: "kubejs:specialized_profession_card_sorcerer"
-			x: -6.0d
-			y: -10.0d
+			x: -5.0d
+			y: -9.5d
 			hide_dependency_lines: true
 			dependencies: ["17D3BAD392EA129E"]
 			id: "1EDD6D2E53F8B9AF"

@@ -104,38 +104,25 @@ onEvent('item.tags', event => {
     event.get('thermal:crafting/casts')
         .add(TC('ingot_cast'))
 })
-blacklist([IE('watermill'), /.*creative.*/, /.*insulation.*/, /ftblibrary.*/, /ftbquests.*/, /mw_core:.*_bucket/, /mw_core:.*_mechanism/, /mw_core:.*_charm/, /tconstruct:.*_bucket/,
-    /mw_core:music_disc.*/, /create:precision_mechanism/, /quark:diamond_heart/, /refinedstorage:.*storage_block.*/, /immersiveengineering:.*blastbrick.*/, /immersiveengineering:.*alloybrick.*/,
-    /immersiveengineering:.*cokebrick.*/, IE('fluid_pump'), IE('fluid_pipe'), /refinedstorage:.*quartz_enriched_iron.*/, /refinedstorage:.*portable.*/, /refinedstorage:.*pattern.*/,
-    /refinedstorage:.*disk_manipulator.*/, /refinedstorage:.*storage_housing.*/, MW('#jei_hidden'), IE('coal_coke'), IE('windmill'), IE('waterwheel_segment'), IE('windmill_sail'),
-    /thermal:.*augment.*/, /tconstruct:raw_cobalt.*/,
-    IE('windmill_blade')])
+blacklist([/.*creative.*/, /.*insulation.*/, /ftblibrary.*/, /ftbquests.*/, /mw_core:.*_bucket/, /mw_core:.*_mechanism/, /mw_core:.*_charm/, /tconstruct:.*_bucket/,
+    /mw_core:music_disc.*/, /create:precision_mechanism/, /quark:diamond_heart/, /refinedstorage:.*storage_block.*/, /refinedstorage:.*quartz_enriched_iron.*/, /refinedstorage:.*portable.*/, /refinedstorage:.*pattern.*/,
+    /refinedstorage:.*disk_manipulator.*/, /refinedstorage:.*storage_housing.*/, MW('#jei_hidden'),
+    /thermal:.*augment.*/, /tconstruct:raw_cobalt.*/])
 jeiHide([/thermal:press.*_die/, RS('#disk_manipulator'), RS('#detector'), RS('#wireless_transmitter'), /refinedstorage:.*storage_block/, RS('storage_monitor'),
     RS('storage_housing'), RS('machine_casing'), RS('wrench'), RS('pattern'), RS('filter'), TE('device_water_gen'), TE('device_fisher'), TE('device_composter'),
-    TE('device_collector'), TE('device_nullifier'), TE('device_potion_diffuser'), TE('machine_furnace'), TE('machine_sawmill'),
-    IE('watermill'), IE('coal_coke'), IE('windmill'), IE('waterwheel_segment'), IE('windmill_sail'), IE('windmill_blade')])
-onEvent('fluid.tags', event => {
-    event.get(F("creosote"))
-        .remove(IE('creosote'))
-})
+    TE('device_collector'), TE('device_nullifier'), TE('device_potion_diffuser'), TE('machine_furnace'), TE('machine_sawmill'),])
 onEvent('block.tags', event => {
     event.get("create:windmill_sails")
         .remove(MC('#wool'))
         .remove(CR('sail_frame'))
 
 })
-unwanted_IE_metals.forEach(e => {
-    blokTagRem(['forge:ores_in_ground/stone', 'forge:ore_rates/singular'], [IE('ore_' + e)])
-    blokTagRem(['forge:ores_in_ground/deepslate', 'forge:ore_rates/singular'], [IE('deepslate_ore_' + e)])
-
-    blokTagRem(F('ores/' + e), [IE('ore_' + e), IE('deepslate_ore_' + e)])
-})
 
 tagRem(F('silicon'), [AE2('silicon')])
 tagRem(F('ingots/bronze'), [TE('bronze_ingot')])
 tagRem(F('ingots/steel'), [TE('steel_ingot')])
 
-tagRem(F('nuggets/copper'), [TC('copper_nugget'), TE('copper_nugget'), IE('nugget_copper')])
+tagRem(F('nuggets/copper'), [TC('copper_nugget'), TE('copper_nugget')])
 dustMetals.forEach(e => {
     tagRem(F('dusts/' + e), [TE(e + '_dust')])
 })
@@ -153,39 +140,12 @@ fluidTagAdd(TC('tooltips/gem_small'), [MKW('molten_monazite'), MKW('molten_helio
 fluidTagAdd(TC('tooltips/gem_small'), MKW('molten_ekanite'))
 
 
-//IE TAGS
-
-unwanted_IE_metals.forEach(e => {
-    tagRem([/forge:ores_in_ground.*/, /forge:ore_rates.*/], [IE('ore_' + e), IE('deepslate_ore_' + e)])
-    tagRem(F('ores/' + e), [IE('ore_' + e), IE('deepslate_ore_' + e)])
-    tagRem(F('storage_blocks/raw_' + e), [IE('raw_block_' + e)])
-    tagRem(F('ingots/' + e), [IE('ingot_' + e)])
-    tagRem(F('storage_blocks/' + e), [IE('storage_' + e)])
-    tagRem(F('plates/' + e), [IE('plate_' + e)])
-    tagRem(F('nuggets/' + e), [IE('nugget_' + e)])
-    tagRem(F('dusts/' + e), [IE('dust_' + e)])
-})
-unwanted_IE_alloys.forEach(e => {
-    tagRem(F('ingots/' + e), [IE('ingot_' + e)])
-    tagRem(F('storage_blocks/' + e), [IE('storage_' + e)])
-    tagRem(F('plates/' + e), [IE('plate_' + e)])
-    tagRem(F('nuggets/' + e), [IE('nugget_' + e)])
-    tagRem(F('dusts/' + e), [IE('dust_' + e)])
-})
 ow_vanilla_metals.forEach(e => {
-    tagRem(F('dusts/' + e), [IE('dust_' + e)])
-
 })
 wood_types.forEach(wt => {
     tagAdd(MW('2x2_drawers'), SD(`${wt}_full_drawers_4`))
 })
 
-tagRem(F('dusts/sulfur'), [IE('dust_sulfur')])
-tagRem(F('dusts/uranium'), [IE('dust_uranium')])
-tagRem(F('dusts/wood'), [IE('dust_wood')])
-tagRem(F('rods/steel'), [IE('stick_steel')])
-tagRem(F('tools/wrench'), [IE('hammer')])
-tagRem(F('slag'), [IE('slag')])
 tagAdd(FD('stew_cups'), /miners_delight:.*_stew_cup/)
 tagAdd(FD('soup_cups'), /miners_delight:.*_soup_cup/)
 tagAdd(FD('large_meals'), /farmersdelight:.*_block/)
@@ -196,6 +156,15 @@ tagAdd(FD('soups'), ['alexsdelight:acacia_blossom_soup', 'miners_delight:cave_so
 tagAdd(FD('stews'), /minecraft:.*_stew/)
 tagAdd(FD('stews'), /endersdelight:.*_stew_.*/)
 tagAdd('endersdelight:shulker_bowl_foods', ['endersdelight:chorus_stew', 'endersdelight:endermite_stew', 'endersdelight:twisted_cereal', 'endersdelight:pearl_pasta', 'endersdelight:ender_paella'])
-
+tagRem('forge:nuggets/bronze', 'thermal:bronze_nugget')
+tagRem('forge:nuggets/bronze', 'createbigcannons:bronze_scrap')
+tagRem('forge:nuggets/steel', 'thermal:steel_nugget')
+tagRem('forge:nuggets/steel', 'createbigcannons:steel_scrap')
+tagAdd('tconstruct:casts', ['createarmory:fifty_cal_mold', 'createarmory:nine_mm_mold', 'createarmory:five_five_six_mold'])
+tagAdd('tconstruct:casts/multi_use', ['createarmory:fifty_cal_mold', 'createarmory:nine_mm_mold', 'createarmory:five_five_six_mold'])
+tagAdd('tconstruct:casts/gold', ['createarmory:fifty_cal_mold', 'createarmory:nine_mm_mold', 'createarmory:five_five_six_mold'])
+tagAdd('tconstruct:casts/multi_use/556', 'createarmory:five_five_six_mold')
+tagAdd('tconstruct:casts/multi_use/50', 'createarmory:fifty_cal_mold')
+tagAdd('tconstruct:casts/multi_use/9mm', 'createarmory:nine_mm_mold')
 
 

@@ -83,7 +83,6 @@ onEvent('item.registry', event => {
         { in: TE('nickel_ore', 4), out: S(16)},
         { in: TE('tin_ore', 4), out: S(16)},
         { in: TE('lead_ore', 4), out: S(16)},
-        { in: IE('ore_uranium', 4), out: S(16)},
 
         { in: MC('deepslate_iron_ore', 4), out: S(32)},
         { in: MC('deepslate_copper_ore', 4), out: S(32)},
@@ -92,7 +91,6 @@ onEvent('item.registry', event => {
         { in: TE('deepslate_nickel_ore', 4), out: S(32)},
         { in: TE('deepslate_tin_ore', 4), out: S(32)},
         { in: TE('deepslate_lead_ore', 4), out: S(32)},
-        { in: IE('deepslate_ore_uranium', 4), out: S(32)},
 
         { in: MC('raw_iron', 8), out: S(24)},
         { in: MC('raw_copper', 8), out: S(24)},
@@ -101,7 +99,6 @@ onEvent('item.registry', event => {
         { in: TE('raw_nickel', 8), out: S(24)},
         { in: TE('raw_tin', 8), out: S(24)},
         { in: TE('raw_lead', 8), out: S(24)},
-        { in: IE('raw_uranium', 8), out: S(24)},
 
         { in: CR('crushed_iron_ore', 8), out: S(16)},
         { in: CR('crushed_copper_ore', 8), out: S(16)},

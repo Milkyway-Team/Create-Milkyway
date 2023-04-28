@@ -1534,6 +1534,19 @@
 				count: 16L
 			}]
 		}
+		{
+			icon: "mw_core:action_mechanism"
+			x: -16.5d
+			y: -6.0d
+			shape: "gear"
+			dependencies: ["4CD56BDAF5F61552"]
+			id: "701ABD2A30FA65EF"
+			tasks: [{
+				id: "4FFEBAD8449B70DF"
+				type: "checkmark"
+				title: "Weaponry"
+			}]
+		}
 	]
 	quest_links: [ ]
 }

@@ -16,11 +16,13 @@ onEvent('client.generate_assets', event => {
     rename('create:crushed_constantan', 'Blister Copper')
     rename('ae2:silicon', "Certus Silicon")
     rename('tconstruct:cobalt_ore', "Nether Cobalithron Ore")
-    rename('createsifter:string_mesh', "Crude Mesh")
-    rename('createsifter:andesite_mesh', "Basic Mesh")
-    rename('createsifter:zinc_mesh', "Improved Mesh")
-    rename('createsifter:brass_mesh', "Advanced Mesh")
     rename('thermal:machine_centrifuge', 'Separator')
+    rename('mw_core:unwrapped_light_bulb', 'Unwrapped Lightbulb')
+    rename('createarmory:five_five_six_mold', '556 Casing Gold Cast')
+    rename('createarmory:nine_mm_mold', '9mm Casing Gold Cast')
+    rename('createarmory:fifty_cal_mold', '50 Caliber Casing Gold Cast')
 
+
+    //event.addLang("desc.immersiveengineering.info.blueprint.weaponry","Weaponry")
     console.info('Custom Item Names Reloaded!')
 })

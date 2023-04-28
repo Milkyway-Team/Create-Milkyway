@@ -43,6 +43,7 @@
 				"3B7ECBA091FA42AA"
 				"4B2C4AFB9C5DD5D9"
 				"5A86706C84FDD376"
+				"72908DBE87A1089E"
 			]
 			id: "270E6F407BD727B0"
 			tasks: [
@@ -457,7 +458,7 @@
 			icon: "minecraft:enchanted_golden_apple"
 			x: 5.0d
 			y: 8.0d
-			description: ["Surrounding an Apple with Arcane Gold Ingots created an Enchanted Golden Apple."]
+			description: ["Surrounding an Apple with Arcane Gold Ingots creates an Enchanted Golden Apple."]
 			dependencies: ["07F252B49264958F"]
 			id: "393875B8722F7AF1"
 			tasks: [
@@ -1450,6 +1451,32 @@
 				id: "7DE94BF6E0CA7AB2"
 				type: "checkmark"
 				title: "Already Automated"
+			}]
+		}
+		{
+			x: 4.0d
+			y: 5.5d
+			dependencies: ["47F56CA1C72C9866"]
+			id: "72908DBE87A1089E"
+			tasks: [{
+				id: "01FA105A2804F207"
+				type: "item"
+				item: "milkyway:liquified_logic_bucket"
+			}]
+		}
+		{
+			x: 2.5d
+			y: 6.0d
+			hide_dependency_lines: true
+			dependencies: [
+				"1C9328C10043749C"
+				"02A0C08887708DD7"
+			]
+			id: "47F56CA1C72C9866"
+			tasks: [{
+				id: "3CE3909478CAF490"
+				type: "item"
+				item: "ae2:cell_component_256k"
 			}]
 		}
 	]

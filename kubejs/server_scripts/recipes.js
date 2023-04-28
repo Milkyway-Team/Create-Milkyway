@@ -143,20 +143,39 @@ let materialMelting = (event, input, output, fluidAmount, temp, time) => {
         "time": time
     }).id('milkyway:processing/melting/' + input.split(':')[1] + fluidAmount)
 }
-let materialCasting = (event, cast, fluid, amount, result, coolingTime) => {
+let castForging = (event, cast, result) => {
     event.custom({
         "type": "tconstruct:casting_table",
         "cast": {
-            "tag": `tconstruct:casts/single_use/${cast}`
+            "item": cast
         },
         "cast_consumed": true,
         "fluid": {
-            "name": fluid,
-            "amount": amount
+            "name": 'tconstruct:molten_gold',
+            "amount": 90
         },
         "result": { "item": result },
-        "cooling_time": coolingTime
-    }).id('milkyway:processing/casting/single_use/' + result.split(':')[1])
+        "cooling_time": 40
+    }).id('milkyway:processing/cast_casting/' + result.split(':')[1])
+    
+}
+let castTagForging = (event, cast, result) => {
+    event.custom({
+        "type": "tconstruct:casting_table",
+        "cast": {
+            "tag": cast
+        },
+        "cast_consumed": true,
+        "fluid": {
+            "name": 'tconstruct:molten_gold',
+            "amount": 90
+        },
+        "result": { "item": result },
+        "cooling_time": 40
+    }).id('milkyway:processing/cast_casting/' + result.split(':')[1])
+    
+}
+let materialCasting = (event, cast, fluid, amount, result, coolingTime, sandCasting) => {
     event.custom({
         "type": "tconstruct:casting_table",
         "cast": {
@@ -170,6 +189,20 @@ let materialCasting = (event, cast, fluid, amount, result, coolingTime) => {
         "result": { "item": result },
         "cooling_time": coolingTime
     }).id('milkyway:processing/casting/multi_use/' + result.split(':')[1])
+    if (sandCasting)
+    event.custom({
+        "type": "tconstruct:casting_table",
+        "cast": {
+            "tag": `tconstruct:casts/single_use/${cast}`
+        },
+        "cast_consumed": true,
+        "fluid": {
+            "name": fluid,
+            "amount": amount
+        },
+        "result": { "item": result },
+        "cooling_time": coolingTime
+    }).id('milkyway:processing/casting/single_use/' + result.split(':')[1])
 }
 let basinCasting = (event, fluid, amount, result, coolingTime) => {
     event.custom({
@@ -201,6 +234,18 @@ function ifiniDeploying(output, input, tool) {
 		"keepHeldItem": true
 	}
 }
+function deploying(output, input, tool) {
+	return {
+		"type": "create:deploying",
+		"ingredients": [
+			Ingredient.of(input).toJson(),
+			Ingredient.of(tool).toJson()
+		],
+		"results": [
+			Item.of(output).toResultJson()
+		],
+	}
+}
 function mixingTwoInputs(input1, input2, output) {
     return {
         "type": "create:mixing",
@@ -220,8 +265,9 @@ function multiSmelt(event, output, input) {
 onEvent('recipes', event => {
 	log.push('Registering Recipes')
 	basicMechanism(event)
-    copperMechanism(event)
-    precisionMechanism(event)
+    actionMechanism(event)
+    //copperMechanism(event)
+    //precisionMechanism(event)
     logicMechanism(event)
 	cobaltMechanism(event)
     tweaks(event)
@@ -246,16 +292,54 @@ function cobaltMechanism(event){
 		event.remove({ id: TE("press_unpacking_die") })
 
 }
+
 function logicMechanism(event){
-event.shaped(AE2('cell_component_4k'), [
-'CPC',
-'PMP',
-'CPC'
-    ], {
-        C: AE2('calculation_processor_press'),
-        P: AE2('printed_silicon_press'),
-        M: AE2('memory_card_press')
-    })
+        let cells = ['1k', '4k', '16k', '64k', '256k']
+        const a = '1k'
+        const b = '4k'
+        const c = '16k'
+        const d = '64k'
+        const e = '256k'
+        event.shaped(AE2(`cell_component_${b}`), [
+            'CPC',
+            'QMQ',
+            'CPC'
+        ], {
+            C: MW('enderslime_crystal_dust'),
+            P: AE2('printed_silicon'),
+            M: AE2(`cell_component_${a}`),
+            Q: MC(`quartz`)
+        })
+        event.shaped(AE2(`cell_component_${c}`), [
+            'CPC',
+            'QMQ',
+            'CPC'
+        ], {
+            C: MW('enderslime_crystal_dust'),
+            P: AE2('printed_silicon'),
+            M: AE2(`cell_component_${b}`),
+            Q: AE2(`certus_quartz_crystal`)
+        })
+        event.shaped(AE2(`cell_component_${d}`), [
+            'CPC',
+            'QMQ',
+            'CPC'
+        ], {
+            C: MW('enderslime_crystal_dust'),
+            P: AE2('printed_silicon'),
+            M: AE2(`cell_component_${c}`),
+            Q: AE2(`charged_certus_quartz_crystal`)
+        })
+        event.shaped(AE2(`cell_component_${e}`), [
+            'CPC',
+            'QMQ',
+            'CPC'
+        ], {
+            C: MW('enderslime_crystal_dust'),
+            P: AE2('printed_silicon'),
+            M: AE2(`cell_component_${d}`),
+            Q: AE2(`fluix_crystal`)
+        })
     event.custom({
         "type": "tconstruct:casting_table",
         "cast": { "item": AE2("calculation_processor_press") },
@@ -323,7 +407,7 @@ function rubberMatters(event) {
 function trickierWindmills(event) {
     event.remove({ output: 'create:sail_frame' })
     event.remove({ output: 'create:white_sail' })
-    event.shapeless('create:white_sail', ['create:sail_frame', IE('hemp_fabric')]).id('milkyway:processing/crafting/white_sail_shapeless')
+    event.shapeless('create:white_sail', ['create:sail_frame', FD('canvas')]).id('milkyway:processing/crafting/white_sail_shapeless')
     event.shaped('2x create:sail_frame', [
         'SSS',
         'A A',
@@ -332,15 +416,120 @@ function trickierWindmills(event) {
         A: 'create:andesite_alloy',
         S: '#forge:rods/wooden'
     }).id('milkyway:processing/crafting/sail_frame')
-    itemApplication(event, CR('sail_frame'), IE('hemp_fabric'), CR('white_sail'))
+    itemApplication(event, CR('sail_frame'), FD('canvas'), CR('white_sail'))
 }
 function tweaks(event){
+    //event.shaped('4x immersiveengineering:wirecoil_copper', [
+    //    ' L ',
+    //    'CSC',
+    //    ' L '
+    //    ], {
+    //        C: 'createaddition:copper_wire',
+    //        L: 'immersiveengineering:wire_lead',
+    //        S: 'createaddition:spool'
+    //    })
+    //event.shaped('4x immersiveengineering:wirecoil_electrum', [
+    //    ' C ',
+    //    'CSC',
+    //    ' C '
+    //    ], {
+    //        C: 'immersiveengineering:wire_electrum',
+    //        S: 'createaddition:spool'
+    //    })
+    //event.shaped('4x immersiveengineering:wirecoil_steel', [
+    //    ' C ',
+    //    'LSL',
+    //    ' C '
+    //    ], {
+    //        C: 'immersiveengineering:wire_steel',
+    //        S: 'createaddition:spool',
+    //        L: 'immersiveengineering:wire_aluminum'
+    //    })
+    //event.shaped('4x immersiveengineering:wirecoil_structure_steel', [
+    //    ' C ',
+    //    'CSC',
+    //    ' C '
+    //    ], {
+    //        C: 'immersiveengineering:wire_steel',
+    //        S: 'createaddition:spool'
+    //    })
+    //event.shaped('4x immersiveengineering:wirecoil_redstone', [
+    //    ' C ',
+    //    'RSR',
+    //    ' C '
+    //    ], {
+    //        C: 'immersiveengineering:wire_aluminum',
+    //        R: 'minecraft:redstone',
+    //        S: 'createaddition:spool'
+    //        })
+    //event.shaped('4x immersiveengineering:wirecoil_structure_rope', [
+    //    ' C ',
+    //    'CSC',
+    //    ' C '
+    //    ], {
+    //         C: 'immersiveengineering:hemp_fiber',
+    //         S: 'createaddition:spool'
+    //    })                   
+    //event.replaceInput({id: /immersiveengineering:crafting.wirecoil.*/}, '#balm:wooden_rods', 'createaddition:spool')
+    //event.replaceInput({id: 'immersiveengineering:crafting/toolupgrade_revlolver_electro'}, 'immersiveengineering:wire_copper', 'createaddition:copper_wire')
     event.replaceInput({id: 'thermal:augments/upgrade_augment_1'}, 'thermal:invar_ingot', 'mw_core:invar_sheet')
     event.replaceInput({id: 'thermal:augments/upgrade_augment_2'}, 'thermal:electrum_ingot', 'mw_core:electrum_sheet')
     event.replaceInput({id: 'thermal:augments/upgrade_augment_3'}, 'thermal:enderium_ingot', 'mw_core:enderium_sheet')
     event.replaceInput({id: 'thermal:augments/upgrade_augment_1'}, '#forge:glass', 'create:electron_tube')
     event.replaceInput({id: 'thermal:augments/upgrade_augment_2'}, 'minecraft:quartz', 'mw_core:data_tube')
     event.replaceInput({id: 'thermal:augments/upgrade_augment_3'}, '#thermal:glass/hardened', 'mw_core:tech_tube')
+    event.smelting('alloyed:bronze_ingot', TE('bronze_dust')).id('milkyway:processing/smelting/bronze_ingot')
+    //event.shaped('immersiveengineering:toolupgrade_drill_lube', [
+    //    ' P ',
+    //    'PBP',
+    //    ' PS'
+    //    ], {
+    //        S: 'create:fluid_pipe',
+    //        P: 'create:iron_sheet',
+    //        B: 'createaddition:seed_oil_bucket'
+    //    })
+//event.shaped('immersiveengineering:capacitor_mv', [
+//        'TNT',
+//        'SRS',
+//        'TIT'
+//        ], {
+//            S: 'alloyed:steel_ingot',
+//            T: '#forge:treated_wood',
+//            R: 'thermal:redstone_bucket',
+//            I: 'create:iron_sheet',
+//            N: 'mw_core:nickel_sheet'
+//        })
+    //event.shaped('immersiveengineering:capacitor_hv', [
+    //    'TNT',
+    //    'SRS',
+    //    'TIT'
+    //    ], {
+    //        S: 'alloyed:steel_ingot',
+    //        T: '#forge:treated_wood',
+    //        R: 'thermal:redstone_bucket',
+    //        I: 'immersiveengineering:ingot_hop_graphite',
+    //        N: 'immersiveengineering:plate_aluminum'
+    //    })
+    //event.shaped('immersiveengineering:capacitor_lv', [
+    //    'TIT',
+    //    'SRS',
+    //    'TIT'
+    //    ], {
+    //        S: 'minecraft:iron_ingot',
+    //        T: '#forge:treated_wood',
+    //        R: 'thermal:redstone_bucket',
+    //        I: 'mw_core:lead_sheet',
+    //    })
+    //event.shaped('immersiveengineering:toolupgrade_drill_fortune', [
+    //    'RS ',
+    //    'SRS',
+    //    'PPC'
+    //    ], {
+    //        S: 'alloyed:steel_sheet',
+    //        R: 'thermal:redstone_bucket',
+    //        P: 'create:fluid_pipe',
+    //        C: 'immersiveengineering:component_steel',
+    //    })
     event.shaped(Item.of('thermal:fluid_upgrade_augment_1', '{AugmentData:{FluidMax:2,RFMax:4,Type:"Fluid"}}'), [
         'STS',
         'RGR',
@@ -426,9 +615,10 @@ function tweaks(event){
     materialMelting(event, MW('reinforced_zinc_sheet'), TC('molten_zinc'), 360, 800, 100)
     materialMelting(event, MW('reinforced_lead_sheet'), TC('molten_lead'), 360, 800, 100)
     materialMelting(event, MKW('copper_concentrate'), MKW('copper_concentrate'), 180, 950, 100)
+    materialMelting(event, AE2('cell_component_256k'), MKW('liquified_logic'), 100, 1250, 300)
     apRods.forEach(e => {
         basinCasting(event, 'milkyway:molten_' + e, 400, 'architects_palette:' + e + '_rod', 200)
-        materialCasting(event, 'rod', 'milkyway:molten_' + e, 100, 'milkyway:' + e + '_rod', 100)
+        materialCasting(event, 'rod', 'milkyway:molten_' + e, 100, 'milkyway:' + e + '_rod', 100, true)
         materialMelting(event, 'milkyway:' + e + '_dust',  MKW('milkyway:molten_' + e), 100, 1000, 200)
         materialMelting(event, 'milkyway:' + e + '_rod',  MKW('molten_' + e), 100, 1000, 200)
         materialMelting(event, 'architects_palette:' + e + '_rod',  MKW('molten_' + e), 400, 1000, 200)
@@ -452,6 +642,22 @@ function tweaks(event){
             "energy": 5000
         }).id('milkyway:processing/crystallizing/' + e + '_rod')
     })
+    materialCasting(event, '556', 'tconstruct:molten_bronze', 90, 'createarmory:five_five_six_casing', 100, false)
+    materialCasting(event, '9mm', 'tconstruct:molten_bronze', 45, 'createarmory:nine_mm_casing', 100, false)
+    materialCasting(event, '50', 'tconstruct:molten_bronze', 135, 'createarmory:fifty_cal_casing', 100, false)
+    materialCasting(event, 'gear', 'tconstruct:molten_diamond', 400, 'thermal:diamond_gear', 160, true)
+    materialCasting(event, 'gear', 'tconstruct:molten_quartz', 400, 'thermal:quartz_gear', 100, true)
+    materialCasting(event, 'gear', 'tconstruct:molten_emerald', 400, 'thermal:emerald_gear', 120, true)
+    materialMelting(event, 'thermal:diamond_gear', 'tconstruct:molten_diamond', 400, 1450, 820)
+    materialMelting(event, 'thermal:quartz_gear', 'tconstruct:molten_quartz', 400, 637, 540)
+    materialMelting(event, 'thermal:emerald_gear', 'tconstruct:molten_emerald', 400, 934, 1120)
+    castTagForging(event, 'forge:gears', 'tconstruct:gear_cast')
+
+    castForging(event, 'createarmory:five_five_six_casing', 'createarmory:five_five_six_mold')
+    castForging(event, 'createarmory:nine_mm_casing', 'createarmory:nine_mm_mold')
+    castForging(event, 'createarmory:fifty_cal_casing', 'createarmory:fifty_cal_mold')
+    //basinCasting(event, 'immersiveengineering:concrete', 250, 'immersiveengineering:concrete', 400)
+
     refining(event, "tconstruct:molten_copper", "tconstruct:molten_gold", "tconstruct:molten_tin", "create:crushed_copper_ore")
     refining(event, "tconstruct:molten_iron", "tconstruct:molten_copper", "tconstruct:molten_nickel", "create:crushed_iron_ore")
     refining(event, "tconstruct:molten_nickel", "tconstruct:molten_iron", "tconstruct:molten_lead", "create:crushed_nickel_ore")
@@ -660,14 +866,17 @@ function tweaks(event){
     AE2CellUpgrade('fluid', '4k', '16k')
     AE2CellUpgrade('fluid', '16k', '64k')
     AE2CellUpgrade('fluid', '64k', '256k')
-    seqAss3(IE('hemp_fabric'), IE('hemp_fabric'), MC('writable_book'), MC('glass_bottle'), IE('screwdriver'), IE('survey_tools'))
+    //seqAss3(IE('hemp_fabric'), IE('hemp_fabric'), MC('writable_book'), MC('glass_bottle'), IE('screwdriver'), IE('survey_tools'))
     seqAss3(CR('precision_mechanism'), CSA('incomplete_steam_engine'), CR('brass_sheet'), CR('andesite_alloy'), MC('compass'), CSA('steam_engine'))
     seqAss3(MW('basic_mechanism'), CSA('incomplete_heat_engine'), CR('andesite_alloy'), CR('copper_nugget'), CR('iron_sheet'), CSA('heat_engine'))
     seqAss3(MW('copper_mechanism'), CSA('incomplete_hydraulic_engine'), CR('copper_sheet'), MC('compass'), Item.of('minecraft:potion', '{Potion:"minecraft:water"}'), CSA('hydraulic_engine'))
     seqAss3(CR('precision_mechanism'), MW('incomplete_refined_mechanism'), RS('silicon'), 'createaddition:capacitor', MW('lead_sheet'), MW('refined_mechanism'))
-    seqAss3(FD('canvas'), FD('canvas'), IE('hemp_fiber'), F('#shears'), IE('hemp_fiber'), IE('hemp_fabric'))
-    seqAss3(IE('empty_casing'), 'immersiveengineering:filled_casing', 'thermal:lead_nugget', 'minecraft:gunpowder', 'thermal:lead_nugget', 'immersiveengineering:casull')
-
+    //seqAss3(FD('canvas'), FD('canvas'), IE('hemp_fiber'), F('#shears'), IE('hemp_fiber'), IE('hemp_fabric'))
+    //seqAss3(IE('empty_casing'), 'immersiveengineering:filled_casing', 'thermal:lead_nugget', 'minecraft:gunpowder', 'thermal:lead_nugget', 'immersiveengineering:casull')
+    //seqAss3(IE('sheetmetal_steel'), IE('sheetmetal_steel'), TE('electrum_ingot'), IE('component_steel'), TE('steel_gear'), IE('heavy_engineering'))
+    //seqAss3(IE('sheetmetal_iron'), IE('sheetmetal_iron'), MC('copper_ingot'), IE('component_iron'), TE('copper_gear'), IE('light_engineering'))
+    //seqAss3(IE('sheetmetal_iron'), IE('sheetmetal_iron'), MC('redstone'), MC('copper_ingot'), MW('aluminium_gear'), IE('rs_engineering'))
+    //seqAss3(IE('sheetmetal_steel'), IE('sheetmetal_steel'), IE('coil_mv'), IE('component_iron'), CR('copper_sheet'), IE('generator'))
     //event.recipes.createSequencedAssembly(['immersiveengineering:casull'], IE('empty_casing'), [
     //    event.recipes.createDeploying('immersiveengineering:filled_casing', ['immersiveengineering:filled_casing', 'thermal:lead_nugget']),
     //    event.recipes.createDeploying('immersiveengineering:filled_casing', ['immersiveengineering:filled_casing', 'minecraft:gunpowder']),
@@ -682,8 +891,8 @@ function tweaks(event){
 
     grow(AE2("small_certus_crystal"), AE2('growing_small_certus_crystal'), AE2('certus_quartz_crystal'))
     grow(AE2("small_fluix_crystal"), AE2('growing_small_fluix_crystal'), AE2('fluix_crystal'))
-
-
+    //event.custom(deploying('immersiveengineering:wirecoil_copper_ins', 'immersiveengineering:wirecoil_copper', 'immersiveengineering:hemp_fabric')).id('milkyway:processing/deploying/wirecoil_copper_ins')
+    //event.custom(deploying('immersiveengineering:wirecoil_electrum_ins', 'immersiveengineering:wirecoil_electrum', 'immersiveengineering:hemp_fabric')).id('milkyway:processing/deploying/wirecoil_electrum_ins')
     event.shaped('milkyway:refined_machine', [
         'LLL',
         'AMA',
@@ -749,80 +958,162 @@ function tweaks(event){
             }
         ]
     }).id('milkyway:processing/bottler/silicon')
+    //event.custom({
+    //    "type": "create:compacting",
+    //    "ingredients": [
+    //        {
+    //            "item": MC('melon_slice')
+    //        }
+    //    ],
+    //    "results": [
+    //        {
+    //            "fluid": IE('ethanol'),
+    //            "amount": 50
+    //        }
+    //    ]
+    //}).id('milkyway:processing/compacting/ethanol')
+    //event.custom({
+    //    "type": "create:compacting",
+    //    "ingredients": [
+    //        {
+    //            "fluid": IE('phenolic_resin'),
+    //            "amount": 160
+    //        }
+    //    ],
+    //    "results": [
+    //        {
+    //            "item": IE('plate_duroplast')
+    //        }
+    //    ]
+    //}).id('milkyway:processing/compacting/duroplast')
     event.custom({
         "type": "create:compacting",
         "ingredients": [
             {
-                "item": MC('melon_slice')
+                "item": MW('insulation_sheet')
+            },
+            {
+                "item": MW('creative_ingot')
+            },
+            {
+                "fluid": MW('liquid_magic'),
+                "amount": 100
+            },
+            {
+                "fluid": MKW('liquified_logic'),
+                "amount": 1000
             }
         ],
         "results": [
             {
-                "fluid": IE('ethanol'),
-                "amount": 50
+                "item": MW('creative_alloy')
             }
         ]
-    }).id('milkyway:processing/compacting/ethanol')
-
-    event.custom({
-        "type": "create:mixing",
-        "ingredients": [
-            {
-                "item": TE('niter_dust')
-            },
-            {
-                "fluid": 'createaddition:seed_oil',
-                "amount": 8
-            },
-            {
-                "fluid": IE('ethanol'),
-                "amount": 8
-            }
-        ],
-        "results": [
-            {
-                "fluid": IE('biodiesel'),
-                "amount": 16
-            }
-        ]
-    }).id('milkyway:processing/mixing/biodiesel')
-    event.custom({
-        "type": "create:mixing",
-        "ingredients": [
-            {
-                "fluid": TE('creosote'),
-                "amount": 8
-            },
-            {
-                "fluid": IE('acetaldehyde'),
-                "amount": 12
-            }
-        ],
-        "results": [
-            {
-                "fluid": IE('phenolic_resin'),
-                "amount": 8
-            }
-        ]
-    }).id('milkyway:processing/mixing/phenolic_resin')
-    event.custom({
-        "type": "create:mixing",
-        "ingredients": [
-            {
-                "item": MW('silver_sheet')
-            },
-            {
-                "fluid": IE('ethanol'),
-                "amount": 8
-            }
-        ],
-        "results": [
-            {
-                "fluid": IE('acetaldehyde'),
-                "amount": 8
-            }
-        ]
-    }).id('milkyway:processing/mixing/acetaldehyde')
+    }).id('milkyway:processing/compacting/creative_alloy')
+    //event.custom({
+    //    "type": "create:mixing",
+    //    "ingredients": [
+    //        {
+    //            "item": TE('niter_dust')
+    //        },
+    //        {
+    //            "fluid": 'createaddition:seed_oil',
+    //            "amount": 8
+    //        },
+    //        {
+    //            "fluid": IE('ethanol'),
+    //            "amount": 8
+    //        }
+    //    ],
+    //    "results": [
+    //        {
+    //            "fluid": IE('biodiesel'),
+    //            "amount": 16
+    //        }
+    //    ]
+    //}).id('milkyway:processing/mixing/biodiesel')
+    //event.custom({
+    //    "type": "create:mixing",
+    //    "ingredients": [
+    //        {
+    //            "item": TE('niter_dust')
+    //        },
+    //        {
+    //            "item": TE('copper_dust')
+    //        },
+    //        {
+    //            "fluid": IE('ethanol'),
+    //            "amount": 500
+    //        }
+    //    ],
+    //    "results": [
+    //        {
+    //            "fluid": IE('herbicide'),
+    //            "amount": 500
+    //        }
+    //    ]
+    //}).id('milkyway:processing/mixing/biodiesel')
+    //event.custom({
+    //    "type": "create:compacting",
+    //    "ingredients": [
+    //        {
+    //            "item": TE('slag')
+    //        },
+    //        {
+    //            "item": MC('clay_ball')
+    //        },
+    //        {
+    //            "tag": '#forge:sand'
+    //        },
+    //        {
+    //            "fluid": 'minecraft:water',
+    //            "amount": 1000
+    //        }
+    //    ],
+    //    "results": [
+    //        {
+    //            "fluid": 'immersiveengineering:concrete',
+    //            "amount": 500
+    //        }
+    //    ]
+    //}).id('milkyway:processing/mixing/concrete')
+    //event.custom({
+    //    "type": "create:mixing",
+    //    "ingredients": [
+    //        {
+    //            "fluid": TE('creosote'),
+    //            "amount": 8
+    //        },
+    //        {
+    //            "fluid": IE('acetaldehyde'),
+    //            "amount": 12
+    //        }
+    //    ],
+    //    "results": [
+    //        {
+    //            "fluid": IE('phenolic_resin'),
+    //            "amount": 8
+    //        }
+    //    ]
+    //}).id('milkyway:processing/mixing/phenolic_resin')
+    //event.custom({
+    //    "type": "create:mixing",
+    //    "ingredients": [
+    //        {
+    //            "item": MW('silver_sheet')
+    //        },
+    //        {
+    //            "fluid": IE('ethanol'),
+    //            "amount": 8
+    //        }
+    //    ],
+    //    "results": [
+    //        {
+    //            "fluid": IE('acetaldehyde'),
+    //            "amount": 8
+    //        }
+    //    ]
+    //}).id('milkyway:processing/mixing/acetaldehyde')
     event.custom({
         "type": "create:mixing",
         "ingredients": [
@@ -1217,7 +1508,157 @@ function tweaks(event){
     })
 }
 function customMachines(event){
-
+    
+    //event.custom({
+    //    "type": "immersiveengineering:blueprint",
+    //    "inputs": [
+    //        {
+    //            "count": 4,
+    //            "base_ingredient":{
+    //            "item": "create:brass_ingot"
+    //            }
+    //        },
+    //        {
+    //            "count": 6,
+    //            "base_ingredient":{
+    //                "item": "createarmory:barrel_part"
+    //            },
+    //        },
+    //        {
+    //            "item": "mw_core:action_mechanism"
+    //        }
+    //    ],
+    //    "category": "weaponry",
+    //    "result": {
+    //        "item": "createarmory:minigun_barrel"
+    //    }
+    //})
+    //event.custom({
+    //    "type": "immersiveengineering:blueprint",
+    //    "inputs": [
+    //        {
+    //            "count": 5,
+    //            "base_ingredient":{
+    //            "item": "create:brass_ingot"
+    //            }
+    //        },
+    //        {
+    //            "count": 5,
+    //            "base_ingredient":{
+    //            "item": "alloyed:steel_ingot"
+    //            }
+    //        },
+    //        {
+    //            "count": 2,
+    //            "base_ingredient":{
+    //            "item": "create:sturdy_sheet"
+    //            }
+    //        },
+    //        {
+    //            "item": "mw_core:action_mechanism"
+    //        }
+    //    ],
+    //    "category": "weaponry",
+    //    "result": {
+    //        "item": "createarmory:barret_lower"
+    //    }
+    //})
+    //event.custom({
+    //    "type": "immersiveengineering:blueprint",
+    //    "inputs": [
+    //        {
+    //            "count": 4,
+    //            "base_ingredient":{
+    //            "item": "create:brass_ingot"
+    //            }
+    //        },
+    //        {
+    //            "count": 4,
+    //            "base_ingredient":{
+    //            "item": "alloyed:steel_ingot"
+    //            }
+    //        },
+    //        {
+    //            "item": "mw_core:action_mechanism"
+    //        },
+    //        {
+    //            "item": "create:sturdy_sheet"
+    //        },
+    //        {
+    //            "item": "create:large_cogwheel"
+    //        },
+    //        {
+    //            "item": "create:flywheel"
+    //        }
+    //    ],
+    //    "category": "weaponry",
+    //    "result": {
+    //        "item": "createarmory:minigun_base"
+    //    }
+    //})
+    //event.custom({
+    //    "type": "immersiveengineering:blueprint",
+    //    "inputs": [
+    //        {
+    //            "count": 3,
+    //            "base_ingredient":{
+    //            "item": "create:brass_ingot"
+    //            }
+    //        },
+    //        {
+    //            "count": 2,
+    //            "base_ingredient":{
+    //            "item": "alloyed:steel_ingot"
+    //            }
+    //        },
+    //        {
+    //            "item": "mw_core:action_mechanism"
+    //        },
+    //        {
+    //            "count": 2,
+    //            "base_ingredient":{
+    //            "item": "create:sturdy_sheet"
+    //            }
+    //        },
+    //        {
+    //            "count": 4,
+    //            "base_ingredient":{
+    //                "item": "createarmory:barrel_part"
+    //            },
+    //        }
+    //    ],
+    //    "category": "weaponry",
+    //    "result": {
+    //        "item": "createarmory:m_sixteen_upper"
+    //    }
+    //})
+    //event.custom({
+    //    "type": "immersiveengineering:blueprint",
+    //    "inputs": [
+    //        {
+    //            "count": 6,
+    //            "base_ingredient":{
+    //            "item": "create:brass_ingot"
+    //            }
+    //        },
+    //        {
+    //            "item": "alloyed:steel_ingot"
+    //        },
+    //        {
+    //            "item": "mw_core:action_mechanism"
+    //        },
+    //        {
+    //            "count": 3,
+    //            "base_ingredient":{
+    //                "item": "createarmory:barrel_part"
+    //            },
+    //        }
+    //    ],
+    //    "category": "weaponry",
+    //    "result": {
+    //        "item": "createarmory:four_sixteen_upper"
+    //    }
+    //})
 }
 function trading(event) {
     let trade = (card_id, ingredient, output) => {
@@ -1302,4 +1743,7 @@ function crushing(event) {
     //    Item.of('thermal:apatite').withChance(0.5)
     //], 'quark:jasper').id('milkyway:crushing/jasper')
     //event.recipes.createsifterSifting([Item.of('minecraft:slime_ball').withChance(0.5).toJson(),Item.of('tconstruct:earth_slime_crystal').withChance(0.25).toJson(),Item.of('mw_core:earthslime_crystal_dust').withChance(0.5).toJson(),Item.of('tconstruct:budding_earth_slime_crystal').withChance(0.01).toJson()], ['tconstruct:earth_slime_dirt','createsifter:zinc_mesh'])
+}
+function actionMechanism(event) {
+
 }

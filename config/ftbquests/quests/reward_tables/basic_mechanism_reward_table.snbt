@@ -17,14 +17,6 @@
 		}
 		{ item: "create:experience_nugget", count: 12 }
 		{ item: "forbidden_arcanus:obsidian_with_iron", count: 4 }
-		{
-			title: "Dungeon Loot"
-			icon: "quark:spruce_chest"
-			exclude_from_claim_all: true
-			command: "/loot spawn ~ ~ ~ loot minecraft:chests/simple_dungeon"
-			player_command: true
-			type: "command"
-		}
 	]
 	loot_crate: {
 		drops: {

@@ -1,0 +1,433 @@
+{
+	id: "77D5DAECDB156A50"
+	group: "76E7DC80C9223355"
+	order_index: 3
+	filename: "woke_up_and_chose_violence"
+	title: "Woke Up And Chose Violence"
+	icon: {
+		id: "ftbquests:custom_icon"
+		Count: 1b
+		tag: {
+			Icon: "mw_core:textures/item/mechanisms/action_mechanism.png"
+		}
+	}
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: -8.5d
+			y: -2.5d
+			subtitle: "WHO TOUCHED MY GUN?"
+			dependencies: ["21BE6980BCE13A0A"]
+			id: "69C6A0E5156E650D"
+			tasks: [{
+				id: "7C83BA64DA46D125"
+				type: "item"
+				item: "createarmory:mini_gun"
+			}]
+		}
+		{
+			icon: {
+				id: "create:potato_cannon"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: -10.5d
+			y: 1.0d
+			subtitle: "Grass grows, birds fly, sun shines, and brother? I hurt people."
+			description: [""]
+			dependencies: ["701ABD2A30FA65EF"]
+			id: "56A691C6FB6BD72B"
+			tasks: [{
+				id: "321D7DB7C0B00A9F"
+				type: "checkmark"
+				title: "Weaponry, The solution to most problems"
+			}]
+		}
+		{
+			x: -10.5d
+			y: 3.0d
+			subtitle: "It doesn't matter how much people respect you when they're on fire."
+			dependencies: ["56A691C6FB6BD72B"]
+			id: "6B95C8711C7AD4B6"
+			tasks: [{
+				id: "0FAD3840378D9608"
+				type: "item"
+				item: "molotov:molotov"
+			}]
+		}
+		{
+			x: -9.5d
+			y: -2.5d
+			subtitle: "Sniping's a good job, mate."
+			description: ["It's challenging work, out of doors... I guarantee you'll not go hungry. 'Cause at the end of the day, long as there's two people left on the planet, someone is gonna want someone dead."]
+			dependencies: ["4A832DA036CD3B05"]
+			id: "36C5AD94887B5567"
+			tasks: [{
+				id: "36C662CE3AD4D4D3"
+				type: "item"
+				item: "createarmory:empty_barret"
+			}]
+			rewards: [
+				{
+					id: "2968DC29E73E2FF2"
+					type: "item"
+					item: "createarmory:fifty_cal"
+					count: 16
+					random_bonus: 48
+				}
+				{
+					id: "3A91C8F86E099588"
+					type: "item"
+					item: "farmersdelight:steak_and_potatoes"
+					count: 3
+				}
+				{
+					id: "6C9C671D84A6FE05"
+					type: "item"
+					item: {
+						id: "supplementaries:jar"
+						Count: 1b
+						tag: {
+							BlockEntityTag: {
+								ForgeCaps: { }
+								Items: [ ]
+								FluidHolder: {
+									Count: 8
+									Fluid: "minecraft:honey"
+									CachedColor: -1
+								}
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			x: -2.5d
+			y: 1.0d
+			dependencies: ["0055D9ED19CD16A3"]
+			id: "428AE1B1B5B53AAD"
+			tasks: [{
+				id: "0D68D62C76508E4D"
+				type: "item"
+				item: "createarmory:five_five_six"
+			}]
+		}
+		{
+			title: "Bullet Builder"
+			x: -7.5d
+			y: 1.0d
+			dependencies: ["56A691C6FB6BD72B"]
+			id: "69447401846B326E"
+			tasks: [{
+				id: "3E6714B7A84AA3FB"
+				type: "item"
+				item: "tconstruct:molten_bronze_bucket"
+			}]
+			rewards: [
+				{
+					id: "799715DFE8CCC04B"
+					type: "item"
+					item: "createarmory:nine_mm_casing"
+				}
+				{
+					id: "53824803616BFDE7"
+					type: "item"
+					item: "createarmory:five_five_six_casing"
+				}
+				{
+					id: "77D7E48C61B73571"
+					type: "item"
+					item: "createarmory:fifty_cal_casing"
+				}
+			]
+		}
+		{
+			x: -5.5d
+			y: 1.0d
+			dependencies: ["69447401846B326E"]
+			id: "08A7AB49AD4E33F5"
+			tasks: [{
+				id: "654320E4BBAE0217"
+				type: "item"
+				item: "createarmory:five_five_six_mold"
+			}]
+		}
+		{
+			x: -5.5d
+			y: -0.5d
+			dependencies: ["69447401846B326E"]
+			id: "32313B62472798F9"
+			tasks: [{
+				id: "2D44E28ECADE6768"
+				type: "item"
+				item: "createarmory:fifty_cal_mold"
+			}]
+		}
+		{
+			x: -5.5d
+			y: 2.5d
+			dependencies: ["69447401846B326E"]
+			id: "20409F7BCD867086"
+			tasks: [{
+				id: "08F1319B186D5A5C"
+				type: "item"
+				item: "createarmory:nine_mm_mold"
+			}]
+		}
+		{
+			x: -2.5d
+			y: -0.5d
+			dependencies: ["4F65163F67BC6ACB"]
+			id: "1E11B3EF1083FBF1"
+			tasks: [{
+				id: "612B90933219E47A"
+				type: "item"
+				item: "createarmory:fifty_cal"
+			}]
+		}
+		{
+			x: -2.5d
+			y: 2.5d
+			dependencies: ["524FD21EA4DBB336"]
+			id: "7346D1AF246229E7"
+			tasks: [{
+				id: "004D6164615175CB"
+				type: "item"
+				item: "createarmory:nine_mm"
+			}]
+		}
+		{
+			x: -4.0d
+			y: 2.5d
+			dependencies: ["20409F7BCD867086"]
+			id: "524FD21EA4DBB336"
+			tasks: [{
+				id: "7BFE1837FBF25575"
+				type: "item"
+				item: "createarmory:nine_mm_casing"
+			}]
+		}
+		{
+			x: -4.0d
+			y: -0.5d
+			dependencies: ["32313B62472798F9"]
+			id: "4F65163F67BC6ACB"
+			tasks: [{
+				id: "5C477511B5DCE570"
+				type: "item"
+				item: "createarmory:fifty_cal_casing"
+			}]
+		}
+		{
+			x: -4.0d
+			y: 1.0d
+			dependencies: ["08A7AB49AD4E33F5"]
+			id: "0055D9ED19CD16A3"
+			tasks: [{
+				id: "4FC1FCB267934A02"
+				type: "item"
+				item: "createarmory:five_five_six_casing"
+			}]
+		}
+		{
+			x: -7.5d
+			y: -2.5d
+			dependencies: [
+				"69C6A0E5156E650D"
+				"457397375D1A8B5B"
+			]
+			id: "32A29241596D4179"
+			tasks: [{
+				id: "6453D9F09F577319"
+				type: "item"
+				item: "createarmory:upgraded_mini_gun"
+			}]
+		}
+		{
+			title: "Minigun Parts"
+			x: -8.5d
+			y: -1.0d
+			dependencies: ["56A691C6FB6BD72B"]
+			id: "21BE6980BCE13A0A"
+			tasks: [
+				{
+					id: "56E4E7B159907A56"
+					type: "item"
+					item: "createarmory:minigun_base"
+				}
+				{
+					id: "2F1EE5A38B9A5400"
+					type: "item"
+					item: "createarmory:minigun_barrel"
+				}
+			]
+		}
+		{
+			title: "Barret Parts"
+			x: -9.5d
+			y: -1.0d
+			dependencies: ["56A691C6FB6BD72B"]
+			id: "4A832DA036CD3B05"
+			tasks: [
+				{
+					id: "016B6195F1E45729"
+					type: "item"
+					item: "createarmory:barret_upper"
+				}
+				{
+					id: "1EF1CA0947157A15"
+					type: "item"
+					item: "createarmory:barret_lower"
+				}
+			]
+		}
+		{
+			title: "M4A4 Parts"
+			x: -11.5d
+			y: -1.0d
+			dependencies: ["56A691C6FB6BD72B"]
+			id: "203237F7681E70FE"
+			tasks: [
+				{
+					id: "2337EF514443DFFA"
+					type: "item"
+					item: "createarmory:m_four_lower"
+				}
+				{
+					id: "07D628AC779D1658"
+					type: "item"
+					item: "createarmory:m_four_upper"
+				}
+			]
+		}
+		{
+			title: "M4A4"
+			x: -11.5d
+			y: -2.5d
+			dependencies: ["203237F7681E70FE"]
+			id: "398D1A52D1DD98CB"
+			tasks: [{
+				id: "139A3086369A8F35"
+				type: "item"
+				item: "createarmory:empty_m_four"
+			}]
+		}
+		{
+			title: "AR-416"
+			x: -12.5d
+			y: -2.5d
+			dependencies: ["262C5012EF7D817D"]
+			id: "1AF9D0D76B86C277"
+			tasks: [{
+				id: "1FBED7076A9141AE"
+				type: "item"
+				item: "createarmory:empty_four_sixteen"
+			}]
+		}
+		{
+			title: "AR-416 Parts"
+			x: -12.5d
+			y: -1.0d
+			dependencies: ["56A691C6FB6BD72B"]
+			id: "262C5012EF7D817D"
+			tasks: [
+				{
+					id: "5DA1B26131102B4F"
+					type: "item"
+					item: "createarmory:m_four_lower"
+				}
+				{
+					id: "7C7882B955FC3B2C"
+					type: "item"
+					item: "createarmory:four_sixteen_upper"
+				}
+			]
+		}
+		{
+			x: -10.5d
+			y: -2.5d
+			dependencies: ["7F578D162A01E321"]
+			id: "197E617E6F6683AF"
+			tasks: [{
+				id: "0C61F8294751BF64"
+				type: "item"
+				item: "createarmory:empty_m_sixteen"
+			}]
+		}
+		{
+			title: "M-16 Parts"
+			x: -10.5d
+			y: -1.0d
+			dependencies: ["56A691C6FB6BD72B"]
+			id: "7F578D162A01E321"
+			tasks: [
+				{
+					id: "5E6CFE59F748B4B9"
+					type: "item"
+					item: "createarmory:m_sixteen_upper"
+				}
+				{
+					id: "3A6A6D618CADE85E"
+					type: "item"
+					item: "createarmory:m_four_lower"
+				}
+			]
+		}
+		{
+			title: "Mac 10"
+			x: -12.5d
+			y: 1.0d
+			dependencies: ["56A691C6FB6BD72B"]
+			id: "09759508EB929FDC"
+			tasks: [{
+				id: "6E9788EB3689EBA0"
+				type: "item"
+				item: "createarmory:empty_mac_ten"
+			}]
+		}
+		{
+			x: -12.5d
+			y: 2.0d
+			dependencies: ["56A691C6FB6BD72B"]
+			id: "245D8E8447A70A48"
+			tasks: [{
+				id: "2C959C738290FF70"
+				type: "item"
+				item: {
+					id: "createarmory:empty_rpg"
+					Count: 1b
+					tag: { }
+				}
+			}]
+		}
+		{
+			title: "Double Barrel Shotgun"
+			x: -12.5d
+			y: 0.0d
+			subtitle: "What? It was obvious! He was the RED Spy!"
+			dependencies: ["56A691C6FB6BD72B"]
+			id: "24346BBCA79BDA27"
+			tasks: [{
+				id: "590F0843175A5322"
+				type: "item"
+				item: "createarmory:empty_double_barrel"
+			}]
+		}
+		{
+			x: -7.5d
+			y: -1.0d
+			dependencies: ["56A691C6FB6BD72B"]
+			id: "457397375D1A8B5B"
+			tasks: [{
+				id: "02944E750294EA40"
+				type: "item"
+				item: "createarmory:upgraded_minigun_barrel"
+			}]
+		}
+	]
+	quest_links: [ ]
+}

@@ -32,6 +32,8 @@ let colours = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purp
 let native_metals = ['iron', 'zinc', 'lead', 'copper', 'nickel', 'gold', 'silver', 'aluminum', 'uranium', 'cobalt', 'tin']
 let wood_types = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'crimson', 'warped']
 let tool_types = ['pickaxe', 'axe', 'shovel', 'hoe', 'sword']
+let armoryGuns = ['rpg', 'mac_ten', 'double_barrel']
+let armoryParts = ['minigun_base', 'barret_lower', 'm_four_lower']
 
 let cck = ['create:crafting/kinetics/']
 let ccl = ['create:crafting/logistics/']
@@ -74,6 +76,9 @@ function unwantedRecipes(event) {
     function replaceIn(originIn, newIn) {
         event.replaceInput({}, originIn, newIn);
     }
+    function replaceOut(originOut, newOut) {
+        event.replaceOutput({}, originOut, newOut);
+    }
     function replaceInById(id, originIn, newIn) {
         event.replaceInput({ id: id }, originIn, newIn);
     }
@@ -93,21 +98,30 @@ function unwantedRecipes(event) {
         event.remove({ input: recipeInput });
     }
     replaceInById('brewinandchewin:fermenting/steel_toe_stout', 'minecraft:iron_ingot', 'alloyed:steel_ingot')
+    armoryGuns.forEach(e => {
+        replaceInById(`createarmory:${e}_recipe`, 'create:precision_mechanism', 'mw_core:action_mechanism')
+    })
+    armoryParts.forEach(e => {
+        replaceInById(`createarmory:${e}_recipe`, 'create:precision_mechanism', 'mw_core:action_mechanism')
+    })
 
+    replaceIn(IE('fluid_pipe'), CR('fluid_pipe'))
+    replaceIn(IE('redstone_acid_bucket'), TE('redstone_bucket'))
+    replaceOut(IE('ingot_aluminum'), 'mw_core:aluminium_ingot')
+    replaceOut(IE('dust_aluminum'), 'mw_core:aluminium_ore_dust')
     removeRecID(/refinedstorage:.*pattern.*/)
+    removeRecID('waystones:warp_stone')
+    removeRecID('waystones:sharestone')
+    removeRecID('waystones:portstone')
+    removeRecID('waystones:warp_plate')
+    removeRecID(/thermal:parts.*_gear/)
+    removeRecID(/waystones:.*waystone.*/)
     removeRecID(/refinedstorage:.*quartz_enriched_iron.*/)
-    removeRecID('immersiveengineering:crafting/survey_tools')
-    removeRecID(/immersiveengineering:crafting.conveyor_.*/)
-    removeRecID(/immersiveengineering:.*blastbrick.*/)
-    removeRecID(/immersiveengineering:.*alloybrick.*/)
-    removeRecID(/immersiveengineering:.*cokebrick.*/)
     removeRecID(IE('crafting/fluid_pump'))
     removeRecID(IE('crafting/fluid_pipe'))
     removeRecID(/createaddition:compat.tconstruct.*/)
     removeRecID(/thermal:compat.create.centrifuge_.*/)
     removeRecID(/thermal:compat.create_ie.centrifuge_.*/)
-    removeRecID(/immersiveengineering:crafting.*hammercrushing_.*/)
-    removeRecID(/immersiveengineering:crafting.*hammering.*/)
     removeRecID(/refinedstorage:.*storage_block.*/)
     removeRecID(/refinedstorage:.*storage_part.*/)
     removeRecID(/railways:sequenced_assembly.*_conductor_cap/)
@@ -124,19 +138,31 @@ function unwantedRecipes(event) {
     removeRecID(RS('filter'))
     removeRecID(/mw_core:compacting.*coin/)
     removeRecID(/mw_core:mixer.mixer_alloying.*/)
-    removeRecID('immersiveengineering:crusher/ore_cobalt')
     removeRecID('tconstruct:smeltery/melting/metal/cobalt/ore_singular')
     removeRecID('mw_core:refinery/copper_refining')
     removeRecID('mw_core:refinery/nickel_refining')
     removeRecID('mw_core:refinery/iron_refining')
     removeRecID('thermal:compat/tconstruct/smelter_tconstruct_cobalt_ore')
     removeRecID('thermal:compat/tconstruct/smelter_tconstruct_raw_cobalt')
-    removeRecID('immersiveengineering:crusher/raw_ore_cobalt')
-    removeRecID('immersiveengineering:crusher/raw_block_cobalt')
+    removeRecID('tconstruct:common/materials/cobalt_ingot_from_block')
+    removeRecID('tconstruct:common/materials/cobalt_ingot_from_nuggets')
+    removeRecID('tconstruct:common/materials/cobalt_nugget_from_ingot')
+    removeRecID('tconstruct:common/materials/cobalt_block_from_ingots')
+    removeByID('mw_core:compacting/creative_alloy')
+    removeByID('createarmory:fifty_cal_mold_complete_recipe')
+    removeByID('createarmory:five_five_six_mold_complete_recipe')
+    removeByID('createarmory:nine_mm_mold_complete_recipe')
+    removeByID('createarmory:fifty_cal_mold_break')
+    removeByID('createarmory:five_five_six_mold_break')
+    removeByID('createarmory:nine_mm_mold_break')
+    removeByID('createarmory:fifty_cal_mold_recipe')
+    removeByID('createarmory:five_five_six_mold_recipe')
+    removeByID('createarmory:nine_mm_mold_recipe')
+    removeByID('createarmory:casing_mold_recipe')
 
-    removeRecTyp([IE('alloy'), IE('arc_furnace'), IE('blast_furnace_fuel'), IE('blast_furnace'), IE('bottling_machine'), IE('coke_oven'), IE('fermenter'),
-        IE('metal_press'), IE('mixer'), IE('refinery'), IE('sawmill'), IE('squeezer')])
-
+    //removeRecTyp([IE('alloy'), IE('arc_furnace'), IE('blast_furnace_fuel'), IE('blast_furnace'), IE('bottling_machine'), IE('coke_oven'), IE('fermenter'),
+    //    IE('metal_press'), IE('mixer'), IE('refinery'), IE('sawmill'), IE('squeezer')])
+removeRecTyp([IE('bottling_machine'), IE('cokeoven')])
 
     removeRecOut(RS('processor_binding'))
     removeRecOut(AE2('inscriber'))
@@ -195,7 +221,6 @@ function unwantedRecipes(event) {
         removeRecOut(IE('storage_' + e))
     })
     removeRecIn(/tconstruct:raw_cobalt.*/)
-replaceOutById('immersiveengineering:crusher/ingot_cobalt', '#forge:dusts/cobalt', 'mw_core:cobalt_dust')
 
 
 
@@ -394,7 +419,6 @@ removeByID(tm + crys + '/' + crys + '_' + 'niter')
 
 removeByID("create:mixing/andesite_alloy_from_zinc")
 removeByID("create:mixing/andesite_alloy")
-removeByID("create:splashing/immersiveengineering/crushed_aluminum_ore")
 //removeByID("tconstruct:smeltery/entity_melting/bee")
 //removeByID("tconstruct:smeltery/melting/slime/honey_block")
 removeByID("thermal:machines/crucible/crucible_honey_block_to_honey")
@@ -431,7 +455,6 @@ removeByID(/refinedstorage:coloring_recipes.*/)
 //removeByID()
 //removeByID()
 //removeByID()
-
 
 
 

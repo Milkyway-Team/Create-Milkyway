@@ -36,8 +36,8 @@ ao:1
 prioritizeChunkUpdates:0
 biomeBlendRadius:2
 renderClouds:true
-resourcePacks:["vanilla","mod_resources","Supplementaries Generated Pack","quark:emote_resources","resources/Pouffy\u0027s Engineering Edits","resources/Updated_Engineering_v1.6","resources/Connected_Textures_for_Milkyway_CTM","resources/arcanus 1.19 texture backport","resources/Create Milkyway Resources","file/Fantasy_Ores_v6.1_shiny_ores","file/Fantasy_Ores_Modded_v2_shiny_ores","resources/Fantasy_Ores_Modded_v2_shiny_ores","resources/Fantasy_Ores_v6.1_shiny_ores"]
-incompatibleResourcePacks:["quark:emote_resources","file/Fantasy_Ores_v6.1_shiny_ores","file/Fantasy_Ores_Modded_v2_shiny_ores","resources/Fantasy_Ores_Modded_v2_shiny_ores","resources/Fantasy_Ores_v6.1_shiny_ores"]
+resourcePacks:["vanilla","mod_resources","Supplementaries Generated Pack","quark:emote_resources","resources/Pouffy\u0027s Engineering Edits","resources/Updated_Engineering_v1.6","resources/Connected_Textures_for_Milkyway_CTM","resources/arcanus 1.19 texture backport","file/Fantasy_Ores_Modded_v2_shiny_ores","file/Fantasy_Ores_v6.1_shiny_ores","resources/Create Milkyway Resources","resources/Fantasy_Ores_Modded_v2_shiny_ores","resources/Fantasy_Ores_v6.1_shiny_ores"]
+incompatibleResourcePacks:["quark:emote_resources","file/Fantasy_Ores_Modded_v2_shiny_ores","file/Fantasy_Ores_v6.1_shiny_ores","resources/Fantasy_Ores_Modded_v2_shiny_ores","resources/Fantasy_Ores_v6.1_shiny_ores"]
 lastServer:
 lang:en_us
 soundDevice:
@@ -70,7 +70,7 @@ skipMultiplayerWarning:true
 skipRealms32bitWarning:false
 hideMatchedNames:true
 joinedFirstServer:true
-hideBundleTutorial:false
+hideBundleTutorial:true
 syncChunkWrites:true
 showAutosaveIndicator:true
 allowServerListing:true
@@ -169,17 +169,17 @@ key_key.tconstruct.leggings_interact:key.keyboard.i
 key_key.create_sa.flying:key.keyboard.space
 key_key.create_sa.increase_reach:key.keyboard.up
 key_key.create_sa.decrease_reach:key.keyboard.down
+key_key.createbigcannons.pitch_mode:key.keyboard.c
+key_key.createbigcannons.fire_controlled_cannon:key.mouse.left
+key_quark.keybind.autorun:key.keyboard.unknown
 key_quark.keybind.transfer_insert:key.keyboard.unknown
 key_quark.keybind.transfer_extract:key.keyboard.unknown
 key_quark.keybind.shift_lock:key.keyboard.unknown
 key_quark.keybind.back:key.mouse.4
-key_key.createbigcannons.pitch_mode:key.keyboard.c
-key_key.createbigcannons.fire_controlled_cannon:key.mouse.left
-key_key.immersiveengineering.magnetEquip:key.keyboard.s
-key_key.immersiveengineering.railgunZoom:key.mouse.middle
-key_key.immersiveengineering.chemthrowerSwitch:key.keyboard.unknown
 key_quark.keybind.sort_player:key.keyboard.unknown
 key_quark.keybind.sort_container:key.keyboard.unknown
+key_quark.keybind.camera_mode:key.keyboard.f12
+key_quark.keybind.lock_rotation:key.keyboard.k
 key_quark.emote.no:key.keyboard.unknown
 key_quark.emote.yes:key.keyboard.unknown
 key_quark.emote.wave:key.keyboard.unknown
@@ -198,10 +198,7 @@ key_quark.keybind.patreon_emote.dab:key.keyboard.unknown
 key_quark.keybind.patreon_emote.jet:key.keyboard.unknown
 key_quark.keybind.patreon_emote.exorcist:key.keyboard.unknown
 key_quark.keybind.patreon_emote.zombie:key.keyboard.unknown
-key_quark.keybind.lock_rotation:key.keyboard.k
 key_quark.keybind.change_hotbar:key.keyboard.z
-key_quark.keybind.autorun:key.keyboard.unknown
-key_quark.keybind.camera_mode:key.keyboard.f12
 key_create.keyinfo.toolmenu:key.keyboard.left.alt
 key_create.keyinfo.toolbelt:key.keyboard.left.alt
 key_keybind.sophisticatedbackpacks.open_backpack:key.keyboard.b
@@ -215,13 +212,13 @@ key_keybind.sophisticatedbackpacks.toggle_upgrade_3:key.keyboard.unknown
 key_keybind.sophisticatedbackpacks.toggle_upgrade_2:key.keyboard.x:ALT
 key_key.cofh.mode_change_increment:key.keyboard.v
 key_key.cofh.mode_change_decrement:key.keyboard.b
-soundCategory_master:1.0
+soundCategory_master:0.0
 soundCategory_music:0.0
 soundCategory_record:0.9330986
 soundCategory_weather:0.0
 soundCategory_block:1.0
-soundCategory_hostile:1.0
-soundCategory_neutral:1.0
+soundCategory_hostile:0.0
+soundCategory_neutral:0.0
 soundCategory_player:1.0
 soundCategory_ambient:1.0
 soundCategory_voice:1.0

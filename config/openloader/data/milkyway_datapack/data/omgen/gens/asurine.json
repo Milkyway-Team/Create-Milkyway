@@ -1,6 +1,6 @@
 {
-  "primary": "tconstruct:molten_zinc",
-  "secondary": "minecraft:water",
+  "primary": "#tconstruct:molten_zinc",
+  "secondary": "#minecraft:water",
   "secondary_pos": "Neighbour",
 
   "gens": [

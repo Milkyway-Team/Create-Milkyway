@@ -1,7 +1,8 @@
 // priority: 0
-
 console.info('Hello, World! (You will only see this line once in console, during startup)')
 onEvent('item.registry', event => {
+	//const BlueprintCraftingRecipe = java("blusunrize.immersiveengineering.api.crafting.BlueprintCraftingRecipe")
+    //BlueprintCraftingRecipe.recipeCategories.add("weaponry")
 	//event.create('infernal_mesh','createsifter:mesh').displayName('Infernal mesh')
 	// Register new items here
 	 event.create('mw_core:tin_ore_dust').displayName('Tin Ore Dust')
@@ -71,7 +72,6 @@ onEvent('block.registry', event => {
 			.renderType(layer)
 	}
 	machine('Refined', "cutout")
-
 })
 onEvent('fluid.registry', event => {
 	event.create('mw_core:soda')
@@ -101,6 +101,11 @@ onEvent('fluid.registry', event => {
 		.displayName('Molten Heliodor')
 		.stillTexture('milkyway:block/heliodor_still')
 		.flowingTexture('milkyway:block/heliodor_flowing')
+	event.create('milkyway:liquified_logic')
+		.bucketColor(0x8dffcc)
+		.displayName('Liquified Logic')
+		.stillTexture('milkyway:block/logic_still')
+		.flowingTexture('milkyway:block/logic_flowing')
 })
 onEvent('block.modification', event => {
 	event.modify('tconstruct:cobalt_ore', block => {
