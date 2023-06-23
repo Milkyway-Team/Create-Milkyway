@@ -1,5 +1,7 @@
 {
 	version: 13
+	title: "Create: Milkyway"
+	icon: "mw_core:milkfur_plush"
 	default_reward_team: false
 	default_consume_items: false
 	default_autoclaim_rewards: "disabled"

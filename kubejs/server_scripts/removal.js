@@ -32,8 +32,8 @@ let colours = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purp
 let native_metals = ['iron', 'zinc', 'lead', 'copper', 'nickel', 'gold', 'silver', 'aluminum', 'uranium', 'cobalt', 'tin']
 let wood_types = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'crimson', 'warped']
 let tool_types = ['pickaxe', 'axe', 'shovel', 'hoe', 'sword']
-let armoryGuns = ['rpg', 'mac_ten', 'double_barrel']
-let armoryParts = ['minigun_base', 'barret_lower', 'm_four_lower']
+//let armoryGuns = ['rpg', 'mac_ten', 'double_barrel']
+//let armoryParts = ['minigun_base', 'barret_lower', 'm_four_lower']
 
 let cck = ['create:crafting/kinetics/']
 let ccl = ['create:crafting/logistics/']
@@ -98,13 +98,14 @@ function unwantedRecipes(event) {
         event.remove({ input: recipeInput });
     }
     replaceInById('brewinandchewin:fermenting/steel_toe_stout', 'minecraft:iron_ingot', 'alloyed:steel_ingot')
-    armoryGuns.forEach(e => {
-        replaceInById(`createarmory:${e}_recipe`, 'create:precision_mechanism', 'mw_core:action_mechanism')
-    })
-    armoryParts.forEach(e => {
-        replaceInById(`createarmory:${e}_recipe`, 'create:precision_mechanism', 'mw_core:action_mechanism')
-    })
+    //armoryGuns.forEach(e => {
+    //    replaceInById(`createarmory:${e}_recipe`, 'create:precision_mechanism', 'mw_core:action_mechanism')
+    //})
+    //armoryParts.forEach(e => {
+    //    replaceInById(`createarmory:${e}_recipe`, 'create:precision_mechanism', 'mw_core:action_mechanism')
+    //})
 
+    replaceIn('createindustrialchemistry:nickel', 'thermal:nickel_ingot')
     replaceIn(IE('fluid_pipe'), CR('fluid_pipe'))
     replaceIn(IE('redstone_acid_bucket'), TE('redstone_bucket'))
     replaceOut(IE('ingot_aluminum'), 'mw_core:aluminium_ingot')
@@ -149,19 +150,6 @@ function unwantedRecipes(event) {
     removeRecID('tconstruct:common/materials/cobalt_nugget_from_ingot')
     removeRecID('tconstruct:common/materials/cobalt_block_from_ingots')
     removeByID('mw_core:compacting/creative_alloy')
-    removeByID('createarmory:fifty_cal_mold_complete_recipe')
-    removeByID('createarmory:five_five_six_mold_complete_recipe')
-    removeByID('createarmory:nine_mm_mold_complete_recipe')
-    removeByID('createarmory:fifty_cal_mold_break')
-    removeByID('createarmory:five_five_six_mold_break')
-    removeByID('createarmory:nine_mm_mold_break')
-    removeByID('createarmory:fifty_cal_mold_recipe')
-    removeByID('createarmory:five_five_six_mold_recipe')
-    removeByID('createarmory:nine_mm_mold_recipe')
-    removeByID('createarmory:casing_mold_recipe')
-
-    //removeRecTyp([IE('alloy'), IE('arc_furnace'), IE('blast_furnace_fuel'), IE('blast_furnace'), IE('bottling_machine'), IE('coke_oven'), IE('fermenter'),
-    //    IE('metal_press'), IE('mixer'), IE('refinery'), IE('sawmill'), IE('squeezer')])
 removeRecTyp([IE('bottling_machine'), IE('cokeoven')])
 
     removeRecOut(RS('processor_binding'))
@@ -174,7 +162,6 @@ removeRecTyp([IE('bottling_machine'), IE('cokeoven')])
     removeRecOut(TE('device_potion_diffuser'))
     removeRecOut(TE('machine_furnace'))
     removeRecOut(TE('machine_sawmill'))
-    //removeRecOut(TE('machine_centrifuge'))
     removeRecOut(TE('machine_crafter'))
     removeRecOut(TE('machine_brewer'))
     removeRecOut(TE('machine_chiller'))
@@ -317,8 +304,8 @@ removeByID(ccl + 'content_observer')
 removeByID(ccl + 'content_observerfrom_conversion')
 removeByID(ccl + 'stockpile_switchfrom_conversion')
 removeByID(ccl + 'display_link')
-removeByID(ccl + 'andesite_alloy')
-removeByID(ccl + 'andesite_alloy_from_zinc')
+removeByID(ccm + 'andesite_alloy')
+removeByID(ccm + 'andesite_alloy_from_zinc')
 removeByID(aen + 'blocks/spatial_io_port')
 removeByID(aen + 'blocks/io_port')
 removeByID(aen + 'blocks/interfaces_interface')
@@ -419,8 +406,6 @@ removeByID(tm + crys + '/' + crys + '_' + 'niter')
 
 removeByID("create:mixing/andesite_alloy_from_zinc")
 removeByID("create:mixing/andesite_alloy")
-//removeByID("tconstruct:smeltery/entity_melting/bee")
-//removeByID("tconstruct:smeltery/melting/slime/honey_block")
 removeByID("thermal:machines/crucible/crucible_honey_block_to_honey")
 removeByID("ae2:materials/advancedcard")
 removeByID("ae2:materials/basiccard")
@@ -434,7 +419,6 @@ removeByID("thermal:machine_refinery")
 removeByID("ae2:materials/annihilationcore")
 removeByID("ae2:materials/formationcore")
 removeByID("create:crafting/materials/electron_tube")
-//removeByID("tconstruct:smeltery/casting/seared/smeltery_controller")
 removeByID("create:mechanical_crafting/potato_cannon")
 removeByID("create:mechanical_crafting/wand_of_symmetry")
 removeByID("tconstruct:smeltery/seared/drain")
@@ -443,7 +427,6 @@ removeByID("tconstruct:smeltery/seared/duct")
 removeByID("tconstruct:smeltery/scorched/drain")
 removeByID("tconstruct:smeltery/scorched/chute")
 removeByID("tconstruct:smeltery/scorched/duct")
-//removeByID("tconstruct:smeltery/casting/scorched/foundry_controller")
 removeByID("alloyed:mixing/steel_ingot")
 removeByID("thermal:fluid_cell")
 removeByID("thermal:rubber_from_vine")
@@ -452,9 +435,25 @@ removeByID("thermal:energy_cell")
 removeByID("thermal:energy_cell_frame")
 removeByID(/thermal:earth_charge.*_from_.*/)
 removeByID(/refinedstorage:coloring_recipes.*/)
-//removeByID()
-//removeByID()
-//removeByID()
-
-
+removeByID('refinedstorage:silicon')
+removeByID('createindustrialchemistry:reactions/oxidation_reduction/aluminium/2al2o3_to_4al_3o2')
+removeByID(/extendedgears.crafting.crafting.base.common.large_half_shaft.*/)
+removeByID(/extendedgears.crafting.crafting.base.common.half_shaft.*/)
+removeByID(/extendedgears.crafting.crafting.base.common.large_shaftless.*/)
+removeByID(/extendedgears.crafting.crafting.base.common.shaftless.*/)
+removeByID('alloyedguns:crude_gun_kit')
+removeByID('alloyedguns:workbench')
+removeByID(/ironchest:.*/)
+removeByID(/storagedrawers:.*_storage_upgrade/)
+removeByID('storagedrawers:one_stack_upgrade')
+removeByID('storagedrawers:void_upgrade')
+removeByID('storagedrawers:creative_upgrade')
+removeByID('thermal:device_rock_gen')
+removeByID('thermal:machine_pulverizer')
+removeByID('thermal:machine_smelter')
+removeByID('thermal:machine_pyrolyzer')
+removeByID('thermal:device_tree_extractor')
+removeByID('thermal:fluid_cell_frame')
+removeByID('thermal:machine_bottler')
+removeByID('thermal:machine_crucible')
 

@@ -516,7 +516,7 @@
 		}
 		{
 			title: "Liquid Experience"
-			icon: "create_things_and_misc:slime_bucket"
+			icon: "create:experience_nugget"
 			x: 6.5d
 			y: 8.0d
 			description: ["Disenchanting an Enchanted Golden Apple will grant some Liquid Experience."]
@@ -529,7 +529,7 @@
 				{
 					id: "19C33DB2D4BB746A"
 					type: "item"
-					icon: "create_things_and_misc:slime_bucket"
+					icon: "create:experience_nugget"
 					item: "create:experience_nugget"
 				}
 				{
@@ -990,8 +990,8 @@
 			}]
 		}
 		{
-			x: 8.0d
-			y: 17.5d
+			x: 7.5d
+			y: 17.0d
 			hide_dependency_lines: true
 			dependencies: ["1C9328C10043749C"]
 			id: "71FD0C262BA2F2C1"

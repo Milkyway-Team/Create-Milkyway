@@ -10,7 +10,7 @@
 	quests: [
 		{
 			icon: "forbidden_arcanus:dark_soul"
-			x: -1.0d
+			x: 0.5d
 			y: -1.0d
 			subtitle: "Dark, yet beautiful."
 			description: [
@@ -87,7 +87,10 @@
 		{
 			x: 3.0d
 			y: -1.0d
-			dependencies: ["0B1293674EDFB499"]
+			dependencies: [
+				"0B1293674EDFB499"
+				"747ED96162F5B664"
+			]
 			id: "093E932C14D5A9CB"
 			tasks: [{
 				id: "0FCE2F8E431FF3AE"
@@ -122,7 +125,7 @@
 		}
 		{
 			title: "The Alchemist"
-			x: 1.0d
+			x: 1.5d
 			y: 0.5d
 			dependencies: ["1B54415C4F7F4B5E"]
 			id: "3BF6E7E9244FAF6B"
@@ -134,7 +137,7 @@
 		}
 		{
 			title: "The Arcane Blacksmith"
-			x: 2.0d
+			x: 2.5d
 			y: 0.5d
 			dependencies: ["1B54415C4F7F4B5E"]
 			id: "68A3ED720D332DE9"
@@ -146,7 +149,7 @@
 		}
 		{
 			title: "The Necromancer"
-			x: 3.0d
+			x: 0.5d
 			y: 0.5d
 			dependencies: ["1B54415C4F7F4B5E"]
 			id: "321BB15118A5432D"
@@ -157,7 +160,7 @@
 			}]
 		}
 		{
-			x: 2.0d
+			x: 2.5d
 			y: 2.0d
 			dependencies: ["68A3ED720D332DE9"]
 			id: "12BA5A830DB70CBC"
@@ -168,7 +171,7 @@
 			}]
 		}
 		{
-			x: 3.0d
+			x: 0.5d
 			y: 2.0d
 			dependencies: ["321BB15118A5432D"]
 			id: "4A3292D1AF60C3F3"
@@ -186,7 +189,7 @@
 					Icon: "forbidden_arcanus:textures/item/obsidian_skull_shield.png"
 				}
 			}
-			x: 3.0d
+			x: 0.5d
 			y: 3.5d
 			dependencies: ["4A3292D1AF60C3F3"]
 			id: "6DE5323D9AB25EDA"
@@ -204,7 +207,7 @@
 					Icon: "tconstruct:textures/item/materials/reinforcement/seared.png"
 				}
 			}
-			x: 2.0d
+			x: 2.5d
 			y: 3.5d
 			dependencies: ["12BA5A830DB70CBC"]
 			id: "02CF381A9BB889BC"
@@ -222,7 +225,7 @@
 					Icon: "create_enchantment_industry:textures/item/hyper_experience_bottle.png"
 				}
 			}
-			x: 1.0d
+			x: 1.5d
 			y: 3.5d
 			dependencies: ["1E6DF8118E9EDEB6"]
 			id: "45F0845F7D92EC24"
@@ -233,7 +236,7 @@
 			}]
 		}
 		{
-			x: 1.0d
+			x: 1.5d
 			y: 2.0d
 			dependencies: ["3BF6E7E9244FAF6B"]
 			id: "1E6DF8118E9EDEB6"

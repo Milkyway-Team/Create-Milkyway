@@ -157,7 +157,7 @@
 			x: -7.0d
 			y: 6.5d
 			subtitle: "Mixer Alloying"
-			description: ["Mixing the two dusts you (hopefully)just automated will make a Blend. Blends are early-progression ways of Alloying."]
+			description: ["Mixing the two dusts you (hopefully) just automated will make a Blend. Blends are early-progression ways of Alloying."]
 			dependencies: [
 				"4F657D4D1C32EF5A"
 				"18CE1F4FFC55DEBC"
@@ -392,10 +392,9 @@
 			icon: "thermal:machine_refinery"
 			x: -1.0d
 			y: 6.5d
-			subtitle: "Split!"
 			description: [
 				"Meet your new friend, The Refinery! Check the ponder to see how to use it. In this instance you will need to convert Molten Iron to Molten Copper."
-				"The Molten Iron will also produce some cobalt which may or may not be useful later."
+				"The Molten Iron will also produce some Nickel which can be used for Deployers."
 			]
 			dependencies: ["1D4663EF5C7348C4"]
 			id: "43862B73D695C1EC"

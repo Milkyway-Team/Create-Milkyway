@@ -125,8 +125,8 @@ onEvent("ponder.registry", (event) => {
         }
     )
     .scene(
-        "hephaestus_forge_pedestal",
-        "Hephaestus Forge Pedestals",
+        "hephaestus_forge_setup",
+        "Hephaestus Forge Setup",
         "kubejs:hephaestusforgeponder", 
         (scene, util) => {
         const base = util.select.fromTo(10, 0, 0, 0, 1, 10);
@@ -215,5 +215,65 @@ onEvent("ponder.registry", (event) => {
         })
         }
     )
-    
+    //.scene(
+    //    "hephaestus_forge_rituals",
+    //    "Hephaestus Forge Rituals [UNFINISHED]",
+    //    "kubejs:hephaestusritualponder", 
+    //    (scene, util) => {
+    //    const pos = [4, 1.5, 4];
+    //    const start = [8, 3.75, 5];
+    //    const end = [5, 2, 6];
+    //    const TICK_LENGTH = 1200;
+    //    const IDLE_TICK_LENGTH = TICK_LENGTH * 3;
+    //    const base = util.select.fromTo(10, 0, 0, 0, 1, 10);
+    //    const forgePos = util.grid.at(5, 2, 5);
+    //    const forge = util.select.position(forgePos);
+    //    const ped1 = util.grid.at(3, 2, 3);
+    //    const ped2 = util.grid.at(3, 2, 7);
+    //    const ped3 = util.grid.at(5, 2, 2);
+    //    const ped4 = util.grid.at(7, 2, 3);
+    //    const ped5 = util.grid.at(7, 2, 7);
+    //    const ped6 = util.grid.at(8, 2, 5);
+    //    const aco11 = util.grid.at(2, 2, 5);
+    //    const aco21 = util.grid.at(5, 2, 8);
+    //    const aco12 = util.grid.at(2, 3, 5);
+    //    const aco22 = util.grid.at(5, 3, 8);
+    //    const aco13 = util.grid.at(2, 4, 5);
+    //    const aco23 = util.grid.at(5, 4, 8);
+    //    let aco1 = util.select.fromTo(2, 2, 5, 2, 4, 5)
+    //    let aco2 = util.select.fromTo(5, 2, 8, 5, 4, 8)
+    //    let ped = [ped1, ped2, ped3, ped4, ped5, ped6];
+    //    //Setting Up Scene
+    //    scene.scaleSceneView(0.6);
+    //    scene.setSceneOffsetY(-1);
+    //    scene.rotateCameraY(45);
+    //    scene.addKeyframe();
+    //    scene.world.showSection(base, Direction.NORTH);
+    //    scene.world.showSection(forge, Direction.NORTH);
+    //    ped.forEach(e => {
+    //    scene.world.showSection(e, Direction.NORTH);
+    //    })
+    //    aco1.forEach(e => {
+    //    scene.world.showSection(e, Direction.NORTH);
+    //    })
+    //    aco2.forEach(e => {
+    //    scene.world.showSection(e, Direction.NORTH);
+    //    })
+    //    scene.idle(20);
+    //    scene.particles.item(TICK_LENGTH, "forbidden_arcanus:xpetrified_orb", [8.5, 3.75, 5]).motion([-0.14, 0.35, 0.05]).lifetime(20);
+    //    scene.particles.item(TICK_LENGTH, "forbidden_arcanus:xpetrified_orb", [7.5, 3.75, 3]).motion([-0.12, 0.35, 0.15]).lifetime(20);
+    //    scene.particles.item(TICK_LENGTH, "forbidden_arcanus:stellarite_piece", [5.5, 3.75, 2]).motion([-0.06, 0.35, 0.35]).lifetime(20);
+    //    scene.world.modifyTileNBT(forgePos, (nbt) => {
+    //            
+    //        nbt.ActiveRitual = [
+    //        {
+    //            Ritual: "eternal_stella"
+    //        }
+    //    ];
+    //    });
+//
+    //    //scene.particles.item(TICK_LENGTH, "minecraft:diamond_block", start).area(end);
+    //    scene.idle(TICK_LENGTH);
+    //    }
+    //)
 });

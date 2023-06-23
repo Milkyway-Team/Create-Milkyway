@@ -32,6 +32,7 @@
 			x: -17.5d
 			y: -7.5d
 			shape: "gear"
+			description: [""]
 			dependencies: ["65C9D4881F5AC82C"]
 			hide: false
 			id: "2C0A2986300275F6"
@@ -74,18 +75,6 @@
 				id: "648AB343F229945F"
 				type: "checkmark"
 				title: "Cobalt Machinery"
-			}]
-		}
-		{
-			icon: "forbidden_arcanus:smelter_prism"
-			x: -17.5d
-			y: -4.5d
-			dependencies: ["5684F3D3F906DB59"]
-			id: "1C0D3D5FBBAC4DF3"
-			tasks: [{
-				id: "7047AF83CFF3FC10"
-				type: "checkmark"
-				title: "Metallurgy"
 			}]
 		}
 		{
@@ -141,8 +130,8 @@
 		}
 		{
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: -17.0d
-			y: 2.0d
+			x: -21.5d
+			y: 1.0d
 			shape: "gear"
 			subtitle: "What does this mean?"
 			description: [
@@ -195,6 +184,7 @@
 		{
 			x: -17.5d
 			y: -3.5d
+			description: [""]
 			dependencies: ["0B1293674EDFB499"]
 			id: "5684F3D3F906DB59"
 			tasks: [{
@@ -213,11 +203,21 @@
 				type: "item"
 				item: "minecraft:crafting_table"
 			}]
+			rewards: [{
+				id: "490B87F94D4BE22D"
+				type: "item"
+				item: "quark:stick_block"
+				random_bonus: 2
+			}]
 		}
 		{
 			x: -20.5d
 			y: -2.0d
-			dependencies: ["0546DFC442013565"]
+			description: [""]
+			dependencies: [
+				"5684F3D3F906DB59"
+				"0546DFC442013565"
+			]
 			id: "259836580D315B5D"
 			tasks: [{
 				id: "109C8E3CAAC40C9A"
@@ -637,8 +637,8 @@
 		}
 		{
 			icon: "minecraft:iron_nugget"
-			x: -11.5d
-			y: -8.0d
+			x: -11.0d
+			y: -6.5d
 			dependencies: ["6E18228B49ED2557"]
 			id: "757933AA409807DB"
 			tasks: [{
@@ -674,8 +674,8 @@
 		}
 		{
 			title: "Train Engineer"
-			x: -11.5d
-			y: -6.0d
+			x: -11.0d
+			y: -5.0d
 			dependencies: ["53EFA330A0C753FC"]
 			id: "30069E34B8DFD768"
 			tasks: [
@@ -778,6 +778,7 @@
 			title: "Basic Storage Solutions"
 			x: -17.5d
 			y: -0.5d
+			description: ["You should probably get some basic storage set up. Your pockets must be full!"]
 			dependencies: ["0546DFC442013565"]
 			id: "77A13DC10BB5E29A"
 			tasks: [{
@@ -792,6 +793,20 @@
 					}
 				}
 				count: 2L
+			}]
+			rewards: [{
+				id: "296069DA3A6691DF"
+				type: "choice"
+				icon: {
+					id: "ftbquests:custom_icon"
+					Count: 1b
+					tag: {
+						Icon: "minecraft:textures/item/bundle_filled.png"
+					}
+				}
+				auto: "disabled"
+				exclude_from_claim_all: true
+				table_id: 4974968473391677390L
 			}]
 		}
 		{
@@ -991,6 +1006,7 @@
 		{
 			x: -11.0d
 			y: -2.5d
+			subtitle: "Powerhouse of the cell"
 			dependencies: ["418462B40338095D"]
 			id: "1094F5678AE66338"
 			tasks: [{
@@ -1276,6 +1292,23 @@
 				}
 				dimension: "minecraft:the_nether"
 			}]
+			rewards: [{
+				id: "20719EF1C4A2C1DA"
+				type: "item"
+				auto: "disabled"
+				item: {
+					id: "tconstruct:pickaxe"
+					Count: 1b
+					tag: {
+						tic_broken: 0b
+						Damage: 0
+						tic_persistent_data: {
+							abilities: 1
+							upgrades: 3
+						}
+					}
+				}
+			}]
 		}
 		{
 			x: -13.5d
@@ -1296,7 +1329,7 @@
 			tasks: [{
 				id: "322C489CF800FE2B"
 				type: "item"
-				item: "refinedstorage:silicon"
+				item: "createindustrialchemistry:silicon"
 			}]
 		}
 		{
@@ -1332,6 +1365,19 @@
 				type: "item"
 				item: "ae2:certus_quartz_crystal"
 			}]
+			rewards: [
+				{
+					id: "47C0C5A78D5CCD72"
+					type: "item"
+					item: "ae2:certus_crystal_seed"
+				}
+				{
+					id: "5A9642759174EADF"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 4
+				}
+			]
 		}
 		{
 			x: -14.0d
@@ -1545,6 +1591,91 @@
 				id: "4FFEBAD8449B70DF"
 				type: "checkmark"
 				title: "Weaponry"
+			}]
+		}
+		{
+			title: "Chemistry Equipment"
+			x: -11.0d
+			y: -8.0d
+			dependencies: ["58D2C0B12357186B"]
+			id: "1EB5B763C30128CF"
+			tasks: [
+				{
+					id: "2429A1CAA01DAAEE"
+					type: "item"
+					item: "createindustrialchemistry:kinetic_electrolyzer"
+				}
+				{
+					id: "017A5AF085D590CA"
+					type: "item"
+					item: "createindustrialchemistry:mechanical_cooler"
+				}
+			]
+		}
+		{
+			x: -16.0d
+			y: 1.0d
+			dependencies: ["52DD11F929AB03DB"]
+			id: "023B2E21B10BB8CA"
+			tasks: [{
+				id: "60B4C7C99ED2CAFE"
+				type: "item"
+				item: "ironchest:copper_chest"
+			}]
+		}
+		{
+			x: -17.5d
+			y: 1.0d
+			dependencies: ["77A13DC10BB5E29A"]
+			id: "52DD11F929AB03DB"
+			tasks: [{
+				id: "17FE1ED67D4AFF6B"
+				type: "item"
+				item: "ironchest:wood_to_copper_chest_upgrade"
+			}]
+		}
+		{
+			x: -14.5d
+			y: 1.0d
+			dependencies: ["023B2E21B10BB8CA"]
+			id: "3459988129A6B68A"
+			tasks: [{
+				id: "5D9AB8B8496F3B98"
+				type: "item"
+				item: "ironchest:copper_to_iron_chest_upgrade"
+			}]
+		}
+		{
+			x: -13.0d
+			y: 1.0d
+			dependencies: ["3459988129A6B68A"]
+			id: "3BFD47BC42304EAB"
+			tasks: [{
+				id: "04565954C6B93A97"
+				type: "item"
+				item: "ironchest:iron_chest"
+			}]
+		}
+		{
+			x: -11.5d
+			y: 1.0d
+			dependencies: ["3BFD47BC42304EAB"]
+			id: "0D95D1CC42761DEC"
+			tasks: [{
+				id: "7931A9B4E8EED3DD"
+				type: "item"
+				item: "ironchest:iron_to_gold_chest_upgrade"
+			}]
+		}
+		{
+			x: -10.0d
+			y: 1.0d
+			dependencies: ["0D95D1CC42761DEC"]
+			id: "29998DCA89A69288"
+			tasks: [{
+				id: "7D2B5476C749D03F"
+				type: "item"
+				item: "ironchest:gold_chest"
 			}]
 		}
 	]

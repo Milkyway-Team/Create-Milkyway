@@ -111,5 +111,8 @@ onEvent('block.modification', event => {
 	event.modify('tconstruct:cobalt_ore', block => {
 		block.material = "Lantern"
 	})
+	event.modify(/extendedgears:.*steel.*/, block => {
+		block.material = "Slime"
+	})
 })
 

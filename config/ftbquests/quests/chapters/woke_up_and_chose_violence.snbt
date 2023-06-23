@@ -15,25 +15,7 @@
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			x: -8.5d
-			y: -2.5d
-			subtitle: "WHO TOUCHED MY GUN?"
-			dependencies: ["21BE6980BCE13A0A"]
-			id: "69C6A0E5156E650D"
-			tasks: [{
-				id: "7C83BA64DA46D125"
-				type: "item"
-				item: "createarmory:mini_gun"
-			}]
-		}
-		{
-			icon: {
-				id: "create:potato_cannon"
-				Count: 1b
-				tag: {
-					Damage: 0
-				}
-			}
+			icon: "mw_core:action_mechanism"
 			x: -10.5d
 			y: 1.0d
 			subtitle: "Grass grows, birds fly, sun shines, and brother? I hurt people."
@@ -59,373 +41,281 @@
 			}]
 		}
 		{
-			x: -9.5d
-			y: -2.5d
-			subtitle: "Sniping's a good job, mate."
-			description: ["It's challenging work, out of doors... I guarantee you'll not go hungry. 'Cause at the end of the day, long as there's two people left on the planet, someone is gonna want someone dead."]
-			dependencies: ["4A832DA036CD3B05"]
-			id: "36C5AD94887B5567"
-			tasks: [{
-				id: "36C662CE3AD4D4D3"
-				type: "item"
-				item: "createarmory:empty_barret"
-			}]
-			rewards: [
-				{
-					id: "2968DC29E73E2FF2"
-					type: "item"
-					item: "createarmory:fifty_cal"
-					count: 16
-					random_bonus: 48
-				}
-				{
-					id: "3A91C8F86E099588"
-					type: "item"
-					item: "farmersdelight:steak_and_potatoes"
-					count: 3
-				}
-				{
-					id: "6C9C671D84A6FE05"
-					type: "item"
-					item: {
-						id: "supplementaries:jar"
-						Count: 1b
-						tag: {
-							BlockEntityTag: {
-								ForgeCaps: { }
-								Items: [ ]
-								FluidHolder: {
-									Count: 8
-									Fluid: "minecraft:honey"
-									CachedColor: -1
-								}
-							}
-						}
-					}
-				}
-			]
-		}
-		{
-			x: -2.5d
-			y: 1.0d
-			dependencies: ["0055D9ED19CD16A3"]
-			id: "428AE1B1B5B53AAD"
-			tasks: [{
-				id: "0D68D62C76508E4D"
-				type: "item"
-				item: "createarmory:five_five_six"
-			}]
-		}
-		{
-			title: "Bullet Builder"
-			x: -7.5d
-			y: 1.0d
-			dependencies: ["56A691C6FB6BD72B"]
-			id: "69447401846B326E"
-			tasks: [{
-				id: "3E6714B7A84AA3FB"
-				type: "item"
-				item: "tconstruct:molten_bronze_bucket"
-			}]
-			rewards: [
-				{
-					id: "799715DFE8CCC04B"
-					type: "item"
-					item: "createarmory:nine_mm_casing"
-				}
-				{
-					id: "53824803616BFDE7"
-					type: "item"
-					item: "createarmory:five_five_six_casing"
-				}
-				{
-					id: "77D7E48C61B73571"
-					type: "item"
-					item: "createarmory:fifty_cal_casing"
-				}
-			]
-		}
-		{
-			x: -5.5d
-			y: 1.0d
-			dependencies: ["69447401846B326E"]
-			id: "08A7AB49AD4E33F5"
-			tasks: [{
-				id: "654320E4BBAE0217"
-				type: "item"
-				item: "createarmory:five_five_six_mold"
-			}]
-		}
-		{
-			x: -5.5d
-			y: -0.5d
-			dependencies: ["69447401846B326E"]
-			id: "32313B62472798F9"
-			tasks: [{
-				id: "2D44E28ECADE6768"
-				type: "item"
-				item: "createarmory:fifty_cal_mold"
-			}]
-		}
-		{
-			x: -5.5d
-			y: 2.5d
-			dependencies: ["69447401846B326E"]
-			id: "20409F7BCD867086"
-			tasks: [{
-				id: "08F1319B186D5A5C"
-				type: "item"
-				item: "createarmory:nine_mm_mold"
-			}]
-		}
-		{
-			x: -2.5d
-			y: -0.5d
-			dependencies: ["4F65163F67BC6ACB"]
-			id: "1E11B3EF1083FBF1"
-			tasks: [{
-				id: "612B90933219E47A"
-				type: "item"
-				item: "createarmory:fifty_cal"
-			}]
-		}
-		{
-			x: -2.5d
-			y: 2.5d
-			dependencies: ["524FD21EA4DBB336"]
-			id: "7346D1AF246229E7"
-			tasks: [{
-				id: "004D6164615175CB"
-				type: "item"
-				item: "createarmory:nine_mm"
-			}]
-		}
-		{
-			x: -4.0d
-			y: 2.5d
-			dependencies: ["20409F7BCD867086"]
-			id: "524FD21EA4DBB336"
-			tasks: [{
-				id: "7BFE1837FBF25575"
-				type: "item"
-				item: "createarmory:nine_mm_casing"
-			}]
-		}
-		{
-			x: -4.0d
-			y: -0.5d
-			dependencies: ["32313B62472798F9"]
-			id: "4F65163F67BC6ACB"
-			tasks: [{
-				id: "5C477511B5DCE570"
-				type: "item"
-				item: "createarmory:fifty_cal_casing"
-			}]
-		}
-		{
-			x: -4.0d
-			y: 1.0d
-			dependencies: ["08A7AB49AD4E33F5"]
-			id: "0055D9ED19CD16A3"
-			tasks: [{
-				id: "4FC1FCB267934A02"
-				type: "item"
-				item: "createarmory:five_five_six_casing"
-			}]
-		}
-		{
-			x: -7.5d
-			y: -2.5d
-			dependencies: [
-				"69C6A0E5156E650D"
-				"457397375D1A8B5B"
-			]
-			id: "32A29241596D4179"
-			tasks: [{
-				id: "6453D9F09F577319"
-				type: "item"
-				item: "createarmory:upgraded_mini_gun"
-			}]
-		}
-		{
-			title: "Minigun Parts"
 			x: -8.5d
-			y: -1.0d
-			dependencies: ["56A691C6FB6BD72B"]
-			id: "21BE6980BCE13A0A"
-			tasks: [
-				{
-					id: "56E4E7B159907A56"
-					type: "item"
-					item: "createarmory:minigun_base"
-				}
-				{
-					id: "2F1EE5A38B9A5400"
-					type: "item"
-					item: "createarmory:minigun_barrel"
-				}
-			]
-		}
-		{
-			title: "Barret Parts"
-			x: -9.5d
-			y: -1.0d
-			dependencies: ["56A691C6FB6BD72B"]
-			id: "4A832DA036CD3B05"
-			tasks: [
-				{
-					id: "016B6195F1E45729"
-					type: "item"
-					item: "createarmory:barret_upper"
-				}
-				{
-					id: "1EF1CA0947157A15"
-					type: "item"
-					item: "createarmory:barret_lower"
-				}
-			]
-		}
-		{
-			title: "M4A4 Parts"
-			x: -11.5d
-			y: -1.0d
-			dependencies: ["56A691C6FB6BD72B"]
-			id: "203237F7681E70FE"
-			tasks: [
-				{
-					id: "2337EF514443DFFA"
-					type: "item"
-					item: "createarmory:m_four_lower"
-				}
-				{
-					id: "07D628AC779D1658"
-					type: "item"
-					item: "createarmory:m_four_upper"
-				}
-			]
-		}
-		{
-			title: "M4A4"
-			x: -11.5d
-			y: -2.5d
-			dependencies: ["203237F7681E70FE"]
-			id: "398D1A52D1DD98CB"
-			tasks: [{
-				id: "139A3086369A8F35"
-				type: "item"
-				item: "createarmory:empty_m_four"
-			}]
-		}
-		{
-			title: "AR-416"
-			x: -12.5d
-			y: -2.5d
-			dependencies: ["262C5012EF7D817D"]
-			id: "1AF9D0D76B86C277"
-			tasks: [{
-				id: "1FBED7076A9141AE"
-				type: "item"
-				item: "createarmory:empty_four_sixteen"
-			}]
-		}
-		{
-			title: "AR-416 Parts"
-			x: -12.5d
-			y: -1.0d
-			dependencies: ["56A691C6FB6BD72B"]
-			id: "262C5012EF7D817D"
-			tasks: [
-				{
-					id: "5DA1B26131102B4F"
-					type: "item"
-					item: "createarmory:m_four_lower"
-				}
-				{
-					id: "7C7882B955FC3B2C"
-					type: "item"
-					item: "createarmory:four_sixteen_upper"
-				}
-			]
-		}
-		{
-			x: -10.5d
-			y: -2.5d
-			dependencies: ["7F578D162A01E321"]
-			id: "197E617E6F6683AF"
-			tasks: [{
-				id: "0C61F8294751BF64"
-				type: "item"
-				item: "createarmory:empty_m_sixteen"
-			}]
-		}
-		{
-			title: "M-16 Parts"
-			x: -10.5d
-			y: -1.0d
-			dependencies: ["56A691C6FB6BD72B"]
-			id: "7F578D162A01E321"
-			tasks: [
-				{
-					id: "5E6CFE59F748B4B9"
-					type: "item"
-					item: "createarmory:m_sixteen_upper"
-				}
-				{
-					id: "3A6A6D618CADE85E"
-					type: "item"
-					item: "createarmory:m_four_lower"
-				}
-			]
-		}
-		{
-			title: "Mac 10"
-			x: -12.5d
 			y: 1.0d
 			dependencies: ["56A691C6FB6BD72B"]
-			id: "09759508EB929FDC"
+			id: "400E816929BCB5FA"
 			tasks: [{
-				id: "6E9788EB3689EBA0"
+				id: "28924B95E86F452F"
 				type: "item"
-				item: "createarmory:empty_mac_ten"
+				item: "alloyedguns:workbench"
 			}]
 		}
 		{
-			x: -12.5d
-			y: 2.0d
-			dependencies: ["56A691C6FB6BD72B"]
-			id: "245D8E8447A70A48"
+			x: -6.5d
+			y: 1.0d
+			dependencies: ["400E816929BCB5FA"]
+			id: "1275602DC87B390B"
 			tasks: [{
-				id: "2C959C738290FF70"
+				id: "75813E3CD0FDE245"
+				type: "item"
+				item: "alloyedguns:crude_gun_kit"
+			}]
+		}
+		{
+			x: -6.5d
+			y: 3.0d
+			dependencies: ["1275602DC87B390B"]
+			id: "655D8E30F956C778"
+			tasks: [{
+				id: "24EFDE6D644B74EA"
+				type: "item"
+				item: "alloyedguns:basic_gun_kit"
+			}]
+		}
+		{
+			x: -6.5d
+			y: 5.0d
+			dependencies: ["655D8E30F956C778"]
+			id: "491123D3D5C8F3C9"
+			tasks: [{
+				id: "30506284628E2126"
+				type: "item"
+				item: "alloyedguns:advanced_gun_kit"
+			}]
+		}
+		{
+			x: -6.5d
+			y: 7.0d
+			dependencies: ["491123D3D5C8F3C9"]
+			id: "1613F99E36F5CD7F"
+			tasks: [{
+				id: "70E5621D4EFD1589"
+				type: "item"
+				item: "alloyedguns:complex_gun_kit"
+			}]
+		}
+		{
+			x: -5.5d
+			y: 0.0d
+			dependencies: ["1275602DC87B390B"]
+			id: "1BB5FA2279C6ECC7"
+			tasks: [{
+				id: "0B73592F1FD0D21B"
 				type: "item"
 				item: {
-					id: "createarmory:empty_rpg"
+					id: "alloyedguns:flintlock"
 					Count: 1b
-					tag: { }
+					tag: {
+						AmmoCount: 0
+					}
 				}
 			}]
 		}
 		{
-			title: "Double Barrel Shotgun"
-			x: -12.5d
-			y: 0.0d
-			subtitle: "What? It was obvious! He was the RED Spy!"
-			dependencies: ["56A691C6FB6BD72B"]
-			id: "24346BBCA79BDA27"
+			x: -5.5d
+			y: 2.0d
+			dependencies: ["655D8E30F956C778"]
+			id: "21BA817D894C2ADC"
 			tasks: [{
-				id: "590F0843175A5322"
+				id: "6ABE285B77437593"
 				type: "item"
-				item: "createarmory:empty_double_barrel"
+				item: {
+					id: "alloyedguns:shotgun"
+					Count: 1b
+					tag: {
+						AmmoCount: 0
+					}
+				}
 			}]
 		}
 		{
-			x: -7.5d
+			x: -4.5d
+			y: 2.5d
+			dependencies: ["655D8E30F956C778"]
+			id: "75D5154734DDC592"
+			tasks: [{
+				id: "0EF29D61E00AE271"
+				type: "item"
+				item: {
+					id: "alloyedguns:assault_rifle"
+					Count: 1b
+					tag: {
+						AmmoCount: 0
+					}
+				}
+			}]
+		}
+		{
+			x: -5.5d
+			y: 8.0d
+			dependencies: ["1613F99E36F5CD7F"]
+			id: "45096C2E5D177F4E"
+			tasks: [{
+				id: "3154584AA9C50182"
+				type: "item"
+				item: {
+					id: "alloyedguns:grenade_launcher"
+					Count: 1b
+					tag: {
+						AmmoCount: 0
+					}
+				}
+			}]
+		}
+		{
+			x: -3.5d
+			y: 3.0d
+			dependencies: ["655D8E30F956C778"]
+			id: "260D9FEB34F1A695"
+			tasks: [{
+				id: "2F3BF4E7D3FF7393"
+				type: "item"
+				item: {
+					id: "alloyedguns:rifle"
+					Count: 1b
+					tag: {
+						AmmoCount: 0
+					}
+				}
+			}]
+		}
+		{
+			x: -2.5d
+			y: 3.5d
+			dependencies: ["655D8E30F956C778"]
+			id: "21CDEA10D2BF06B4"
+			tasks: [{
+				id: "616838151EA52EC3"
+				type: "item"
+				item: {
+					id: "alloyedguns:machine_pistol"
+					Count: 1b
+					tag: {
+						AmmoCount: 0
+					}
+				}
+			}]
+		}
+		{
+			x: -5.5d
+			y: 6.0d
+			dependencies: [
+				"491123D3D5C8F3C9"
+				"1613F99E36F5CD7F"
+			]
+			id: "6859E3E8C363FA33"
+			tasks: [{
+				id: "5E4294B4B83045A8"
+				type: "item"
+				item: {
+					id: "alloyedguns:heavy_rifle"
+					Count: 1b
+					tag: {
+						AmmoCount: 0
+					}
+				}
+			}]
+		}
+		{
+			x: -4.5d
+			y: 6.0d
+			dependencies: [
+				"491123D3D5C8F3C9"
+				"1613F99E36F5CD7F"
+			]
+			id: "59A7547115A464A6"
+			tasks: [{
+				id: "5A64C1D5DF9191C5"
+				type: "item"
+				item: {
+					id: "alloyedguns:bazooka"
+					Count: 1b
+					tag: {
+						AmmoCount: 0
+					}
+				}
+			}]
+		}
+		{
+			x: -3.5d
+			y: 6.0d
+			dependencies: [
+				"491123D3D5C8F3C9"
+				"1613F99E36F5CD7F"
+			]
+			id: "219411629B60642D"
+			tasks: [{
+				id: "0C8AE43A66C7F136"
+				type: "item"
+				item: {
+					id: "alloyedguns:mini_gun"
+					Count: 1b
+					tag: {
+						AmmoCount: 0
+					}
+				}
+			}]
+		}
+		{
+			x: -12.5d
+			y: 1.0d
+			dependencies: ["56A691C6FB6BD72B"]
+			id: "63271F1E50EE8CA8"
+			tasks: [{
+				id: "206774EBCE923949"
+				type: "item"
+				item: "alloyedguns:gunpowder_bottle"
+			}]
+		}
+		{
+			x: -12.5d
+			y: 3.0d
+			dependencies: ["63271F1E50EE8CA8"]
+			id: "44261017041B4EF1"
+			tasks: [{
+				id: "4AF731B545D47128"
+				type: "item"
+				item: "alloyedguns:stun_grenade"
+			}]
+		}
+		{
+			x: -14.5d
+			y: 3.0d
+			dependencies: ["63271F1E50EE8CA8"]
+			id: "7DECA96E7D242DDC"
+			tasks: [{
+				id: "03FD90FC1E3F2672"
+				type: "item"
+				item: "alloyedguns:grenade"
+			}]
+		}
+		{
+			x: -12.5d
+			y: -1.0d
+			dependencies: ["63271F1E50EE8CA8"]
+			id: "65C4067842E5FF1A"
+			tasks: [{
+				id: "32F343F2C3A74253"
+				type: "item"
+				item: "alloyedguns:crude_shot"
+			}]
+		}
+		{
+			x: -10.5d
 			y: -1.0d
 			dependencies: ["56A691C6FB6BD72B"]
-			id: "457397375D1A8B5B"
+			id: "7D3332BC93CF5E15"
 			tasks: [{
-				id: "02944E750294EA40"
+				id: "227E6FC1B89AB8EC"
 				type: "item"
-				item: "createarmory:upgraded_minigun_barrel"
+				item: {
+					id: "create:potato_cannon"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
 			}]
 		}
 	]

@@ -1214,10 +1214,12 @@
 			}]
 		}
 		{
+			title: "Faceblock Marketplace"
 			icon: "kubejs:trade_card_ender_pearl"
 			disable_toast: true
 			x: -6.0d
 			y: -9.0d
+			description: ["Ever wanted an endless supply of Trinkets, Doodads and thingymajigs? Look no further than the Trade Station! With enough coins you too can have a near infinite supply of items you'll probably never get around to using!"]
 			dependencies: ["04A7A7E4A605D66C"]
 			size: 2.0d
 			id: "3F1AB3D4CC1DE5B6"
@@ -1225,14 +1227,14 @@
 				{
 					id: "0BDC556407D589BF"
 					type: "checkmark"
-					title: "Mixin' It Up With Capitalism"
+					title: "Faceblock Marketplace"
 					disable_toast: true
 				}
 				{
 					id: "676084076BE9FA5B"
 					type: "item"
 					disable_toast: true
-					item: "create:mechanical_mixer"
+					item: "thermal:machine_press"
 				}
 			]
 			rewards: [

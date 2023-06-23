@@ -1,0 +1,12 @@
+{
+	"parent": "kubejs:block/default",
+	"textures": {
+		"particle": "milkyway:block/trade_station/side",
+		"down": "milkyway:block/trade_station/bottom",
+		"up": "milkyway:block/trade_station/top",
+		"east": "milkyway:block/trade_station/side",
+		"west": "milkyway:block/trade_station/side",
+		"south": "milkyway:block/trade_station/side",
+		"north": "milkyway:block/trade_station/front"
+	  }
+}

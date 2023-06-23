@@ -87,6 +87,9 @@ onEvent('item.tags', event => {
     global.professions.forEach(element => {
         event.get('forge:profession_cards').add(`kubejs:profession_card_${element}`)
     });
+    global.specProfessions.forEach(element => {
+        event.get('forge:profession_cards').add(`kubejs:specialized_profession_card_${element}`)
+    });
     event.get('thermal:crafting/dies').add('#forge:trade_cards')
     event.get('thermal:crafting/dies').add('#forge:profession_cards')
     event.get('mw_industry_additions:cards').add(['#forge:profession_cards', '#forge:trade_cards'])
@@ -160,11 +163,14 @@ tagRem('forge:nuggets/bronze', 'thermal:bronze_nugget')
 tagRem('forge:nuggets/bronze', 'createbigcannons:bronze_scrap')
 tagRem('forge:nuggets/steel', 'thermal:steel_nugget')
 tagRem('forge:nuggets/steel', 'createbigcannons:steel_scrap')
-tagAdd('tconstruct:casts', ['createarmory:fifty_cal_mold', 'createarmory:nine_mm_mold', 'createarmory:five_five_six_mold'])
-tagAdd('tconstruct:casts/multi_use', ['createarmory:fifty_cal_mold', 'createarmory:nine_mm_mold', 'createarmory:five_five_six_mold'])
-tagAdd('tconstruct:casts/gold', ['createarmory:fifty_cal_mold', 'createarmory:nine_mm_mold', 'createarmory:five_five_six_mold'])
-tagAdd('tconstruct:casts/multi_use/556', 'createarmory:five_five_six_mold')
-tagAdd('tconstruct:casts/multi_use/50', 'createarmory:fifty_cal_mold')
-tagAdd('tconstruct:casts/multi_use/9mm', 'createarmory:nine_mm_mold')
+tagAdd('milkyway:mechanisms', /mw_core:.*_mechanism/)
+tagAdd('milkyway:mechanisms', 'create:precision_mechanism')
+
+//tagAdd('tconstruct:casts', ['createarmory:fifty_cal_mold', 'createarmory:nine_mm_mold', 'createarmory:five_five_six_mold'])
+//tagAdd('tconstruct:casts/multi_use', ['createarmory:fifty_cal_mold', 'createarmory:nine_mm_mold', 'createarmory:five_five_six_mold'])
+//tagAdd('tconstruct:casts/gold', ['createarmory:fifty_cal_mold', 'createarmory:nine_mm_mold', 'createarmory:five_five_six_mold'])
+//tagAdd('tconstruct:casts/multi_use/556', 'createarmory:five_five_six_mold')
+//tagAdd('tconstruct:casts/multi_use/50', 'createarmory:fifty_cal_mold')
+//tagAdd('tconstruct:casts/multi_use/9mm', 'createarmory:nine_mm_mold')
 
 

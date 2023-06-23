@@ -33,6 +33,7 @@
 			icon: "create:brass_hand"
 			x: 4.0d
 			y: 2.0d
+			description: ["This mechanism is simple enough to be craftable by hand but I suspect some materials can be saved if a more advanced method of &9assembly&r is used."]
 			dependencies: ["099EE7F5982F13E0"]
 			id: "3355FD301C1D65B5"
 			tasks: [{
@@ -42,11 +43,10 @@
 			}]
 		}
 		{
-			title: "Self Sustainable Deforestation"
+			title: "Tree Harvester"
 			icon: "minecraft:oak_log"
 			x: 4.0d
 			y: 4.0d
-			subtitle: "How Bad Can I Possibly Be?"
 			description: ["Automating logs will be a key part in generating the patterns needed as a base for the Basic Mechanism."]
 			dependencies: ["3355FD301C1D65B5"]
 			id: "208D27F26708E3F0"
@@ -72,11 +72,10 @@
 			]
 		}
 		{
-			title: "The Wood Slice-inator"
+			title: "Automatic Sawmill"
 			icon: "minecraft:oak_planks"
 			x: 4.0d
 			y: 6.5d
-			subtitle: "What An Unexpected Surprise"
 			description: ["Time to cut those logs into planks! You'll have to make two saws to strip, then slice the logs into planks!"]
 			dependencies: ["208D27F26708E3F0"]
 			id: "7B4CD0F06E371092"
@@ -252,7 +251,7 @@
 			icon: "minecraft:gravel"
 			x: 5.5d
 			y: 4.0d
-			description: ["Crush Cobblestone in a millstone to make Gravel."]
+			description: ["Using some Hand-Crafted mechanisms I should be able to make some machines for automating the mechanism's production. A simple &6Millstone&r should be capable of crushing &6Cobblestone&r into &6Gravel&r."]
 			dependencies: ["7281584E0B0CC034"]
 			id: "60ADB14B7175DD03"
 			tasks: [
@@ -263,18 +262,23 @@
 					consume_items: false
 				}
 				{
-					id: "4BACD123EF334770"
+					id: "63C3DA5EBF73FE67"
+					type: "item"
+					item: "create:millstone"
+				}
+				{
+					id: "1183A426D47E3435"
 					type: "checkmark"
 					title: "Automated"
 				}
 			]
 		}
 		{
-			title: "The Exception"
+			title: "Igneous Manipulation"
 			icon: "minecraft:cobblestone"
 			x: 9.0d
 			y: 2.0d
-			subtitle: "Matter cannot be created nor destroyed, unless..."
+			description: ["Through examination of local rocks, I've discovered that when flowing &6lava&r comes into contact with &6water&r, it forms basic stone. Perhaps this can be manipulated for use in automation."]
 			dependencies: ["3355FD301C1D65B5"]
 			id: "7281584E0B0CC034"
 			tasks: [
