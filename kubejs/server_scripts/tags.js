@@ -175,6 +175,8 @@ tagRem('forge:dusts/copper', 'createindustrialchemistry:copper_dusts')
 tagRem('forge:dusts/copper', 'createbb:crushed_copper')
 tagRem('forge:dusts', 'createindustrialchemistry:copper_dusts')
 tagRem('forge:dusts', 'createbb:crushed_copper')
+tagRem('forge:dusts', 'createindustrialchemistry:iron_dusts')
+tagRem('forge:dusts/iron', 'createindustrialchemistry:iron_dusts')
 
 
 jeiHide(
@@ -193,7 +195,9 @@ jeiHide(
 'createbb:crushed_zinc',
 'createbb:crushed_copper',
 'createbb:copper_zinc_catalyst',
-'createindustrialchemistry:zinc_dusts'
+'createindustrialchemistry:zinc_dusts',
+'createindustrialchemistry:copper_dusts',
+'createindustrialchemistry:iron_dusts'
 ]
 )
 

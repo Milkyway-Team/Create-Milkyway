@@ -291,6 +291,7 @@ function cobaltMechanism(event){
 		event.remove({ id: TE("press_packing_3x3_die") })
 		event.remove({ id: TE("press_unpacking_die") })
     cobaltMachine(event, TE("machine_press"), '#minecraft:boats', 'thermal:gold_coin', 'mw_core:aluminium_gear', 'mw_core:sturdy_iron_sheet')
+    cobaltMachine(event, 'thermal:machine_centrifuge', 'create:millstone', 'create:item_drain', 'thermal:constantan_gear', 'mw_core:sturdy_iron_sheet')
     event.shaped('4x thermal:energy_duct', [
         'RLR',
         'GCG',
@@ -647,7 +648,6 @@ function trickierWindmills(event) {
     itemApplication(event, CR('sail_frame'), FD('canvas'), CR('white_sail'))
 }
 function tweaks(event){
-cobaltMachine(event, 'thermal:machine_centrifuge', 'create:millstone', 'create:encased_fan', 'thermal:constantan_gear', 'mw_core:sturdy_iron_sheet')
 
 
     event.shapeless('2x waystones:warp_dust', ['thermal:ender_pearl_dust', 'mw_core:chromatic_dust', 'mw_core:enderslime_crystal_dust', 'forbidden_arcanus:arcane_crystal_dust']).id('milkyway:processing/crafting/warp_dust')
