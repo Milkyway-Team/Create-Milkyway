@@ -1,0 +1,114 @@
+{
+    "name": "Trade Station",
+    "appearance": {
+        "block": "milkyway:machine/trade_station"
+    },
+    "components": [
+      {
+        "capacity": 10000,
+        "type": "custommachinery:energy"
+      },
+      {
+        "mode": "input",
+        "id": "card_input",
+        "type": "custommachinery:item",
+        "filter": ["#forge:profession_cards","#forge:trade_cards"],
+        "whitelist": true
+      },
+      {
+        "mode": "input",
+        "id": "input1",
+        "type": "custommachinery:item",
+        "filter": ["#forge:profession_cards","#forge:trade_cards"],
+        "blacklist": true
+      },
+      {
+        "mode": "input",
+        "id": "input2",
+        "type": "custommachinery:item",
+        "filter": ["#forge:profession_cards","#forge:trade_cards"],
+        "blacklist": true
+      },
+      {
+        "mode": "input",
+        "id": "energy_input",
+        "type": "custommachinery:item",
+        "variant": "custommachinery:energy"
+      },
+      {
+        "mode": "output",
+        "id": "output1",
+        "type": "custommachinery:item"
+      }
+    ],
+    "gui": [
+      {
+        "type": "custommachinery:size",
+        "width": "177",
+        "height": "166"
+      },
+      {
+        "texture": "milkyway:textures/gui/trade_station.png",
+        "x": 0,
+        "y": 0,
+        "type": "custommachinery:texture",
+        "width": "256",
+        "height": "256"
+      },
+      {
+        "x": 7,
+        "y": 83,
+        "type": "custommachinery:player_inventory"
+      },
+      { 
+        "x": 151,
+        "y": 7,
+        "type": "custommachinery:energy"
+      }, 
+      {
+        "x": 151,
+        "y": 53,
+        "type": "custommachinery:slot",
+        "id": "energy_input",
+        "texture":"milkyway:textures/gui/energy_slot.png"
+      },
+      {
+        "x": 27,
+        "y": 30,
+        "type": "custommachinery:slot",
+        "id": "input1"
+      },
+      {
+        "x": 47,
+        "y": 30,
+        "type": "custommachinery:slot",
+        "id": "input2"
+      },
+      {
+        "id": "output1",
+        "x": 109,
+        "y": 30,
+        "type": "custommachinery:slot"
+      },
+      {
+        "id": "card_input",
+        "x": 79,
+        "y": 53,
+        "type": "custommachinery:slot",
+        "texture":"milkyway:textures/gui/card_slot.png"
+      },
+      {
+        "x": 76,
+        "y": 31,
+        "type": "custommachinery:progress",
+        "filledTexture": "milkyway:textures/gui/progress_filled.png",
+        "emptyTexture": "milkyway:textures/gui/progress_empty.png"
+      },
+      {
+        "text": "Quest Station",
+        "x": 38,
+        "y": 5,
+        "type": "custommachinery:text"
+      }
+    ]
+  }

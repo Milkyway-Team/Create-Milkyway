@@ -14,7 +14,7 @@
 			y: 0.0d
 			shape: "gear"
 			subtitle: "How It Began"
-			description: ["Create Milkyway was originally an SMP by the name of Milkyway SMP created by MilkFur. Pouffy later joined his discord server and began to update the modpack to what you see today!"]
+			description: ["Create Milkyway was originally an SMP by the name of Milkyway SMP created by MilkFur. Pouffy later joined her discord server and began to update the modpack to what you see today!"]
 			size: 3.0d
 			id: "2A39249976E79176"
 			tasks: [{

@@ -1,0 +1,281 @@
+{
+	id: "450AA377D1473FCE"
+	order_index: 9
+	title: "Shelter Bundle"
+	icon: "create:oak_window_pane"
+	loot_size: 1
+	hide_tooltip: true
+	use_title: true
+	rewards: [
+		{
+			item: {
+				id: "minecraft:bundle"
+				Count: 1b
+				tag: {
+					Items: [
+						{
+							id: "minecraft:lantern"
+							Count: 4b
+						}
+						{
+							id: "minecraft:oak_door"
+							Count: 1b
+						}
+						{
+							id: "minecraft:oak_log"
+							Count: 16b
+						}
+						{
+							id: "create:oak_window_pane"
+							Count: 8b
+						}
+					]
+					RepairCost: 0
+					display: {
+						Name: "{\"text\":\"Oak\"}"
+					}
+				}
+			}
+		}
+		{
+			item: {
+				id: "minecraft:bundle"
+				Count: 1b
+				tag: {
+					Items: [
+						{
+							id: "minecraft:lantern"
+							Count: 4b
+						}
+						{
+							id: "minecraft:birch_door"
+							Count: 1b
+						}
+						{
+							id: "minecraft:birch_log"
+							Count: 16b
+						}
+						{
+							id: "create:birch_window_pane"
+							Count: 8b
+						}
+					]
+					RepairCost: 0
+					display: {
+						Name: "{\"text\":\"Birch\"}"
+					}
+				}
+			}
+		}
+		{
+			item: {
+				id: "minecraft:bundle"
+				Count: 1b
+				tag: {
+					Items: [
+						{
+							id: "minecraft:lantern"
+							Count: 4b
+						}
+						{
+							id: "minecraft:spruce_door"
+							Count: 1b
+						}
+						{
+							id: "minecraft:spruce_log"
+							Count: 16b
+						}
+						{
+							id: "create:spruce_window_pane"
+							Count: 8b
+						}
+					]
+					RepairCost: 0
+					display: {
+						Name: "{\"text\":\"Spruce\"}"
+					}
+				}
+			}
+		}
+		{
+			item: {
+				id: "minecraft:bundle"
+				Count: 1b
+				tag: {
+					Items: [
+						{
+							id: "minecraft:lantern"
+							Count: 4b
+						}
+						{
+							id: "quark:blossom_door"
+							Count: 1b
+						}
+						{
+							id: "quark:blossom_log"
+							Count: 16b
+						}
+						{
+							id: "quark:red_framed_glass_pane"
+							Count: 8b
+						}
+					]
+					RepairCost: 0
+					display: {
+						Name: "{\"text\":\"Blossom\"}"
+					}
+				}
+			}
+		}
+		{
+			item: {
+				id: "minecraft:bundle"
+				Count: 1b
+				tag: {
+					Items: [
+						{
+							id: "minecraft:lantern"
+							Count: 4b
+						}
+						{
+							id: "minecraft:jungle_door"
+							Count: 1b
+						}
+						{
+							id: "minecraft:jungle_log"
+							Count: 16b
+						}
+						{
+							id: "create:jungle_window_pane"
+							Count: 8b
+						}
+					]
+					RepairCost: 0
+					display: {
+						Name: "{\"text\":\"Jungle\"}"
+					}
+				}
+			}
+		}
+		{
+			item: {
+				id: "minecraft:bundle"
+				Count: 1b
+				tag: {
+					Items: [
+						{
+							id: "minecraft:lantern"
+							Count: 4b
+						}
+						{
+							id: "minecraft:acacia_door"
+							Count: 1b
+						}
+						{
+							id: "minecraft:acacia_log"
+							Count: 16b
+						}
+						{
+							id: "create:acacia_window_pane"
+							Count: 8b
+						}
+					]
+					RepairCost: 0
+					display: {
+						Name: "{\"text\":\"Acacia\"}"
+					}
+				}
+			}
+		}
+		{
+			item: {
+				id: "minecraft:bundle"
+				Count: 1b
+				tag: {
+					Items: [
+						{
+							id: "minecraft:lantern"
+							Count: 4b
+						}
+						{
+							id: "minecraft:dark_oak_door"
+							Count: 1b
+						}
+						{
+							id: "minecraft:dark_oak_log"
+							Count: 16b
+						}
+						{
+							id: "create:dark_oak_window_pane"
+							Count: 8b
+						}
+					]
+					RepairCost: 0
+					display: {
+						Name: "{\"text\":\"Dark Oak\"}"
+					}
+				}
+			}
+		}
+		{
+			item: {
+				id: "minecraft:bundle"
+				Count: 1b
+				tag: {
+					Items: [
+						{
+							id: "minecraft:lantern"
+							Count: 4b
+						}
+						{
+							id: "wildbackport:mangrove_door"
+							Count: 1b
+						}
+						{
+							id: "wildbackport:mangrove_log"
+							Count: 16b
+						}
+						{
+							id: "quark:orange_framed_glass_pane"
+							Count: 8b
+						}
+					]
+					RepairCost: 0
+					display: {
+						Name: "{\"text\":\"Mangrove\"}"
+					}
+				}
+			}
+		}
+		{
+			item: {
+				id: "minecraft:bundle"
+				Count: 1b
+				tag: {
+					Items: [
+						{
+							id: "minecraft:lantern"
+							Count: 4b
+						}
+						{
+							id: "quark:azalea_door"
+							Count: 1b
+						}
+						{
+							id: "quark:azalea_log"
+							Count: 16b
+						}
+						{
+							id: "quark:green_framed_glass_pane"
+							Count: 8b
+						}
+					]
+					RepairCost: 0
+					display: {
+						Name: "{\"text\":\"Azalea\"}"
+					}
+				}
+			}
+		}
+	]
+}

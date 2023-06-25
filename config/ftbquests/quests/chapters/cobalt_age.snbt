@@ -10,7 +10,7 @@
 	quests: [
 		{
 			icon: "create:brass_hand"
-			x: -3.0d
+			x: -3.5d
 			y: -3.0d
 			dependencies: ["266393D12E3D6B5F"]
 			id: "44286347C6F6AC67"
@@ -35,13 +35,13 @@
 			}]
 		}
 		{
-			x: -0.5d
+			x: 0.0d
 			y: 6.5d
 			dependencies: [
 				"22A3CD60B02D1ACB"
 				"616F0D4ADBDE8021"
-				"07A5F2C58D197172"
 				"4E853010A2AF5E73"
+				"42FC87DA8F611E8C"
 			]
 			id: "427B116E232D4809"
 			tasks: [{
@@ -71,7 +71,7 @@
 		{
 			title: "Molten Lead"
 			icon: "tconstruct:molten_lead_bucket"
-			x: -2.0d
+			x: -1.5d
 			y: 6.5d
 			dependencies: ["69240D98881683E1"]
 			id: "4E853010A2AF5E73"
@@ -89,27 +89,8 @@
 			]
 		}
 		{
-			icon: "create:zinc_ingot"
-			x: -0.5d
-			y: 5.0d
-			dependencies: ["229215814734628C"]
-			id: "07A5F2C58D197172"
-			tasks: [
-				{
-					id: "0F1B4C5BD06BBFD8"
-					type: "item"
-					item: "create:zinc_ingot"
-				}
-				{
-					id: "4D73DA54F9FEFF3E"
-					type: "checkmark"
-					title: "Automated"
-				}
-			]
-		}
-		{
-			icon: "tconstruct:cobalt_ingot"
-			x: 1.0d
+			icon: "mw_core:cobalt_gear"
+			x: 1.5d
 			y: 6.5d
 			dependencies: ["709C0EFA23C31D47"]
 			id: "22A3CD60B02D1ACB"
@@ -127,48 +108,32 @@
 			]
 		}
 		{
+			icon: "thermal:rf_coil"
 			x: -1.5d
-			y: 5.5d
+			y: 5.0d
 			description: ["Mechanical Crafting is the only way to automate the construction of Redstone Flux Coils."]
 			dependencies: [
-				"5CA7EA0275FC0C1F"
-				"219BF695E1461900"
+				"5A901FE8E7DB83C4"
+				"37120A81D29B0444"
 			]
 			id: "616F0D4ADBDE8021"
-			tasks: [{
-				id: "420F69F0B7729CF9"
-				type: "item"
-				item: "thermal:rf_coil"
-			}]
-		}
-		{
-			x: -1.5d
-			y: 4.0d
-			subtitle: "[Already Automated]"
-			dependencies: ["487ED42271AE45D6"]
-			id: "5CA7EA0275FC0C1F"
-			tasks: [{
-				id: "6F69DF05BEC5D4B2"
-				type: "item"
-				item: "minecraft:redstone"
-			}]
-		}
-		{
-			x: -3.0d
-			y: 5.5d
-			subtitle: "[Already Automated]"
-			dependencies: ["2248C1E1A0AC7CEB"]
-			id: "219BF695E1461900"
-			tasks: [{
-				id: "64D3633062A8CBF8"
-				type: "item"
-				item: "minecraft:gold_ingot"
-			}]
+			tasks: [
+				{
+					id: "420F69F0B7729CF9"
+					type: "item"
+					item: "thermal:rf_coil"
+				}
+				{
+					id: "1251AEDDF4612D78"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
 		}
 		{
 			title: "Molten Cobalt"
 			icon: "tconstruct:molten_cobalt_bucket"
-			x: 2.5d
+			x: 3.5d
 			y: 6.5d
 			description: ["Molten Cobalt is an output from most metal refining recipes."]
 			dependencies: [
@@ -192,88 +157,8 @@
 			]
 		}
 		{
-			title: "Molten Zinc"
-			icon: "tconstruct:molten_zinc_bucket"
-			x: 1.0d
-			y: 5.0d
-			dependencies: ["40A7D6E655703913"]
-			id: "229215814734628C"
-			tasks: [
-				{
-					id: "101656C9F8D22CB8"
-					type: "item"
-					item: "tconstruct:molten_zinc_bucket"
-				}
-				{
-					id: "7D756E8250D69419"
-					type: "checkmark"
-					title: "Automated"
-				}
-			]
-		}
-		{
-			title: "Refining Molten Tin"
-			icon: "tconstruct:molten_tin_bucket"
-			x: 1.0d
-			y: 3.0d
-			dependencies: ["2FD55ADBF5C8D65A"]
-			id: "40A7D6E655703913"
-			tasks: [
-				{
-					id: "010B7F6DBFD64F73"
-					type: "item"
-					item: "tconstruct:molten_tin_bucket"
-				}
-				{
-					id: "44214942BDA9535E"
-					type: "checkmark"
-					title: "Automated"
-				}
-			]
-		}
-		{
-			title: "Refining Molten Gold"
-			icon: "tconstruct:molten_gold_bucket"
-			x: 1.0d
-			y: 0.5d
-			dependencies: ["63227557E2B93547"]
-			id: "2FD55ADBF5C8D65A"
-			tasks: [
-				{
-					id: "130D8DAE7D98B92D"
-					type: "item"
-					item: "tconstruct:molten_gold_bucket"
-				}
-				{
-					id: "36BD262546929FA6"
-					type: "checkmark"
-					title: "Automated"
-				}
-			]
-		}
-		{
-			title: "Refining Molten Copper"
-			icon: "tconstruct:molten_copper_bucket"
-			x: 2.5d
-			y: 0.5d
-			dependencies: ["30C85CF854731D59"]
-			id: "63227557E2B93547"
-			tasks: [
-				{
-					id: "60F6E632EF8BB664"
-					type: "item"
-					item: "tconstruct:molten_copper_bucket"
-				}
-				{
-					id: "357DB27645E6322D"
-					type: "checkmark"
-					title: "Automated"
-				}
-			]
-		}
-		{
 			icon: "thermal:lead_nugget"
-			x: -4.5d
+			x: -5.0d
 			y: 6.5d
 			description: ["Scorchia is rich in Lead! Crushing it will break off chunks of Crushed Lead and Lead Nuggets!"]
 			dependencies: ["35229A5907071191"]
@@ -293,7 +178,7 @@
 		}
 		{
 			icon: "create:scorchia"
-			x: -4.5d
+			x: -5.0d
 			y: 3.0d
 			description: ["Combining Scoria with Black Dye will create Scorchia."]
 			dependencies: [
@@ -316,7 +201,7 @@
 		}
 		{
 			icon: "minecraft:black_dye"
-			x: -3.0d
+			x: -3.5d
 			y: 3.0d
 			description: ["Crush Charcoal to make Black Dye"]
 			dependencies: ["0D8941A1F6A444B9"]
@@ -336,7 +221,7 @@
 		}
 		{
 			icon: "create:scoria"
-			x: -6.0d
+			x: -6.5d
 			y: 3.0d
 			description: ["Cooking Scoria will result in Soul Sand."]
 			dependencies: ["619760787EF29973"]
@@ -356,7 +241,7 @@
 		}
 		{
 			icon: "minecraft:soul_sand"
-			x: -6.0d
+			x: -6.5d
 			y: 1.5d
 			description: ["You'll need to haunt your Sand to get Soul Sand."]
 			dependencies: ["6CCB317A61E1F369"]
@@ -375,7 +260,7 @@
 			]
 		}
 		{
-			x: -6.0d
+			x: -6.5d
 			y: 0.0d
 			subtitle: "[Already Automated]"
 			dependencies: ["4058BED15C956B22"]
@@ -388,7 +273,7 @@
 		}
 		{
 			icon: "minecraft:charcoal"
-			x: -3.0d
+			x: -3.5d
 			y: 1.5d
 			description: ["Time to cook all those Flammable Logs you've worked so hard to grow!"]
 			dependencies: ["03AF1DFD02A32727"]
@@ -409,7 +294,7 @@
 		{
 			title: "Flammable Logs"
 			icon: "minecraft:oak_log"
-			x: -3.0d
+			x: -3.5d
 			y: 0.0d
 			description: ["Whilst you may have constructed a tree farm already for Chapter 1, a new one is reccommended as you will be needing a lot of charcoal."]
 			dependencies: ["44286347C6F6AC67"]
@@ -435,60 +320,9 @@
 			]
 		}
 		{
-			title: "Refining Molten Iron"
-			icon: "tconstruct:molten_iron_bucket"
-			x: 4.0d
-			y: 0.5d
-			dependencies: [
-				"503A97041C9C5577"
-				"5049B227F0BC4BA1"
-			]
-			id: "30C85CF854731D59"
-			tasks: [
-				{
-					id: "79AB790BE66AB233"
-					type: "item"
-					item: "tconstruct:molten_iron_bucket"
-				}
-				{
-					id: "43972890D172B413"
-					type: "checkmark"
-					title: "Automated"
-				}
-			]
-		}
-		{
-			x: 5.5d
-			y: 0.5d
-			subtitle: "[Already Automated]"
-			dependencies: ["2C522C3F689D3703"]
-			id: "503A97041C9C5577"
-			tasks: [{
-				id: "4F218D05E33390B8"
-				type: "item"
-				item: "minecraft:iron_nugget"
-			}]
-		}
-		{
-			title: "Iron Nuggets Already Automated"
-			icon: "create_enchantment_industry:enchanting_guide"
-			x: 5.5d
-			y: -1.5d
-			shape: "gear"
-			subtitle: "Automated in Chapter 1"
-			hide_dependency_lines: true
-			dependencies: ["44286347C6F6AC67"]
-			id: "2C522C3F689D3703"
-			tasks: [{
-				id: "1E9D3F12B086B355"
-				type: "checkmark"
-				title: "Already Automated"
-			}]
-		}
-		{
 			title: "Sand Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: -6.0d
+			x: -6.5d
 			y: -1.5d
 			shape: "gear"
 			subtitle: "Automated in Chapter 1"
@@ -502,62 +336,8 @@
 			}]
 		}
 		{
-			title: "Gold Ingot Already Automated"
-			icon: "create_enchantment_industry:enchanting_guide"
-			x: -3.0d
-			y: 4.0d
-			shape: "gear"
-			subtitle: "Automated in Chapter 2"
-			hide_dependency_lines: true
-			dependencies: ["44286347C6F6AC67"]
-			id: "2248C1E1A0AC7CEB"
-			tasks: [{
-				id: "09F0E928C3F58771"
-				type: "checkmark"
-				title: "Already Automated"
-			}]
-		}
-		{
-			title: "Redstone Dust Already Automated"
-			icon: "create_enchantment_industry:enchanting_guide"
-			x: 0.0d
-			y: 4.0d
-			shape: "gear"
-			subtitle: "Automated in Chapter 2"
-			hide_dependency_lines: true
-			dependencies: ["44286347C6F6AC67"]
-			id: "487ED42271AE45D6"
-			tasks: [{
-				id: "7612BC7ED4FA88BD"
-				type: "checkmark"
-				title: "Already Automated"
-			}]
-		}
-		{
-			icon: "thermal:machine_refinery"
-			x: 4.0d
-			y: -1.5d
-			shape: "hexagon"
-			description: ["To get Molten Zinc you will need to refine many molten metals starting with Molten Iron. Descriptions will not be provided for these quests as they all follow the same method."]
-			hide_dependency_lines: true
-			dependencies: ["44286347C6F6AC67"]
-			id: "5049B227F0BC4BA1"
-			tasks: [
-				{
-					id: "44F3862D8247192A"
-					type: "checkmark"
-					title: "Refining"
-				}
-				{
-					id: "1BFDF1C1D0166994"
-					type: "item"
-					item: "thermal:machine_refinery"
-				}
-			]
-		}
-		{
 			icon: "mw_core:logic_mechanism"
-			x: -0.5d
+			x: 0.0d
 			y: 8.5d
 			dependencies: ["427B116E232D4809"]
 			id: "799F6769884BAAAD"
@@ -569,8 +349,9 @@
 		}
 		{
 			icon: "tconstruct:cobalt_ore"
-			x: 2.5d
+			x: 3.5d
 			y: 5.0d
+			subtitle: "Unlocks Side Chapter"
 			hide_dependency_lines: true
 			dependencies: ["44286347C6F6AC67"]
 			id: "20F8FC20001DEAA3"
@@ -578,6 +359,185 @@
 				id: "6CA54253B9FE4945"
 				type: "checkmark"
 				title: "&4Cobalt Refining&r"
+			}]
+		}
+		{
+			x: -1.5d
+			y: 3.0d
+			dependencies: ["39B608749F0D876E"]
+			id: "37120A81D29B0444"
+			tasks: [{
+				id: "08156DE8DE68BE8B"
+				type: "item"
+				item: "milkyway:prepared_coil"
+			}]
+		}
+		{
+			icon: "thermal:redstone_bucket"
+			x: -3.5d
+			y: 5.0d
+			dependencies: ["08990541AA8A7F1F"]
+			id: "5A901FE8E7DB83C4"
+			tasks: [
+				{
+					id: "4CEB5886C194B1F2"
+					type: "item"
+					item: "thermal:redstone_bucket"
+				}
+				{
+					id: "60DB02DE30963E1F"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: 0.0d
+			y: 3.0d
+			dependencies: ["25226F03594A6D74"]
+			id: "39B608749F0D876E"
+			tasks: [{
+				id: "50F671FA0C336C93"
+				type: "item"
+				item: "milkyway:coil_frame"
+			}]
+		}
+		{
+			icon: "create:brass_ingot"
+			x: 0.0d
+			y: 1.0d
+			dependencies: ["1C3059BA5035348C"]
+			id: "25226F03594A6D74"
+			tasks: [
+				{
+					id: "6AB1631A0D030BAC"
+					type: "item"
+					item: "create:brass_ingot"
+				}
+				{
+					id: "4979AEEC7929FA65"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			x: -3.5d
+			y: 4.0d
+			dependencies: ["0637B9AA4BF7F35F"]
+			id: "08990541AA8A7F1F"
+			tasks: [{
+				id: "4AFEADAF33EC83AE"
+				type: "item"
+				item: "minecraft:redstone"
+			}]
+		}
+		{
+			icon: "create_enchantment_industry:enchanting_guide"
+			x: -2.5d
+			y: 4.0d
+			shape: "gear"
+			subtitle: "Automated in Chapter 2"
+			hide_dependency_lines: true
+			dependencies: ["44286347C6F6AC67"]
+			id: "0637B9AA4BF7F35F"
+			tasks: [{
+				id: "6CEDA9505B21599C"
+				type: "checkmark"
+				title: "Redstone Dust Already Automated"
+			}]
+		}
+		{
+			icon: {
+				id: "tconstruct:smeltery_controller"
+				Count: 1b
+				tag: {
+					texture: "tconstruct:seared_bricks"
+				}
+			}
+			x: -1.5d
+			y: 1.0d
+			shape: "hexagon"
+			hide_dependency_lines: true
+			dependencies: ["44286347C6F6AC67"]
+			id: "1C3059BA5035348C"
+			tasks: [{
+				id: "0D8280CF8E60DA33"
+				type: "checkmark"
+				title: "Alloying"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 5.0d
+			dependencies: [
+				"56ECFA14FEB9189C"
+				"063519758E09F038"
+			]
+			id: "42FC87DA8F611E8C"
+			tasks: [{
+				id: "583EE1255512715E"
+				type: "item"
+				item: "mw_core:tech_tube"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 3.0d
+			dependencies: ["3B8BDDF161932982"]
+			id: "56ECFA14FEB9189C"
+			tasks: [{
+				id: "7FF4B274C751536C"
+				type: "item"
+				item: "mw_core:polished_diamond_quartz"
+			}]
+		}
+		{
+			title: "Mixing"
+			x: 3.5d
+			y: 1.0d
+			hide_dependency_lines: true
+			dependencies: ["44286347C6F6AC67"]
+			id: "655F86255B112819"
+			tasks: [
+				{
+					id: "535F6C53314CD581"
+					type: "item"
+					item: "minecraft:quartz"
+				}
+				{
+					id: "19A29F359B58C45B"
+					type: "item"
+					item: "createindustrialchemistry:diamond_dusts"
+				}
+				{
+					id: "4A1377A7058CDA36"
+					type: "item"
+					item: "tconstruct:molten_diamond_bucket"
+				}
+			]
+		}
+		{
+			x: 1.5d
+			y: 1.0d
+			dependencies: ["655F86255B112819"]
+			id: "3B8BDDF161932982"
+			tasks: [{
+				id: "3630C41033A0AF02"
+				type: "item"
+				item: "mw_core:diamond_quartz"
+			}]
+		}
+		{
+			x: 3.5d
+			y: 3.0d
+			hide_dependency_lines: true
+			dependencies: ["44286347C6F6AC67"]
+			id: "063519758E09F038"
+			tasks: [{
+				id: "628DB71ECC10ADC9"
+				type: "item"
+				item: "tconstruct:molten_steel_bucket"
 			}]
 		}
 	]

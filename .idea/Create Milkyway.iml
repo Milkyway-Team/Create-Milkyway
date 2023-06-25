@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/saves/New World/DIM1/betterdeserttemples" />
+      <excludeFolder url="file://$MODULE_DIR$/saves/New World/DIM-1/betterdeserttemples" />
+      <excludeFolder url="file://$MODULE_DIR$/saves/New World/dimensions/ae2/spatial_storage/betterdeserttemples" />
+      <excludeFolder url="file://$MODULE_DIR$/saves/New World/ftbteams/party" />
+      <excludeFolder url="file://$MODULE_DIR$/saves/New World/ftbteams/server" />
+      <excludeFolder url="file://$MODULE_DIR$/saves/New World/betterdeserttemples" />
+      <excludeFolder url="file://$MODULE_DIR$/saves/New World/datapacks" />
+      <excludeFolder url="file://$MODULE_DIR$/essential/image-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/local/ftbchunks/data/b7609b0e-e82f-493a-b328-7e997ec1a9c7" />
+      <excludeFolder url="file://$MODULE_DIR$/saves/Ponder + Testing" />
+      <excludeFolder url="file://$MODULE_DIR$/essential/avatar-cache/3/9" />
+      <excludeFolder url="file://$MODULE_DIR$/essential/avatar-cache/0" />
+      <excludeFolder url="file://$MODULE_DIR$/essential/avatar-cache/6" />
+      <excludeFolder url="file://$MODULE_DIR$/essential/avatar-cache/b" />
+      <excludeFolder url="file://$MODULE_DIR$/essential/avatar-cache/f" />
+      <excludeFolder url="file://$MODULE_DIR$/essential/cosmetic-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/essential/libraries" />
+      <excludeFolder url="file://$MODULE_DIR$/essential/loader" />
+      <excludeFolder url="file://$MODULE_DIR$/essential/screenshot-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/essential/screenshot-metadata" />
+      <excludeFolder url="file://$MODULE_DIR$/crash-reports" />
+      <excludeFolder url="file://$MODULE_DIR$/local" />
+      <excludeFolder url="file://$MODULE_DIR$/saves" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

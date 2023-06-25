@@ -6,8 +6,8 @@ onEvent('item.registry', event => {
 	//event.create('infernal_mesh','createsifter:mesh').displayName('Infernal mesh')
 	// Register new items here
 	 event.create('mw_core:tin_ore_dust').displayName('Tin Ore Dust')
-	event.create('immersiveengineering:filled_shell').displayName('Filled Shell').texture('kubejs:item/filled_shell')
-	event.create('immersiveengineering:filled_casing').displayName('Filled Casing').texture('kubejs:item/filled_casing')
+	//event.create('immersiveengineering:filled_shell').displayName('Filled Shell').texture('kubejs:item/filled_shell')
+	//event.create('immersiveengineering:filled_casing').displayName('Filled Casing').texture('kubejs:item/filled_casing')
 	event.create('milkyway:copper_concentrate').displayName('Cobalithron').texture('milkyway:item/crushed_copper_cobalt_ore')
 	event.create('milkyway:cobalt_slag').displayName('Cobalt Slag').texture('milkyway:item/cobalt_slag')
 	event.create('milkyway:monazite_rod').displayName('Monazite Rod').texture('milkyway:item/monazite_rod')
@@ -16,6 +16,16 @@ onEvent('item.registry', event => {
 	event.create('milkyway:monazite_dust').displayName('Monazite Dust').texture('milkyway:item/monazite_dust')
 	event.create('milkyway:ekanite_dust').displayName('Ekanite Dust').texture('milkyway:item/ekanite_dust')
 	event.create('milkyway:heliodor_dust').displayName('Heliodor Dust').texture('milkyway:item/heliodor_dust')
+	event.create('milkyway:coil_frame').displayName('Coil Frame').texture('milkyway:item/coil_frame')
+	event.create('milkyway:pressed_brass_rod').displayName('Pressed Brass Rod').texture('milkyway:item/pressed_brass_rod')
+	event.create('milkyway:prepared_coil').displayName('Prepared Coil').texture('milkyway:item/prepared_coil')
+	event.create('milkyway:insulated_coil').displayName('Insulated Coil').texture('milkyway:item/insulated_coil')
+	event.create('milkyway:silicate_dust').displayName('Silicate Dust').texture('milkyway:item/silicate_dust')
+	event.create('milkyway:raw_aluminium').displayName('Raw Aluminium').texture('milkyway:item/raw_aluminium')
+	event.create('milkyway:aluminium_blend').displayName('Aluminium Blend').texture('milkyway:item/aluminium_blend')
+	event.create('milkyway:augment_base').displayName('Augment Base').texture('milkyway:item/augment_base')
+	event.create('milkyway:invar_augment_base').displayName('Augment Base').texture('milkyway:item/invar_augment_base')
+
 
 	event.create('thermal:fluid_upgrade_augment_1').displayName('Hardened Sealed Components').parentModel('kubejs:item/upgrade_augment_1').texture('milkyway:item/fluid_upgrade_augment_1')
 	event.create('thermal:fluid_upgrade_augment_2').displayName('Reinforced Sealed Components').parentModel('kubejs:item/upgrade_augment_2').texture('milkyway:item/fluid_upgrade_augment_2')
@@ -106,6 +116,10 @@ onEvent('fluid.registry', event => {
 		.displayName('Liquified Logic')
 		.stillTexture('milkyway:block/logic_still')
 		.flowingTexture('milkyway:block/logic_flowing')
+	event.create('milkyway:alumina_solution')
+	    .thinTexture(0xe6dabb)
+        .bucketColor(0xe6dabb)
+		.displayName('Alumina Solution')
 })
 onEvent('block.modification', event => {
 	event.modify('tconstruct:cobalt_ore', block => {

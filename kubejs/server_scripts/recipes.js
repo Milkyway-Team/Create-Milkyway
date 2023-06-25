@@ -290,7 +290,235 @@ function cobaltMechanism(event){
 		event.remove({ id: TE("press_packing_2x2_die") })
 		event.remove({ id: TE("press_packing_3x3_die") })
 		event.remove({ id: TE("press_unpacking_die") })
-
+    cobaltMachine(event, TE("machine_press"), '#minecraft:boats', 'thermal:gold_coin', 'mw_core:aluminium_gear', 'mw_core:sturdy_iron_sheet')
+    event.shaped('4x thermal:energy_duct', [
+        'RLR',
+        'GCG',
+        'RLR'
+    ], {
+        R: '#forge:dusts/redstone',
+        G: '#forge:glass',
+        L: '#forge:plates/sturdy/lead',
+        C: 'mw_core:cobalt_mechanism'
+    }).id('milkyway:processing/crafting/energy_duct')
+    event.shaped('4x thermal:fluid_duct', [
+        'RLR',
+        'GCG',
+        'RLR'
+    ], {
+        R: '#forge:nuggets/lead',
+        G: 'create:fluid_pipe',
+        L: '#forge:plates/sturdy/copper',
+        C: 'mw_core:cobalt_mechanism'
+    }).id('milkyway:processing/crafting/fluid_duct')
+    event.shaped('4x thermal:fluid_duct_windowed', [
+        'RLR',
+        'GCG',
+        'RLR'
+    ], {
+        R: '#forge:glass',
+        G: 'create:fluid_pipe',
+        L: '#forge:plates/sturdy/copper',
+        C: 'mw_core:cobalt_mechanism'
+    }).id('milkyway:processing/crafting/fluid_duct_windowed')
+    event.shaped('2x thermal:energy_limiter_attachment', [
+        'LGL',
+        'EME'
+    ], {
+        L: '#forge:nuggets/lead',
+        G: '#forge:glass',
+        E: 'mw_core:electrum_sheet',
+        M: 'mw_core:cobalt_mechanism'
+    }).id('milkyway:processing/crafting/energy_limiter_attachment')
+    event.shaped('2x thermal:filter_attachment', [
+        'LGL',
+        'EME'
+    ], {
+        L: '#forge:nuggets/invar',
+        G: 'create:filter',
+        E: 'create:iron_sheet',
+        M: 'mw_core:cobalt_mechanism'
+    }).id('milkyway:processing/crafting/filter_attachment')
+    event.shaped('2x thermal:servo_attachment', [
+        'LGL',
+        'EME'
+    ], {
+        L: '#forge:nuggets/invar',
+        G: '#forge:glass',
+        E: 'create:iron_sheet',
+        M: 'mw_core:cobalt_mechanism'
+    }).id('milkyway:processing/crafting/servo_attachment')
+    event.shaped('2x thermal:turbo_servo_attachment', [
+        'LGL',
+        'EME'
+    ], {
+        L: '#forge:nuggets/lead',
+        G: '#forge:glass',
+        E: 'mw_core:invar_sheet',
+        M: 'mw_core:cobalt_mechanism'
+    }).id('milkyway:processing/crafting/turbo_servo_attachment')
+    event.shaped('thermal:item_buffer', [
+        'ISI',
+        'WMW',
+        'IAI'
+    ], {
+        I: 'mw_core:invar_sheet',
+        S: 'thermal:signalum_gear',
+        W: '#minecraft:planks',
+        M: 'mw_core:cobalt_mechanism',
+        A: 'thermal:rf_coil'
+    }).id('milkyway:processing/crafting/item_buffer')
+    event.recipes.createSequencedAssembly([('milkyway:coil_frame')], 'createaddition:brass_rod', [
+        event.recipes.createPressing('milkyway:pressed_brass_rod', 'milkyway:pressed_brass_rod'),
+        event.recipes.createDeploying('milkyway:pressed_brass_rod', ['milkyway:pressed_brass_rod', CR('brass_nugget')]),
+        event.recipes.createDeploying('milkyway:pressed_brass_rod', ['milkyway:pressed_brass_rod', CR('brass_nugget')])
+    ]).transitionalItem('milkyway:pressed_brass_rod').loops(1).id('milkyway:processing/sequenced_assembly/coil_frame')
+    event.recipes.createSequencedAssembly([('milkyway:prepared_coil')], 'milkyway:coil_frame', [
+        event.recipes.createDeploying('milkyway:insulated_coil', ['milkyway:insulated_coil', TE('cured_rubber')]),
+        event.recipes.createPressing('milkyway:insulated_coil', 'milkyway:insulated_coil'),
+        event.recipes.createDeploying('milkyway:insulated_coil', ['milkyway:insulated_coil', CR('brass_sheet')]),
+    ]).transitionalItem('milkyway:insulated_coil').loops(1).id('milkyway:processing/sequenced_assembly/prepared_coil')
+    event.recipes.createSequencedAssembly([Item.of('thermal:rf_coil').withChance(5.0), Item.of('createaddition:brass_rod').withChance(5.0)], 'milkyway:prepared_coil', [
+        event.recipes.createFilling('milkyway:prepared_coil', ['milkyway:prepared_coil', Fluid.of('thermal:redstone', 1000)]),
+        event.recipes.createFilling('milkyway:prepared_coil', ['milkyway:prepared_coil', Fluid.of('thermal:redstone', 1000)]),
+    ]).transitionalItem('milkyway:prepared_coil').loops(2).id('milkyway:processing/sequenced_assembly/rf_coil')
+    event.custom({
+        "type": "thermal:bottler",
+        "ingredients": [
+            {"item": "milkyway:prepared_coil"},
+            {
+                "fluid": "thermal:redstone",
+                "amount": 5000,
+            }
+        ],
+        "result": [{"item": "thermal:rf_coil"}]
+    })
+    event.custom({
+        "type": "create:filling",
+        "ingredients": [
+          {
+            "item": "mw_core:polished_diamond_quartz"
+          },
+          {
+            "fluid": "tconstruct:molten_steel",
+            "nbt": {},
+            "amount": 180
+          }
+        ],
+        "results": [
+          {
+            "item": "mw_core:tech_tube"
+          }
+        ]
+    }).id('milkyway:processing/filling/tech_tube')
+    event.recipes.createSequencedAssembly([('thermal:area_radius_augment')], 'milkyway:augment_base', [
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'extendedgears:iron_cogwheel']),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'extendedgears:iron_cogwheel']),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'thermal:redstone_servo']),
+        event.recipes.createFilling('milkyway:augment_base', ['milkyway:augment_base', Fluid.of('tconstruct:molten_tin', 360)]),
+    ]).transitionalItem('milkyway:augment_base').loops(1).id('milkyway:processing/sequenced_assembly/augments/area_radius')
+    event.recipes.createSequencedAssembly([('thermal:dynamo_fuel_augment')], 'milkyway:augment_base', [
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'mw_core:lumium_sheet']),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'thermal:lead_gear']),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', '#thermal:glass/hardened']),
+    ]).transitionalItem('milkyway:augment_base').loops(2).id('milkyway:processing/sequenced_assembly/augments/dynamo_fuel')
+    event.recipes.createSequencedAssembly([('thermal:fluid_tank_augment')], 'milkyway:augment_base', [
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'thermal:cured_rubber']),
+        event.recipes.createFilling('milkyway:augment_base', ['milkyway:augment_base', Fluid.of('tconstruct:molten_iron', 180)]),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'thermal:cured_rubber']),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', '#thermal:glass/hardened']),
+    ]).transitionalItem('milkyway:augment_base').loops(2).id('milkyway:processing/sequenced_assembly/augments/fluid_tank')
+    event.recipes.createSequencedAssembly([('thermal:machine_speed_augment')], 'milkyway:augment_base', [
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'mw_core:electrum_sheet']),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'thermal:lead_gear']),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'thermal:rf_coil']),
+    ]).transitionalItem('milkyway:augment_base').loops(2).id('milkyway:processing/sequenced_assembly/augments/machine_speed')
+    event.recipes.createSequencedAssembly([('thermal:machine_efficiency_augment')], 'milkyway:augment_base', [
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'thermal:nickel_gear']),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'mw_core:lumium_sheet']),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'thermal:rf_coil']),
+    ]).transitionalItem('milkyway:augment_base').loops(2).id('milkyway:processing/sequenced_assembly/augments/machine_efficiency')
+    event.recipes.createSequencedAssembly([('thermal:machine_output_augment')], 'milkyway:augment_base', [
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'mw_core:invar_sheet']),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'thermal:bronze_gear']),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'mw_core:invar_sheet']),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'thermal:bronze_gear']),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'thermal:redstone_servo']),
+    ]).transitionalItem('milkyway:augment_base').loops(1).id('milkyway:processing/sequenced_assembly/augments/machine_output')
+    event.recipes.createSequencedAssembly([('thermal:machine_catalyst_augment')], 'milkyway:augment_base', [
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'mw_core:lead_sheet']),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'thermal:constantan_gear']),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'mw_core:lead_sheet']),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'thermal:constantan_gear']),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'thermal:redstone_servo']),
+    ]).transitionalItem('milkyway:augment_base').loops(1).id('milkyway:processing/sequenced_assembly/augments/machine_catalyst')
+    event.recipes.createSequencedAssembly([('thermal:dynamo_output_augment')], 'milkyway:augment_base', [
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'mw_core:signalum_sheet']),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'thermal:silver_gear']),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'mw_core:signalum_sheet']),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'thermal:silver_gear']),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', '#thermal:glass/hardened']),
+    ]).transitionalItem('milkyway:augment_base').loops(1).id('milkyway:processing/sequenced_assembly/augments/dynamo_output')
+    event.recipes.createSequencedAssembly([('thermal:rf_coil_augment')], 'milkyway:augment_base', [
+        event.recipes.createFilling('milkyway:augment_base', ['milkyway:augment_base', Fluid.of('tconstruct:molten_silver', 180)]),
+        event.recipes.createFilling('milkyway:augment_base', ['milkyway:augment_base', Fluid.of('tconstruct:molten_gold', 180)]),
+    ]).transitionalItem('milkyway:augment_base').loops(1).id('milkyway:processing/sequenced_assembly/augments/rf_coil')
+    event.recipes.createSequencedAssembly([('thermal:rf_coil_storage_augment')], 'thermal:rf_coil_augment', [
+        event.recipes.createFilling('milkyway:augment_base', ['milkyway:augment_base', Fluid.of('tconstruct:molten_gold', 270)]),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'thermal:silver_ingot']),
+    ]).transitionalItem('milkyway:augment_base').loops(1).id('milkyway:processing/sequenced_assembly/augments/rf_coil_storage')
+    event.recipes.createSequencedAssembly([('thermal:rf_coil_xfer_augment')], 'thermal:rf_coil_augment', [
+        event.recipes.createFilling('milkyway:augment_base', ['milkyway:augment_base', Fluid.of('tconstruct:molten_silver', 270)]),
+        event.recipes.createDeploying('milkyway:augment_base', ['milkyway:augment_base', 'minecraft:gold_ingot']),
+    ]).transitionalItem('milkyway:augment_base').loops(1).id('milkyway:processing/sequenced_assembly/augments/rf_coil_xfer')
+    event.recipes.createSequencedAssembly([('thermal:item_filter_augment')], 'create:filter', [
+        event.recipes.createDeploying('create:filter', ['create:filter', 'thermal:tin_nugget']),
+        event.recipes.createDeploying('create:filter', ['create:filter', 'thermal:tin_nugget']),
+        event.recipes.createDeploying('create:filter', ['create:filter', 'thermal:tin_nugget']),
+        event.recipes.createDeploying('create:filter', ['create:filter', 'thermal:tin_nugget']),
+        event.recipes.createFilling('create:filter', ['create:filter', Fluid.of('tconstruct:molten_signalum', 90)]),
+    ]).transitionalItem('create:filter').loops(1).id('milkyway:processing/sequenced_assembly/augments/item_filter')
+    event.recipes.createSequencedAssembly([('thermal:fluid_filter_augment')], 'create:filter', [
+        event.recipes.createDeploying('create:filter', ['create:filter', 'alloyed:bronze_nugget']),
+        event.recipes.createDeploying('create:filter', ['create:filter', 'alloyed:bronze_nugget']),
+        event.recipes.createDeploying('create:filter', ['create:filter', 'alloyed:bronze_nugget']),
+        event.recipes.createDeploying('create:filter', ['create:filter', 'alloyed:bronze_nugget']),
+        event.recipes.createFilling('create:filter', ['create:filter', Fluid.of('tconstruct:molten_signalum', 90)]),
+    ]).transitionalItem('create:filter').loops(1).id('milkyway:processing/sequenced_assembly/augments/fluid_filter')
+    event.recipes.createSequencedAssembly([('thermal:machine_cycle_augment')], 'milkyway:invar_augment_base', [
+        event.recipes.createDeploying('milkyway:invar_augment_base', ['milkyway:invar_augment_base', 'mw_core:silver_sheet']),
+        event.recipes.createDeploying('milkyway:invar_augment_base', ['milkyway:invar_augment_base', 'mw_core:constantan_sheet']),
+        event.recipes.createDeploying('milkyway:invar_augment_base', ['milkyway:invar_augment_base', 'thermal:signalum_gear']),
+        event.recipes.createDeploying('milkyway:invar_augment_base', ['milkyway:invar_augment_base', 'thermal:redstone_servo']),
+    ]).transitionalItem('milkyway:invar_augment_base').loops(2).id('milkyway:processing/sequenced_assembly/augments/machine_cycle')
+    event.recipes.createSequencedAssembly([('thermal:xp_storage_augment')], 'milkyway:invar_augment_base', [
+        event.recipes.createDeploying('milkyway:invar_augment_base', ['milkyway:invar_augment_base', 'minecraft:gold_nugget']),
+        event.recipes.createDeploying('milkyway:invar_augment_base', ['milkyway:invar_augment_base', 'minecraft:gold_nugget']),
+        event.recipes.createDeploying('milkyway:invar_augment_base', ['milkyway:invar_augment_base', 'minecraft:gold_nugget']),
+        event.recipes.createDeploying('milkyway:invar_augment_base', ['milkyway:invar_augment_base', 'minecraft:gold_nugget']),
+        event.recipes.createFilling('milkyway:augment_base', ['milkyway:augment_base', Fluid.of('create_enchantment_industry:experience', 1000)]),
+        event.recipes.createDeploying('milkyway:invar_augment_base', ['milkyway:invar_augment_base', 'thermal:xp_crystal']),
+    ]).transitionalItem('milkyway:invar_augment_base').loops(1).id('milkyway:processing/sequenced_assembly/augments/xp_storage')
+    event.recipes.createSequencedAssembly([('thermal:machine_null_augment')], 'milkyway:invar_augment_base', [
+        event.recipes.createDeploying('milkyway:invar_augment_base', ['milkyway:invar_augment_base', 'minecraft:iron_nugget']),
+        event.recipes.createDeploying('milkyway:invar_augment_base', ['milkyway:invar_augment_base', 'minecraft:iron_nugget']),
+        event.recipes.createDeploying('milkyway:invar_augment_base', ['milkyway:invar_augment_base', 'minecraft:iron_nugget']),
+        event.recipes.createDeploying('milkyway:invar_augment_base', ['milkyway:invar_augment_base', 'minecraft:iron_nugget']),
+        event.recipes.createDeploying('milkyway:invar_augment_base', ['milkyway:invar_augment_base', 'minecraft:cactus']),
+    ]).transitionalItem('milkyway:invar_augment_base').loops(1).id('milkyway:processing/sequenced_assembly/augments/machine_null')
+    event.recipes.createSequencedAssembly([('thermal:dynamo_throttle_augment')], 'milkyway:invar_augment_base', [
+        event.recipes.createDeploying('milkyway:invar_augment_base', ['milkyway:invar_augment_base', 'thermal:lead_nugget']),
+        event.recipes.createDeploying('milkyway:invar_augment_base', ['milkyway:invar_augment_base', 'thermal:lead_nugget']),
+        event.recipes.createDeploying('milkyway:invar_augment_base', ['milkyway:invar_augment_base', 'thermal:lead_nugget']),
+        event.recipes.createDeploying('milkyway:invar_augment_base', ['milkyway:invar_augment_base', 'thermal:lead_nugget']),
+        event.recipes.createFilling('milkyway:invar_augment_base', ['milkyway:invar_augment_base', Fluid.of('tconstruct:molten_electrum', 90)]),
+    ]).transitionalItem('milkyway:invar_augment_base').loops(1).id('milkyway:processing/sequenced_assembly/augments/dynamo_throttle')
+    event.recipes.createSequencedAssembly([('mw_core:cobalt_mechanism')], 'create:precision_mechanism', [
+        event.recipes.createFilling('create:precision_mechanism', ['create:precision_mechanism', Fluid.of('tconstruct:molten_lead', 360)]),
+        event.recipes.createDeploying('create:precision_mechanism', ['create:precision_mechanism', 'mw_core:tech_tube']),
+        event.recipes.createDeploying('create:precision_mechanism', ['create:precision_mechanism', 'mw_core:cobalt_gear']),
+        event.recipes.createDeploying('create:precision_mechanism', ['create:precision_mechanism', 'thermal:rf_coil']),
+    ]).transitionalItem('create:precision_mechanism').loops(1).id('milkyway:processing/sequenced_assembly/cobalt_mechanism')
 }
 
 function logicMechanism(event){
@@ -421,6 +649,8 @@ function trickierWindmills(event) {
 function tweaks(event){
 cobaltMachine(event, 'thermal:machine_centrifuge', 'create:millstone', 'create:encased_fan', 'thermal:constantan_gear', 'mw_core:sturdy_iron_sheet')
 
+
+    event.shapeless('2x waystones:warp_dust', ['thermal:ender_pearl_dust', 'mw_core:chromatic_dust', 'mw_core:enderslime_crystal_dust', 'forbidden_arcanus:arcane_crystal_dust']).id('milkyway:processing/crafting/warp_dust')
     event.replaceInput({id: 'create_things_and_misc:slime_gun_craft'}, Fluid.of('create_things_and_misc:slime'), Fluid.of('tconstruct:slime'))
     event.replaceInput({id: 'thermal:augments/upgrade_augment_1'}, 'thermal:invar_ingot', 'mw_core:invar_sheet')
     event.replaceInput({id: 'thermal:augments/upgrade_augment_2'}, 'thermal:electrum_ingot', 'mw_core:electrum_sheet')
@@ -429,6 +659,7 @@ cobaltMachine(event, 'thermal:machine_centrifuge', 'create:millstone', 'create:e
     event.replaceInput({id: 'thermal:augments/upgrade_augment_2'}, 'minecraft:quartz', 'mw_core:data_tube')
     event.replaceInput({id: 'thermal:augments/upgrade_augment_3'}, '#thermal:glass/hardened', 'mw_core:tech_tube')
     event.smelting('alloyed:bronze_ingot', TE('bronze_dust')).id('milkyway:processing/smelting/bronze_ingot')
+    event.replaceInput({id: 'createindustrialchemistry:reactions/oxidation/zinc'}, '#forge:dusts/zinc', 'mw_core:zinc_dust')
     event.shaped(Item.of('thermal:fluid_upgrade_augment_1', '{AugmentData:{FluidMax:2,RFMax:4,Type:"Fluid"}}'), [
         'STS',
         'RGR',
@@ -776,14 +1007,6 @@ cobaltMachine(event, 'thermal:machine_centrifuge', 'create:millstone', 'create:e
         L: MW('sturdy_lead_sheet')
     }).id('milkyway:processing/crafting/refined_machine')
     event.shapeless(MW('basic_mechanism'), [F('#cogwheels'), CR('andesite_alloy'), F('#ingots/iron'), MC('#planks')])
-    event.shaped('thermal:rf_coil', [
-        'R',
-        'G',
-        'R'
-    ], {
-        R: '#forge:dusts/redstone',
-        G: '#forge:ingots/gold'
-    }).id('milkyway:processing/crafting/rf_coil_vertical')
     event.shaped('create:steam_engine', [
         ' B ',
         ' SC',

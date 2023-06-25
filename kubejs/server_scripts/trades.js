@@ -50,7 +50,6 @@ onEvent("morejs.villager.trades", (event) => {
         .maxUses(maxUses);
     }
     //fEng Buying
-    buyTrade(fEng, 1, 6, TE('rf_coil'), 3, 16, 4);
     //event.addTrade(fEng, 1, ['8x ' + EM], TE('wrench'));
     buyTrade(fEng, 1, 8, TE('wrench'), 1, 8, 1);
     //event.addTrade(fEng, 2, ['11x ' + EM], TE('rf_potato'));

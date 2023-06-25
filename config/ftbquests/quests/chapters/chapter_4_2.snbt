@@ -10,8 +10,8 @@
 	quests: [
 		{
 			icon: "farmersdelight:lime_canvas_sign"
-			x: -2.5d
-			y: -2.0d
+			x: 1.5d
+			y: 1.5d
 			description: ["The base materials required for the Creative Motor."]
 			dependencies: ["501D87E236FCB915"]
 			hide: true
@@ -24,8 +24,8 @@
 		}
 		{
 			icon: "create:brass_hand"
-			x: -0.5d
-			y: -2.0d
+			x: 3.5d
+			y: 1.5d
 			dependencies: ["689BBA6A1804D4E6"]
 			hide: true
 			id: "1C9328C10043749C"
@@ -258,7 +258,7 @@
 		{
 			title: "Molten Steel"
 			x: 10.5d
-			y: -2.0d
+			y: -3.0d
 			subtitle: "[Already Automated]"
 			dependencies: ["27D7BDB7E46792B1"]
 			id: "4999815143E064C3"
@@ -338,8 +338,8 @@
 		{
 			title: "Molten Lumium"
 			icon: "tconstruct:molten_lumium_bucket"
-			x: 11.0d
-			y: 2.5d
+			x: 10.0d
+			y: 1.0d
 			description: ["Alloying Molten Tin, Molten Silver and Energized Glowstone will produce Molten Lumium."]
 			dependencies: [
 				"1D0CE1DC3ED47731"
@@ -363,8 +363,8 @@
 		{
 			title: "Molten Tin"
 			icon: "tconstruct:molten_tin_bucket"
-			x: 11.0d
-			y: 0.0d
+			x: 10.0d
+			y: -1.5d
 			description: ["Molten Gold can be refined into 180mb of Molten Tin."]
 			dependencies: ["5357B98790C35306"]
 			id: "4773B58A0994B72A"
@@ -384,8 +384,8 @@
 		{
 			title: "Molten Silver"
 			icon: "tconstruct:molten_silver_bucket"
-			x: 12.0d
-			y: 1.5d
+			x: 11.0d
+			y: 0.0d
 			description: ["Molten Gold can be refined into 90mb of Molten Silver."]
 			dependencies: ["5357B98790C35306"]
 			id: "1D0CE1DC3ED47731"
@@ -404,8 +404,8 @@
 		}
 		{
 			icon: "thermal:glowstone_bucket"
-			x: 12.0d
-			y: 3.5d
+			x: 10.5d
+			y: 2.5d
 			description: ["Melting Glowstone in a Magma Crucible creates Energized Glowstone."]
 			dependencies: ["2E2677811D647B0C"]
 			id: "6B18E2CC3ECCDE92"
@@ -443,8 +443,8 @@
 			]
 		}
 		{
-			x: 12.5d
-			y: -1.0d
+			x: 12.0d
+			y: -2.0d
 			subtitle: "[Already Automated]"
 			dependencies: ["75D87AE28C7B1A03"]
 			id: "5357B98790C35306"
@@ -579,8 +579,8 @@
 		}
 		{
 			icon: "forbidden_arcanus:golden_orchid_seeds"
-			x: 7.5d
-			y: 12.5d
+			x: 8.0d
+			y: 11.5d
 			description: ["The Golden Orchid is an astounding plant. It has the ability to grow Arcane Gold Nuggets on it's branches."]
 			dependencies: ["23876A6665AFA5F1"]
 			id: "0E59DDF0096CF5E3"
@@ -611,8 +611,8 @@
 		}
 		{
 			icon: "minecraft:blaze_rod"
-			x: 8.5d
-			y: 9.0d
+			x: 7.5d
+			y: 8.5d
 			description: ["Casting Blazing Blood into Rod Casts creates Blaze Rods."]
 			dependencies: ["608EB7DE3A0DAB31"]
 			id: "24942A7A139679A2"
@@ -905,8 +905,8 @@
 		}
 		{
 			title: "Orchid Catalyst"
-			x: 8.5d
-			y: 14.0d
+			x: 9.5d
+			y: 13.5d
 			subtitle: "No Need To Automate"
 			dependencies: [
 				"28FA24335CB2B58B"
@@ -922,8 +922,8 @@
 			}]
 		}
 		{
-			x: 7.0d
-			y: 16.0d
+			x: 8.0d
+			y: 15.5d
 			hide_dependency_lines: true
 			dependencies: ["1C9328C10043749C"]
 			id: "2911B111CC5D6C0B"
@@ -934,8 +934,8 @@
 			}]
 		}
 		{
-			x: 9.5d
-			y: 15.0d
+			x: 10.5d
+			y: 14.5d
 			hide_dependency_lines: true
 			dependencies: ["1C9328C10043749C"]
 			id: "28FA24335CB2B58B"
@@ -946,8 +946,8 @@
 			}]
 		}
 		{
-			x: 10.5d
-			y: 14.0d
+			x: 11.5d
+			y: 13.5d
 			hide_dependency_lines: true
 			dependencies: ["1C9328C10043749C"]
 			id: "144FF2C7ABAE3F3A"
@@ -958,8 +958,8 @@
 			}]
 		}
 		{
-			x: 8.5d
-			y: 15.5d
+			x: 9.5d
+			y: 15.0d
 			description: ["Mundabitur Dust is a transformative powder made from a combination of dusts and items."]
 			dependencies: [
 				"2C7B9A1BDA7B8060"
@@ -976,8 +976,8 @@
 			}]
 		}
 		{
-			x: 10.5d
-			y: 15.0d
+			x: 11.5d
+			y: 14.5d
 			dependencies: [
 				"4BFA5D7EB5B2B8D0"
 				"5881AB80D61DFB4E"
@@ -990,8 +990,8 @@
 			}]
 		}
 		{
-			x: 7.5d
-			y: 17.0d
+			x: 8.5d
+			y: 16.5d
 			hide_dependency_lines: true
 			dependencies: ["1C9328C10043749C"]
 			id: "71FD0C262BA2F2C1"
@@ -1002,8 +1002,8 @@
 			}]
 		}
 		{
-			x: 9.5d
-			y: 16.0d
+			x: 10.5d
+			y: 15.5d
 			hide_dependency_lines: true
 			dependencies: ["1C9328C10043749C"]
 			id: "4BFD081AF0C5338A"
@@ -1014,8 +1014,8 @@
 			}]
 		}
 		{
-			x: 9.5d
-			y: 17.0d
+			x: 10.5d
+			y: 16.5d
 			hide_dependency_lines: true
 			dependencies: ["1C9328C10043749C"]
 			id: "541D367ACA0AC1B7"
@@ -1026,8 +1026,8 @@
 			}]
 		}
 		{
-			x: 8.5d
-			y: 16.5d
+			x: 9.5d
+			y: 16.0d
 			hide_dependency_lines: true
 			dependencies: ["1C9328C10043749C"]
 			id: "2C7B9A1BDA7B8060"
@@ -1038,8 +1038,8 @@
 			}]
 		}
 		{
-			x: 11.5d
-			y: 15.5d
+			x: 12.5d
+			y: 15.0d
 			hide_dependency_lines: true
 			dependencies: ["1C9328C10043749C"]
 			id: "5881AB80D61DFB4E"
@@ -1050,8 +1050,8 @@
 			}]
 		}
 		{
-			x: 10.5d
-			y: 16.5d
+			x: 11.5d
+			y: 16.0d
 			hide_dependency_lines: true
 			dependencies: ["1C9328C10043749C"]
 			id: "4BFA5D7EB5B2B8D0"
@@ -1069,8 +1069,8 @@
 					Icon: "tconstruct:textures/gui/modifiers/harvest/melting.png"
 				}
 			}
-			x: 8.5d
-			y: 11.0d
+			x: 7.5d
+			y: 10.5d
 			shape: "hexagon"
 			description: ["Constructing a Smeltery around a Blaze Spawner is an easy way to automate Blazing Blood."]
 			hide_dependency_lines: true
@@ -1116,8 +1116,8 @@
 		}
 		{
 			icon: "mw_core:creatite_dust"
-			x: 9.5d
-			y: -9.5d
+			x: 10.0d
+			y: -11.0d
 			dependencies: ["3C8E8A75CDCA6F3F"]
 			id: "3904738CC660C8C7"
 			tasks: [
@@ -1207,8 +1207,8 @@
 		{
 			title: "Redstone Dust Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: 9.5d
-			y: 8.0d
+			x: 8.5d
+			y: 10.5d
 			shape: "gear"
 			subtitle: "Automated in Chapter 2"
 			hide_dependency_lines: true
@@ -1223,8 +1223,8 @@
 		{
 			title: "Molten Gold Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: 13.0d
-			y: -3.0d
+			x: 12.0d
+			y: -4.0d
 			shape: "gear"
 			subtitle: "Automated in Chapter 2"
 			hide_dependency_lines: true
@@ -1239,8 +1239,8 @@
 		{
 			title: "Cinder Flour Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: 11.5d
-			y: -8.5d
+			x: 10.5d
+			y: -9.0d
 			shape: "gear"
 			subtitle: "Automated in Chapter 2"
 			hide_dependency_lines: true
@@ -1288,7 +1288,7 @@
 			title: "Molten Steel Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
 			x: 11.5d
-			y: -4.0d
+			y: -5.0d
 			shape: "gear"
 			subtitle: "Automated in Chapter 3a"
 			hide_dependency_lines: true

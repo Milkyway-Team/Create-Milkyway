@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="stage2.forge_1.17.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/essential/loader/stage1/modlauncher9/stage2.forge_1.17.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

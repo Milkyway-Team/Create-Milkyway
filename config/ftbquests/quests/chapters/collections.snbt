@@ -758,6 +758,26 @@
 				type: "item"
 				item: "create_sa:hydraulic_engine"
 			}]
+			rewards: [
+				{
+					id: "527A6B75AAEECFC8"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+				{
+					id: "389258F3D6FB24EB"
+					type: "item"
+					item: "mw_core:soda"
+					count: 4
+				}
+				{
+					id: "3F3ACBC2F3A5BAC4"
+					type: "item"
+					item: "create_confectionery:gingerbread"
+					count: 16
+				}
+			]
 		}
 		{
 			x: 1.0d
@@ -818,6 +838,26 @@
 				type: "item"
 				item: "create_sa:heat_engine"
 			}]
+			rewards: [
+				{
+					id: "3E540D90092C4D3D"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+				{
+					id: "60526AAA4B4A94A6"
+					type: "item"
+					item: "mw_core:soda"
+					count: 4
+				}
+				{
+					id: "62F11DDAEDA0B77B"
+					type: "item"
+					item: "create_confectionery:gingerbread"
+					count: 16
+				}
+			]
 		}
 		{
 			x: -5.0d
@@ -901,6 +941,26 @@
 				type: "item"
 				item: "create_sa:steam_engine"
 			}]
+			rewards: [
+				{
+					id: "1511A0B48CB7E7F8"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+				{
+					id: "34DED51F0EAF4183"
+					type: "item"
+					item: "mw_core:soda"
+					count: 4
+				}
+				{
+					id: "405F62F279C077F7"
+					type: "item"
+					item: "create_confectionery:gingerbread"
+					count: 16
+				}
+			]
 		}
 		{
 			x: -2.0d
@@ -1002,12 +1062,20 @@
 				type: "item"
 				item: "thermal:machine_bottler"
 			}]
-			rewards: [{
-				id: "2EDE7844F84EA85C"
-				type: "random"
-				exclude_from_claim_all: true
-				table_id: 6455957437896197102L
-			}]
+			rewards: [
+				{
+					id: "2EDE7844F84EA85C"
+					type: "random"
+					exclude_from_claim_all: true
+					table_id: 6455957437896197102L
+				}
+				{
+					id: "516289F874327FC0"
+					type: "item"
+					item: "mw_core:sturdy_brass_sheet"
+					count: 2
+				}
+			]
 		}
 		{
 			x: 3.0d
@@ -1021,12 +1089,20 @@
 				type: "item"
 				item: "thermal:device_rock_gen"
 			}]
-			rewards: [{
-				id: "27207EFBF758FF2C"
-				type: "random"
-				exclude_from_claim_all: true
-				table_id: 6455957437896197102L
-			}]
+			rewards: [
+				{
+					id: "27207EFBF758FF2C"
+					type: "random"
+					exclude_from_claim_all: true
+					table_id: 6455957437896197102L
+				}
+				{
+					id: "15F217A227E6B636"
+					type: "item"
+					item: "mw_core:sturdy_brass_sheet"
+					count: 2
+				}
+			]
 		}
 		{
 			x: 5.0d
@@ -1040,12 +1116,20 @@
 				type: "item"
 				item: "thermal:machine_refinery"
 			}]
-			rewards: [{
-				id: "72D48E0FD037DA40"
-				type: "random"
-				exclude_from_claim_all: true
-				table_id: 6455957437896197102L
-			}]
+			rewards: [
+				{
+					id: "72D48E0FD037DA40"
+					type: "random"
+					exclude_from_claim_all: true
+					table_id: 6455957437896197102L
+				}
+				{
+					id: "2EDEF734F6E4E299"
+					type: "item"
+					item: "mw_core:sturdy_brass_sheet"
+					count: 2
+				}
+			]
 		}
 		{
 			x: 4.0d
@@ -1072,12 +1156,20 @@
 					}
 				}
 			}]
-			rewards: [{
-				id: "32845E50BA11929C"
-				type: "random"
-				exclude_from_claim_all: true
-				table_id: 6455957437896197102L
-			}]
+			rewards: [
+				{
+					id: "32845E50BA11929C"
+					type: "random"
+					exclude_from_claim_all: true
+					table_id: 6455957437896197102L
+				}
+				{
+					id: "294B5308DAC8559E"
+					type: "item"
+					item: "mw_core:sturdy_brass_sheet"
+					count: 2
+				}
+			]
 		}
 		{
 			x: 5.0d
@@ -1091,12 +1183,20 @@
 				type: "item"
 				item: "thermal:machine_pyrolyzer"
 			}]
-			rewards: [{
-				id: "332FB62529440C69"
-				type: "random"
-				exclude_from_claim_all: true
-				table_id: 6455957437896197102L
-			}]
+			rewards: [
+				{
+					id: "332FB62529440C69"
+					type: "random"
+					exclude_from_claim_all: true
+					table_id: 6455957437896197102L
+				}
+				{
+					id: "6924B4DD8BB9806C"
+					type: "item"
+					item: "mw_core:sturdy_brass_sheet"
+					count: 2
+				}
+			]
 		}
 		{
 			x: 5.0d
@@ -1110,12 +1210,20 @@
 				type: "item"
 				item: "thermal:machine_pulverizer"
 			}]
-			rewards: [{
-				id: "4FF8468565508C57"
-				type: "random"
-				exclude_from_claim_all: true
-				table_id: 6455957437896197102L
-			}]
+			rewards: [
+				{
+					id: "4FF8468565508C57"
+					type: "random"
+					exclude_from_claim_all: true
+					table_id: 6455957437896197102L
+				}
+				{
+					id: "42C73453CA40CC71"
+					type: "item"
+					item: "mw_core:sturdy_brass_sheet"
+					count: 2
+				}
+			]
 		}
 		{
 			x: 3.0d
@@ -1129,12 +1237,20 @@
 				type: "item"
 				item: "thermal:machine_crucible"
 			}]
-			rewards: [{
-				id: "665EB0CCFFE1A260"
-				type: "random"
-				exclude_from_claim_all: true
-				table_id: 6455957437896197102L
-			}]
+			rewards: [
+				{
+					id: "665EB0CCFFE1A260"
+					type: "random"
+					exclude_from_claim_all: true
+					table_id: 6455957437896197102L
+				}
+				{
+					id: "7D89060FF4052189"
+					type: "item"
+					item: "mw_core:sturdy_brass_sheet"
+					count: 2
+				}
+			]
 		}
 		{
 			x: 5.0d
@@ -1148,12 +1264,20 @@
 				type: "item"
 				item: "thermal:device_tree_extractor"
 			}]
-			rewards: [{
-				id: "52697B6EB09CE696"
-				type: "random"
-				exclude_from_claim_all: true
-				table_id: 6455957437896197102L
-			}]
+			rewards: [
+				{
+					id: "52697B6EB09CE696"
+					type: "random"
+					exclude_from_claim_all: true
+					table_id: 6455957437896197102L
+				}
+				{
+					id: "6E90AAE4324A1AFA"
+					type: "item"
+					item: "mw_core:sturdy_brass_sheet"
+					count: 2
+				}
+			]
 		}
 		{
 			x: 5.0d
@@ -1167,12 +1291,20 @@
 				type: "item"
 				item: "thermal:machine_crystallizer"
 			}]
-			rewards: [{
-				id: "1F6AC7385FDC106D"
-				type: "random"
-				exclude_from_claim_all: true
-				table_id: 6455957437896197102L
-			}]
+			rewards: [
+				{
+					id: "1F6AC7385FDC106D"
+					type: "random"
+					exclude_from_claim_all: true
+					table_id: 6455957437896197102L
+				}
+				{
+					id: "21965BA974A1968E"
+					type: "item"
+					item: "mw_core:sturdy_brass_sheet"
+					count: 2
+				}
+			]
 		}
 		{
 			x: 4.0d
@@ -1197,12 +1329,20 @@
 					}
 				}
 			}]
-			rewards: [{
-				id: "6F263AE221B8287E"
-				type: "random"
-				exclude_from_claim_all: true
-				table_id: 6455957437896197102L
-			}]
+			rewards: [
+				{
+					id: "6F263AE221B8287E"
+					type: "random"
+					exclude_from_claim_all: true
+					table_id: 6455957437896197102L
+				}
+				{
+					id: "3D01FCCADEB55739"
+					type: "item"
+					item: "mw_core:sturdy_brass_sheet"
+					count: 2
+				}
+			]
 		}
 		{
 			x: 5.0d
@@ -1216,12 +1356,20 @@
 				type: "item"
 				item: "thermal:machine_smelter"
 			}]
-			rewards: [{
-				id: "5008D2DB65950549"
-				type: "random"
-				exclude_from_claim_all: true
-				table_id: 6455957437896197102L
-			}]
+			rewards: [
+				{
+					id: "5008D2DB65950549"
+					type: "random"
+					exclude_from_claim_all: true
+					table_id: 6455957437896197102L
+				}
+				{
+					id: "2CE1242A9ADA1AF9"
+					type: "item"
+					item: "mw_core:sturdy_brass_sheet"
+					count: 2
+				}
+			]
 		}
 		{
 			x: 7.0d
@@ -2478,12 +2626,20 @@
 				type: "item"
 				item: "thermal:machine_press"
 			}]
-			rewards: [{
-				id: "09C6245105E1913F"
-				type: "random"
-				exclude_from_claim_all: true
-				table_id: 6455957437896197102L
-			}]
+			rewards: [
+				{
+					id: "09C6245105E1913F"
+					type: "random"
+					exclude_from_claim_all: true
+					table_id: 6455957437896197102L
+				}
+				{
+					id: "21CC4763F22E5F78"
+					type: "item"
+					item: "mw_core:sturdy_brass_sheet"
+					count: 2
+				}
+			]
 		}
 		{
 			x: -5.0d
@@ -3434,6 +3590,26 @@
 				type: "item"
 				item: "mw_core:basic_mechanism"
 			}]
+			rewards: [
+				{
+					id: "2072AE493A1C8A17"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+				{
+					id: "1CF477023358B79D"
+					type: "item"
+					item: "mw_core:soda"
+					count: 4
+				}
+				{
+					id: "69D36F180B1CAE7E"
+					type: "item"
+					item: "create_confectionery:gingerbread"
+					count: 16
+				}
+			]
 		}
 		{
 			x: 4.0d
@@ -3447,6 +3623,26 @@
 				type: "item"
 				item: "mw_core:copper_mechanism"
 			}]
+			rewards: [
+				{
+					id: "36DE065BACF10F7B"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+				{
+					id: "100514B2B03C96A2"
+					type: "item"
+					item: "mw_core:soda"
+					count: 4
+				}
+				{
+					id: "4E38898FC24ABF48"
+					type: "item"
+					item: "create_confectionery:gingerbread"
+					count: 16
+				}
+			]
 		}
 		{
 			x: 4.0d
@@ -3460,6 +3656,26 @@
 				type: "item"
 				item: "create:precision_mechanism"
 			}]
+			rewards: [
+				{
+					id: "46DFEC2AFA3B1473"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+				{
+					id: "33FE1DD94B30A946"
+					type: "item"
+					item: "mw_core:soda"
+					count: 4
+				}
+				{
+					id: "76036CF928B47F88"
+					type: "item"
+					item: "create_confectionery:gingerbread"
+					count: 16
+				}
+			]
 		}
 		{
 			x: 4.0d
@@ -3472,6 +3688,26 @@
 				type: "item"
 				item: "mw_core:refined_mechanism"
 			}]
+			rewards: [
+				{
+					id: "7EEE0D5322443099"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+				{
+					id: "6D256AB1F1A061E5"
+					type: "item"
+					item: "mw_core:soda"
+					count: 4
+				}
+				{
+					id: "4DC32A5325944ADD"
+					type: "item"
+					item: "create_confectionery:gingerbread"
+					count: 16
+				}
+			]
 		}
 		{
 			x: 3.0d
@@ -3484,6 +3720,26 @@
 				type: "item"
 				item: "mw_core:seared_mechanism"
 			}]
+			rewards: [
+				{
+					id: "2486E59B1900383C"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+				{
+					id: "7892FEC5C5CDB87E"
+					type: "item"
+					item: "mw_core:soda"
+					count: 4
+				}
+				{
+					id: "26EE9685A52C41EE"
+					type: "item"
+					item: "create_confectionery:gingerbread"
+					count: 16
+				}
+			]
 		}
 		{
 			x: 4.0d
@@ -3496,6 +3752,26 @@
 				type: "item"
 				item: "mw_core:cobalt_mechanism"
 			}]
+			rewards: [
+				{
+					id: "73E519D2722167E6"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+				{
+					id: "76ACDB09BE7FBC6A"
+					type: "item"
+					item: "mw_core:soda"
+					count: 4
+				}
+				{
+					id: "1F97CAB153AA72FF"
+					type: "item"
+					item: "create_confectionery:gingerbread"
+					count: 16
+				}
+			]
 		}
 		{
 			x: 4.0d
@@ -3508,6 +3784,26 @@
 				type: "item"
 				item: "mw_core:action_mechanism"
 			}]
+			rewards: [
+				{
+					id: "11DAA7B03FDC0DDB"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+				{
+					id: "3EF5F961B72DA5AD"
+					type: "item"
+					item: "mw_core:soda"
+					count: 4
+				}
+				{
+					id: "19008AA3D29CEECF"
+					type: "item"
+					item: "create_confectionery:gingerbread"
+					count: 16
+				}
+			]
 		}
 		{
 			x: 3.0d
@@ -3520,6 +3816,26 @@
 				type: "item"
 				item: "mw_core:scorched_mechanism"
 			}]
+			rewards: [
+				{
+					id: "317ACAD344F1E3A3"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+				{
+					id: "4ADE1C7526CF1885"
+					type: "item"
+					item: "mw_core:soda"
+					count: 4
+				}
+				{
+					id: "0B81AA4EEC0A02A7"
+					type: "item"
+					item: "create_confectionery:gingerbread"
+					count: 16
+				}
+			]
 		}
 		{
 			x: 4.0d
@@ -3532,6 +3848,26 @@
 				type: "item"
 				item: "mw_core:manyullyn_mechanism"
 			}]
+			rewards: [
+				{
+					id: "323847B74019EB75"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+				{
+					id: "64D6E88D0B1CF08F"
+					type: "item"
+					item: "mw_core:soda"
+					count: 4
+				}
+				{
+					id: "756CD1134CFD3B04"
+					type: "item"
+					item: "create_confectionery:gingerbread"
+					count: 16
+				}
+			]
 		}
 		{
 			x: 3.0d
@@ -3544,6 +3880,26 @@
 				type: "item"
 				item: "mw_core:logic_mechanism"
 			}]
+			rewards: [
+				{
+					id: "36320E97DC0D19BC"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+				{
+					id: "145E603E3BE78C63"
+					type: "item"
+					item: "mw_core:soda"
+					count: 4
+				}
+				{
+					id: "19A9D0BCEE2429E0"
+					type: "item"
+					item: "create_confectionery:gingerbread"
+					count: 16
+				}
+			]
 		}
 		{
 			x: 3.0d
@@ -3556,6 +3912,26 @@
 				type: "item"
 				item: "create_things_and_misc:vibration_mechanism"
 			}]
+			rewards: [
+				{
+					id: "5E08C95F72E098E7"
+					type: "item"
+					item: "create:experience_nugget"
+					count: 16
+				}
+				{
+					id: "30CA81A5C2C95473"
+					type: "item"
+					item: "mw_core:soda"
+					count: 4
+				}
+				{
+					id: "5658EBD47585A6C0"
+					type: "item"
+					item: "create_confectionery:gingerbread"
+					count: 16
+				}
+			]
 		}
 		{
 			x: 10.0d
@@ -3581,12 +3957,20 @@
 				type: "item"
 				item: "thermal:machine_centrifuge"
 			}]
-			rewards: [{
-				id: "070307BE69E7F5E9"
-				type: "random"
-				exclude_from_claim_all: true
-				table_id: 6455957437896197102L
-			}]
+			rewards: [
+				{
+					id: "070307BE69E7F5E9"
+					type: "random"
+					exclude_from_claim_all: true
+					table_id: 6455957437896197102L
+				}
+				{
+					id: "42F132B7A22B4EEF"
+					type: "item"
+					item: "mw_core:sturdy_brass_sheet"
+					count: 2
+				}
+			]
 		}
 	]
 	quest_links: [ ]

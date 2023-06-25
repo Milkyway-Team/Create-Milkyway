@@ -1,0 +1,434 @@
+{
+	id: "5BE2C5523C93F94C"
+	group: "76E7DC80C9223355"
+	order_index: 4
+	filename: "chemistry_class"
+	title: "Chemistry Class"
+	icon: {
+		id: "ftbquests:custom_icon"
+		Count: 1b
+		tag: {
+			Icon: "createindustrialchemistry:textures/item/poison_resistance.png"
+		}
+	}
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 2.0d
+			y: -1.5d
+			subtitle: "Via Filling"
+			dependencies: ["58625974758B288B"]
+			id: "76EE8A744ED76E53"
+			tasks: [{
+				id: "065AE4192D69C2BF"
+				type: "item"
+				item: "createbb:blue_meth_tray"
+			}]
+		}
+		{
+			x: 0.0d
+			y: -1.5d
+			subtitle: "Via Mixing"
+			dependencies: [
+				"62FDB21492A34D76"
+				"04BD8E17B5784348"
+			]
+			id: "58625974758B288B"
+			tasks: [{
+				id: "3284E467C0589B72"
+				type: "item"
+				item: "createbb:liquid_blue_methamphetamine_bucket"
+			}]
+		}
+		{
+			title: "Basic Chemistry"
+			x: 2.0d
+			y: -3.5d
+			subtitle: "Via Pressing"
+			dependencies: ["76EE8A744ED76E53"]
+			id: "093DEE8F314A483F"
+			tasks: [{
+				id: "686839B1D76B562F"
+				type: "item"
+				item: "createbb:blue_meth"
+			}]
+		}
+		{
+			x: -2.0d
+			y: -1.5d
+			subtitle: "Via Mixing"
+			dependencies: [
+				"0C330BDFDC27B3D4"
+				"35D06063C5C6E5D1"
+			]
+			id: "04BD8E17B5784348"
+			tasks: [{
+				id: "49B9F8E6985DEACB"
+				type: "item"
+				item: "createbb:methylamine_bucket"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 0.5d
+			subtitle: "Via Mixing"
+			dependencies: [
+				"0C5E536B89BA00A4"
+				"7E9FF3AD014888F4"
+			]
+			id: "62FDB21492A34D76"
+			tasks: [{
+				id: "2F72A7578DB86119"
+				type: "item"
+				item: "createbb:phenylacetone_bucket"
+			}]
+		}
+		{
+			x: -2.0d
+			y: -3.5d
+			subtitle: "Via Mixing"
+			dependencies: ["7D796FE8833936E8"]
+			id: "0C330BDFDC27B3D4"
+			tasks: [{
+				id: "39115987B9446D4E"
+				type: "item"
+				item: "createbb:ammonia_bucket"
+			}]
+		}
+		{
+			x: -4.0d
+			y: -1.5d
+			subtitle: "Via Mixing"
+			dependencies: [
+				"05845E1B73F76EA4"
+				"3106B6216BF5DF58"
+				"0A46606471C901A2"
+			]
+			id: "35D06063C5C6E5D1"
+			tasks: [{
+				id: "787A9B61AEA6E55D"
+				type: "item"
+				item: "createindustrialchemistry:methanol_tank"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 2.5d
+			subtitle: "Via Mixing"
+			dependencies: [
+				"519A0F8616F7FA9B"
+				"0884A3C1C4267142"
+			]
+			id: "0C5E536B89BA00A4"
+			tasks: [{
+				id: "134598C09FAD1380"
+				type: "item"
+				item: "createbb:phenylacetic_acid_bucket"
+			}]
+		}
+		{
+			x: -2.0d
+			y: 0.5d
+			subtitle: "Via Mixing"
+			dependencies: [
+				"6FFDF22A601C090D"
+				"39C00652E79D0FAD"
+			]
+			id: "7E9FF3AD014888F4"
+			tasks: [{
+				id: "0226CD839E2678CA"
+				type: "item"
+				item: "createbb:acetic_anhydride_bucket"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 4.5d
+			dependencies: ["1EB5B763C30128CF"]
+			id: "0884A3C1C4267142"
+			tasks: [{
+				id: "5E8D18BD236EDAEF"
+				type: "item"
+				item: "minecraft:water_bucket"
+			}]
+		}
+		{
+			x: 2.0d
+			y: 2.5d
+			dependencies: ["1EB5B763C30128CF"]
+			id: "519A0F8616F7FA9B"
+			tasks: [{
+				id: "663F9917FBDB344E"
+				type: "item"
+				item: "createbb:cyanide"
+			}]
+		}
+		{
+			x: -2.0d
+			y: 2.5d
+			dependencies: ["65A1E4778DE9BA08"]
+			id: "6FFDF22A601C090D"
+			tasks: [{
+				id: "684875F072ABE9B7"
+				type: "item"
+				item: "createindustrialchemistry:oxygen_tank"
+			}]
+		}
+		{
+			x: -4.0d
+			y: 0.5d
+			dependencies: ["52473784F8089655"]
+			id: "39C00652E79D0FAD"
+			tasks: [{
+				id: "05D5037F9528CDFF"
+				type: "item"
+				item: "minecraft:sugar"
+			}]
+		}
+		{
+			x: -4.0d
+			y: -3.5d
+			subtitle: "Via Electrolysis"
+			hide_dependency_lines: true
+			dependencies: ["0884A3C1C4267142"]
+			id: "05845E1B73F76EA4"
+			tasks: [{
+				id: "6812EF12E971B659"
+				type: "item"
+				item: "createindustrialchemistry:hydrogen_tank"
+			}]
+		}
+		{
+			x: -6.0d
+			y: -1.5d
+			subtitle: "Via Compacting"
+			dependencies: [
+				"15FC626FC39A131E"
+				"1A36C315915075D1"
+			]
+			id: "0A46606471C901A2"
+			tasks: [{
+				id: "2A191E526BAF367B"
+				type: "item"
+				item: "createindustrialchemistry:carbon_monoxide_tank"
+			}]
+		}
+		{
+			x: -6.0d
+			y: -3.5d
+			subtitle: "Via Crafting"
+			dependencies: [
+				"2D66D7786ADD562C"
+				"0DAD9B72D2E5220B"
+			]
+			id: "3106B6216BF5DF58"
+			tasks: [{
+				id: "28D9728465161CDF"
+				type: "item"
+				item: "createindustrialchemistry:copper_zinc_oxide"
+			}]
+		}
+		{
+			x: -8.0d
+			y: -1.5d
+			subtitle: "Via Mixing"
+			dependencies: [
+				"47C63D66B59DA4B1"
+				"35F99B313CFB6E2B"
+			]
+			id: "15FC626FC39A131E"
+			tasks: [{
+				id: "3352B8F923B30F17"
+				type: "item"
+				item: "createindustrialchemistry:silicon_dioxide"
+			}]
+		}
+		{
+			x: -6.0d
+			y: 0.5d
+			subtitle: "Via Cooling"
+			dependencies: ["771A6816DFC37D0D"]
+			id: "1A36C315915075D1"
+			tasks: [{
+				id: "7040993A26991F4D"
+				type: "item"
+				item: "createindustrialchemistry:graphite"
+			}]
+		}
+		{
+			x: -8.0d
+			y: -3.5d
+			subtitle: "Via Mixing"
+			dependencies: [
+				"59484B6F8E9B4500"
+				"76FB53E82FBEA8C8"
+			]
+			id: "47C63D66B59DA4B1"
+			tasks: [{
+				id: "127E5D7ABADC3F96"
+				type: "item"
+				item: "createindustrialchemistry:spodumene_dusts"
+			}]
+		}
+		{
+			x: -10.0d
+			y: -1.5d
+			subtitle: "Via Mixing"
+			dependencies: [
+				"65A1E4778DE9BA08"
+				"4CE120BD6A5EE022"
+			]
+			id: "35F99B313CFB6E2B"
+			tasks: [{
+				id: "4256DF5B1AEF1E88"
+				type: "item"
+				item: "createindustrialchemistry:hydrochloric_acid_tank"
+			}]
+		}
+		{
+			x: -10.0d
+			y: 2.5d
+			subtitle: "Via Cooling"
+			dependencies: ["79DFA07553D463BF"]
+			id: "65A1E4778DE9BA08"
+			tasks: [{
+				id: "672BCC484B315ED9"
+				type: "item"
+				item: "createindustrialchemistry:distilled_water_tank"
+			}]
+		}
+		{
+			x: -12.0d
+			y: -1.5d
+			subtitle: "Via Mixing"
+			dependencies: [
+				"22CA592398BCEA9E"
+				"76FB53E82FBEA8C8"
+			]
+			id: "4CE120BD6A5EE022"
+			tasks: [{
+				id: "0321EF67E8350D9B"
+				type: "item"
+				item: "createindustrialchemistry:hydrogen_chloride_tank"
+			}]
+		}
+		{
+			x: -10.0d
+			y: 4.5d
+			subtitle: "Via Fractional Distillation"
+			dependencies: ["0884A3C1C4267142"]
+			id: "79DFA07553D463BF"
+			tasks: [{
+				id: "08AFA4431A633A95"
+				type: "item"
+				item: "createindustrialchemistry:water_vapor_tank"
+			}]
+		}
+		{
+			x: -5.5d
+			y: -5.0d
+			dependencies: ["1EB5B763C30128CF"]
+			id: "2D66D7786ADD562C"
+			tasks: [{
+				id: "5EEE8A97F73ADC34"
+				type: "item"
+				item: "createbb:crushed_copper"
+			}]
+		}
+		{
+			x: -6.5d
+			y: -5.0d
+			dependencies: ["1EB5B763C30128CF"]
+			id: "0DAD9B72D2E5220B"
+			tasks: [{
+				id: "5F66EFD358504A42"
+				type: "item"
+				item: "createbb:crushed_zinc"
+			}]
+		}
+		{
+			x: -2.0d
+			y: -5.5d
+			dependencies: ["1EB5B763C30128CF"]
+			id: "7D796FE8833936E8"
+			tasks: [{
+				id: "3C9A1136026A17DA"
+				type: "item"
+				item: "createbb:nitrogen"
+			}]
+		}
+		{
+			x: -14.0d
+			y: -1.5d
+			subtitle: "Via Electrolysis"
+			hide_dependency_lines: true
+			dependencies: ["0884A3C1C4267142"]
+			id: "22CA592398BCEA9E"
+			tasks: [{
+				id: "0388CED578E6408A"
+				type: "item"
+				item: "createindustrialchemistry:hydrogen_tank"
+			}]
+		}
+		{
+			x: -12.0d
+			y: -3.5d
+			subtitle: "Via Electrolysis"
+			hide_dependency_lines: true
+			dependencies: ["0884A3C1C4267142"]
+			id: "76FB53E82FBEA8C8"
+			tasks: [{
+				id: "232906F69A73218F"
+				type: "item"
+				item: "createindustrialchemistry:chlorine_tank"
+			}]
+		}
+		{
+			x: -8.0d
+			y: 0.5d
+			dependencies: ["1EB5B763C30128CF"]
+			id: "771A6816DFC37D0D"
+			tasks: [{
+				id: "57D12D96385F5D11"
+				type: "item"
+				item: "minecraft:charcoal"
+			}]
+		}
+		{
+			x: -5.0d
+			y: 1.5d
+			dependencies: ["1EB5B763C30128CF"]
+			id: "52473784F8089655"
+			tasks: [{
+				id: "3B802ED75050F198"
+				type: "item"
+				item: "minecraft:sugar_cane"
+			}]
+		}
+		{
+			x: -8.0d
+			y: -5.5d
+			subtitle: "Via Compacting"
+			dependencies: ["3ABD2B77E0BB7400"]
+			id: "59484B6F8E9B4500"
+			tasks: [{
+				id: "1E7FF68D4F426225"
+				type: "item"
+				item: "createindustrialchemistry:spodumene"
+			}]
+		}
+		{
+			x: -10.0d
+			y: -5.5d
+			dependencies: ["1EB5B763C30128CF"]
+			id: "3ABD2B77E0BB7400"
+			tasks: [{
+				id: "2C56D060B6EF457A"
+				type: "item"
+				item: "minecraft:granite"
+			}]
+		}
+	]
+	quest_links: [ ]
+}

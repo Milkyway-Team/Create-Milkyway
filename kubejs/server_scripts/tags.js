@@ -165,12 +165,36 @@ tagRem('forge:nuggets/steel', 'thermal:steel_nugget')
 tagRem('forge:nuggets/steel', 'createbigcannons:steel_scrap')
 tagAdd('milkyway:mechanisms', /mw_core:.*_mechanism/)
 tagAdd('milkyway:mechanisms', 'create:precision_mechanism')
+tagRem('forge:storage_blocks/steel', 'thermal:steel_block')
+tagRem('forge:storage_blocks', 'thermal:steel_block')
+tagRem('forge:dusts/zinc', 'createindustrialchemistry:zinc_dusts')
+tagRem('forge:dusts/zinc', 'createbb:crushed_zinc')
+tagRem('forge:dusts', 'createindustrialchemistry:zinc_dusts')
+tagRem('forge:dusts', 'createbb:crushed_zinc')
+tagRem('forge:dusts/copper', 'createindustrialchemistry:copper_dusts')
+tagRem('forge:dusts/copper', 'createbb:crushed_copper')
+tagRem('forge:dusts', 'createindustrialchemistry:copper_dusts')
+tagRem('forge:dusts', 'createbb:crushed_copper')
 
-//tagAdd('tconstruct:casts', ['createarmory:fifty_cal_mold', 'createarmory:nine_mm_mold', 'createarmory:five_five_six_mold'])
-//tagAdd('tconstruct:casts/multi_use', ['createarmory:fifty_cal_mold', 'createarmory:nine_mm_mold', 'createarmory:five_five_six_mold'])
-//tagAdd('tconstruct:casts/gold', ['createarmory:fifty_cal_mold', 'createarmory:nine_mm_mold', 'createarmory:five_five_six_mold'])
-//tagAdd('tconstruct:casts/multi_use/556', 'createarmory:five_five_six_mold')
-//tagAdd('tconstruct:casts/multi_use/50', 'createarmory:fifty_cal_mold')
-//tagAdd('tconstruct:casts/multi_use/9mm', 'createarmory:nine_mm_mold')
+
+jeiHide(
+[
+'thermal:steel_block',
+'thermal:machine_insolator',
+'thermal:machine_brewer',
+'thermal:machine_crafter',
+'thermal:machine_chiller',
+'thermal:machine_sawmill',
+'thermal:machine_furnace',
+'waystones:mossy_waystone',
+'waystones:sandy_waystone',
+'waystones:warp_plate',
+'ae2:ender_dust',
+'createbb:crushed_zinc',
+'createbb:crushed_copper',
+'createbb:copper_zinc_catalyst',
+'createindustrialchemistry:zinc_dusts'
+]
+)
 
 

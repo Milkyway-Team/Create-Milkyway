@@ -15,7 +15,6 @@ let SD = (id, x) => MOD("storagedrawers", id, x)
 let SP = (id, x) => MOD("supplementaries", id, x)
 let MW = (id, x) => MOD("mw_core", id, x)
 let MKW = (id, x) => MOD("milkyway", id, x)
-
 let FA = (id, x) => MOD("forbidden_arcanus", id, x)
 let RS = (id, x) => MOD("refinedstorage", id, x)
 let IE = (id, x) => MOD("immersiveengineering", id, x)
@@ -34,7 +33,6 @@ let wood_types = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'cri
 let tool_types = ['pickaxe', 'axe', 'shovel', 'hoe', 'sword']
 //let armoryGuns = ['rpg', 'mac_ten', 'double_barrel']
 //let armoryParts = ['minigun_base', 'barret_lower', 'm_four_lower']
-
 let cck = ['create:crafting/kinetics/']
 let ccl = ['create:crafting/logistics/']
 let ccm = ['create:crafting/materials/']
@@ -69,10 +67,7 @@ function remMetalCraft(mod, metal) {
 function blastRem(event, recipeOutput) {
     event.remove({ output: recipeOutput, type: 'minecraft:blasting'} );
 }
-let unwanted_IE_metals = ['aluminum', 'lead', 'nickel', 'silver']
-
 function unwantedRecipes(event) {
-
     function replaceIn(originIn, newIn) {
         event.replaceInput({}, originIn, newIn);
     }
@@ -104,12 +99,7 @@ function unwantedRecipes(event) {
     //armoryParts.forEach(e => {
     //    replaceInById(`createarmory:${e}_recipe`, 'create:precision_mechanism', 'mw_core:action_mechanism')
     //})
-
     replaceIn('createindustrialchemistry:nickel', 'thermal:nickel_ingot')
-    replaceIn(IE('fluid_pipe'), CR('fluid_pipe'))
-    replaceIn(IE('redstone_acid_bucket'), TE('redstone_bucket'))
-    replaceOut(IE('ingot_aluminum'), 'mw_core:aluminium_ingot')
-    replaceOut(IE('dust_aluminum'), 'mw_core:aluminium_ore_dust')
     removeRecID(/refinedstorage:.*pattern.*/)
     removeRecID('waystones:warp_stone')
     removeRecID('waystones:sharestone')
@@ -118,8 +108,6 @@ function unwantedRecipes(event) {
     removeRecID(/thermal:parts.*_gear/)
     removeRecID(/waystones:.*waystone.*/)
     removeRecID(/refinedstorage:.*quartz_enriched_iron.*/)
-    removeRecID(IE('crafting/fluid_pump'))
-    removeRecID(IE('crafting/fluid_pipe'))
     removeRecID(/createaddition:compat.tconstruct.*/)
     removeRecID(/thermal:compat.create.centrifuge_.*/)
     removeRecID(/thermal:compat.create_ie.centrifuge_.*/)
@@ -150,8 +138,6 @@ function unwantedRecipes(event) {
     removeRecID('tconstruct:common/materials/cobalt_nugget_from_ingot')
     removeRecID('tconstruct:common/materials/cobalt_block_from_ingots')
     removeByID('mw_core:compacting/creative_alloy')
-removeRecTyp([IE('bottling_machine'), IE('cokeoven')])
-
     removeRecOut(RS('processor_binding'))
     removeRecOut(AE2('inscriber'))
     removeRecOut(TE('device_water_gen'))
@@ -165,11 +151,8 @@ removeRecTyp([IE('bottling_machine'), IE('cokeoven')])
     removeRecOut(TE('machine_crafter'))
     removeRecOut(TE('machine_brewer'))
     removeRecOut(TE('machine_chiller'))
-    removeRecOut([IE('watermill'), IE('coal_coke'), IE('windmill'), IE('waterwheel_segment'), IE('windmill_sail'), IE('windmill_blade')])
-
     replaceIn(TE('iron_coin'), TE('silver_coin'))
     replaceIn(AL('bronze_sheet'), KJ('bronze_sheet'))
-
     smeltingRemove(event, MC('iron_ingot'))
     smeltingRemove(event, MC('copper_ingot'))
     smeltingRemove(event, MC('gold_ingot'))
@@ -186,31 +169,11 @@ removeRecTyp([IE('bottling_machine'), IE('cokeoven')])
     smeltingRemove(event, TE('signalum_ingot'))
     smeltingRemove(event, TE('lumium_ingot'))
     smeltingRemove(event, TE('enderium_ingot'))
-    smeltingRemove(event, IE('ingot_aluminum'))
-    smeltingRemove(event, IE('nugget_aluminum'))
     smeltingRemove(event, MC('netherite_ingot'))
-    smeltingRemove(event, IE('ingot_nickel'))
-    smeltingRemove(event, IE('ingot_silver'))
-    smeltingRemove(event, IE('ingot_electrum'))
-    smeltingRemove(event, IE('ingot_steel'))
-    smeltingRemove(event, IE('ingot_constantan'))
-    smeltingRemove(event, IE('ingot_uranium'))
-    smeltingRemove(event, IE('ingot_lead'))
     smeltingRemove(event, AE2('silicon'))
-
-
     event.remove({ output: TC('cobalt_ingot'), type: 'minecraft:blasting'} );
     event.remove({ output: 'create:scoria', type: 'minecraft:smelting'} );
-
-    unwanted_IE_metals.forEach(e => {
-        removeRecOut(IE('ingot_' + e))
-        removeRecOut(IE('nugget_' + e))
-        removeRecOut(IE('storage_' + e))
-    })
     removeRecIn(/tconstruct:raw_cobalt.*/)
-
-
-
     native_metals.forEach(e => {
         event.remove({ type: MC("smelting"), input: F("#dusts/" + e) })
         event.remove({ type: MC("blasting"), input: F("#dusts/" + e) })
@@ -219,7 +182,6 @@ removeRecTyp([IE('bottling_machine'), IE('cokeoven')])
     })
     event.replaceInput({type: 'thermal:chiller'}, TE('chiller_ingot_cast'), TC('ingot_cast'))
     event.replaceInput({type: 'thermal:chiller'}, TE('chiller_rod_cast'), TC('rod_cast'))
-    event.replaceInput({}, IE('hammer'), TE('wrench'))
     event.replaceInput({}, RS('quartz_enriched_iron'), MW('aluminium_ingot'))
     event.replaceOutput({}, 'ae2:ender_dust', TE('ender_pearl_dust'))
     event.replaceInput({id: /mw_core:milkyway.machines.cobalt.refinedstorage.*/}, MW('cobalt_mechanism'), MKW('refined_machine'))
@@ -233,11 +195,9 @@ removeRecTyp([IE('bottling_machine'), IE('cokeoven')])
 let main_ores = ['coal', 'iron', 'copper', 'zinc', 'gold', 'redstone', 'lapis', 'diamond', 'emerald']
 let nether_ores = ['nether_quartz', 'nether_gold']
 let thermal_ores = ['apatite', 'cinnabar', 'niter', 'sulfur']
-
 main_ores.forEach(e => {
     removeByID('create:crushing/' + e + '_ore')
     removeByID('create:crushing/deepslate_' + e + '_ore')
-
 })
 nether_ores.forEach(e => {
     removeByID('create:crushing/' + e + '_ore')
@@ -245,9 +205,7 @@ nether_ores.forEach(e => {
 thermal_ores.forEach(e => {
     removeByID('create:compat/thermal/crushing/' + e + '_ore')
 })
-
 removeByID(/thermal.machines.press.*/)
-
 remMetalCraft(['thermal:'], 'tin')
 remMetalCraft(['thermal:'], 'lead')
 remMetalCraft(['thermal:'], 'silver')
@@ -271,7 +229,6 @@ remMetalCraft(['minecraft:'], 'iron')
 remMetalCraft(['minecraft:'], 'copper')
 remMetalCraft(['minecraft:'], 'gold')
 remMetalCraft(['minecraft:'], 'netherite')
-
 removeByID(cck + 'portable_fluid_interface')
 removeByID(cck + 'mechanical_pump')
 removeByID(cck + 'fluid_valve')
@@ -346,7 +303,6 @@ removeByID(RS('relay'))
 removeByID(RS('external_storage'))
 removeByID(RS('cable'))
 removeByID(RS('security_card'))
-
 removeByID(TE('enderium_dust_2'))
 removeByID(TE('lumium_dust_4'))
 removeByID(TE('signalum_dust_4'))
@@ -354,12 +310,9 @@ removeByID(TE('constantan_dust_2'))
 removeByID(TE('invar_dust_3'))
 removeByID(TE('electrum_dust_2'))
 removeByID(TE('bronze_dust_4'))
-
 removeByID(/network.cells.fluid.*/)
 removeByID(/network.cells.item.*/)
 removeByID(/mw_core:.*storage_part.*/)
-
-
 removeByID(tm + sml + '/' + sml + '_iron_dust')
 removeByID(tm + sml + '/' + sml + '_bronze_dust')
 removeByID(tm + sml + '/' + sml + '_gold_dust')
@@ -377,7 +330,6 @@ removeByID(tm + sml + '/' + sml + '_alloy_enderium')
 removeByID(tm + sml + '/' + sml + '_alloy_netherite')
 removeByID(tm + sml + '/' + sml + '_raw_nickel')
 removeByID(tm + sml + '/' + sml + '_raw_gold')
-
 removeByID(tm + pulv + '/' + pulv + '_iron_ingot_to_dust')
 removeByID(tm + pulv + '/' + pulv + '_silver_ingot_to_dust')
 removeByID(tm + pulv + '/' + pulv + '_copper_ingot_to_dust')
@@ -393,7 +345,6 @@ removeByID(tm + pulv + '/' + pulv + '_cinnabar')
 removeByID(tm + pulv + '/' + pulv + '_quartz')
 removeByID(tm + pulv + '/' + pulv + '_lapis')
 removeByID(tm + pulv + '/' + pulv + '_niter')
-
 removeByID(tm + crys + '/' + crys + '_' + 'amethyst_cluster')
 removeByID(tm + crys + '/' + crys + '_' + 'emerald')
 removeByID(tm + crys + '/' + crys + '_' + 'cinnabar')
@@ -403,7 +354,6 @@ removeByID(tm + crys + '/' + crys + '_' + 'sulfur')
 removeByID(tm + crys + '/' + crys + '_' + 'diamond')
 removeByID(tm + crys + '/' + crys + '_' + 'lapis')
 removeByID(tm + crys + '/' + crys + '_' + 'niter')
-
 removeByID("create:mixing/andesite_alloy_from_zinc")
 removeByID("create:mixing/andesite_alloy")
 removeByID("thermal:machines/crucible/crucible_honey_block_to_honey")
@@ -456,4 +406,39 @@ removeByID('thermal:device_tree_extractor')
 removeByID('thermal:fluid_cell_frame')
 removeByID('thermal:machine_bottler')
 removeByID('thermal:machine_crucible')
-
+removeByID('thermal:energy_duct_4')
+removeByID('thermal:fluid_duct_4')
+removeByID('thermal:fluid_duct_windowed_4')
+removeByID('thermal:energy_limiter_attachment_2')
+removeByID('thermal:filter_attachment_2')
+removeByID('thermal:servo_attachment_2')
+removeByID('thermal:turbo_servo_attachment_2')
+removeByID('mw_core:milkyway/machines/logic/machine_press')
+removeByID('createbigcannons:cannon_loader')
+removeByID('createbigcannons:cannon_builder')
+removeByID('createbigcannons:yaw_controller')
+removeByID('createbigcannons:cannon_drill')
+removeByID('createbigcannons:cannon_mount')
+removeByID('thermal:machine_insolator')
+removeByID('waystones:warp_dust')
+removeByID('thermal:machine_centrifuge')
+removeByID('createbb:phase2/copper_zinc_catalyst')
+removeByID('createbb:phase2/methanol_mixing')
+removeByID('createbb:phase2/water_electrolysis')
+removeByID('createbb:phase2/copper_crushing')
+removeByID('createbb:phase2/zinc_crushing')
+removeByID('createindustrialchemistry:non_chemicals/into_dusts/zinc')
+removeByID(/mw_core:mixing.mixer_alloying.crushed.*/)
+removeByID(/createbigcannons:melting.melt.*/)
+removeByID('mw_core:basin_melting/raw_uranium_melting')
+removeByID('thermal:rf_coil')
+removeByID(/thermal:augments.dynamo.*/)
+removeByID(/thermal:augments.machine.*/)
+removeByID(/thermal:augments.rf.*/)
+removeByID(/thermal:augments.area.*/)
+removeByID(/thermal:augments.xp.*/)
+removeByID(/thermal:augments.fluid.*/)
+removeByID('thermal:augments/item_filter_augment')
+removeByID('thermal:item_buffer')
+removeByID('mw_core:filling/tech_tube')
+removeByID('mw_core:sequenced_assembly/mechanism/cobalt')

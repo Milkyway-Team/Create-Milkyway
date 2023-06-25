@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="stage1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/essential/loader/stage0/modlauncher/stage1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
