@@ -26,6 +26,7 @@ let AL = (id, x) => MOD("alloyed", id, x)
 onEvent('recipes', event => {
     log.push('Satisfactory Load Started')
     aluminium(event)
+    copper(event)
     log.push('Satisfactory Load Complete')
 })
 
@@ -133,4 +134,187 @@ function aluminium(event) {
         ],
         "experience": 0.1
     }).id('milkyway:satisfactory/aluminium/pulverizer/silicate_dust')
+}
+
+function copper(event) {
+    function coolingitemtoitem(item, output, count) {
+    event.custom({
+        "type": "createindustrialchemistry:cooling",
+        "ingredients": [
+          {
+            "item": item
+          }
+        ],
+        "results": [
+          {
+            "item": output,
+            "count": count
+          }
+        ]
+       }).id('milkyway:satisfactory/copper/cooling/' + output.replace(':', '_'))
+    }
+    
+
+    function simplesoaking(item, fluid, output, count) {
+        event.custom({
+        "type": "mw_core:soaking",
+        "ingredient": {
+          "item": item //this is the input
+        },
+        "fluid": fluid,  //this is the fluid, it can accept tags
+        "source": true,  //If it should be a source (not the flowing)
+        "remove": true, 
+        "result": {
+          "item": output, //the output/item
+          "count": count
+        }
+    }).id('milkyway:satisfactory/copper/soaking/' + output.replace(':', '_'))
+}
+
+        event.recipes.create.mixing(Item.of('2x create:crushed_constantan'),[
+Fluid.of('tconstruct:blood',1000),
+'2x create:cinder_flour',
+'3x wildbackport:mud',
+'2x minecraft:quartz',
+'#forge:dusts/quartz',
+'1x minecraft:raw_copper'
+ ]).superheated().id('milkyway:satisfactory/copper/mixing/blister_copper')
+
+ event.recipes.createFilling('milkyway:enriched_copper_ore_dust', [
+    'mw_core:copper_ore_dust',
+    Fluid.of('thermal:glowstone', 500)
+]).id('milkyway:satisfactory/copper/filling/enriched_copper_ore_dust')
+
+event.recipes.createFilling('milkyway:enriched_raw_copper', [
+    'minecraft:raw_copper',
+    Fluid.of('thermal:glowstone',1000)
+]).id('milkyway:satisfactory/copper/filling/enriched_raw_copper')
+
+event.recipes.createHaunting([
+    '5x milkyway:haunted_copper_clump',
+    Item.of('2x milkyway:haunted_copper_clump').withChance(0.5),
+    Item.of('1x milkyway:haunted_copper_clump').withChance(0.3)
+], [
+    'milkyway:enriched_raw_copper'
+]).id('milkyway:satisfactory/copper/haunting/haunted_copper_clump_from_enriched_raw_copper')
+
+event.recipes.createHaunting([
+  '3x milkyway:haunted_copper_clump',
+  Item.of('1x milkyway:haunted_copper_clump').withChance(0.75),
+  Item.of('2x milkyway:haunted_copper_clump').withChance(0.33),
+  Item.of('3x milkyway:haunted_copper_clump').withChance(0.15)
+], [
+  'milkyway:enriched_copper_ore_dust'
+]).id('milkyway:satisfactory/copper/haunting/haunted_copper_clump_from_enriched_copper_ore_dust')
+
+event.smoking('milkyway:smoked_copper_clump', 'milkyway:haunted_copper_clump').id('milkyway:satisfactory/copper/smoking/smoked_copper_clump')
+
+ simplesoaking("minecraft:raw_copper", "tconstruct:molten_lumium", "milkyway:enriched_raw_copper", 1) //idk how 2 texture
+
+ //main path
+ event.recipes.create.mixing(Item.of('milkyway:haunted_copper'),[
+  Fluid.of('tconstruct:molten_clay',50),
+ '3x milkyway:haunted_copper_clump'
+    ]).id('milkyway:satisfactory/copper/mixing/haunted_copper')
+
+    event.recipes.create.mixing(Item.of('minecraft:copper_ingot'),[
+      Fluid.of('tconstruct:molten_clay',50),
+     '3x milkyway:copper_clump'
+        ]).id('milkyway:satisfactory/copper/mixing/copper_ingot')
+
+    coolingitemtoitem("milkyway:haunted_copper", "minecraft:copper_ingot", 1)
+    coolingitemtoitem("milkyway:haunted_copper_clump", "milkyway:copper_clump", 1)
+
+
+    event.custom({
+        "type": "thermal:centrifuge",
+        "ingredient": {
+          "item": "milkyway:smoked_copper_clump"
+        },
+        "result": [
+          {
+            "item": "milkyway:copper_fragment",
+            "count": 4,
+            "chance": 2.5,
+            "locked": true
+          },
+          {
+            "item": "milkyway:copper_fragment",
+            "chance": 0.7
+          },
+          {
+            "item": "supplementaries:ash",
+            "chance": 2.6
+          },
+          {
+            "fluid": "tconstruct:molten_gold",
+            "amount": 30
+          },  {
+            "item": "infernalexp:glownuggets",
+            "chance": 0.6,
+            "locked": true
+          },
+        ],
+        "energy": 10000
+    }).id('milkyway:satisfactory/copper/centrifuge/copper_fragment')
+
+    event.custom({
+      "type": "createindustrialchemistry:electrolysis",
+      "ingredients": [
+        {
+          "item": "milkyway:copper_fragment"
+        }, {
+          "item": "milkyway:copper_fragment"
+        }, {
+          "item": "milkyway:copper_fragment"
+        }, {
+          "item": "milkyway:copper_fragment"
+        }, {
+          "item": "milkyway:copper_fragment"
+        }, {
+          "item": "milkyway:copper_fragment"
+        }, {
+          "item": "milkyway:copper_fragment"
+        }, {
+          "item": "milkyway:copper_fragment"
+        }, {
+          "item": "milkyway:copper_fragment"
+        }, {
+          "fluid": "tconstruct:molten_glass",
+          "amount": 500
+        }
+      ],
+      "results": [
+        {
+          "item": "milkyway:electrified_copper_nugget"
+        }, {
+          "fluid": "tconstruct:molten_gold",
+          "amount": 15
+        }
+      ], 
+      "heatRequirement": "superheated"
+     }).id('milkyway:satisfactory/copper/electrolysis/electrified_copper_nugget')
+
+     event.custom({
+      "type": "createindustrialchemistry:cooling",
+      "ingredients": [
+        {
+          "item": "minecraft:redstone"
+        }, {
+          "fluid": "createindustrialchemistry:distilled_water",
+          "amount": 150
+        }, {
+          "item": "milkyway:electrified_copper_nugget"
+        }
+      ],
+      "results": [
+        {
+          "item": "create:copper_nugget",
+          "count": 1
+        }, { 
+        "fluid": "thermal:glowstone",
+        "amount": 250 
+        }
+      ]
+     }).id('milkyway:satisfactory/copper/cooling/copper_nugget')
 }

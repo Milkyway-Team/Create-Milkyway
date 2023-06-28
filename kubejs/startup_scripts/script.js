@@ -25,45 +25,63 @@ onEvent('item.registry', event => {
 	event.create('milkyway:aluminium_blend').displayName('Aluminium Blend').texture('milkyway:item/aluminium_blend')
 	event.create('milkyway:augment_base').displayName('Augment Base').texture('milkyway:item/augment_base')
 	event.create('milkyway:invar_augment_base').displayName('Augment Base').texture('milkyway:item/invar_augment_base')
-
+	event.create('milkyway:enriched_copper_ore_dust').displayName('Enriched Copper Ore Dust').texture('milkyway:item/enriched_copper_ore_dust')
+    event.create('milkyway:enriched_raw_copper').displayName('Enriched Raw Copper').texture('milkyway:item/enriched_raw_copper')
+    event.create('milkyway:copper_clump').displayName('Copper Clump').texture('milkyway:item/copper_clump')
+    event.create('milkyway:haunted_copper').displayName('Haunted Copper ').texture('milkyway:item/haunted_copper')
+    event.create('milkyway:haunted_copper_clump').displayName('Haunted Copper Clump').texture('milkyway:item/haunted_copper_clump')
+    event.create('milkyway:smoked_copper_clump').displayName('Smoked Copper Clump').texture('milkyway:item/smoked_copper_clump')
+    event.create('milkyway:copper_fragment').displayName('Copper Fragment').texture('milkyway:item/copper_fragment')
+    event.create('milkyway:electrified_copper_nugget').displayName('Electrified Copper Nugget').texture('milkyway:item/electrified_copper_nugget')
 
 	event.create('thermal:fluid_upgrade_augment_1').displayName('Hardened Sealed Components').parentModel('kubejs:item/upgrade_augment_1').texture('milkyway:item/fluid_upgrade_augment_1')
-	event.create('thermal:fluid_upgrade_augment_2').displayName('Reinforced Sealed Components').parentModel('kubejs:item/upgrade_augment_2').texture('milkyway:item/fluid_upgrade_augment_2')
-	event.create('thermal:fluid_upgrade_augment_3').displayName('Inductive Sealed Components').parentModel('kubejs:item/upgrade_augment_3').texture('milkyway:item/fluid_upgrade_augment_3')
+    event.create('thermal:fluid_upgrade_augment_2').displayName('Reinforced Sealed Components').parentModel('kubejs:item/upgrade_augment_2').texture('milkyway:item/fluid_upgrade_augment_2')
+    event.create('thermal:fluid_upgrade_augment_3').displayName('Inductive Sealed Components').parentModel('kubejs:item/upgrade_augment_3').texture('milkyway:item/fluid_upgrade_augment_3')
+	
+	event.create('create_central_kitchen:incomplete_chorus_pie', 'create:sequenced_assembly').displayName('Incomplete Chorus Pie').texture('milkyway:item/incomplete_chorus_pie').food(food => {
+		food
+		.hunger(2)
+		.saturation(1)
+	})
+	event.create('create_central_kitchen:incomplete_rose_hip_pie', 'create:sequenced_assembly').displayName('Incomplete Rose Hip Pie').texture('milkyway:item/incomplete_rose_hip_pie').food(food => {
+		food
+		.hunger(2)
+		.saturation(1)
+	})
+	let crystal = (name, rarity) => {
+		let id = name.toLowerCase()
+		event.create('ae2:growing_' + id + '_seed').texture("ae2:item/crystal_seed_" + id).displayName(name + ' Quartz Seed').rarity(rarity ? rarity : RARITY_COMMON)
+		event.create('ae2:tiny_' + id + '_crystal').texture("ae2:item/crystal_seed_" + id + "2").displayName('Tiny ' + name + ' Quartz Crystal').rarity(rarity ? rarity : RARITY_COMMON)
+		event.create('ae2:growing_tiny_' + id + '_crystal').texture("ae2:item/crystal_seed_" + id + "2").displayName('Tiny ' + name + ' Quartz Crystal').rarity(rarity ? rarity : RARITY_COMMON)
+		event.create('ae2:small_' + id + '_crystal').texture("ae2:item/crystal_seed_" + id + "3").displayName('Small ' + name + ' Quartz Crystal').rarity(rarity ? rarity : RARITY_COMMON)
+		event.create('ae2:growing_small_' + id + '_crystal').texture("ae2:item/crystal_seed_" + id + "3").displayName('Small ' + name + ' Quartz Crystal').rarity(rarity ? rarity : RARITY_COMMON)
+	}
 
-	 let crystal = (name, rarity) => {
-		 let id = name.toLowerCase()
-		 event.create('ae2:growing_' + id + '_seed').texture("ae2:item/crystal_seed_" + id).displayName(name + ' Quartz Seed').rarity(rarity ? rarity : RARITY_COMMON)
-		 event.create('ae2:tiny_' + id + '_crystal').texture("ae2:item/crystal_seed_" + id + "2").displayName('Tiny ' + name + ' Quartz Crystal').rarity(rarity ? rarity : RARITY_COMMON)
-		 event.create('ae2:growing_tiny_' + id + '_crystal').texture("ae2:item/crystal_seed_" + id + "2").displayName('Tiny ' + name + ' Quartz Crystal').rarity(rarity ? rarity : RARITY_COMMON)
-		 event.create('ae2:small_' + id + '_crystal').texture("ae2:item/crystal_seed_" + id + "3").displayName('Small ' + name + ' Quartz Crystal').rarity(rarity ? rarity : RARITY_COMMON)
-		 event.create('ae2:growing_small_' + id + '_crystal').texture("ae2:item/crystal_seed_" + id + "3").displayName('Small ' + name + ' Quartz Crystal').rarity(rarity ? rarity : RARITY_COMMON)
-	 }
-	 crystal('Certus')
+	crystal('Certus')
 	crystal('Fluix')
-let sheetSet = (name, rarity) => {
-	let id = name.toLowerCase()
-	event.create('mw_core:unprocessed_' + id + '_sheet').texture("kubejs:item/unprocessed_" + id + "_sheet").displayName('Unprocessed ' + name + ' Sheet').rarity(rarity ? rarity : RARITY_COMMON)
-	event.create('mw_core:sturdy_' + id + '_sheet').texture("kubejs:item/sturdy_" + id + "_sheet").displayName('Sturdy ' + name + ' Sheet').rarity(rarity ? rarity : RARITY_COMMON)
-	event.create('mw_core:reprocessed_' + id + '_sheet').texture("kubejs:item/reprocessed_" + id + "_sheet").displayName('Reprocessed ' + name + ' Sheet').rarity(rarity ? rarity : RARITY_COMMON)
-	event.create('mw_core:reinforced_' + id + '_sheet').texture("kubejs:item/reinforced_" + id + "_sheet").displayName('Reinforced ' + name + ' Sheet').rarity(rarity ? rarity : RARITY_COMMON)
-}
+    let sheetSet = (name, rarity) => {
+	    let id = name.toLowerCase()
+	    event.create('mw_core:unprocessed_' + id + '_sheet').texture("kubejs:item/unprocessed_" + id + "_sheet").displayName('Unprocessed ' + name + ' Sheet').rarity(rarity ? rarity : RARITY_COMMON)
+	    event.create('mw_core:sturdy_' + id + '_sheet').texture("kubejs:item/sturdy_" + id + "_sheet").displayName('Sturdy ' + name + ' Sheet').rarity(rarity ? rarity : RARITY_COMMON)
+	    event.create('mw_core:reprocessed_' + id + '_sheet').texture("kubejs:item/reprocessed_" + id + "_sheet").displayName('Reprocessed ' + name + ' Sheet').rarity(rarity ? rarity : RARITY_COMMON)
+	    event.create('mw_core:reinforced_' + id + '_sheet').texture("kubejs:item/reinforced_" + id + "_sheet").displayName('Reinforced ' + name + ' Sheet').rarity(rarity ? rarity : RARITY_COMMON)
+    }
 	sheetSet('Zinc')
 
-let metalSet = (name, rarity) => {
-	let id = name.toLowerCase()
-	event.create('milkyway:' + id + '_ingot').texture("kubejs:item/" + id + "_ingot").displayName(name + ' Ingot').rarity(rarity ? rarity : RARITY_COMMON)
-	event.create('milkyway:' + id + '_nugget').texture("kubejs:item/" + id + "_nugget").displayName(name + ' Nugget').rarity(rarity ? rarity : RARITY_COMMON)
-	event.create('milkyway:' + id + '_sheet').texture("kubejs:item/" + id + "_sheet").displayName(name + ' Sheet').rarity(rarity ? rarity : RARITY_COMMON)
-}
-    //metalSet('Bronze')
-	//metalSet('Steel')
-	let mechanism = (name, rarity) => {
+	let metalSet = (name, rarity) => {
 		let id = name.toLowerCase()
-		event.create('mw_core:' + id + '_mechanism').texture("kubejs:item/" + id + "_mechanism").displayName(name + ' Mechanism').rarity(rarity ? rarity : RARITY_COMMON)
-		event.create('mw_core:incomplete_' + id + '_mechanism').texture("kubejs:item/incomplete_" + id + "_mechanism").type('create:sequenced_assembly').displayName('Incomplete ' + name + ' Mechanism')
+		event.create('milkyway:' + id + '_ingot').texture("kubejs:item/" + id + "_ingot").displayName(name + ' Ingot').rarity(rarity ? rarity : RARITY_COMMON)
+		event.create('milkyway:' + id + '_nugget').texture("kubejs:item/" + id + "_nugget").displayName(name + ' Nugget').rarity(rarity ? rarity : RARITY_COMMON)
+		event.create('milkyway:' + id + '_sheet').texture("kubejs:item/" + id + "_sheet").displayName(name + ' Sheet').rarity(rarity ? rarity : RARITY_COMMON)
 	}
-	mechanism('Refined', RARITY_UNCOMMON)
+		//metalSet('Bronze')
+		//metalSet('Steel')
+		let mechanism = (name, rarity) => {
+			let id = name.toLowerCase()
+			event.create('mw_core:' + id + '_mechanism').texture("kubejs:item/" + id + "_mechanism").displayName(name + ' Mechanism').rarity(rarity ? rarity : RARITY_COMMON)
+			event.create('mw_core:incomplete_' + id + '_mechanism', 'create:sequenced_assembly').texture("kubejs:item/incomplete_" + id + "_mechanism").type('create:sequenced_assembly').displayName('Incomplete ' + name + ' Mechanism')
+		}
+		mechanism('Refined', RARITY_UNCOMMON)
 })
 
 onEvent('block.registry', event => {
@@ -120,6 +138,16 @@ onEvent('fluid.registry', event => {
 	    .thinTexture(0xe6dabb)
         .bucketColor(0xe6dabb)
 		.displayName('Alumina Solution')
+	event.create('create_central_kitchen:sweet_berry_juice')
+		.displayName('Sweet Berry Juice')
+		.thinTexture(0x820b05)
+		.noBucket()
+        .noBlock()
+	event.create('create_central_kitchen:chorus_juice')
+		.displayName('Chorus Juice')
+		.thinTexture(0x472147)
+		.noBucket()
+        .noBlock()
 })
 onEvent('block.modification', event => {
 	event.modify('tconstruct:cobalt_ore', block => {

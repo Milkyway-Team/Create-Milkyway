@@ -22,9 +22,6 @@ let EG = (id, x) => MOD("extendedgears", id, x)
 let RW = (id, x) => MOD("railways", id, x)
 let BD = (id, x) => MOD("buildersdelight", id, x)
 let AL = (id, x) => MOD("alloyed", id, x)
-
-
-
 let colours = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
 let native_metals = ['iron', 'zinc', 'lead', 'copper', 'nickel', 'gold', 'silver', 'aluminum', 'uranium', 'cobalt', 'tin']
 let dustMetals = ['iron', 'lead', 'copper', 'nickel', 'gold', 'silver', 'tin']
@@ -51,6 +48,35 @@ function tagAdd(tag, add){
     event.get(tag)
         .add(add)
     })}
+    function uprightOnBelt(item){
+        onEvent('item.tags', event => {
+            event.get('create:upright_on_belt')
+                .add(item)
+        })
+    }
+    function leveledDrinkTag(type){
+        strongDrinkTag(type)
+        longDrinkTag(type)
+        onEvent('item.tags', event => {
+            event.get('create:upright_on_belt')
+                .add('farmersrespite:long_' + type)
+                .add('bundledelight:long_' + type + '_cup')
+        })
+    }
+    function longDrinkTag(type){
+        onEvent('item.tags', event => {
+            event.get('farmersrespite:drinks/long/' + type)
+                .add('farmersrespite:long_' + type)
+                .add('bundledelight:long_' + type + '_cup')
+        })
+    }
+    function strongDrinkTag(type){
+        onEvent('item.tags', event => {
+            event.get('farmersrespite:drinks/strong/' + type)
+                .add('farmersrespite:strong_' + type)
+                .add('bundledelight:strong_' + type + '_cup')
+        })
+    }
 function tagRem(tag, remove){
     onEvent('item.tags', event => {
     event.get(tag)
@@ -83,7 +109,6 @@ onEvent('item.tags', event => {
     global.trades.forEach(element => {
         event.get('forge:trade_cards').add(`kubejs:trade_card_${element}`)
     });
-
     global.professions.forEach(element => {
         event.get('forge:profession_cards').add(`kubejs:profession_card_${element}`)
     });
@@ -93,7 +118,6 @@ onEvent('item.tags', event => {
     event.get('thermal:crafting/dies').add('#forge:trade_cards')
     event.get('thermal:crafting/dies').add('#forge:profession_cards')
     event.get('mw_industry_additions:cards').add(['#forge:profession_cards', '#forge:trade_cards'])
-
     event.get("tconstruct:anvil_metal")
     //.remove("#forge:storage_blocks/nethersteel")
     event.get('forge:dusts/processed/tin')
@@ -118,9 +142,7 @@ onEvent('block.tags', event => {
     event.get("create:windmill_sails")
         .remove(MC('#wool'))
         .remove(CR('sail_frame'))
-
 })
-
 tagRem(F('silicon'), [AE2('silicon')])
 tagRem(F('ingots/bronze'), [TE('bronze_ingot')])
 tagRem(F('ingots/steel'), [TE('steel_ingot')])
@@ -141,14 +163,11 @@ blokTagAdd(F('stone_gold_ores'), [MC('gold_ore'), MC('deepslate_gold_ore')])
 fluidTagAdd(TC('tooltips/metal'), MKW('copper_concentrate'))
 fluidTagAdd(TC('tooltips/gem_small'), [MKW('molten_monazite'), MKW('molten_heliodor')])
 fluidTagAdd(TC('tooltips/gem_small'), MKW('molten_ekanite'))
-
-
 ow_vanilla_metals.forEach(e => {
 })
 wood_types.forEach(wt => {
     tagAdd(MW('2x2_drawers'), SD(`${wt}_full_drawers_4`))
 })
-
 tagAdd(FD('stew_cups'), /miners_delight:.*_stew_cup/)
 tagAdd(FD('soup_cups'), /miners_delight:.*_soup_cup/)
 tagAdd(FD('large_meals'), /farmersdelight:.*_block/)
@@ -156,6 +175,8 @@ tagAdd(FD('large_meals'), ['miners_delight:stuffed_squid', 'endersdelight:stuffe
 tagAdd(FD('soups'), /farmersdelight:.*_soup/)
 tagAdd(FD('stews'), /farmersdelight:.*_stew/)
 tagAdd(FD('soups'), ['alexsdelight:acacia_blossom_soup', 'miners_delight:cave_soup', MC('beetroot_soup')])
+tagAdd(FD('stews'), 'bundledelight:borscht')
+tagAdd(FD('soups'), 'bundledelight:nettle_soup')
 tagAdd(FD('stews'), /minecraft:.*_stew/)
 tagAdd(FD('stews'), /endersdelight:.*_stew_.*/)
 tagAdd('endersdelight:shulker_bowl_foods', ['endersdelight:chorus_stew', 'endersdelight:endermite_stew', 'endersdelight:twisted_cereal', 'endersdelight:pearl_pasta', 'endersdelight:ender_paella'])
@@ -177,6 +198,29 @@ tagRem('forge:dusts', 'createindustrialchemistry:copper_dusts')
 tagRem('forge:dusts', 'createbb:crushed_copper')
 tagRem('forge:dusts', 'createindustrialchemistry:iron_dusts')
 tagRem('forge:dusts/iron', 'createindustrialchemistry:iron_dusts')
+uprightOnBelt('bundledelight:sweet_berry_juice')
+uprightOnBelt(/tconstruct:.*_cake/)
+uprightOnBelt(/create_things_and_misc:.*_cake/)
+uprightOnBelt('farmersrespite:coffee_cake')
+uprightOnBelt('bundledelight:carrot_cake')
+uprightOnBelt('farmersdelight:melon_juice')
+uprightOnBelt('farmersdelight:apple_cider')
+uprightOnBelt('nethersdelight:magma_gelatin')
+uprightOnBelt('endersdelight:chorus_juice')
+uprightOnBelt('endersdelight:chorus_pie')
+leveledDrinkTag('green_tea')
+leveledDrinkTag('yellow_tea')
+leveledDrinkTag('black_tea')
+leveledDrinkTag('coffee')
+longDrinkTag('dandelion_tea')
+strongDrinkTag('purulent_tea')
+strongDrinkTag('rose_hip_tea')
+uprightOnBelt('farmersrespite:dandelion_tea')
+uprightOnBelt('farmersrespite:purulent_tea')
+uprightOnBelt('farmersrespite:rose_hip_tea')
+uprightOnBelt('farmersrespite:long_dandelion_tea')
+uprightOnBelt('farmersrespite:strong_purulent_tea')
+uprightOnBelt('farmersrespite:strong_rose_hip_tea')
 
 
 jeiHide(
@@ -197,7 +241,25 @@ jeiHide(
 'createbb:copper_zinc_catalyst',
 'createindustrialchemistry:zinc_dusts',
 'createindustrialchemistry:copper_dusts',
-'createindustrialchemistry:iron_dusts'
+'createindustrialchemistry:iron_dusts',
+'thermal:sugar_cane_block',
+'thermal:bamboo_block',
+'thermal:beetroot_block',
+'thermal:carrot_block',
+'thermal:potato_block',
+'thermal:apple_block',
+'quark:carrot_crate',
+'quark:potato_crate',
+'quark:glowberry_sack',
+'quark:sugar_cane_block',
+'quark:berry_sack',
+'quark:beetroot_crate',
+'quark:apple_crate',
+'quark:golden_apple_crate',
+'quark:cocoa_beans_sack',
+'quark:bamboo_block',
+'mw_core:sweet_berry_juice',
+'quark:chorus_fruit_block',
 ]
 )
 

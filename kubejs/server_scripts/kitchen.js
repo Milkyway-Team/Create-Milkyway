@@ -26,6 +26,7 @@ let AL = (id, x) => MOD("alloyed", id, x)
 onEvent('recipes', event => {
     log.push('Tidying the Kitchen')
     filling(event)
+    processing(event)
     log.push('Kitchen Tidied')
 })
 
@@ -70,7 +71,7 @@ function filling(event) {
             }
         ],
         "energy": 400,
-    }).id('milkyway:kitchen/centrifuge/' + fluid.replace(':', '_') + '_from_' + result.replace(':', '_'))
+    }).id('milkyway:kitchen/separator/' + fluid.replace(':', '_') + '_from_' + result.replace(':', '_'))
 }
     let bottling = (event, result, input, fluid, amount) => {
         event.custom({
@@ -99,7 +100,7 @@ function filling(event) {
                 }
             ],
             "energy": 400,
-        }).id('milkyway:kitchen/centrifuge/' + fluid.replace(':', '_') + '_from_' + result.replace(':', '_'))
+        }).id('milkyway:kitchen/separator/' + fluid.replace(':', '_') + '_from_' + result.replace(':', '_'))
     }
 filling(event, "bundledelight:green_tea_cup", "bundledelight:cup", "create_central_kitchen:green_tea", 250)
 filling(event, "bundledelight:yellow_tea_cup", "bundledelight:cup", "create_central_kitchen:yellow_tea", 250)
@@ -119,31 +120,93 @@ filling(event, "bundledelight:strong_black_tea_cup", "bundledelight:cup", "creat
 filling(event, "bundledelight:strong_coffee_cup", "bundledelight:cup", "create_central_kitchen:strong_coffee", 250)
 filling(event, "bundledelight:strong_purulent_tea_cup", "bundledelight:cup", "create_central_kitchen:strong_purulent_tea", 250)
 filling(event, "bundledelight:strong_rose_hip_tea_cup", "bundledelight:cup", "create_central_kitchen:strong_rose_hip_tea", 250)
+filling(event, "bundledelight:sweet_berry_juice", "minecraft:glass_bottle", "create_central_kitchen:sweet_berry_juice", 250)
+filling(event, "endersdelight:chorus_juice", "minecraft:glass_bottle", "create_central_kitchen:chorus_juice", 250)
 
-bottling(event, "farmersrespite:green_tea", "minecraft:glass_bottle", "create_central_kitchen:green_tea", 250)
-bottling(event, "farmersrespite:yellow_tea", "minecraft:glass_bottle", "create_central_kitchen:yellow_tea", 250)
-bottling(event, "farmersrespite:black_tea", "minecraft:glass_bottle", "create_central_kitchen:black_tea", 250)
-bottling(event, "farmersrespite:coffee", "minecraft:glass_bottle", "create_central_kitchen:coffee", 250)
-bottling(event, "farmersrespite:dandelion_tea", "minecraft:glass_bottle", "create_central_kitchen:dandelion_tea", 250)
-bottling(event, "farmersrespite:long_green_tea", "minecraft:glass_bottle", "create_central_kitchen:long_green_tea", 250)
-bottling(event, "farmersrespite:long_yellow_tea", "minecraft:glass_bottle", "create_central_kitchen:long_yellow_tea", 250)
-bottling(event, "farmersrespite:long_black_tea", "minecraft:glass_bottle", "create_central_kitchen:long_black_tea", 250)
-bottling(event, "farmersrespite:long_coffee", "minecraft:glass_bottle", "create_central_kitchen:long_coffee", 250)
-bottling(event, "farmersrespite:long_dandelion_tea", "minecraft:glass_bottle", "create_central_kitchen:long_dandelion_tea", 250)
-bottling(event, "farmersrespite:purulent_tea", "minecraft:glass_bottle", "create_central_kitchen:purulent_tea", 250)
-bottling(event, "farmersrespite:rose_hip_tea", "minecraft:glass_bottle", "create_central_kitchen:rose_hip_tea", 250)
-bottling(event, "farmersrespite:strong_green_tea", "minecraft:glass_bottle", "create_central_kitchen:strong_green_tea", 250)
-bottling(event, "farmersrespite:strong_yellow_tea", "minecraft:glass_bottle", "create_central_kitchen:strong_yellow_tea", 250)
-bottling(event, "farmersrespite:strong_black_tea", "minecraft:glass_bottle", "create_central_kitchen:strong_black_tea", 250)
-bottling(event, "farmersrespite:strong_coffee", "minecraft:glass_bottle", "create_central_kitchen:strong_coffee", 250)
-bottling(event, "farmersrespite:strong_purulent_tea", "minecraft:glass_bottle", "create_central_kitchen:strong_purulent_tea", 250)
-bottling(event, "farmersrespite:strong_rose_hip_tea", "minecraft:glass_bottle", "create_central_kitchen:strong_rose_hip_tea", 250)
+//bottling(event, "farmersrespite:green_tea", "minecraft:glass_bottle", "create_central_kitchen:green_tea", 250)
+//bottling(event, "farmersrespite:yellow_tea", "minecraft:glass_bottle", "create_central_kitchen:yellow_tea", 250)
+//bottling(event, "farmersrespite:black_tea", "minecraft:glass_bottle", "create_central_kitchen:black_tea", 250)
+//bottling(event, "farmersrespite:coffee", "minecraft:glass_bottle", "create_central_kitchen:coffee", 250)
+//bottling(event, "farmersrespite:dandelion_tea", "minecraft:glass_bottle", "create_central_kitchen:dandelion_tea", 250)
+//bottling(event, "farmersrespite:long_green_tea", "minecraft:glass_bottle", "create_central_kitchen:long_green_tea", 250)
+//bottling(event, "farmersrespite:long_yellow_tea", "minecraft:glass_bottle", "create_central_kitchen:long_yellow_tea", 250)
+//bottling(event, "farmersrespite:long_black_tea", "minecraft:glass_bottle", "create_central_kitchen:long_black_tea", 250)
+//bottling(event, "farmersrespite:long_coffee", "minecraft:glass_bottle", "create_central_kitchen:long_coffee", 250)
+//bottling(event, "farmersrespite:long_dandelion_tea", "minecraft:glass_bottle", "create_central_kitchen:long_dandelion_tea", 250)
+//bottling(event, "farmersrespite:purulent_tea", "minecraft:glass_bottle", "create_central_kitchen:purulent_tea", 250)
+//bottling(event, "farmersrespite:rose_hip_tea", "minecraft:glass_bottle", "create_central_kitchen:rose_hip_tea", 250)
+//bottling(event, "farmersrespite:strong_green_tea", "minecraft:glass_bottle", "create_central_kitchen:strong_green_tea", 250)
+//bottling(event, "farmersrespite:strong_yellow_tea", "minecraft:glass_bottle", "create_central_kitchen:strong_yellow_tea", 250)
+//bottling(event, "farmersrespite:strong_black_tea", "minecraft:glass_bottle", "create_central_kitchen:strong_black_tea", 250)
+//bottling(event, "farmersrespite:strong_coffee", "minecraft:glass_bottle", "create_central_kitchen:strong_coffee", 250)
+//bottling(event, "farmersrespite:strong_purulent_tea", "minecraft:glass_bottle", "create_central_kitchen:strong_purulent_tea", 250)
+//bottling(event, "farmersrespite:strong_rose_hip_tea", "minecraft:glass_bottle", "create_central_kitchen:strong_rose_hip_tea", 250)
 bottling(event, "farmersdelight:hot_cocoa", "minecraft:glass_bottle", "create_central_kitchen:hot_cocoa", 250)
 bottling(event, "farmersdelight:apple_cider", "minecraft:glass_bottle", "create_central_kitchen:apple_cider", 250)
 bottling(event, "farmersdelight:melon_juice", "minecraft:glass_bottle", "create_central_kitchen:melon_juice", 250)
 bottling(event, "farmersrespite:strong_apple_cider", "minecraft:glass_bottle", "create_central_kitchen:strong_apple_cider", 250)
 bottling(event, "farmersrespite:long_apple_cider", "minecraft:glass_bottle", "create_central_kitchen:long_apple_cider", 250)
 bottling(event, "farmersdelight:tomato_sauce", "minecraft:bowl", "create_central_kitchen:tomato_sauce", 250)
+}
+
+function processing(event) {
+    event.custom({
+        "type": "create:mixing",
+        "ingredients": [
+            {
+                "item": "minecraft:sweet_berries"
+            },
+            {
+                "item": "minecraft:sweet_berries"
+            },
+            {
+                "item": "minecraft:sweet_berries"
+            },
+            {
+                "item": "minecraft:sweet_berries"
+            },
+            {
+                "item": "minecraft:sugar"
+            }
+        ],
+        "results": [
+            {
+                "fluid": "create_central_kitchen:sweet_berry_juice",
+                "amount": 250
+            }
+        ]
+    }).id('milkyway:kitchen/mixing/sweet_berry_juice')
+    event.custom({
+        "type": "create:mixing",
+        "ingredients": [
+            {
+                "item": "minecraft:chorus_fruit"
+            },
+            {
+                "item": "minecraft:sugar"
+            }
+        ],
+        "results": [
+            {
+                "fluid": "create_central_kitchen:chorus_juice",
+                "amount": 250
+            }
+        ]
+    }).id('milkyway:kitchen/mixing/chorus_juice')
+    const pie_crust = 'farmersdelight:pie_crust'
+    const incomplete_chorus_pie = 'create_central_kitchen:incomplete_chorus_pie'
+    const incomplete_rose_hip_pie = 'create_central_kitchen:incomplete_rose_hip_pie'
+    event.recipes.createSequencedAssembly([('endersdelight:chorus_pie')], pie_crust, [
+        event.recipes.createDeploying(incomplete_chorus_pie, [incomplete_chorus_pie, 'minecraft:chorus_fruit']),
+        event.recipes.createDeploying(incomplete_chorus_pie, [incomplete_chorus_pie, 'create:wheat_flour']),
+        event.recipes.createDeploying(incomplete_chorus_pie, [incomplete_chorus_pie, 'minecraft:sugar'])
+    ]).transitionalItem(incomplete_chorus_pie).loops(1).id('milkyway:kitchen/sequenced_assembly/chorus_pie')
+    event.recipes.createSequencedAssembly([('farmersrespite:rose_hip_pie')], pie_crust, [
+        event.recipes.createDeploying(incomplete_rose_hip_pie, [incomplete_rose_hip_pie, 'farmersrespite:rose_hips']),
+        event.recipes.createFilling(incomplete_rose_hip_pie, [incomplete_rose_hip_pie, Fluid.of(MC('milk'), 250)]),
+        event.recipes.createDeploying(incomplete_rose_hip_pie, [incomplete_rose_hip_pie, 'minecraft:sugar']),
+        event.recipes.createFilling(incomplete_rose_hip_pie, [incomplete_rose_hip_pie, Fluid.of(CR('honey'), 250)])
+    ]).transitionalItem(incomplete_rose_hip_pie).loops(1).id('milkyway:kitchen/sequenced_assembly/rose_hip_pie')
 }
 
 

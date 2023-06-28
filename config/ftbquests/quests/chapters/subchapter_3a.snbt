@@ -41,10 +41,11 @@
 			x: 3.5d
 			y: 11.0d
 			dependencies: [
-				"23A6D391BEEB782D"
 				"4057976A51270973"
 				"7A0A9266D53A9E0B"
 				"4A839CEEF20D4670"
+				"1FDB1C03BA284C83"
+				"54BBA4CE615D3E96"
 			]
 			id: "418462B40338095D"
 			tasks: [{
@@ -148,7 +149,7 @@
 		}
 		{
 			icon: "mw_core:certus_core"
-			x: 1.0d
+			x: 3.5d
 			y: 6.0d
 			description: ["COmbining a shard of Certus QUartz with an Advanced Processor creates a Certus Core which will be a key part of all Applied Energistics machines."]
 			dependencies: [
@@ -171,7 +172,7 @@
 		}
 		{
 			icon: "refinedstorage:advanced_processor"
-			x: 2.0d
+			x: 5.0d
 			y: 6.0d
 			dependencies: [
 				"56F964BDDB1BCCA0"
@@ -193,7 +194,7 @@
 		}
 		{
 			icon: "refinedstorage:improved_processor"
-			x: 3.5d
+			x: 6.5d
 			y: 6.0d
 			dependencies: [
 				"633EFB2125A85532"
@@ -215,7 +216,7 @@
 		}
 		{
 			icon: "refinedstorage:basic_processor"
-			x: 5.0d
+			x: 8.0d
 			y: 6.0d
 			dependencies: [
 				"3CAAA0EBE196B04C"
@@ -237,7 +238,7 @@
 		}
 		{
 			icon: "mw_core:core_casing"
-			x: 6.5d
+			x: 9.5d
 			y: 6.0d
 			description: ["Core Casing is the main ingredient to create primitive Processors."]
 			dependencies: ["5ABC97221F761E3E"]
@@ -258,7 +259,7 @@
 		{
 			title: "Growing Certus Quartz"
 			icon: "ae2:certus_quartz_crystal"
-			x: 1.0d
+			x: 3.5d
 			y: 4.5d
 			dependencies: ["3B3AAA522715339A"]
 			id: "4DCC48D7D4B619D7"
@@ -276,7 +277,7 @@
 			]
 		}
 		{
-			x: 1.0d
+			x: 2.0d
 			y: 2.0d
 			dependencies: [
 				"32A9B55169990D39"
@@ -291,7 +292,7 @@
 			}]
 		}
 		{
-			x: 1.0d
+			x: 2.0d
 			y: 0.5d
 			subtitle: "[Already Automated]"
 			dependencies: ["3663AB6030B54209"]
@@ -315,7 +316,7 @@
 		}
 		{
 			icon: "create:iron_sheet"
-			x: 8.0d
+			x: 11.0d
 			y: 6.0d
 			hide_dependency_lines: true
 			dependencies: ["5DE3AC2B6525923C"]
@@ -335,7 +336,7 @@
 		}
 		{
 			x: 2.0d
-			y: 7.0d
+			y: 6.0d
 			hide_dependency_lines: true
 			dependencies: ["2C55BD11CCF57406"]
 			id: "7D7F6429CBCF601F"
@@ -346,7 +347,7 @@
 			}]
 		}
 		{
-			x: 3.5d
+			x: 6.5d
 			y: 4.5d
 			subtitle: "[Already Automated]"
 			dependencies: ["6BA631E8E1E29949"]
@@ -359,7 +360,7 @@
 		}
 		{
 			title: "Molten Iron"
-			x: 5.0d
+			x: 8.0d
 			y: 9.5d
 			subtitle: "[Already Automated]"
 			dependencies: ["1A113538450D74E2"]
@@ -369,47 +370,6 @@
 				type: "item"
 				item: "tconstruct:molten_iron_bucket"
 			}]
-		}
-		{
-			icon: "mw_core:data_tube"
-			x: 3.5d
-			y: 9.5d
-			dependencies: [
-				"396BC8AFF3B320A3"
-				"5DE3AC2B6525923C"
-			]
-			id: "23A6D391BEEB782D"
-			tasks: [
-				{
-					id: "3BB975377F1CDDDC"
-					type: "item"
-					item: "mw_core:data_tube"
-				}
-				{
-					id: "599FDF7408578DB6"
-					type: "checkmark"
-					title: "Automated"
-				}
-			]
-		}
-		{
-			icon: "create:experience_nugget"
-			x: 3.5d
-			y: 8.0d
-			dependencies: ["551BB04B1EEF3F51"]
-			id: "396BC8AFF3B320A3"
-			tasks: [
-				{
-					id: "17AFCB04681AE220"
-					type: "item"
-					item: "create:experience_nugget"
-				}
-				{
-					id: "2CCD44A6F4625197"
-					type: "checkmark"
-					title: "Automated"
-				}
-			]
 		}
 		{
 			icon: "thermal:diamond_gear"
@@ -489,7 +449,7 @@
 		{
 			title: "Sand Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: 2.5d
+			x: 3.5d
 			y: 0.5d
 			shape: "gear"
 			subtitle: "Automated in Chapter 1"
@@ -503,7 +463,7 @@
 			}]
 		}
 		{
-			x: 2.5d
+			x: 5.0d
 			y: 2.0d
 			dependencies: ["52356C3DA9EEE1A0"]
 			id: "0FA5664056195D0E"
@@ -514,7 +474,7 @@
 			}]
 		}
 		{
-			x: 2.5d
+			x: 5.0d
 			y: 4.5d
 			dependencies: ["0FA5664056195D0E"]
 			id: "3B3AAA522715339A"
@@ -527,7 +487,7 @@
 		{
 			title: "Molten Gold Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: 5.0d
+			x: 8.0d
 			y: 4.5d
 			shape: "gear"
 			subtitle: "Automated in Chapter 2"
@@ -543,7 +503,7 @@
 		{
 			title: "Certus Soaking"
 			icon: "create:spout"
-			x: 1.0d
+			x: 2.0d
 			y: 3.0d
 			shape: "hexagon"
 			description: ["Certus Quartz Seeds can be grown faster with a spout and water."]
@@ -566,7 +526,7 @@
 		{
 			title: "Molten Iron Already Automated"
 			icon: "create_enchantment_industry:enchanting_guide"
-			x: 7.0d
+			x: 9.5d
 			y: 9.5d
 			shape: "gear"
 			hide_dependency_lines: true
@@ -576,33 +536,6 @@
 				id: "5EF5D464C69CAC07"
 				type: "checkmark"
 				title: "Already Automated"
-			}]
-		}
-		{
-			icon: "create_sa:heap_of_experience"
-			x: 3.5d
-			y: 7.0d
-			hide_dependency_lines: true
-			dependencies: ["2ADAC0B8BF09A42F"]
-			id: "551BB04B1EEF3F51"
-			tasks: [{
-				id: "33ACF437F56B5150"
-				type: "checkmark"
-				title: "Automating Experience Nuggets?"
-			}]
-			rewards: [{
-				id: "28A2E1B1E794058E"
-				type: "command"
-				title: "Open Ponder"
-				icon: {
-					id: "ftbquests:custom_icon"
-					Count: 1b
-					tag: {
-						Icon: "forbidden_arcanus:textures/block/black_hole_aura_0.png"
-					}
-				}
-				command: "/create ponder create:experience_nugget"
-				player_command: true
 			}]
 		}
 		{
@@ -716,6 +649,18 @@
 				id: "4FF35BF57EBC7EFB"
 				type: "item"
 				item: "minecraft:lava_bucket"
+			}]
+		}
+		{
+			x: 5.0d
+			y: 9.0d
+			hide_dependency_lines: true
+			dependencies: ["2ADAC0B8BF09A42F"]
+			id: "54BBA4CE615D3E96"
+			tasks: [{
+				id: "112CB9CD7981008F"
+				type: "item"
+				item: "mw_core:chromatic_waste_bucket"
 			}]
 		}
 	]

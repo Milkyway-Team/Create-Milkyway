@@ -290,7 +290,7 @@ function cobaltMechanism(event){
 		event.remove({ id: TE("press_packing_2x2_die") })
 		event.remove({ id: TE("press_packing_3x3_die") })
 		event.remove({ id: TE("press_unpacking_die") })
-    cobaltMachine(event, TE("machine_press"), '#minecraft:boats', 'thermal:gold_coin', 'mw_core:aluminium_gear', 'mw_core:sturdy_iron_sheet')
+    cobaltMachine(event, TE("machine_press"), 'farmingforblockheads:market', 'thermal:gold_coin', 'mw_core:aluminium_gear', 'mw_core:sturdy_iron_sheet')
     cobaltMachine(event, 'thermal:machine_centrifuge', 'create:millstone', 'create:item_drain', 'thermal:constantan_gear', 'mw_core:sturdy_iron_sheet')
     event.shaped('4x thermal:energy_duct', [
         'RLR',
@@ -515,11 +515,11 @@ function cobaltMechanism(event){
         event.recipes.createFilling('milkyway:invar_augment_base', ['milkyway:invar_augment_base', Fluid.of('tconstruct:molten_electrum', 90)]),
     ]).transitionalItem('milkyway:invar_augment_base').loops(1).id('milkyway:processing/sequenced_assembly/augments/dynamo_throttle')
     event.recipes.createSequencedAssembly([('mw_core:cobalt_mechanism')], 'create:precision_mechanism', [
-        event.recipes.createFilling('create:precision_mechanism', ['create:precision_mechanism', Fluid.of('tconstruct:molten_lead', 360)]),
-        event.recipes.createDeploying('create:precision_mechanism', ['create:precision_mechanism', 'mw_core:tech_tube']),
-        event.recipes.createDeploying('create:precision_mechanism', ['create:precision_mechanism', 'mw_core:cobalt_gear']),
-        event.recipes.createDeploying('create:precision_mechanism', ['create:precision_mechanism', 'thermal:rf_coil']),
-    ]).transitionalItem('create:precision_mechanism').loops(1).id('milkyway:processing/sequenced_assembly/cobalt_mechanism')
+        event.recipes.createFilling('mw_core:incomplete_cobalt_mechanism', ['mw_core:incomplete_cobalt_mechanism', Fluid.of('tconstruct:molten_lead', 360)]),
+        event.recipes.createDeploying('mw_core:incomplete_cobalt_mechanism', ['mw_core:incomplete_cobalt_mechanism', 'mw_core:tech_tube']),
+        event.recipes.createDeploying('mw_core:incomplete_cobalt_mechanism', ['mw_core:incomplete_cobalt_mechanism', 'mw_core:cobalt_gear']),
+        event.recipes.createDeploying('mw_core:incomplete_cobalt_mechanism', ['mw_core:incomplete_cobalt_mechanism', 'thermal:rf_coil']),
+    ]).transitionalItem('mw_core:incomplete_cobalt_mechanism').loops(1).id('milkyway:processing/sequenced_assembly/cobalt_mechanism')
 }
 
 function logicMechanism(event){
@@ -602,6 +602,11 @@ function logicMechanism(event){
         "result": { "item": MW("printed_upgrade_circuit") },
         "cooling_time": 150
     }).id('milkyway:processing/casting/upgrade_circuit')
+    event.recipes.createSequencedAssembly([('mw_core:logic_mechanism')], 'ae2:logic_processor', [
+        event.recipes.createDeploying('mw_core:incomplete_logic_mechanism', ['mw_core:incomplete_logic_mechanism', 'ae2:printed_silicon']),
+        event.recipes.createDeploying('mw_core:incomplete_logic_mechanism', ['mw_core:incomplete_logic_mechanism', 'thermal:diamond_gear']),
+        event.recipes.createDeploying('mw_core:incomplete_logic_mechanism', ['mw_core:incomplete_logic_mechanism', 'mw_core:certus_core']),
+    ]).transitionalItem('mw_core:incomplete_logic_mechanism').loops(1).id('milkyway:processing/sequenced_assembly/logic_mechanism')
 }
 
 function rubberMatters(event) {

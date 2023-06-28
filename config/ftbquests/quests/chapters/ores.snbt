@@ -17,8 +17,8 @@
 					Damage: 0
 				}
 			}
-			x: -9.0d
-			y: -7.0d
+			x: -11.0d
+			y: -6.0d
 			subtitle: "Diggy Diggy Hole"
 			dependencies: ["04A7A7E4A605D66C"]
 			id: "03D087E4FD02ED15"
@@ -231,8 +231,8 @@
 					}]
 				}
 			}
-			x: -4.5d
-			y: -7.0d
+			x: -8.5d
+			y: -4.5d
 			subtitle: "Magic Rocks Make My Chests Go Funny"
 			dependencies: ["04A7A7E4A605D66C"]
 			id: "17D3BAD392EA129E"
@@ -301,8 +301,8 @@
 					id: "2D042B29F0F7D11A"
 					type: "item"
 					item: "forbidden_arcanus:xpetrified_orb"
-					count: 16
-					random_bonus: 16
+					count: 64
+					random_bonus: 32
 				}
 				{
 					id: "63D87A9A8FF697CF"
@@ -310,13 +310,31 @@
 					item: "mw_core:crushed_lapis_ore"
 					count: 32
 				}
+				{
+					id: "3C2FCE839F30C568"
+					type: "item"
+					item: {
+						id: "forbidden_arcanus:eternal_stella"
+						Count: 1b
+						tag: { }
+					}
+					count: 2
+					random_bonus: 4
+				}
+				{
+					id: "7D0BB84337C2CCAC"
+					type: "item"
+					item: "forbidden_arcanus:arcane_crystal"
+					count: 48
+					random_bonus: 32
+				}
 			]
 		}
 		{
 			title: "Quite a Random Find"
 			icon: "randomium:randomium"
-			x: -3.0d
-			y: -7.0d
+			x: -7.5d
+			y: -5.0d
 			subtitle: "Incredibly Unpredictable"
 			dependencies: ["04A7A7E4A605D66C"]
 			id: "0470EB80D5AF5F74"
@@ -384,8 +402,8 @@
 					Damage: 0
 				}
 			}
-			x: -7.5d
-			y: -7.0d
+			x: -9.5d
+			y: -4.5d
 			subtitle: "Mining Straight To Hell"
 			dependencies: ["04A7A7E4A605D66C"]
 			id: "6A6A401730853605"
@@ -393,7 +411,7 @@
 				{
 					id: "57AC0FCFD47EDAEB"
 					type: "questsadditions:break"
-					title: "Break 1,000 Nether Cobalt Ore"
+					title: "Break 1,000 Nether Cobalithron Ore"
 					block_type: 1
 					block: "forge:ores/cobalt"
 					value: 1000L
@@ -454,13 +472,25 @@
 					type: "item"
 					item: "minecraft:piglin_banner_pattern"
 				}
+				{
+					id: "7EF9A8993997468A"
+					type: "item"
+					item: "unusualend:nether_orb"
+				}
+				{
+					id: "52E4DE1BD1781E50"
+					type: "item"
+					item: "minecraft:netherite_ingot"
+					count: 4
+					random_bonus: 8
+				}
 			]
 		}
 		{
 			title: "OoOoO Shiny"
 			icon: "minecraft:emerald"
-			x: -6.0d
-			y: -7.0d
+			x: -10.5d
+			y: -5.0d
 			subtitle: "Shiny Rocks Are Fun!"
 			dependencies: ["04A7A7E4A605D66C"]
 			id: "2F81B9348B4DEB4B"
@@ -548,20 +578,22 @@
 					id: "63C2A465C5C4C05E"
 					type: "item"
 					item: "quark:diamond_heart"
+					random_bonus: 2
 				}
 				{
 					id: "6DE0553975861346"
 					type: "item"
 					item: "thermal:redstone_tnt"
-					count: 4
+					count: 8
+					random_bonus: 8
 				}
 			]
 		}
 		{
 			title: "Specialized Profession: Dwarven"
 			icon: "kubejs:specialized_profession_card_dwarven"
-			x: -7.0d
-			y: -9.5d
+			x: -9.5d
+			y: -8.5d
 			dependencies: [
 				"219733689EB0A1AC"
 				"3E09AC454C8E800B"
@@ -571,6 +603,11 @@
 				"1466EE3C4DFAB73F"
 				"1B5A38359EF3563B"
 				"74728821288943D9"
+				"03D087E4FD02ED15"
+				"2F81B9348B4DEB4B"
+				"6A6A401730853605"
+				"17D3BAD392EA129E"
+				"0470EB80D5AF5F74"
 			]
 			id: "678E1375E5763308"
 			tasks: [{
@@ -589,9 +626,16 @@
 		{
 			title: "Specialized Profession: Carbon"
 			icon: "kubejs:specialized_profession_card_carbon"
-			x: -9.0d
-			y: -9.5d
-			dependencies: ["37FA28EA6AC49E14"]
+			x: -10.5d
+			y: -8.0d
+			dependencies: [
+				"37FA28EA6AC49E14"
+				"03D087E4FD02ED15"
+				"2F81B9348B4DEB4B"
+				"6A6A401730853605"
+				"17D3BAD392EA129E"
+				"0470EB80D5AF5F74"
+			]
 			id: "7144093F36ADD37A"
 			tasks: [{
 				id: "7D56D8F400D57FD1"
@@ -609,11 +653,16 @@
 		{
 			title: "Specialized Profession: Prospector"
 			icon: "kubejs:specialized_profession_card_prospector"
-			x: -8.0d
-			y: -9.5d
+			x: -8.5d
+			y: -8.5d
 			dependencies: [
 				"6931CEC2335C55EB"
 				"57929944FECA76CD"
+				"03D087E4FD02ED15"
+				"2F81B9348B4DEB4B"
+				"6A6A401730853605"
+				"17D3BAD392EA129E"
+				"0470EB80D5AF5F74"
 			]
 			id: "66D96ED7B7085126"
 			tasks: [{
@@ -621,6 +670,7 @@
 				type: "item"
 				item: "thermal:gold_coin"
 				count: 16L
+				consume_items: true
 			}]
 			rewards: [{
 				id: "726464285507D45B"
@@ -631,16 +681,22 @@
 		{
 			title: "Specialized Profession: Gemologist"
 			icon: "kubejs:specialized_profession_card_gemologist"
-			x: -6.0d
-			y: -9.5d
-			hide_dependency_lines: true
-			dependencies: ["2F81B9348B4DEB4B"]
+			x: -7.5d
+			y: -8.0d
+			dependencies: [
+				"2F81B9348B4DEB4B"
+				"03D087E4FD02ED15"
+				"6A6A401730853605"
+				"17D3BAD392EA129E"
+				"0470EB80D5AF5F74"
+			]
 			id: "085138D56F67184C"
 			tasks: [{
 				id: "559052DD033D68D2"
 				type: "item"
 				item: "thermal:gold_coin"
 				count: 16L
+				consume_items: true
 			}]
 			rewards: [{
 				id: "669BE0C3B1B8C219"
@@ -651,21 +707,796 @@
 		{
 			title: "Specialized Profession: Sorcerer"
 			icon: "kubejs:specialized_profession_card_sorcerer"
-			x: -5.0d
-			y: -9.5d
-			hide_dependency_lines: true
-			dependencies: ["17D3BAD392EA129E"]
+			x: -7.0d
+			y: -7.0d
+			dependencies: [
+				"17D3BAD392EA129E"
+				"03D087E4FD02ED15"
+				"2F81B9348B4DEB4B"
+				"6A6A401730853605"
+				"0470EB80D5AF5F74"
+			]
 			id: "1EDD6D2E53F8B9AF"
 			tasks: [{
 				id: "672D6BD3461C42DF"
 				type: "item"
 				item: "thermal:gold_coin"
 				count: 16L
+				consume_items: true
 			}]
 			rewards: [{
 				id: "7F8323EDAF10AEC2"
 				type: "item"
 				item: "kubejs:specialized_profession_card_sorcerer"
+			}]
+		}
+		{
+			title: "Truckloads of Tea"
+			icon: "farmersrespite:green_tea_leaves"
+			x: -4.5d
+			y: -6.5d
+			subtitle: "A true Brit"
+			dependencies: ["04A7A7E4A605D66C"]
+			id: "1992087FE999C581"
+			tasks: [
+				{
+					id: "37FDCBBEFFD00728"
+					type: "item"
+					title: "500x Green Tea"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "farmersrespite:drinks/green_tea"
+						}
+					}
+					count: 500L
+					consume_items: true
+				}
+				{
+					id: "3DEF5C7DE2EC4608"
+					type: "item"
+					title: "500x Yellow Tea"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "farmersrespite:drinks/yellow_tea"
+						}
+					}
+					count: 500L
+					consume_items: true
+				}
+				{
+					id: "3B6A8089F56CC3EF"
+					type: "item"
+					title: "500x Black Tea"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "farmersrespite:drinks/black_tea"
+						}
+					}
+					count: 500L
+					consume_items: true
+				}
+				{
+					id: "3BFA8E93040B439E"
+					type: "item"
+					title: "500x Rose Hip Tea"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "farmersrespite:drinks/rose_hip_tea"
+						}
+					}
+					count: 500L
+					consume_items: true
+				}
+				{
+					id: "215B136FEE299D6D"
+					type: "item"
+					title: "500x Dandelion Tea"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "farmersrespite:drinks/dandelion_tea"
+						}
+					}
+					count: 500L
+					consume_items: true
+				}
+				{
+					id: "0D205AFE34CD650D"
+					type: "item"
+					title: "500x Purulent Tea"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "farmersrespite:drinks/purulent_tea"
+						}
+					}
+					count: 500L
+					consume_items: true
+				}
+			]
+			rewards: [
+				{
+					id: "16937570C8060D4A"
+					type: "item"
+					item: "bundledelight:green_tea_leaf_crate"
+					count: 32
+				}
+				{
+					id: "5C8C1CC88DDDAD1E"
+					type: "item"
+					item: "bundledelight:yellow_tea_leaf_crate"
+					count: 32
+				}
+				{
+					id: "56AEB0A71F22E205"
+					type: "item"
+					item: "bundledelight:black_tea_leaf_crate"
+					count: 32
+				}
+				{
+					id: "3980A1D93B5ED1C8"
+					type: "item"
+					item: "minecraft:rose_bush"
+					count: 64
+					random_bonus: 64
+				}
+				{
+					id: "6698C58B22D5CDE5"
+					type: "item"
+					item: "minecraft:dandelion"
+					count: 64
+					random_bonus: 64
+				}
+				{
+					id: "284EB4D5912AB2C3"
+					type: "item"
+					item: "minecraft:spider_eye"
+					count: 64
+					random_bonus: 64
+				}
+				{
+					id: "70ED1F5C722C98AA"
+					type: "item"
+					item: "thermal:gold_coin"
+					count: 96
+					random_bonus: 32
+				}
+			]
+		}
+		{
+			title: "Long Lasting Effects"
+			icon: "farmersrespite:yellow_tea_leaves"
+			x: -4.5d
+			y: -5.5d
+			dependencies: ["04A7A7E4A605D66C"]
+			id: "1F44F8C36119560A"
+			tasks: [
+				{
+					id: "6F040D0781030F7B"
+					type: "item"
+					title: "500x Long Green Tea"
+					item: "farmersrespite:long_green_tea"
+					count: 500L
+					consume_items: true
+				}
+				{
+					id: "45257AB227E4803B"
+					type: "item"
+					title: "500x Long Yellow Tea"
+					item: "farmersrespite:long_yellow_tea"
+					count: 500L
+					consume_items: true
+				}
+				{
+					id: "7B26FE94F8F83D08"
+					type: "item"
+					title: "500x Long Black Tea"
+					item: "farmersrespite:long_black_tea"
+					count: 500L
+					consume_items: true
+				}
+				{
+					id: "5AD7035990AB4A12"
+					type: "item"
+					title: "500x Long Dandelion Tea"
+					item: "farmersrespite:long_dandelion_tea"
+					count: 500L
+					consume_items: true
+				}
+			]
+			rewards: [
+				{
+					id: "2FBEC602AA4A51DF"
+					type: "item"
+					item: "bundledelight:green_tea_leaf_crate"
+					count: 48
+				}
+				{
+					id: "62650CD92856E714"
+					type: "item"
+					item: "bundledelight:yellow_tea_leaf_crate"
+					count: 48
+				}
+				{
+					id: "671D787CD3547C03"
+					type: "item"
+					item: "bundledelight:black_tea_leaf_crate"
+					count: 48
+				}
+				{
+					id: "2C48B25F5ED861B3"
+					type: "item"
+					item: "minecraft:dandelion"
+					count: 80
+					random_bonus: 80
+				}
+				{
+					id: "1ADF08E21AFEB18B"
+					type: "item"
+					item: "thermal:gold_coin"
+					count: 96
+					random_bonus: 32
+				}
+				{
+					id: "31BF55E265870BF2"
+					type: "item"
+					item: "create:cuckoo_clock"
+				}
+			]
+		}
+		{
+			title: "Strong Taste"
+			icon: "farmersrespite:black_tea_leaves"
+			x: -3.5d
+			y: -5.0d
+			dependencies: ["04A7A7E4A605D66C"]
+			id: "16EB68D5EB794208"
+			tasks: [
+				{
+					id: "4A367C10B6A58CDF"
+					type: "item"
+					title: "500x Strong Green Tea"
+					item: "farmersrespite:strong_green_tea"
+					count: 500L
+					consume_items: true
+				}
+				{
+					id: "7514C9E58A9E0D49"
+					type: "item"
+					title: "500x Strong Yellow Tea"
+					item: "farmersrespite:strong_yellow_tea"
+					count: 500L
+					consume_items: true
+				}
+				{
+					id: "44A60723EB6E2326"
+					type: "item"
+					title: "500x Strong Black Tea"
+					item: "farmersrespite:strong_black_tea"
+					count: 500L
+					consume_items: true
+				}
+				{
+					id: "786D957FCE385219"
+					type: "item"
+					title: "500x Strong Purulent Tea"
+					item: "farmersrespite:strong_purulent_tea"
+					count: 500L
+					consume_items: true
+				}
+				{
+					id: "741C0B40628604B1"
+					type: "item"
+					title: "500x Strong Rose Hip Tea"
+					item: "farmersrespite:strong_rose_hip_tea"
+					count: 500L
+					consume_items: true
+				}
+			]
+			rewards: [
+				{
+					id: "4A8114B69368B456"
+					type: "item"
+					item: "bundledelight:green_tea_leaf_crate"
+					count: 48
+				}
+				{
+					id: "71F920BCBAE87C10"
+					type: "item"
+					item: "bundledelight:yellow_tea_leaf_crate"
+					count: 48
+				}
+				{
+					id: "40EB7DF8A2F96F2E"
+					type: "item"
+					item: "bundledelight:black_tea_leaf_crate"
+					count: 48
+				}
+				{
+					id: "6FD91DC31420BEC1"
+					type: "item"
+					item: "minecraft:spider_eye"
+					count: 80
+					random_bonus: 80
+				}
+				{
+					id: "3A6C4002EFE04F9D"
+					type: "item"
+					item: "minecraft:rose_bush"
+					count: 80
+					random_bonus: 80
+				}
+				{
+					id: "29BA5B8A5BAC4A28"
+					type: "item"
+					item: "thermal:gold_coin"
+					count: 96
+					random_bonus: 32
+				}
+				{
+					id: "7583AA8CF0D2BE91"
+					type: "item"
+					item: "bundledelight:strongroot_ale_glass"
+				}
+			]
+		}
+		{
+			title: "I Can Make You Feel Alive"
+			icon: "farmersrespite:coffee_beans"
+			x: -2.5d
+			y: -5.0d
+			subtitle: "I know, But do I need you to survive?"
+			dependencies: ["04A7A7E4A605D66C"]
+			id: "3440B3ACB9A9ED35"
+			tasks: [
+				{
+					id: "40E4860E8D0F62C5"
+					type: "item"
+					title: "500x Coffee"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "farmersrespite:drinks/coffee"
+						}
+					}
+					count: 500L
+					consume_items: true
+				}
+				{
+					id: "1E7098CC68A25A6D"
+					type: "item"
+					title: "500x Long Coffee"
+					item: "farmersrespite:long_coffee"
+					count: 500L
+					consume_items: true
+				}
+				{
+					id: "6BEB8EE86CA7962D"
+					type: "item"
+					title: "500x Strong Coffee"
+					item: "farmersrespite:strong_coffee"
+					count: 500L
+					consume_items: true
+				}
+				{
+					id: "471F8858A651D683"
+					type: "item"
+					title: "1,000x Coffee Cake"
+					item: "farmersrespite:coffee_cake"
+					count: 1000L
+					consume_items: true
+				}
+			]
+			rewards: [
+				{
+					id: "2638DE4C79185C25"
+					type: "item"
+					item: "bundledelight:coffee_bean_crate"
+					count: 64
+				}
+				{
+					id: "28AD4D01CF37715E"
+					type: "item"
+					item: "farmersrespite:coffee_cake_slice"
+					count: 48
+					random_bonus: 64
+				}
+				{
+					id: "6A2B7A03B6BAA160"
+					type: "item"
+					item: "farmersrespite:coffee_berries"
+					count: 64
+				}
+				{
+					id: "1FDBB73942A8F6F4"
+					type: "item"
+					item: "thermal:gold_coin"
+					count: 96
+					random_bonus: 32
+				}
+			]
+		}
+		{
+			title: "Sweet Tooth"
+			icon: "minecraft:sweet_berries"
+			x: -1.5d
+			y: -5.5d
+			dependencies: ["04A7A7E4A605D66C"]
+			id: "7A60806C16D89C66"
+			tasks: [
+				{
+					id: "2C58BB31522AB557"
+					type: "item"
+					title: "500x Sweet Berry Juice"
+					item: "bundledelight:sweet_berry_juice"
+					count: 500L
+					consume_items: true
+				}
+				{
+					id: "59B529BBC3E2EB51"
+					type: "item"
+					title: "500x Melon Juice"
+					item: "farmersdelight:melon_juice"
+					count: 500L
+					consume_items: true
+				}
+				{
+					id: "46813F1B6F4233F0"
+					type: "item"
+					title: "500x Hot Cocoa"
+					item: "farmersdelight:hot_cocoa"
+					count: 500L
+					consume_items: true
+				}
+				{
+					id: "2DA575D7B33099FE"
+					type: "item"
+					title: "500x Apple Cider"
+					item: "farmersdelight:apple_cider"
+					count: 500L
+					consume_items: true
+				}
+				{
+					id: "494745CF70A87E78"
+					type: "item"
+					title: "500x Chorus Juice"
+					item: "endersdelight:chorus_juice"
+					count: 500L
+					consume_items: true
+				}
+			]
+			rewards: [
+				{
+					id: "50C5D8C647E9F7F2"
+					type: "item"
+					item: "farmers_bundle:crate_sweetberry"
+					count: 48
+				}
+				{
+					id: "07544202C792F67E"
+					type: "item"
+					item: "minecraft:melon"
+					count: 64
+				}
+				{
+					id: "2092892A6E91942A"
+					type: "item"
+					item: "farmers_bundle:crate_cocoabean"
+					count: 48
+				}
+				{
+					id: "3CD6195083F1E201"
+					type: "item"
+					item: "farmers_bundle:crate_apple"
+					count: 48
+				}
+				{
+					id: "0DA23431830FF6D2"
+					type: "item"
+					item: "endersdelight:chorus_crate"
+					count: 48
+				}
+				{
+					id: "1451092D93547B8B"
+					type: "item"
+					item: "thermal:gold_coin"
+					count: 96
+					random_bonus: 32
+				}
+			]
+		}
+		{
+			title: "Spirits of Hospitality"
+			icon: "brewinandchewin:beer"
+			x: -1.5d
+			y: -6.5d
+			dependencies: ["04A7A7E4A605D66C"]
+			id: "3E41EB471E549F4B"
+			tasks: [
+				{
+					id: "609C2DAD9838EB55"
+					type: "item"
+					title: "250x Beer"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "brewinandchewin:drinks/beer"
+						}
+					}
+					count: 250L
+					consume_items: true
+				}
+				{
+					id: "2F24438EAA5B4678"
+					type: "item"
+					title: "250x Vodka"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "brewinandchewin:drinks/vodka"
+						}
+					}
+					count: 250L
+					consume_items: true
+				}
+				{
+					id: "306FF075EB05FABA"
+					type: "item"
+					title: "250x Mead"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "brewinandchewin:drinks/mead"
+						}
+					}
+					count: 250L
+					consume_items: true
+				}
+				{
+					id: "38CAFD6925AF6FAC"
+					type: "item"
+					title: "250x Rice Wine"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "brewinandchewin:drinks/rice_wine"
+						}
+					}
+					count: 250L
+					consume_items: true
+				}
+				{
+					id: "5AD3A3E985135771"
+					type: "item"
+					title: "250x Egg Grog"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "brewinandchewin:drinks/egg_grog"
+						}
+					}
+					count: 250L
+					consume_items: true
+				}
+				{
+					id: "1439CCA0149EFBC7"
+					type: "item"
+					title: "250x Strongroot Ale"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "brewinandchewin:drinks/strongroot_ale"
+						}
+					}
+					count: 250L
+					consume_items: true
+				}
+				{
+					id: "06712A5F461FCB80"
+					type: "item"
+					title: "250x Saccharine Rum"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "brewinandchewin:drinks/saccharine_rum"
+						}
+					}
+					count: 250L
+					consume_items: true
+				}
+				{
+					id: "02860E40445335BB"
+					type: "item"
+					title: "250x Pale Jane"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "brewinandchewin:drinks/pale_jane"
+						}
+					}
+					count: 250L
+					consume_items: true
+				}
+				{
+					id: "3BF9B212AC9BE551"
+					type: "item"
+					title: "250x Dread Nog"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "brewinandchewin:drinks/dread_nog"
+						}
+					}
+					count: 250L
+					consume_items: true
+				}
+				{
+					id: "7296183BA55B0998"
+					type: "item"
+					title: "250x Salty Folly"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "brewinandchewin:drinks/salty_folly"
+						}
+					}
+					count: 250L
+					consume_items: true
+				}
+				{
+					id: "060DF34B67AFDE57"
+					type: "item"
+					title: "250x Steel Toe Stout"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "brewinandchewin:drinks/steel_toe_stout"
+						}
+					}
+					count: 250L
+					consume_items: true
+				}
+				{
+					id: "723E91704ADA0ED8"
+					type: "item"
+					title: "250x Glittering Grenadine"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "brewinandchewin:drinks/glittering_grenadine"
+						}
+					}
+					count: 250L
+					consume_items: true
+				}
+				{
+					id: "5675199064B348AB"
+					type: "item"
+					title: "250x Bloody Mary"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "brewinandchewin:drinks/bloody_mary"
+						}
+					}
+					count: 250L
+					consume_items: true
+				}
+				{
+					id: "4BA56BD2AAB792B1"
+					type: "item"
+					title: "250x Red Rum"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "brewinandchewin:drinks/red_rum"
+						}
+					}
+					count: 250L
+					consume_items: true
+				}
+				{
+					id: "6E7D9FE55598BC94"
+					type: "item"
+					title: "250x Withering Dross"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "brewinandchewin:drinks/withering_dross"
+						}
+					}
+					count: 250L
+					consume_items: true
+				}
+				{
+					id: "152304A68E07DD06"
+					type: "item"
+					title: "250x Kombucha"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "brewinandchewin:drinks/kombucha"
+						}
+					}
+					count: 250L
+					consume_items: true
+				}
+			]
+			rewards: [
+				{
+					id: "7D7634C57B8B52D9"
+					type: "item"
+					item: "brewinandchewin:pizza"
+					random_bonus: 1
+				}
+				{
+					id: "75FCC127E229BBE3"
+					type: "item"
+					item: "brewinandchewin:cocoa_fudge"
+					count: 48
+					random_bonus: 48
+				}
+				{
+					id: "569F61DDE4D5F7C7"
+					type: "item"
+					item: "bundledelight:cheeseburger"
+					count: 16
+					random_bonus: 64
+				}
+			]
+		}
+		{
+			title: "Specialized Profession: Drinks"
+			icon: "kubejs:specialized_profession_card_drinks"
+			x: -3.0d
+			y: -6.5d
+			dependencies: [
+				"3440B3ACB9A9ED35"
+				"7A60806C16D89C66"
+				"1F44F8C36119560A"
+				"1992087FE999C581"
+				"3E41EB471E549F4B"
+				"16EB68D5EB794208"
+			]
+			id: "2A159271F3B5FAFE"
+			tasks: [{
+				id: "64F2AF56875BAF2E"
+				type: "item"
+				item: "thermal:gold_coin"
+				count: 16L
+				consume_items: true
+			}]
+			rewards: [{
+				id: "439C706A1FF41E97"
+				type: "item"
+				item: "kubejs:specialized_profession_card_drinks"
 			}]
 		}
 	]

@@ -7,6 +7,8 @@ let TC = (id, x) => MOD("tconstruct", id, x)
 let MC = (id, x) => MOD("minecraft", id, x)
 let KJ = (id, x) => MOD("kubejs", id, x)
 let FD = (id, x) => MOD("farmersdelight", id, x)
+let BD = (id, x) => MOD("bundledelight", id, x)
+let FR = (id, x) => MOD("farmersrespite", id, x)
 let SP = (id, x) => MOD("supplementaries", id, x)
 let F = (id, x) => MOD("forge", id, x)
 let AC = (id, x) => MOD("aquaculture", id, x)
@@ -68,6 +70,50 @@ onEvent('item.registry', event => {
 
     let S = (x) => TE('silver_coin', x)
     let G = (x) => TE('gold_coin', x)
+    specializedProfession('Farming', 'Drinks', 0x5d8fc2, 0xf000ff, [
+        { in: BD('sweet_berry_juice', 1), out: S(12)},
+        { in: FD('melon_juice', 1), out: S(12)},
+        { in: FD('hot_cocoa', 1), out: S(12)},
+        { in: FD('apple_cider', 1), out: S(12)},
+        { in: FR('strong_apple_cider', 1), out: S(24)},
+        { in: FR('long_apple_cider', 1), out: S(24)},
+        { in: 'endersdelight:chorus_juice', out: S(12)},
+        { in: TE('syrup_bottle', 1), out: S(12)},
+        { in: MC('honey_bottle', 1), out: S(12)},
+        { in: '#farmersrespite:drinks/green_tea', out: S(12)},
+        { in: '#farmersrespite:drinks/yellow_tea', out: S(12)},
+        { in: '#farmersrespite:drinks/black_tea', out: S(12)},
+        { in: '#farmersrespite:drinks/strong/green_tea', out: S(24)},
+        { in: '#farmersrespite:drinks/strong/yellow_tea', out: S(24)},
+        { in: '#farmersrespite:drinks/strong/black_tea', out: S(24)},
+        { in: '#farmersrespite:drinks/long/green_tea', out: S(24)},
+        { in: '#farmersrespite:drinks/long/yellow_tea', out: S(24)},
+        { in: '#farmersrespite:drinks/long/black_tea', out: S(24)},
+        { in: '#farmersrespite:drinks/dandelion_tea', out: S(12)},
+        { in: '#farmersrespite:drinks/long/dandelion_tea', out: S(24)},
+        { in: '#farmersrespite:drinks/strong/purulent_tea', out: S(24)},
+        { in: '#farmersrespite:drinks/strong/rose_hip_tea', out: S(24)},
+        { in: '#farmersrespite:drinks/coffee', out: S(12)},
+        { in: '#farmersrespite:drinks/long/coffee', out: S(24)},
+        { in: '#farmersrespite:drinks/strong/coffee', out: S(24)},
+        { in: '#brewinandchewin:drinks/beer', out: G(1)},
+        { in: '#brewinandchewin:drinks/vodka', out: G(1)},
+        { in: '#brewinandchewin:drinks/mead', out: G(1)},
+        { in: '#brewinandchewin:drinks/rice_wine', out: G(1)},
+        { in: '#brewinandchewin:drinks/egg_grog', out: G(1)},
+        { in: '#brewinandchewin:drinks/strongroot_ale', out: G(2)},
+        { in: '#brewinandchewin:drinks/saccharine_rum', out: G(2)},
+        { in: '#brewinandchewin:drinks/pale_jane', out: G(2)},
+        { in: '#brewinandchewin:drinks/dread_nog', out: G(2)},
+        { in: '#brewinandchewin:drinks/salty_folly', out: G(2)},
+        { in: '#brewinandchewin:drinks/steel_toe_stout', out: G(3)},
+        { in: '#brewinandchewin:drinks/glittering_grenadine', out: G(1)},
+        { in: '#brewinandchewin:drinks/bloody_mary', out: G(2)},
+        { in: '#brewinandchewin:drinks/red_rum', out: G(3)},
+        { in: '#brewinandchewin:drinks/withering_dross', out: G(2)},
+        { in: '#brewinandchewin:drinks/kombucha', out: G(1)},
+    ])
+
 
     specializedProfession('Ore', 'Carbon', 0x101418, 0xf000ff, [
         { in: MC('coal_ore', 4), out: S(16)},
