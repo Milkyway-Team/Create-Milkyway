@@ -1,0 +1,6 @@
+
+#Modded bonus features
+[extras]
+	#Should foods from Neapolitan have potion effect tooltips? Default TRUE
+	neapolitanEffectsTooltips = true
+
